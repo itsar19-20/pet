@@ -1,5 +1,7 @@
 # PET
 
+![Pet](docs/images/pet.png "Pet")
+
 Progetto iniziato mercoledì 11 dicembre 2019.
 
 ## Componenti del gruppo
