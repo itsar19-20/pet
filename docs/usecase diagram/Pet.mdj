@@ -19660,7 +19660,7 @@
 							"top": 176,
 							"width": 207.18603515625,
 							"height": 154,
-							"text": "l'ultima freccia è la 63! ListaSegnalazioniSingoloUtente. \nvanno aggiunti i templates dal 44 al 51(compresi) + dal 54 al 64(compresi)\n\nIMPORTANTE\n-aggiungere il template 44\n-modificare use case 35\n-si è liberato il numero 27"
+							"text": "l'ultima freccia è la 63! ListaSegnalazioniSingoloUtente. \nvanno aggiunti i templates  dal 54 al 64(compresi) \n\nIMPORTANTE\n-aggiungere il template 44\n-modificare use case 35\n-si è liberato il numero 27"
 						},
 						{
 							"_type": "UMLUseCaseView",
