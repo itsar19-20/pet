@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -17,8 +18,8 @@ public class Utente {
 	private String password;
 	private Date dataDiNascita;
 	private Date dataRegistrazione;
-	//@OneToMany
-	//private ArrayList<Email> emails;
+	@OneToMany
+	private List<Email> emails;
 	
 	
 	
