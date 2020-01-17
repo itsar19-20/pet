@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,6 +18,7 @@ public class Animale {
 	private String nome;
 	private int eta;
 	private String dettagli;
+	private Date dataDiNascita;
 	
 	
 	
@@ -57,6 +60,12 @@ public class Animale {
 	}
 	public void setDettagli(String dettagli) {
 		this.dettagli = dettagli;
+	}
+	public Date getDataDiNascita() {
+		return dataDiNascita;
+	}
+	public void setDataDiNascita(Date dataDiNascita) {
+		this.dataDiNascita = dataDiNascita;
 	}
 	
 
