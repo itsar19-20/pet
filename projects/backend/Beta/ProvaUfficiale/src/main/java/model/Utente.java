@@ -18,8 +18,8 @@ public class Utente {
 	private String password;
 	private Date dataDiNascita;
 	private Date dataRegistrazione;
-	@OneToMany
-	private List<Email> emails;
+	//@OneToMany
+	//private List<Email> emails;
 	
 	
 	
