@@ -10,15 +10,15 @@ public class TestDB {
 	public static void main(String[] args) {
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 		
-		PetSitter ps = new PetSitter();
+		//PetSitter ps = new PetSitter();
 		
-		ps.setUsername("Giorgio");
-		ps.setPassword("password");
+		//ps.setUsername("Giorgio");
+		//ps.setPassword("password");
 	
 		
-		em.getTransaction().begin();
-		em.persist(ps);
-		em.getTransaction().commit();
+		//em.getTransaction().begin();
+		//em.persist(ps);
+		//em.getTransaction().commit();
 
 	}
 
