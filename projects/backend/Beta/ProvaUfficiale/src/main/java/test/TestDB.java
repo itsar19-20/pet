@@ -1,3 +1,4 @@
+
 package test;
 
 import javax.persistence.EntityManager;
@@ -19,7 +20,7 @@ public class TestDB {
 		em.getTransaction().begin();
 		em.persist(ps);
 		em.getTransaction().commit();
-		em.close();
 	}
 
 }
+>>>>>>> master

@@ -2520,9 +2520,9 @@
 											"font": "Arial;13;1",
 											"left": 637,
 											"top": 903,
-											"width": 87.4072265625,
+											"width": 129.3017578125,
 											"height": 13,
-											"text": "UtenteFactory"
+											"text": "RegistrationManager"
 										},
 										{
 											"_type": "LabelView",
@@ -2558,7 +2558,7 @@
 									"font": "Arial;13;0",
 									"left": 632,
 									"top": 896,
-									"width": 97.4072265625,
+									"width": 139.3017578125,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFvsrMN9M4Cn5I="
@@ -2586,7 +2586,7 @@
 									"font": "Arial;13;0",
 									"left": 632,
 									"top": 921,
-									"width": 97.4072265625,
+									"width": 139.3017578125,
 									"height": 10
 								},
 								{
@@ -2602,7 +2602,7 @@
 									"font": "Arial;13;0",
 									"left": 632,
 									"top": 931,
-									"width": 97.4072265625,
+									"width": 139.3017578125,
 									"height": 10
 								},
 								{
@@ -2645,7 +2645,7 @@
 							"containerChangeable": true,
 							"left": 632,
 							"top": 896,
-							"width": 97.4072265625,
+							"width": 139.3017578125,
 							"height": 45,
 							"nameCompartment": {
 								"$ref": "AAAAAAFvsrMN9M4BvGw="
@@ -3376,8 +3376,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1059,
-									"top": 900,
+									"left": 1080,
+									"top": 901,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -3397,8 +3397,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1059,
-									"top": 885,
+									"left": 1080,
+									"top": 886,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -3418,8 +3418,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1058,
-									"top": 929,
+									"left": 1079,
+									"top": 930,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -3438,7 +3438,7 @@
 								"$ref": "AAAAAAFvsrMN9M4A0VE="
 							},
 							"lineStyle": 1,
-							"points": "729:920;1389.245849609375:923.146314971301",
+							"points": "771:921;1389.245849609375:923.146314971301",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFvsrfWPs7HXH0="
@@ -4650,7 +4650,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "UtenteFactory",
+					"name": "RegistrationManager",
 					"ownedElements": [
 						{
 							"_type": "UMLInterfaceRealization",
