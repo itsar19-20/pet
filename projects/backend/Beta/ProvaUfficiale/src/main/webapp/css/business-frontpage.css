@@ -5,4 +5,45 @@
  */
 body {
   padding-top: 56px;
+  
+  overflow-x: hidden;
+}
+
+.navbar{
+	background-color: #2E0300 !important;
+}
+
+.bg-primary{
+	background-color: #14a302 !important;
+}
+
+.containerSuperior2{
+		background-color: #14a302;
+}
+
+.display-4{
+	font-family: blippo;
+}
+
+.btn{
+	background-color: #14a302 !important;
+	border-color: #14a302 !important;
+	cursor: url(../immaginiPerWeb/cursoreZampa.webp),auto !important;
+}
+
+.linkMail{
+	color: #14a302;
+}
+
+.linkMail:hover{
+	color: #2E0300;
+	text-decoration: none; /*serve per togliere la linea sotto un link */
+} 
+
+.card-footer{
+	background-color: #2E0300;
+}
+
+.card{
+	border-color:#2E0300;
 }
