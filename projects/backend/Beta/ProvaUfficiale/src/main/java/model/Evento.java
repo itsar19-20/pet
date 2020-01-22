@@ -7,8 +7,23 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+@NamedQueries(  
+	    {  
+	        @NamedQuery(  
+	        name = "cercaEventiPerOrganizzatore",  
+	        query = "select c from Evento c where c.organizzatore= :username"  
+	       
+	        ),
+	        @NamedQuery(
+	        name = "cercaEventiPerPartecipante",
+	        query = "select c from Evento c where c.partecipanti= :username"
+	        )
+	    }  
+	)  
 
 @Entity
 public class Evento {
@@ -18,6 +33,13 @@ public class Evento {
 	private int id_evento;
 	@OneToOne
 	private UtenteApp organizzatore;
+	private String nomeEvento;
+	public String getNomeEvento() {
+		return nomeEvento;
+	}
+	public void setNomeEvento(String nomeEvento) {
+		this.nomeEvento = nomeEvento;
+	}
 	@OneToMany
 	private List<UtenteApp> partecipanti;
 	private String descrizione;

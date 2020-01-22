@@ -7,6 +7,7 @@ import model.UtenteApp;
 
 public interface UtenteAppInterface {
 	
-	abstract List<Evento> visualizzaEventi(UtenteApp utente);
+	abstract List<Evento> visualizzaEventiUtente(UtenteApp utente);
+	abstract List<Evento> visualizzaTuttiEventi();
 
 }
