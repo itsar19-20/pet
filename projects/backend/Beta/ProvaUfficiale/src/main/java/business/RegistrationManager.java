@@ -28,7 +28,7 @@ public class RegistrationManager implements RegistrationInterface {
 		u.setPassword(password);
 		u.setDataDiNascita(dataDiNascita);
 		u.setDataRegistrazione(dataRegistrazione);
-		// CAZZO!u.se
+		
 		}
 		if ( u instanceof PetSitter || u instanceof Proprietario) {
 			u.setNome(nome);

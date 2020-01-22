@@ -74,9 +74,9 @@
 											"font": "Arial;13;0",
 											"left": -368,
 											"top": -144,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -356,9 +356,9 @@
 											"font": "Arial;13;0",
 											"left": -32,
 											"top": 12,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -651,9 +651,9 @@
 											"font": "Arial;13;0",
 											"left": -96,
 											"top": -20,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -981,9 +981,9 @@
 											"font": "Arial;13;0",
 											"left": 70.16015625,
 											"top": -4,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -1271,9 +1271,9 @@
 											"font": "Arial;13;0",
 											"left": -425.4345703125,
 											"top": -256,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -1557,9 +1557,9 @@
 											"font": "Arial;13;0",
 											"left": 96,
 											"top": -448,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -2007,9 +2007,9 @@
 											"font": "Arial;13;0",
 											"left": -176,
 											"top": -208,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -2473,9 +2473,9 @@
 											"font": "Arial;13;0",
 											"left": -448,
 											"top": 32,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -2659,9 +2659,9 @@
 											"font": "Arial;13;0",
 											"left": 80,
 											"top": 1392,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -2852,9 +2852,9 @@
 											"font": "Arial;13;0",
 											"left": 336,
 											"top": 1408,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -3853,9 +3853,9 @@
 											"font": "Arial;13;0",
 											"left": -368,
 											"top": -224,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -4116,9 +4116,9 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"top": -432,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -4668,9 +4668,9 @@
 											"font": "Arial;13;0",
 											"left": -128,
 											"top": -160,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -5230,9 +5230,9 @@
 											"font": "Arial;13;0",
 											"left": -128,
 											"top": -176,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -6014,9 +6014,9 @@
 											"font": "Arial;13;0",
 											"left": 32,
 											"top": 144,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -6815,9 +6815,9 @@
 											"font": "Arial;13;0",
 											"left": 496,
 											"top": 1040,
-											"width": 73.67724609375,
+											"width": 142.6064453125,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from EntityClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -22939,9 +22939,9 @@
 											"font": "Arial;13;0",
 											"left": 768,
 											"top": 400,
-											"width": 73.67724609375,
+											"width": 172.64990234375,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from BusinessClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -23125,9 +23125,9 @@
 											"font": "Arial;13;0",
 											"left": 2416,
 											"top": 192,
-											"width": 73.67724609375,
+											"width": 172.64990234375,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from BusinessClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -23311,9 +23311,9 @@
 											"font": "Arial;13;0",
 											"left": 2768,
 											"top": -560,
-											"width": 73.67724609375,
+											"width": 172.64990234375,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from BusinessClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -23499,9 +23499,9 @@
 											"font": "Arial;13;0",
 											"left": 3008,
 											"top": -816,
-											"width": 73.67724609375,
+											"width": 172.64990234375,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from BusinessClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -24070,9 +24070,9 @@
 											"font": "Arial;13;0",
 											"left": 240,
 											"top": 992,
-											"width": 73.67724609375,
+											"width": 172.64990234375,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from BusinessClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -24356,9 +24356,9 @@
 											"font": "Arial;13;0",
 											"left": 1232,
 											"top": 784,
-											"width": 73.67724609375,
+											"width": 172.64990234375,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from BusinessClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -24619,9 +24619,9 @@
 											"font": "Arial;13;0",
 											"left": 800,
 											"top": 928,
-											"width": 73.67724609375,
+											"width": 172.64990234375,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from BusinessClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -24807,9 +24807,9 @@
 											"font": "Arial;13;0",
 											"left": 1600,
 											"top": 1392,
-											"width": 73.67724609375,
+											"width": 172.64990234375,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from BusinessClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -25381,9 +25381,9 @@
 											"font": "Arial;13;1",
 											"left": 637,
 											"top": 903,
-											"width": 87.4072265625,
+											"width": 129.3017578125,
 											"height": 13,
-											"text": "UtenteFactory"
+											"text": "RegistrationManager"
 										},
 										{
 											"_type": "LabelView",
@@ -25396,9 +25396,9 @@
 											"font": "Arial;13;0",
 											"left": 208,
 											"top": 1440,
-											"width": 73.67724609375,
+											"width": 172.64990234375,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from BusinessClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -25419,7 +25419,7 @@
 									"font": "Arial;13;0",
 									"left": 632,
 									"top": 896,
-									"width": 97.4072265625,
+									"width": 139.3017578125,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFvs9ygjeSgxeA="
@@ -25447,7 +25447,7 @@
 									"font": "Arial;13;0",
 									"left": 632,
 									"top": 921,
-									"width": 97.4072265625,
+									"width": 139.3017578125,
 									"height": 10
 								},
 								{
@@ -25463,7 +25463,7 @@
 									"font": "Arial;13;0",
 									"left": 632,
 									"top": 931,
-									"width": 97.4072265625,
+									"width": 139.3017578125,
 									"height": 10
 								},
 								{
@@ -25506,7 +25506,7 @@
 							"containerChangeable": true,
 							"left": 632,
 							"top": 896,
-							"width": 97.4072265625,
+							"width": 139.3017578125,
 							"height": 45,
 							"nameCompartment": {
 								"$ref": "AAAAAAFvs9ygjeSfM1U="
@@ -25584,9 +25584,9 @@
 											"font": "Arial;13;0",
 											"left": 784,
 											"top": 1536,
-											"width": 73.67724609375,
+											"width": 172.64990234375,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from BusinessClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -25795,9 +25795,9 @@
 											"font": "Arial;13;0",
 											"left": 624,
 											"top": 64,
-											"width": 73.67724609375,
+											"width": 172.64990234375,
 											"height": 13,
-											"text": "(from Model)"
+											"text": "(from BusinessClassDiagram)"
 										},
 										{
 											"_type": "LabelView",
@@ -26237,8 +26237,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1059,
-									"top": 900,
+									"left": 1080,
+									"top": 901,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -26258,8 +26258,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1059,
-									"top": 885,
+									"left": 1080,
+									"top": 886,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -26279,8 +26279,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1058,
-									"top": 929,
+									"left": 1079,
+									"top": 930,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -26299,7 +26299,7 @@
 								"$ref": "AAAAAAFvs9ygjeSesJY="
 							},
 							"lineStyle": 1,
-							"points": "729:920;1389.245849609375:923.146314971301",
+							"points": "771:921;1389.245849609375:923.146314971301",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFvs9ygjuTO/eo="
@@ -27511,7 +27511,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFvs9ygi+QdBS8="
 					},
-					"name": "UtenteFactory",
+					"name": "RegistrationManager",
 					"ownedElements": [
 						{
 							"_type": "UMLInterfaceRealization",
