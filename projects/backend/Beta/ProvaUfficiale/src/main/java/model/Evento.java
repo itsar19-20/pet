@@ -1,5 +1,6 @@
 package model;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,12 +35,8 @@ public class Evento {
 	@OneToOne
 	private UtenteApp organizzatore;
 	private String nomeEvento;
-	public String getNomeEvento() {
-		return nomeEvento;
-	}
-	public void setNomeEvento(String nomeEvento) {
-		this.nomeEvento = nomeEvento;
-	}
+	private Date dataEvento;
+	
 	@OneToMany
 	private List<UtenteApp> partecipanti;
 	private String descrizione;
@@ -47,7 +44,12 @@ public class Evento {
 	private String longitudine;
 	
 	
-	
+	public String getNomeEvento() {
+		return nomeEvento;
+	}
+	public void setNomeEvento(String nomeEvento) {
+		this.nomeEvento = nomeEvento;
+	}
 	
 	public int getId_evento() {
 		return id_evento;
@@ -84,6 +86,12 @@ public class Evento {
 	}
 	public void setLongitudine(String longitudine) {
 		this.longitudine = longitudine;
+	}
+	public Date getDataEvento() {
+		return dataEvento;
+	}
+	public void setDataEvento(Date dataEvento) {
+		this.dataEvento = dataEvento;
 	}
 	
 	
