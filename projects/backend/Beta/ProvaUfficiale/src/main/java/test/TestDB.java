@@ -2,7 +2,6 @@
 package test;
 
 import javax.persistence.EntityManager;
-
 import model.PetSitter;
 import utils.JPAUtil;
 
@@ -23,4 +22,4 @@ public class TestDB {
 	}
 
 }
->>>>>>> master
+//>>>>>>> master

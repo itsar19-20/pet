@@ -10,7 +10,7 @@ body {
 }
 
 .navbar{
-	background-color: #2E0300 !important;
+	background: #2E0300 !important;
 }
 
 .bg-primary{
@@ -19,6 +19,7 @@ body {
 
 .containerSuperior2{
 		background-color: #14a302;
+		
 }
 
 .display-4{
