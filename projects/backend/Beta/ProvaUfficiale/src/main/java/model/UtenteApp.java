@@ -12,6 +12,8 @@ public class UtenteApp extends Utente{
 	private String longitudine;
 	
 
+	public UtenteApp() {
+	}
 	
 	public String getDescrizione() {
 		return descrizione;
@@ -52,6 +54,16 @@ public class UtenteApp extends Utente{
 	public void setLongitudine(String longitudine) {
 		this.longitudine = longitudine;
 	}
+
+	@Override
+	public String toString() {
+		return "UtenteApp [descrizione=" + descrizione + ", attivo=" + attivo + ", bloccato=" + bloccato
+				+ ", latitudine=" + latitudine + ", longitudine=" + longitudine + "]";
+	}
+	
+	
+
+	
 	
 	
 

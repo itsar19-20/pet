@@ -1,12 +1,13 @@
 package model;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Utente {
@@ -15,13 +16,20 @@ public class Utente {
 	private String cognome;
 	@Id
 	private String username;
+	@JsonIgnore
 	private String password;
+	@Temporal(TemporalType.DATE)
 	private Date dataDiNascita;
+	@Temporal(TemporalType.DATE)
 	private Date dataRegistrazione;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dataOraUltimoLogin;
 	//@OneToMany
 	//private List<Email> emails;
 	
 	
+	public Utente() {
+	}
 	
 	
 	public String getNome() {
@@ -65,6 +73,24 @@ public class Utente {
 	}
 	public void setDataRegistrazione(Date dataRegistrazione) {
 		this.dataRegistrazione = dataRegistrazione;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Utente [nome=" + nome + ", cognome=" + cognome + ", username=" + username + ", dataDiNascita="
+				+ dataDiNascita + ", dataRegistrazione=" + dataRegistrazione + ", dataOraUltimoLogin="
+				+ dataOraUltimoLogin + "]";
+	}
+
+
+	public Date getDataOraUltimoLogin() {
+		return dataOraUltimoLogin;
+	}
+
+
+	public void setDataOraUltimoLogin(Date dataOraUltimoLogin) {
+		this.dataOraUltimoLogin = dataOraUltimoLogin;
 	}
 
 	
