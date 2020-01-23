@@ -26,6 +26,10 @@ body {
 	font-family: blippo;
 }
 
+.paragrafo-pubblicitario{
+	font-family: "Palatino Linotype","Book Antiqua",Palatino,serif
+}
+
 .btn{
 	background-color: #14a302 !important;
 	border-color: #14a302 !important;
