@@ -1,5 +1,6 @@
 package interfaces;
 
+import java.util.Date;
 import java.util.List;
 
 import model.Evento;
@@ -9,6 +10,7 @@ import model.Valutazione;
 
 public interface UtenteAppInterface {
 	
+
 	abstract List<Evento> visualizzaEventi(UtenteApp utente);
 	abstract void inviaSegnalazione(Segnalazione segnalazione);
 	abstract void inviaValutazione(Valutazione valutazione);
@@ -20,6 +22,11 @@ public interface UtenteAppInterface {
 	abstract UtenteApp cambiaTipoProfilo(String username);
 	abstract void refresh();
 	abstract void aggiungiEvento(UtenteApp organizzatore, List<UtenteApp> partecipanti, );
+  abstract List<Evento> visualizzaEventiUtente(UtenteApp utente);
+	abstract List<Evento> visualizzaTuttiEventi();
+
+	public abstract void nuovoEvento( String nomeEvento,  Date dataDiNascita, Date dataDiRegistrazione, String descrizione, String latitudine, String longitudine);
+
 	
 
 }
