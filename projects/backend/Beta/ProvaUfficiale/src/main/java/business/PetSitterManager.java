@@ -11,6 +11,7 @@ public class PetSitterManager implements PetSitterInterface {
 	public List<Evento> visualizzaEventi(UtenteApp utente) {
 		
 		
+		
 		return null;
 	}
 
