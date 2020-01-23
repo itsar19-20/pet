@@ -18,6 +18,9 @@ public class Segnalazione {
 	private UtenteApp segnalatore;
 	@OneToOne
 	private Annuncio annuncio;
+	@OneToOne
+	private Evento evento;
+	private String descrizione;
 	
 	
 	
@@ -45,6 +48,18 @@ public class Segnalazione {
 	}
 	public void setAnnuncio(Annuncio annuncio) {
 		this.annuncio = annuncio;
+	}
+	public String getDescrizione() {
+		return descrizione;
+	}
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+	public Evento getEvento() {
+		return evento;
+	}
+	public void setEvento(Evento evento) {
+		this.evento = evento;
 	}
 	
 	
