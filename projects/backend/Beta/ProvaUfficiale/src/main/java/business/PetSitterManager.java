@@ -6,13 +6,7 @@ import interfaces.PetSitterInterface;
 import model.Evento;
 import model.UtenteApp;
 
-public class PetSitterManager implements PetSitterInterface {
+public class PetSitterManager implements PetSitterInterface extends UtenteAppManager {
 
-	public List<Evento> visualizzaEventi(UtenteApp utente) {
-		
-		
-		
-		return null;
-	}
 
 }
