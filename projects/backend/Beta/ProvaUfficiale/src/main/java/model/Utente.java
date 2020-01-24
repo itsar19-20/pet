@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Utente {
 	
 	private String tipoUtente;
-	private Integer contatoreAccessiSbagliati;
+	private Integer contatoreAccessiSbagliati = 0;
 	
 	
 	private String nome;
