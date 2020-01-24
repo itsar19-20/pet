@@ -12,6 +12,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Utente {
 	
+	private String tipoUtente;
+	private Integer contatoreAccessiSbagliati;
+	
+	
 	private String nome;
 	private String cognome;
 	@Id
@@ -91,6 +95,26 @@ public class Utente {
 
 	public void setDataOraUltimoLogin(Date dataOraUltimoLogin) {
 		this.dataOraUltimoLogin = dataOraUltimoLogin;
+	}
+
+
+	public String getTipoUtente() {
+		return tipoUtente;
+	}
+
+
+	public void setTipoUtente(String tipoUtente) {
+		this.tipoUtente = tipoUtente;
+	}
+
+
+	public Integer getContatoreAccessiSbagliati() {
+		return contatoreAccessiSbagliati;
+	}
+
+
+	public void setContatoreAccessiSbagliati(Integer contatoreAccessiSbagliati) {
+		this.contatoreAccessiSbagliati = contatoreAccessiSbagliati;
 	}
 
 	
