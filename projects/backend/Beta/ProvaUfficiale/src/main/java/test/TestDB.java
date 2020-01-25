@@ -19,7 +19,6 @@ public class TestDB {
 		em.getTransaction().begin();
 		em.persist(ps);
 		em.getTransaction().commit();
-
 	}
 
 }
