@@ -20,8 +20,9 @@ public class Activity_login extends AppCompatActivity {
         //login.loadUrl("http://www.google.com");
         //login.loadUrl("https://bootsnipp.com/snippets/vl4R7");
         //login.loadUrl("https://bootsnipp.com/snippets/z8l2X");
-        login.loadUrl("https://pet/provaLogin");
-
+        //login.loadUrl("http://192.168.203.23:8080/ProvaUfficiale/provaLogin");
+        //login.loadUrl("http://localhost:8080/ProvaUfficiale/index.html");
+        login.loadUrl("http://192.168.203.83:8080/ProvaUfficiale/index.html");
         WebSettings webSettings = login.getSettings();
         webSettings.setJavaScriptEnabled(true);
     }
