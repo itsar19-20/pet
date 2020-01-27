@@ -48,6 +48,15 @@ body {
 .card-footer{
 	background-color: #2E0300;
 }
+.cardImg1{
+	width: 20% !important;
+	height: 20% !important;
+}
+
+.cardImg2-img-top{
+	width: 20% !important;
+	height: 30% !important;
+}
 
 .card{
 	border-color:#2E0300;

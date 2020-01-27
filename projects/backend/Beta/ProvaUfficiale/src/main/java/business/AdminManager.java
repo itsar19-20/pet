@@ -9,6 +9,7 @@ import interfaces.AdminInterface;
 import model.Annuncio;
 import model.Evento;
 import model.Segnalazione;
+import model.Utente;
 import model.UtenteApp;
 import model.Valutazione;
 import utils.JPAUtil;
@@ -25,6 +26,32 @@ public class AdminManager implements AdminInterface {
 		}
 		return _return;
 	}
+	
+	//GESTIONE UTENTI
+	public List<Utente> gestioneUtenti(){
+		List<Utente> _return = new ArrayList <Utente>();
+		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
+		
+		for (Utente utente : em.createQuery("select c from utente c", Utente.class).getResultList()) {
+			_return.add(utente);
+		}
+			return _return;
+	}
+	
+	//LISTA SEGNALAZIONI SINGOLO UTENTE
+	public List<Segnalazione> visualizzaSegnalazioniSingoloUtente(String username) {
+		List<Segnalazione> _return = new ArrayList<Segnalazione>();
+		EntityManager em_segnalazione = JPAUtil.getInstance().getEmf().createEntityManager();
+		EntityManager em_username = JPAUtil.getInstance().getEmf().createEntityManager();
+		Utente utente = em_username.find(Utente.class, username);
+		
+		for (Segnalazione s : em_segnalazione.createQuery("select id_username from segnalazione c", Segnalazione.class).getResultList()) {
+			//if (s==utente) {
+			_return.add(s);
+		}
+		return _return;
+		}
+//	}
 	
 	//BLOCCA/SBLOCCA UTENTI
 	public void bloccaSbloccaUtenti(String username) {
@@ -78,7 +105,8 @@ public class AdminManager implements AdminInterface {
 			EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 			Evento evento = em.find(Evento.class, id_evento);
 			String _return = evento.getDescrizione();
-			return _return;
-			
+			return _return;	
 		}
+		
+	//
 }
