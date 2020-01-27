@@ -22,7 +22,7 @@ public class Activity_login extends AppCompatActivity {
         //login.loadUrl("https://bootsnipp.com/snippets/z8l2X");
         //login.loadUrl("http://192.168.203.23:8080/ProvaUfficiale/provaLogin");
         //login.loadUrl("http://localhost:8080/ProvaUfficiale/index.html");
-        login.loadUrl("http://192.168.203.83:8080/ProvaUfficiale/index.html");
+        login.loadUrl("https://192.168.203.83:8080/ProvaUfficiale/index.html");
         WebSettings webSettings = login.getSettings();
         webSettings.setJavaScriptEnabled(true);
     }
