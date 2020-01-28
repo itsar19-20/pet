@@ -10,8 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity_scelta_start"/>
-        <!--<activity android:name=".Activity_login" />-->
+       <!-- <activity android:name=".Activity_scelta_start"/>
+        <activity android:name=".Activity_login" />-->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +21,8 @@
         </activity>
         <activity android:name=".Activity_login"
                     android:parentActivityName=".MainActivity"/>
-        <!--<activity android:name=".Activity_scelta_start"
-            android:parentActivityName=".Activity_login"/>-->
+        <activity android:name=".Activity_scelta_start"
+            android:parentActivityName=".Activity_login"/>
     </application>
 
 </manifest>

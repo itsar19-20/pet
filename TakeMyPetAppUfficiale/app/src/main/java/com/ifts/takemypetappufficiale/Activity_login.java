@@ -23,7 +23,7 @@ public class Activity_login extends AppCompatActivity {
         });
     }
     public void openActivity_scelta_start(){
-        Intent intent = new Intent(this, Activity_login.class);
+        Intent intent = new Intent(this, Activity_scelta_start.class);
         startActivity(intent);
     }
 }
