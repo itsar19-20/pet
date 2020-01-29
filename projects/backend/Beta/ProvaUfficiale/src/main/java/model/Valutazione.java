@@ -16,7 +16,7 @@ public class Valutazione {
 	private UtenteApp valutatore;
 	@OneToOne
 	private UtenteApp valutato;
-	private numeroOrme numeroOrme;
+	private float numeroOrme;
 	private String commento;
 	
 	
@@ -39,10 +39,10 @@ public class Valutazione {
 	public void setValutato(UtenteApp valutato) {
 		this.valutato = valutato;
 	}
-	public numeroOrme getNumeroOrme() {
+	public float getNumeroOrme() {
 		return numeroOrme;
 	}
-	public void setNumeroOrme(numeroOrme numeroOrme) {
+	public void setNumeroOrme(float numeroOrme) {
 		this.numeroOrme = numeroOrme;
 	}
 	public String getCommento() {
