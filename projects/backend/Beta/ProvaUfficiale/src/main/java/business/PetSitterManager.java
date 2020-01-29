@@ -1,17 +1,15 @@
+
 package business;
 
-import java.util.List;
+
+import javax.persistence.EntityManager;
 
 import interfaces.PetSitterInterface;
-import model.Evento;
-import model.UtenteApp;
 
-public class PetSitterManager implements PetSitterInterface {
+public abstract class PetSitterManager extends UtenteAppManager implements PetSitterInterface {
 
-	public List<Evento> visualizzaEventi(UtenteApp utente) {
-		
-		
-		return null;
+	
+
 	}
 
-}
+

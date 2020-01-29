@@ -1,7 +1,15 @@
 package interfaces;
 
 import java.util.List;
+<<<<<<< HEAD
+=======
 
+import model.Segnalazione;
+
+public interface AdminInterface {
+>>>>>>> refs/remotes/origin/master
+
+<<<<<<< HEAD
 import model.Segnalazione;
 import model.Utente;
 
@@ -25,4 +33,7 @@ public interface AdminInterface {
 	
 	
 	//abstract void logout();
+=======
+	abstract List<Segnalazione> visualizzaSegnalazioni();
+>>>>>>> refs/remotes/origin/master
 }
