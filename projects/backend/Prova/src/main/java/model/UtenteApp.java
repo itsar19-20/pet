@@ -1,12 +1,18 @@
 package model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 
 @Entity
 public class UtenteApp extends Utente{
 	
 	private String descrizione;
 	private boolean attivo;
+	private boolean bloccato;
+	@OneToMany
+	private List<Preferiti> preferiti;
 	
 	
 	
@@ -26,6 +32,22 @@ public class UtenteApp extends Utente{
 
 	public void setAttivo(boolean attivo) {
 		this.attivo = attivo;
+	}
+
+	public List<Preferiti> getPreferiti() {
+		return preferiti;
+	}
+
+	public void setPreferiti(List<Preferiti> preferiti) {
+		this.preferiti = preferiti;
+	}
+
+	public boolean isBloccato() {
+		return bloccato;
+	}
+
+	public void setBloccato(boolean bloccato) {
+		this.bloccato = bloccato;
 	}
 	
 	
