@@ -18,13 +18,16 @@ $(() => {
                     sessionStorage.setItem('user',JSON.stringify(utente));
                     location.href = './index.html'
                 }
+                if($(utente.contatoreAccessiSbagliati >= 10)){
+                    alert('Il tuo account è stato bloccato. Controlla la tua email per sbloccarlo.');
+                    localStorage.removeItem('user');
+                    sessionStorage.removeItem('user');
+                }
             if (utente == null) {
                 localStorage.removeItem('user');
                 sessionStorage.removeItem('user');
                 $('#haiSbagiato').show;
-                if($(utente.contatoreAccessiSbagliati >= 10)){
-                    alert('Il tuo account è stato bloccato. Controlla la tua email per sbloccarlo.')
-                }
+                
             }
             }
         })
