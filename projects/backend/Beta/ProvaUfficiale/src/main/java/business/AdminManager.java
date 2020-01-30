@@ -12,4 +12,10 @@ import utils.JPAUtil;
 
 public class AdminManager implements AdminInterface {
 
+	@Override
+	public List<Segnalazione> visualizzaSegnalazioni() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

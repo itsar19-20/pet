@@ -36,13 +36,13 @@ public class LoginManager implements LoginInterface {
 			}
 		}
 
-		Integer i = u.getContatoreAccessiSbagliati();
-		i++;
-		u.setContatoreAccessiSbagliati(i);
-		em.getTransaction().begin();
-		em.remove(em.find(Utente.class, username));
-		em.persist(u);
-		em.getTransaction().commit();
+//		Integer i = u.getContatoreAccessiSbagliati();
+//		i++;
+//		u.setContatoreAccessiSbagliati(i);
+//		em.getTransaction().begin();
+//		em.remove(em.find(Utente.class, username));
+//		em.persist(u);
+//		em.getTransaction().commit();
 		return null;
 
 	}

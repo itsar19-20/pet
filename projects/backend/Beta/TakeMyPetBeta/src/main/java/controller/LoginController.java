@@ -40,13 +40,12 @@ public class LoginController extends HttpServlet {
 		LoginManager lm = new LoginManager();
 
 		Utente u = lm.login(username, password);
-
 	
 			
 			response.setContentType("application/json");
 			response.getWriter().append(om.writeValueAsString(u));
 		
-		
+	
 
 	}
 

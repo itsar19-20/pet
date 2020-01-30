@@ -10,5 +10,23 @@ import model.Valutazione;
 
 public class ProprietarioManager extends UtenteAppManager implements ProprietarioInterface {
 
+	@Override
+	public void modificaProfilo(String username) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public UtenteApp cambiaTipoProfilo(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void partecipaEvento(Evento evento, UtenteApp partecipante) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }

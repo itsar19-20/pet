@@ -30,6 +30,7 @@ $(() => {
                     sessionStorage.setItem('user',JSON.stringify(utente));
                     location.href = './index.html'
                 }
+
             }
             if(!utente) {
             	localStorage.removeItem('user');
