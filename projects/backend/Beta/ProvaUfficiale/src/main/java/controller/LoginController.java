@@ -41,7 +41,7 @@ public class LoginController extends HttpServlet {
 
 		Utente u = lm.login(username, password);
 
-		if (u != null && u.getContatoreAccessiSbagliati() >= 10) {
+		if ((u != null) && (u.getContatoreAccessiSbagliati()) >= 10) {
 			u = null;
 			response.getWriter().append("");
 		} else {
