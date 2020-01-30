@@ -45,10 +45,11 @@ public class LoginController extends HttpServlet {
 			u = null;
 			response.getWriter().append("");
 		} else {
+
 			ObjectMapper om = new ObjectMapper();
 			response.setContentType("application/json");
 			response.getWriter().append(om.writeValueAsString(u));
-		}
+		//}
 
 	}
 

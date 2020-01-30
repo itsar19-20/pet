@@ -32,17 +32,17 @@ public class LoginManager implements LoginInterface {
 				em.getTransaction().commit();
 				
 				return u;
-			}
-			/*else {
-				Integer i = u.getContatoreAccessiSbagliati();
-				i++;
-				u.setContatoreAccessiSbagliati(i);
-				em.getTransaction().begin();
-				em.remove(em.find(Utente.class, username));
-				em.persist(u);
-				em.getTransaction().commit();
-				return null;
-			}*/
+				
+			} //else {
+				//Integer i = u.getContatoreAccessiSbagliati();
+				//i++;
+				//u.setContatoreAccessiSbagliati(i);
+				//em.getTransaction().begin();
+				//em.remove(em.find(Utente.class, username));
+				//em.persist(u);
+				//em.getTransaction().commit();
+				//return null;
+			//}
 		}
 
 		return null;
