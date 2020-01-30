@@ -36,18 +36,17 @@ public class LoginController extends HttpServlet {
 
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-
+		ObjectMapper om = new ObjectMapper();
 		LoginManager lm = new LoginManager();
 
 		Utente u = lm.login(username, password);
 
-		if (u.getContatoreAccessiSbagliati() >= 10) {
-			u = null;
-		} else {
-			ObjectMapper om = new ObjectMapper();
+	
+			
 			response.setContentType("application/json");
 			response.getWriter().append(om.writeValueAsString(u));
-		}
+		
+		
 
 	}
 

@@ -41,13 +41,13 @@ public class LoginController extends HttpServlet {
 
 		Utente u = lm.login(username, password);
 
-		if (u.getContatoreAccessiSbagliati() >= 10) {
-			u = null;
-		} else {
+		//if (u.getContatoreAccessiSbagliati() >= 10) {
+		//	u = null;
+		//} else {
 			ObjectMapper om = new ObjectMapper();
 			response.setContentType("application/json");
 			response.getWriter().append(om.writeValueAsString(u));
-		}
+		//}
 
 	}
 

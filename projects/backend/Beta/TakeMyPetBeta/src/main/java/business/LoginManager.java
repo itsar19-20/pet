@@ -17,9 +17,8 @@ public class LoginManager implements LoginInterface {
 		Utente u = em.find(Utente.class, username);
 
 		if (u != null) {
-
-			em.getTransaction().begin();
 			u.setDataOraUltimoLogin(new Date());
+			em.getTransaction().begin();
 			em.remove(em.find(Utente.class, username));
 			em.persist(u);
 			em.getTransaction().commit();
@@ -33,16 +32,18 @@ public class LoginManager implements LoginInterface {
 				em.getTransaction().commit();
 				
 				return u;
-			}
+				
+			} //else {
+				//Integer i = u.getContatoreAccessiSbagliati();
+				//i++;
+				//u.setContatoreAccessiSbagliati(i);
+				//em.getTransaction().begin();
+				//em.remove(em.find(Utente.class, username));
+				//em.persist(u);
+				//em.getTransaction().commit();
+				//return null;
+			//}
 		}
-
-		Integer i = u.getContatoreAccessiSbagliati();
-		i++;
-		u.setContatoreAccessiSbagliati(i);
-		em.getTransaction().begin();
-		em.remove(em.find(Utente.class, username));
-		em.persist(u);
-		em.getTransaction().commit();
 		return null;
 
 	}
