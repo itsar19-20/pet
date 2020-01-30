@@ -1,10 +1,11 @@
 $(() => {
-	if(localStorage.getItem('user') || sessionStorage.getItem('user')){
-        var utente_local = localStorage.getItem('user');
-        var utente_session = sessionStorage.getItem('user');
-       // ${utente_local.tipoUtente}
-        if((utente_session.tipoUtente).contentEquals("proprietario")){
-            $('#home').hide();
-        }
+	if(localStorage.getItem('user')){
+        var utente = localStorage.getItem('user');
+	} else {
+        var utente = sessionStorage.getItem('user');
 	}
+        $(utenteText).text('utente.username');
+        
+       
+	
 })

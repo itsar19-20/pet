@@ -22,15 +22,21 @@ $(() => {
                     sessionStorage.removeItem('user');
                     location.href = './index.html'
                   }
+            	
                 if($('#rememberCheck').checked) {
                     localStorage.setItem('user',JSON.stringify(utente));
-                    location.href = './index.html';
+                    //location.href = './index.html';
                 }
                 else {
                     sessionStorage.setItem('user',JSON.stringify(utente));
-                    location.href = './index.html'
+                    //location.href = './index.html'
                 }
-
+                if(utente.tipoUtente == "admin"){
+                	location.href = './no.html'
+                }else {
+                	location.href = './index.html'
+                }
+                
             }
             if(!utente) {
             	localStorage.removeItem('user');
