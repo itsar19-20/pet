@@ -9,9 +9,6 @@ $(() => {
                 password: $('#inputPassword').val()
             }
         })
-        
-        
-        
         .done((utente) => {
        
             if (utente) {
@@ -24,11 +21,19 @@ $(() => {
                   }
                 if($('#rememberCheck').checked) {
                     localStorage.setItem('user',JSON.stringify(utente));
-                    location.href = './index.html';
+                   
+                    if(utente.tipoUtente == "Admin"){
+                    	location.href = './admin.html';
+                    } else{location.href = './index.html';
+                    	}
                 }
                 else {
                     sessionStorage.setItem('user',JSON.stringify(utente));
-                    location.href = './index.html'
+                  
+                    if(utente.tipoUtente == "Admin"){
+                    	location.href = './admin.html';
+                    } else{location.href = './index.html';
+                    	}
                 }
 
             }

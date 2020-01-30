@@ -23,9 +23,9 @@ public class LoginManager implements LoginInterface {
 			em.persist(u);
 			em.getTransaction().commit();
 
-			if (u.getPassword().contentEquals(password) && !((UtenteApp) u).isBloccato()) {
+			if (u.getPassword().contentEquals(password)) { //&& !((UtenteApp) u).isBloccato()) {
 				u.setContatoreAccessiSbagliati(0);
-				((UtenteApp) u).setAttivo(true);
+				//((UtenteApp) u).setAttivo(true);
 				em.getTransaction().begin();
 				em.remove(em.find(Utente.class, username));
 				em.persist(u);
