@@ -12,16 +12,10 @@ import utils.JPAUtil;
 
 public class AdminManager implements AdminInterface {
 
+	@Override
 	public List<Segnalazione> visualizzaSegnalazioni() {
-		
-		List<Segnalazione> _return = new ArrayList();
-		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
-		
-		for(Segnalazione s : em.createQuery("select c from segnalazione c", Segnalazione.class).getResultList()) {
-			_return.add(s);
-		}
-			
-		return _return;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

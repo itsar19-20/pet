@@ -2,25 +2,20 @@ package test;
 
 import javax.persistence.EntityManager;
 
-import model.PetSitter;
+import model.Utente;
 import utils.JPAUtil;
 
-public class TestDB {
+public class TestRefreshDB {
 
 	public static void main(String[] args) {
+
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 		
-		PetSitter ps = new PetSitter();
-		
-		ps.setUsername("Giorgio");
-		ps.setPassword("password");
-		ps.setBloccato(true);
-		
-	
 		
 		em.getTransaction().begin();
-		em.refresh(ps);
+		em.refresh(em.find(Utente.class, "Giorgio"));
 		em.getTransaction().commit();
+		
 	}
 
 }

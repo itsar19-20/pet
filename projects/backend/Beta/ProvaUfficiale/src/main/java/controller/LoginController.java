@@ -1,57 +1,55 @@
 package controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import business.AuthenticationManager;
-import model.Admin;
-import model.PetSitter;
-import model.Proprietario;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import business.LoginManager;
 import model.Utente;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class LoginController
  */
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LoginController() {
-        super();
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("paginaLogin.html").forward(request, response);
-
-		AuthenticationManager am = new AuthenticationManager();
-		Utente u = am.login(request.getParameter("username"), request.getParameter("password"));
-		
-		if(u instanceof Admin) {
-			request.getRequestDispatcher("/admin.html").forward(request,response);
-		}
-		else if (u instanceof PetSitter || u instanceof Proprietario) {
-			request.getRequestDispatcher("/ok.html").forward(request,response);
-		}
-		else {
-			request.getRequestDispatcher("/no.html").forward(request, response);
-		}
+	public LoginController() {
+		super();
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+
+		LoginManager lm = new LoginManager();
+
+		Utente u = lm.login(username, password);
+
+		if ((u != null) && (u.getContatoreAccessiSbagliati()) >= 10) {
+			u = null;
+			response.getWriter().append("");
+		} else {
+			ObjectMapper om = new ObjectMapper();
+			response.setContentType("application/json");
+			response.getWriter().append(om.writeValueAsString(u));
+		}
+
 	}
 
 }
