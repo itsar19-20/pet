@@ -21,20 +21,16 @@ $(() => {
                   }
                 if($('#rememberCheck').checked) {
                     localStorage.setItem('user',JSON.stringify(utente));
-                   
-                    if(utente.tipoUtente == "Admin"){
-                    	location.href = './admin.html';
-                    } else{location.href = './index.html';
-                    	}
                 }
                 else {
                     sessionStorage.setItem('user',JSON.stringify(utente));
-                  
-                    if(utente.tipoUtente == "Admin"){
-                    	location.href = './admin.html';
-                    } else{location.href = './index.html';
-                    }
                 }
+                if(utente.tipoUtente == "admin"){
+                	location.href = './admin.html';
+                } else { 
+                	location.href = './index.html';
+                	}
+                
 
             }
             if(!utente) {
