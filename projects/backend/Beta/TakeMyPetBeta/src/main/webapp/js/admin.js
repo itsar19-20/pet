@@ -1,18 +1,16 @@
 $(() => {
 	$('#homepage_admin').click(() => {
 		location.href = './index.html';
-		$('#homepage_admin').active();
+		$($('nav-link')).active();
 	})
 	$('#gestioneUtenti_admin').click(() => {
-		$('#gestioneUtenti_admin').active();
+		$('nav-link').active();
 	})
-	$('#segnalazioni').click(() => {
-		location.href = './index.html';
-		$('#segnalazioni_admin').active();
+	$('#segnalazioni_admin').click(() => {
+		document.getElementById('segnalazioni_admin').style.background = '#14a302';
 	})
 	$('#statistiche_admin').click(() => {
-		location.href = './index.html';
-		$('#statistiche_admin').active();
+		$('nav-link').active();
 	})
 	
 })
