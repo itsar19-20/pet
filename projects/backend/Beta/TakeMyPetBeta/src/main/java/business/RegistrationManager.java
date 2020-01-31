@@ -1,12 +1,12 @@
 package business;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.persistence.EntityManager;
 
 import interfaces.RegistrationInterface;
 import model.Admin;
-import model.Animale;
 import model.PetSitter;
 import model.Proprietario;
 import model.Utente;
@@ -16,11 +16,13 @@ import utils.UtenteFactory;
 
 public class RegistrationManager implements RegistrationInterface {
 
-	public String registrazione(boolean doppioProfilo, String tipo, String nome, String cognome, String username, String password,
+	//MANCA DA SISTEMARE L' EMAIL
+	public String registrazione(boolean doppioProfilo, String tipo, String nome, String cognome,String email, String username, String password,
 			Date dataDiNascita, Date dataRegistrazione, String descrizione, String latitudine, String longitudine,
 			Date dataUltimoLogin) {
 
 		Utente u = UtenteFactory.creaUtente(tipo);
+		ArrayList<String> emails = new ArrayList<>();
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 
 		if (em.find(Utente.class, username) == null) {
@@ -33,6 +35,7 @@ public class RegistrationManager implements RegistrationInterface {
 				u.setPassword(password);
 				u.setDataDiNascita(dataDiNascita);
 				u.setDataRegistrazione(dataRegistrazione);
+				emails.add(email);
 			}
 
 			if (u instanceof PetSitter) {
