@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 $(() => {
         $('#logout').hide();
         $('#admin').hide();
@@ -30,4 +29,4 @@ $(() => {
             })
 	
 })
->>>>>>> branch 'master' of https://github.com/itsar19-20/pet.git
+
