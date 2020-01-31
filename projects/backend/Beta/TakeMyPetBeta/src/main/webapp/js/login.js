@@ -24,8 +24,9 @@ $(() => {
                 }
                 else {
                     sessionStorage.setItem('user',JSON.stringify(utente));
+
                 }
-                if(utente.tipoUtente == "Admin"){
+                if(utente.tipoUtente == "admin"){
                 	location.href = './admin.html';
                 } else { 
                 	location.href = './index.html';
