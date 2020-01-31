@@ -1,5 +1,6 @@
 $(() => {
         $('#logout').hide();
+        $('#admin').hide();
 
 	if(localStorage.getItem('user')) {
             var utente = JSON.parse(localStorage.getItem('user'));
@@ -15,6 +16,10 @@ $(() => {
             $('#logout').show();
         }
 
+        if(utente.tipoUtente == "admin") {
+            $('#admin').show();
+        }
+
 
         $('#logout').click(() => {
                 localStorage.removeItem('user');
@@ -23,8 +28,8 @@ $(() => {
             })
 	
 })
-    }
     
-})
+    
+
 
 
