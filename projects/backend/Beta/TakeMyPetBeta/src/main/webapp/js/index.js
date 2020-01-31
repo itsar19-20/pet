@@ -1,4 +1,11 @@
 $(() => {
+
+        $('#logout').hide();
+        $('#admin').hide();
+
+	if(localStorage.getItem('user')) {
+            var utente = JSON.parse(localStorage.getItem('user'));
+        }
         if(sessionStorage.getItem('user')) {
 	    var utente = JSON.parse(sessionStorage.getItem('user'));
 	}
@@ -10,6 +17,10 @@ $(() => {
             $('#logout').show();
         }
 
+        if(utente.tipoUtente == "admin") {
+            $('#admin').show();
+        }
+
 
         $('#logout').click(() => {
                 localStorage.removeItem('user');
@@ -18,6 +29,3 @@ $(() => {
             })
 	
 })
-    
-
-
