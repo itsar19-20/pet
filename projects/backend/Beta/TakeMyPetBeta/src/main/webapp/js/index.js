@@ -1,29 +1,30 @@
 $(() => {
-	if(localStorage.getItem('user') || sessionStorage.getItem('user')){
-        var utente_local = localStorage.getItem('user');
-        var utente_session = sessionStorage.getItem('user');
-       // ${utente_local.tipoUtente}
-        if((utente_session.tipoUtente).contentEquals("proprietario")){
-            $('#home').hide();
+        $('#logout').hide();
+
+	if(localStorage.getItem('user')) {
+            var utente = JSON.parse(localStorage.getItem('user'));
         }
+        if(sessionStorage.getItem('user')) {
+	    var utente = JSON.parse(sessionStorage.getItem('user'));
+	}
+      
+        if(localStorage.getItem('user') || sessionStorage.getItem('user')){
+            $('#ciaoUtente').text(` Ciao ${utente.username}`);
+            $('#registrati').hide();
+            $('#login').hide();
+            $('#logout').show();
+        }
+
+
+        $('#logout').click(() => {
+                localStorage.removeItem('user');
+                sessionStorage.removeItem('user')
+                location.href('./index.html')
+            })
+	
+})
     }
     
 })
 
 
-// Get the video
-var video = document.getElementById("myVideo");
-
-// Get the button
-var btn = document.getElementById("myBtn");
-
-// Pause and play the video, and change the button text
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
-}

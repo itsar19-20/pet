@@ -3,7 +3,7 @@ package test;
 import javax.persistence.EntityManager;
 
 import model.Admin;
-import model.PetSitter;
+import model.Proprietario;
 import utils.JPAUtil;
 
 public class TestDB {
@@ -12,16 +12,16 @@ public class TestDB {
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 		
 		Admin a = new Admin();
-		PetSitter ps = new PetSitter();
+		Proprietario ps = new Proprietario();
 		
 		ps.setUsername("alex");
 		ps.setPassword("password");
-		ps.setTipoUtente("Petsitter");
+		ps.setTipoUtente("proprietario");
 		ps.setBloccato(false);
 		ps.setAttivo(true);
-		a.setUsername("giorgio");
+		a.setUsername("ciccio");
 		a.setPassword("password");
-		a.setTipoUtente("Admin");
+		
 		
 	
 		
