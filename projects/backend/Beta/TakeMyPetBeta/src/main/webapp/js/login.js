@@ -61,7 +61,7 @@ function toggle(){
     if(state){
          document.getElementById("inputPassword").setAttribute("type","inputPassword");
         document.getElementById("eye-wrapper").style.boxShadow = '0 0 0 0px white';
-        document.getEl ementById("lock").style.fill = 'white';
+        document.getElelementById("lock").style.fill = 'white';
         document.getElementById("open").style.display= 'none';
          document.getElementById("close").style.display= 'block';
         state = false;
