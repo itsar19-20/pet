@@ -1,15 +1,7 @@
 $(() => {
 	$('#btnLogout').click(() => {
-			  location.href = './index.html';
-			  localStorage.clear();
-			  sessionStorage.clear();
+		localStorage.clear();
+		sessionStorage.clear();
+		location.href = './index.html';
 	})
 })
-
-              
-         // .fail(() => {
-             //   localStorage.removeItem('user');
-              //  sessionStorage.removeItem('user');
-              //  $('#haiSbagiato').show();
-         // })
-        
