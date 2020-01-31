@@ -33,7 +33,7 @@ $(() => {
                     if(utente.tipoUtente == "Admin"){
                     	location.href = './admin.html';
                     } else{location.href = './index.html';
-                    	}
+                    }
                 }
 
             }
