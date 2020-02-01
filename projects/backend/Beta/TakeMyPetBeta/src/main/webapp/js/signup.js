@@ -3,6 +3,12 @@ $(() => {
    $('#esisteGia').hide();
 
    $('#btnSignUp').click(() => {
+       if(($('#btnPetSitter').focus())){
+           var tipo = 'petsitter'
+       } 
+       else {
+           var tipo = 'proprietario'
+       }
 
     if(($('#inputPassword').val()) != ($('#inputConfermaPassword').val())) {
         $('#haiSbagliato').show();
@@ -15,7 +21,8 @@ $(() => {
                surname: $('#inputSurname').val(),
                email: $('#inputEmail').val(),
                username: $('#inputUsername').val(),
-               password: $('#inputPassword').val()
+               password: $('#inputPassword').val(),
+               type: tipo
 
            }
         })
