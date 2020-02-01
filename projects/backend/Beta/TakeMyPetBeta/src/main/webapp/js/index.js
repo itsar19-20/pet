@@ -1,5 +1,4 @@
 $(() => {
-
         $('#logout').hide();
         $('#admin').hide();
 
@@ -27,5 +26,6 @@ $(() => {
                 sessionStorage.removeItem('user')
                 location.href('./index.html')
             })
-	
+
 })
+

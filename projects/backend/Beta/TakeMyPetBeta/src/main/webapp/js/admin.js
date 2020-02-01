@@ -1,21 +1,15 @@
-$(() => {
-	$('nav').click(() => {
-		 $('nav-link').active();
-	})
+/*$(() => {
 	$('#homepage_admin').click(() => {
 		location.href = './index.html';
-		$('#homepage_admin').active();
+		document.getElementById('homepage_admin').style.color = '#eeeeee';
 	})
 	$('#gestioneUtenti_admin').click(() => {
-		$('#gestioneUtenti_admin').active();
+		document.getElementById('gestioneUtenti_admin').style.color = '#14a302';
 	})
-	$('#segnalazioni').click(() => {
-		location.href = './index.html';
-		$('#segnalazioni_admin').active();
+	$('#segnalazioni_admin').click(() => {
+		document.getElementById('segnalazioni_admin').style.background = '#eeeeee';
 	})
 	$('#statistiche_admin').click(() => {
-		location.href = './index.html';
-		$('#statistiche_admin').active();
-	})
+		document.getElementById('statistiche_admin').style.color = '#14a302';	})
 	
-})
+})*/
