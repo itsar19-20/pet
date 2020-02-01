@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 $(() => {
         $('#logout').hide();
         $('#admin').hide();
@@ -28,6 +26,6 @@ $(() => {
                 sessionStorage.removeItem('user')
                 location.href('./index.html')
             })
-	
+
 })
->>>>>>> branch 'master' of https://github.com/itsar19-20/pet.git
+
