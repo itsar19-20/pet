@@ -74,10 +74,6 @@ body {
   border-radius: 0;
 }
 
-#mychart{
-	color:  #14a302;
-}
-
 .form-control-dark {
   color: #fff;
   background-color: rgba(255, 255, 255, .1);

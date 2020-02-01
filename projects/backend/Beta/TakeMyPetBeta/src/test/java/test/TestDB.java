@@ -19,8 +19,10 @@ public class TestDB {
 		ps.setTipoUtente("proprietario");
 		ps.setBloccato(false);
 		ps.setAttivo(true);
-		a.setUsername("admin");
+
+		a.setUsername("giorgio");
 		a.setPassword("password");
+		a.setTipoUtente("admin");
 		
 		
 	
