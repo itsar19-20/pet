@@ -19,14 +19,14 @@ public class TestDB {
 		ps.setTipoUtente("proprietario");
 		ps.setBloccato(false);
 		ps.setAttivo(true);
-		a.setUsername("ciccio");
+		a.setUsername("admin");
 		a.setPassword("password");
 		
 		
 	
 		
 		em.getTransaction().begin();
-		em.persist(ps);
+		//em.persist(ps);
 		em.persist(a);
 		em.getTransaction().commit();
 	}
