@@ -47,10 +47,10 @@ public class RegistrationController extends HttpServlet {
 		String descrizione = null; //request.getParameter("descrizione");
 		String latitudine = null; //request.getParameter("latitudine");
 		String longitudine = null; //request.getParameter("longitudine");
-		String tipo = null; //request.getParameter ("tipo");
+		String tipo = request.getParameter ("type");
 		boolean doppioProfilo = false; // = request.getParameter("doppioprofilo");
 		
-		String controllo = rm.registrazione(doppioProfilo, "petsitter", nome, cognome, email, username, password, dataDiNascita, dataDiRegistrazione, descrizione, latitudine, longitudine, null);
+		String controllo = rm.registrazione(doppioProfilo, tipo, nome, cognome, email, username, password, dataDiNascita, dataDiRegistrazione, descrizione, latitudine, longitudine, null);
 		
 		
 		response.setContentType("application/json");
