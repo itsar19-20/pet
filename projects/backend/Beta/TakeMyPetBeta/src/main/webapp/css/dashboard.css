@@ -74,8 +74,8 @@ body {
   border-radius: 0;
 }
 
-#mychart{
-	color:  #14a302;
+#myChart{
+	style-color:  #14a302;
 }
 
 .form-control-dark {
