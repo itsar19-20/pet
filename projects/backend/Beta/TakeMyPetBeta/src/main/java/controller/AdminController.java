@@ -27,13 +27,13 @@ public class AdminController extends HttpServlet {
      */
     public AdminController() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {		
 
 			AdminManager am = new AdminManager();
 			List<UtenteApp> listaUtenti = new ArrayList<UtenteApp>();
