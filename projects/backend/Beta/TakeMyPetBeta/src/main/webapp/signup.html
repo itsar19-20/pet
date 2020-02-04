@@ -8,6 +8,7 @@
 <title>Bootstrap Start Free Trail Sign up Form</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="css/signup.css"></link>
 <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -15,102 +16,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/signup.js"></script>
-<style type="text/css">
-	body{
-		color: #999;
-		background: #e2e2e2;
-		font-family: 'Roboto', sans-serif;
-	}
-    #buttonsChoose {
-        margin-bottom: 10px;
-
-    }
-    #esisteGia {
-        color: red;
-    }
-    #haiSbagliato{
-        color: red;
-    }
-	.form-control{
-        font-size: medium;
-		min-height: 41px;
-		box-shadow: none;
-		border-color: #e1e1e1;
-	}
-	.form-control:focus{
-		border-color: #00cb82;
-	}
-    .form-control, .btn{
-        border-radius: 13px;
-    }
-	.form-header{
-		margin: -30px -30px 20px;
-		padding: 30px 30px 10px;
-		text-align: center;
-		background: #00cb82;
-		border-bottom: 1px solid #eee;
-		color: #fff;
-	}
-	.form-header h2{
-		font-size: 34px;
-		font-weight: bold;
-        margin: 0 0 10px;
-		font-family: 'Pacifico', sans-serif;
-    }
-	.form-header p{
-		margin: 20px 0 15px;
-		font-size: 17px;
-		line-height: normal;
-		font-family: 'Courgette', sans-serif;
-	}
-    .signup-form{
-		width: 390px;
-		margin: 0 auto;
-		padding: 30px 0;
-	}
-    .signup-form form{
-		color: #999;
-		border-radius: 3px;
-    	margin-bottom: 15px;
-        background: #f0f0f0;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-        padding: 30px;
-    }
-	.signup-form .form-group{
-		margin-bottom: 20px;
-	}
-	.signup-form label{
-		font-weight: normal;
-		font-size: 13px;
-	}
-    .signup-form input[type="checkbox"]{
-		margin-top: 2px;
-	}
-    .signup-form .btn{
-        font-size: 16px;
-        font-weight: bold;
-		background: #00cb82;
-		border: none;
-		min-width: 166px;
-    }
-	.signup-form .btn:hover, .signup-form .btn:focus{
-		background: #00b073 !important;
-        outline: none;
-	}
-    .signup-form a{
-		color: #00cb82;
-	}
-    .signup-form a:hover{
-		text-decoration: underline;
-	}
-</style>
 </head>
 <body>
+	  <!-- The video -->
+	  <video autoplay muted loop id="myVideo">
+		<source src="../immaginiPerWeb/caneApp.mp4" type="video/mp4">
+	  </video>
+	
 <div class="signup-form">
     <form action="/examples/actions/confirmation.php" method="post">
 		<div class="form-header">
 			<h2>Sign Up</h2>
-			<p>Take My Pet</p>
+			<p>TakeMyPet</p>
         </div>
         <label>Che tipo di utente sei?</label>
         <div class="btn-group btn-group-toggle" data-toggle="buttons" id="buttonsChoose">
