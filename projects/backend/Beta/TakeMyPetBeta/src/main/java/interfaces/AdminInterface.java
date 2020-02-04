@@ -3,6 +3,7 @@ package interfaces;
 import java.util.List;
 
 import model.Segnalazione;
+import model.Utente;
 import model.UtenteApp;
 
 public interface AdminInterface {
@@ -19,7 +20,7 @@ public interface AdminInterface {
 	
 	abstract void eliminaUtente(String username);
 	
-	abstract List<UtenteApp> visualizzaUtenti();
+	abstract List<Utente> visualizzaUtenti();
 	
 	abstract String visualizzaTestoEvento(Integer idEvento);
 	
@@ -33,5 +34,6 @@ public interface AdminInterface {
 	
 	abstract void eliminaValutazione(Integer idValutazione);
 	
+	abstract List<Object> statUtentiRegistratiDay();
 	
 }

@@ -20,7 +20,7 @@ public class TestDB {
 		ps.setBloccato(false);
 		ps.setAttivo(true);
 
-		a.setUsername("giorgio");
+		a.setUsername("admin");
 		a.setPassword("password");
 		a.setTipoUtente("admin");
 		
@@ -28,7 +28,7 @@ public class TestDB {
 	
 		
 		em.getTransaction().begin();
-		em.persist(ps);
+		//em.persist(ps);
 		em.persist(a);
 		em.getTransaction().commit();
 	}
