@@ -19,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
     @NamedQuery(name="utente.findByUsername",
                 query="SELECT c FROM Utente c WHERE c.username = :name"),
     @NamedQuery(name="utente.statRegistrazioneDay",
-    			query="SELECT c.username, c.dataRegistrazione , COUNT(c.username)AS dataReg FROM Utente c GROUP BY c.dataRegistrazione ORDER BY dataReg"),
+    			query="SELECT c.dataRegistrazione , COUNT(c.username)AS dataReg FROM Utente c WHERE NOT c.tipoUtente = 'admin' GROUP BY c.dataRegistrazione ORDER BY c.dataRegistrazione"),
 })
 public class Utente {
 	
