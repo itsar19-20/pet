@@ -15,6 +15,18 @@ $(() =>{
 						{title: 'Doppio profilo', data: 'doppioProfilo' },
 					]
 			    } );
+				
+				$('#tabella2').DataTable( {
+					data: listaUtenti,
+					columns: [
+						{title: 'Username', data: 'username'},
+						{title: 'Nome', data: 'nome' },
+						{title: 'Cognome', data: 'cognome' },
+						{title: 'Bloccato', data: 'bloccato' },
+						{title: 'Doppio profilo', data: 'doppioProfilo' },
+					]
+			    } );
 		}
 	})
 })
+
