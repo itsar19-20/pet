@@ -14,6 +14,8 @@
     <link href="css/dashboard.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/handsontable_css/handsontable.full.min.css">
 	<link rel="stylesheet" type="text/css" href="css/handsontable_css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
 </head>
 <body>
  <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
@@ -32,15 +34,15 @@
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
              <li class="nav-item">
-                <a class="nav-link active" href="#" id="spazioVuoto_admin">
-                 
+                <a class="nav-link" href="#" id="spazioVuoto_admin">
+
                 </a>
-                 <a class="nav-link active" href="#" id="spazioVuoto2_admin">
-                 
+                 <a class="nav-link" href="#" id="spazioVuoto2_admin">
+
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#" id="homepage_admin">
+                <a class="nav-link" href="#" id="homepage_admin">
                   <span data-feather="home"></span>
                   Homepage
                 </a>
@@ -52,7 +54,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" id="gestioneUtenti_admin">
+                <a class="nav-link" href="./gestioneUtenti.html" id="gestioneUtenti_admin">
                   <span data-feather="users"></span>
                   Gestione Utenti
                 </a>
@@ -85,8 +87,9 @@
           <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
 
           <h2>Gestione Utenti</h2>
-          
-          <div id="hot"></div>
+
+         <table id="tabella" class="display" style="width:100%"> </table>
+         <!-- <div id="hot"></div>-->
         </main>
       </div>
     </div>
@@ -95,10 +98,13 @@
  <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+    <script src="vendor/jsquery/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
@@ -107,341 +113,15 @@
     </script>
 
     <!-- Graphs -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="js/admin.js"></script>
     <script src="js/logout.js"></script>
     <script src="js/handsontable_JS/handsontable.full.min.js"></script>
-    
-    <script>
-      var ctx = document.getElementById("myChart");
-      var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          datasets: [{
-            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
-            lineTension: 0,
-            backgroundColor: 'transparent',
-            borderColor: '#14a302',
-            borderWidth: 4,
-            pointBackgroundColor: '#14a302'
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: false
-              }
-            }]
-          },
-          legend: {
-            display: false,
-          }
-        }
-      });
-    </script>
-<script>var dataObject = [
-  {
-    id: 1,
-    flag: 'EUR',
-    currencyCode: 'EUR',
-    currency: 'Euro',
-    level: 0.9033,
-    units: 'EUR / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0026
-  },
-  {
-    id: 2,
-    flag: 'JPY',
-    currencyCode: 'JPY',
-    currency: 'Japanese Yen',
-    level: 124.3870,
-    units: 'JPY / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0001
-  },
-  {
-    id: 3,
-    flag: 'GBP',
-    currencyCode: 'GBP',
-    currency: 'Pound Sterling',
-    level: 0.6396,
-    units: 'GBP / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.00
-  },
-  {
-    id: 4,
-    flag: 'CHF',
-    currencyCode: 'CHF',
-    currency: 'Swiss Franc',
-    level: 0.9775,
-    units: 'CHF / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0008
-  },
-  {
-    id: 5,
-    flag: 'CAD',
-    currencyCode: 'CAD',
-    currency: 'Canadian Dollar',
-    level: 1.3097,
-    units: 'CAD / USD',
-    asOf: '08/19/2019',
-    onedChng: -0.0005
-  },
-  {
-    id: 6,
-    flag: 'AUD',
-    currencyCode: 'AUD',
-    currency: 'Australian Dollar',
-    level: 1.3589,
-    units: 'AUD / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0020
-  },
-  {
-    id: 7,
-    flag: 'NZD',
-    currencyCode: 'NZD',
-    currency: 'New Zealand Dollar',
-    level: 1.5218,
-    units: 'NZD / USD',
-    asOf: '08/19/2019',
-    onedChng: -0.0036
-  },
-  {
-    id: 8,
-    flag: 'SEK',
-    currencyCode: 'SEK',
-    currency: 'Swedish Krona',
-    level: 8.5280,
-    units: 'SEK / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0016
-  },
-  {
-    id: 9,
-    flag: 'NOK',
-    currencyCode: 'NOK',
-    currency: 'Norwegian Krone',
-    level: 8.2433,
-    units: 'NOK / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0008
-  },
-  {
-    id: 10,
-    flag: 'BRL',
-    currencyCode: 'BRL',
-    currency: 'Brazilian Real',
-    level: 3.4806,
-    units: 'BRL / USD',
-    asOf: '08/19/2019',
-    onedChng: -0.0009
-  },
-  {
-    id: 11,
-    flag: 'CNY',
-    currencyCode: 'CNY',
-    currency: 'Chinese Yuan',
-    level: 6.3961,
-    units: 'CNY / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0004
-  },
-  {
-    id: 12,
-    flag: 'RUB',
-    currencyCode: 'RUB',
-    currency: 'Russian Rouble',
-    level: 65.5980,
-    units: 'RUB / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0059
-  },
-  {
-    id: 13,
-    flag: 'INR',
-    currencyCode: 'INR',
-    currency: 'Indian Rupee',
-    level: 65.3724,
-    units: 'INR / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0026
-  },
-  {
-    id: 14,
-    flag: 'TRY',
-    currencyCode: 'TRY',
-    currency: 'New Turkish Lira',
-    level: 2.8689,
-    units: 'TRY / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0092
-  },
-  {
-    id: 15,
-    flag: 'THB',
-    currencyCode: 'THB',
-    currency: 'Thai Baht',
-    level: 35.5029,
-    units: 'THB / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0044
-  },
-  {
-    id: 16,
-    flag: 'IDR',
-    currencyCode: 'IDR',
-    currency: 'Indonesian Rupiah',
-    level: 13.83,
-    units: 'IDR / USD',
-    asOf: '08/19/2019',
-    onedChng: -0.0009
-  },
-  {
-    id: 17,
-    flag: 'MYR',
-    currencyCode: 'MYR',
-    currency: 'Malaysian Ringgit',
-    level: 4.0949,
-    units: 'MYR / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0010
-  },
-  {
-    id: 18,
-    flag: 'MXN',
-    currencyCode: 'MXN',
-    currency: 'Mexican New Peso',
-    level: 16.4309,
-    units: 'MXN / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0017
-  },
-  {
-    id: 19,
-    flag: 'ARS',
-    currencyCode: 'ARS',
-    currency: 'Argentinian Peso',
-    level: 9.2534,
-    units: 'ARS / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0011
-  },
-  {
-    id: 20,
-    flag: 'DKK',
-    currencyCode: 'DKK',
-    currency: 'Danish Krone',
-    level: 6.7417,
-    units: 'DKK / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0025
-  },
-  {
-    id: 21,
-    flag: 'ILS',
-    currencyCode: 'ILS',
-    currency: 'Israeli New Sheqel',
-    level: 3.8262,
-    units: 'ILS / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0084
-  },
-  {
-    id: 22,
-    flag: 'PHP',
-    currencyCode: 'PHP',
-    currency: 'Philippine Peso',
-    level: 46.3108,
-    units: 'PHP / USD',
-    asOf: '08/19/2019',
-    onedChng: 0.0012
-  }
-];
-var currencyCodes = ['EUR', 'JPY', 'GBP', 'CHF', 'CAD', 'AUD', 'NZD', 'SEK', 'NOK', 'BRL', 'CNY', 'RUB', 'INR', 'TRY', 'THB', 'IDR', 'MYR', 'MXN', 'ARS', 'DKK', 'ILS', 'PHP'];
-var flagRenderer = function (instance, td, row, col, prop, value, cellProperties) {
-  var currencyCode = value;
-  while (td.firstChild) {
-    td.removeChild(td.firstChild);
-  }
-  if (currencyCodes.indexOf(currencyCode) > -1) {
-    var flagElement = document.createElement('DIV');
-    flagElement.className = 'flag ' + currencyCode.toLowerCase();
-    td.appendChild(flagElement);
-  } else {
-    var textNode = document.createTextNode(value === null ? '' : value);
-    td.appendChild(textNode);
-  }
-};
-var hotElement = document.querySelector('#hot');
-var hotElementContainer = hotElement.parentNode;
-var hotSettings = {
-  data: dataObject,
-  columns: [
-    {
-      data: 'id',
-      type: 'numeric',
-      width: 40
-    },
-    {
-      data: 'flag',
-			renderer: flagRenderer
-    },
-    {
-      data: 'currencyCode',
-      type: 'text'
-    },
-    {
-      data: 'currency',
-      type: 'text'
-    },
-    {
-      data: 'level',
-      type: 'numeric',
-      numericFormat: {
-        pattern: '0.0000'
-      }
-    },
-    {
-      data: 'units',
-      type: 'text'
-    },
-    {
-      data: 'asOf',
-      type: 'date',
-      dateFormat: 'MM/DD/YYYY'
-    },
-    {
-      data: 'onedChng',
-      type: 'numeric',
-      numericFormat: {
-        pattern: '0.00%'
-      }
-    }
-  ],
-  stretchH: 'all',
-  width: 805,
-  autoWrapRow: true,
-  height: 487,
-  <!--maxRows: 22,-->
-  rowHeaders: true,
-  colHeaders: [
-    'ID',
-    'Country',
-    'Code',
-    'Currency',
-    'Level',
-    'Units',
-    'Date',
-    'Change'
-  ]
-};
-var hot = new Handsontable(hotElement, hotSettings);
-</script>
-<script src="js/admin.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
+    <script src="js/handsontable_JS/tabellaDB.js"></script>
+    <script src="js/statAdmin.js"></script>
+
+
 </body>
 </html>

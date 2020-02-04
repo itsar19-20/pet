@@ -9,6 +9,7 @@ import interfaces.AdminInterface;
 import model.Annuncio;
 import model.Evento;
 import model.Segnalazione;
+import model.Utente;
 import model.UtenteApp;
 import model.Valutazione;
 import utils.JPAUtil;
@@ -85,11 +86,13 @@ public class AdminManager implements AdminInterface {
 	}
 
 	@Override
-	public List<UtenteApp> visualizzaUtenti() {
-		List<UtenteApp> _return = new ArrayList<UtenteApp>();
+	public List<Utente> visualizzaUtenti() {
+		List<Utente> _return = new ArrayList<Utente>();
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 
-		_return = em.createQuery("select c from utente c where c.tipo != admin").getResultList();
+		//_return = em.createQuery("select c from utente c", Utente.class).getResultList();
+		
+		_return = em.createNamedQuery("utente.findAll", Utente.class).getResultList();
 		return _return;
 	}
 
@@ -147,5 +150,13 @@ public class AdminManager implements AdminInterface {
 		em.getTransaction().commit();
 	}
 	
+	public List<Object> statUtentiRegistratiDay() {
+		List<Object> _return = new ArrayList<>();
+		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
+		
+		_return = em.createNamedQuery("utente.statRegistrazioneDay").getResultList();
 
+		return _return;
+	}
+	
 }

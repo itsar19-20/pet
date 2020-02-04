@@ -20,7 +20,7 @@ public class TestDB {
 		ps.setBloccato(false);
 		ps.setAttivo(true);
 
-		a.setUsername("giorgio");
+		a.setUsername("admin");
 		a.setPassword("password");
 		a.setTipoUtente("admin");
 		
