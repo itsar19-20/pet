@@ -51,7 +51,9 @@ public class RegistrationManager implements RegistrationInterface {
 				((UtenteApp) u).setLongitudine(longitudine);
 				((UtenteApp) u).setBloccato(false);
 				((UtenteApp) u).setAttivo(true);
+				((UtenteApp) u).setDoppioProfilo(doppioProfilo);
 				
+				/*
 				if(doppioProfilo) {
 					Proprietario u2 = (Proprietario) u;
 					u2.setTipoUtente("proprietario");
@@ -60,6 +62,7 @@ public class RegistrationManager implements RegistrationInterface {
 					em.getTransaction().commit();
 					
 				}
+				*/
 			}
 			
 			if(u instanceof Proprietario) {
@@ -75,14 +78,10 @@ public class RegistrationManager implements RegistrationInterface {
 				((UtenteApp) u).setLongitudine(longitudine);
 				((UtenteApp) u).setBloccato(false);
 				((UtenteApp) u).setAttivo(true);
+				((UtenteApp) u).setDoppioProfilo(doppioProfilo);
 				
 				//IL PROPRIETARIO E' AUTOMATICAMENTE UN PET SITTER!
 				
-				PetSitter u2 = (PetSitter) u;
-				u2.setTipoUtente("petsitter");
-				em.getTransaction().begin();
-				em.persist(u2);
-				em.getTransaction().commit();
 			}
 
 			em.getTransaction().begin();
