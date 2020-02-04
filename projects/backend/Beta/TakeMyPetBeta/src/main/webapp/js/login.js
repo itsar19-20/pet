@@ -1,3 +1,6 @@
+
+//aggiungere checkbox per doppio profilo (soloapp!!!)
+
 $(() => {
  	$('#haiSbagliato').hide();
     $('#btnLogin').click(() => {
@@ -10,9 +13,9 @@ $(() => {
             }
         })
         .done((utente) => {
-       
+
             if (utente) {
-           
+
             	if(utente.contatoreAccessiSbagliati >= 10){
                     alert('Il tuo account è stato bloccato. Controlla la tua email per sbloccarlo.')
                     localStorage.removeItem('user');
@@ -27,10 +30,10 @@ $(() => {
                 }
                 if(utente.tipoUtente == "admin"){
                 	location.href = './admin.html';
-                } else { 
+                } else {
                 	location.href = './index.html';
                 	}
-                
+
 
             }
             if(!utente) {
@@ -40,7 +43,7 @@ $(() => {
                 //location.href = './no.html'
             }
         })
-              
+
          // .fail(() => {
              //   localStorage.removeItem('user');
               //  sessionStorage.removeItem('user');
@@ -48,16 +51,16 @@ $(() => {
          // })
     })
 })
-            
-  // Get the video      
+
+  // Get the video
 var video = document.getElementById("myVideo");
 
 
 // Hiding the password
 
-alert("Try filling the password field and hit the eye button.");
+//alert("Try filling the password field and hit the eye button.");
 var state = false;
-function toggle(){    
+function toggle(){
     if(state){
          document.getElementById("inputPassword").setAttribute("type","inputPassword");
         document.getElementById("eye-wrapper").style.boxShadow = '0 0 0 0px white';

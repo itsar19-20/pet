@@ -2,13 +2,19 @@ $(() => {
    $('#haiSbagliato').hide();
    $('#esisteGia').hide();
 
+   var tipo;
+
+   $('#option3').change(tipo, () => {
+        tipo = 'proprietario';
+   });
+
+   $('#option1').change(tipo, ()=> {
+        tipo = 'petsitter';
+   });
+
    $('#btnSignUp').click(() => {
-       if(($('#btnPetSitter').focus())){
-           var tipo = 'petsitter'
-       } 
-       else {
-           var tipo = 'proprietario'
-       }
+
+    // SISTEMARE SE CAMPIVUOTI ATTENZIONE
 
     if(($('#inputPassword').val()) != ($('#inputConfermaPassword').val())) {
         $('#haiSbagliato').show();
@@ -28,7 +34,7 @@ $(() => {
         })
         .done((controllo) => {
            if(controllo) {
-               $('esisteGia').show();
+               $('#esisteGia').show();
             } else {
                 location.href = './login.html';
            }

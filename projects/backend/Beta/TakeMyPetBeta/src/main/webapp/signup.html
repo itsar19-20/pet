@@ -8,16 +8,14 @@
 <title>Bootstrap Start Free Trail Sign up Form</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+<link rel="stylesheet" href="css/signup.css"></link>
 <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/signup.js"></script>
-<link rel="stylesheet" href="css/signup.css"></link>
-
 </head>
 <body>
 	  <!-- The video -->
@@ -33,14 +31,14 @@
         </div>
         <label>Che tipo di utente sei?</label>
         <div class="btn-group btn-group-toggle" data-toggle="buttons" id="buttonsChoose">
-            <label class="btn btn-secondary active">
-            <input type="radio" name="options" id="option1" autocomplete="off" id="btnPetSitter"> PetSitter
+            <label class="btn btn-secondary active" id="btnPetSitterLabel">
+            <input type="radio" name="options" id="option1" autocomplete="off"> PetSitter
             </label>
-            <label class="btn btn-secondary">
-            <input type="radio" name="options" id="option3" autocomplete="off" id="btnProprietario"> Proprietario
+            <label class="btn btn-secondary" id="btnProprietarioLabel">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Proprietario
             </label>
         </div>
-        <div> 
+        <div>
             <p> </p>
         </div>
         <div class="form-group">
@@ -59,7 +57,7 @@
 			<label>Username</label>
         	<input type="text" class="form-control" name="username" id="inputUsername" required="required">
         </div>
-        <p id="esisteGia">L'username scelto esiste già</p> 
+        <p id="esisteGia" style="font-size: 15px;">L'username scelto esiste già</p>
 		<div class="form-group">
 			<label>Password</label>
             <input type="password" class="form-control" name="password" id="inputPassword" required="required">
@@ -68,17 +66,17 @@
 			<label>Confirm Password</label>
             <input type="password" class="form-control" name="confirm_password" id="inputConfermaPassword" required="required">
         </div>
-        <p id="haiSbagliato">Le password non corrispondono</p>        
+        <p id="haiSbagliato">Le password non corrispondono</p>
         <div class="form-group">
 			<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
 		</div>
 		<div class="form-group">
 			<button type="button" class="btn btn-primary btn-block btn-lg" id="btnSignUp" >Sign Up</button>
-		</div>	
+		</div>
     </form>
 	<div class="text-center small">Already have an account? <a href="./login.html">Login here</a></div>
 </div>
 
 
 </body>
-</html>                            
+</html>
