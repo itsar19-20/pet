@@ -10,6 +10,7 @@ public class UtenteApp extends Utente{
 	private boolean bloccato;
 	private String latitudine;
 	private String longitudine;
+	private boolean doppioProfilo;
 	
 
 	public UtenteApp() {
@@ -59,6 +60,14 @@ public class UtenteApp extends Utente{
 	public String toString() {
 		return "UtenteApp [descrizione=" + descrizione + ", attivo=" + attivo + ", bloccato=" + bloccato
 				+ ", latitudine=" + latitudine + ", longitudine=" + longitudine + "]";
+	}
+
+	public boolean isDoppioProfilo() {
+		return doppioProfilo;
+	}
+
+	public void setDoppioProfilo(boolean doppioProfilo) {
+		this.doppioProfilo = doppioProfilo;
 	}
 	
 	
