@@ -82,6 +82,10 @@ body{
     text-decoration: underline;
 }
 
+.text-center{
+    font-weight: normal;
+    font-size: 13px;
+} 
 
 
 /* Style the video: 100% width and height to cover the entire window */
