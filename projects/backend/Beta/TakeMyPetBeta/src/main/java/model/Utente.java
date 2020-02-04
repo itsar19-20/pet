@@ -4,12 +4,23 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+
 @Entity
+@NamedQueries({
+    @NamedQuery(name="utente.findAll",
+                query="SELECT c FROM Utente c WHERE NOT c.tipoUtente = 'admin'"),
+    @NamedQuery(name="utente.findByUsername",
+                query="SELECT c FROM Utente c WHERE c.username = :name"),
+    @NamedQuery(name="utente.statRegistrazioneDay",
+    			query="SELECT c.username, c.dataRegistrazione , COUNT(c.username)AS dataReg FROM Utente c GROUP BY c.dataRegistrazione ORDER BY dataReg"),
+})
 public class Utente {
 	
 	private String tipoUtente;
