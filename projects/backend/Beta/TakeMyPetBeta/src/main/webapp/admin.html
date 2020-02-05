@@ -66,7 +66,9 @@
                 </a>
                 <div id="mySidenav_gestioneUtenti" class="sidenav">
 				  <a href="javascript:void(0)" id="btnclose_gestioneUtenti" class="closebtn">&times;</a>
-				      <table id="tabella" class="display" style="width:100%"> </table>
+				      <table id="tabella" class="display" style="width:100%"> 
+				      
+				      </table>
 				</div>
               </li>
               <li class="nav-item">
@@ -97,10 +99,9 @@
               </button>
             </div>
           </div>
-
-
-          <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
-
+          
+         <div id="chartContainer" style="height:370px; width: 100%;"></div>
+          
           <h2>Gestione Utenti</h2>
            <table id="tabella2" class="display" style="width:100%"></table>
 
@@ -119,7 +120,7 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
 
-    <script src="vendor/jsquery/popper.min.js"></script>
+    <script src="vendor/jquery/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Icons -->
@@ -129,6 +130,9 @@
     </script>
 
     <!-- Graphs -->
+    
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script src="js/admin.js"></script>
