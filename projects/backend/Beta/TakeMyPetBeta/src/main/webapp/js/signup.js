@@ -2,7 +2,7 @@ $(() => {
    $('#haiSbagliato').hide();
    $('#esisteGia').hide();
 
-   var tipo;
+   var tipo = 'petsitter';
 
    $('#option3').change(tipo, () => {
         tipo = 'proprietario';
