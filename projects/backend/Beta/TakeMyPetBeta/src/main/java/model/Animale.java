@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Animale {
@@ -19,6 +20,8 @@ public class Animale {
 	private int eta;
 	private String dettagli;
 	private Date dataDiNascita;
+	@OneToOne
+	private Immagine immagine;
 	
 	
 	

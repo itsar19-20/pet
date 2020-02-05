@@ -1,3 +1,4 @@
+
 $(() =>{
     var dataPoints=[];
 
@@ -23,7 +24,7 @@ var options =  {
 };
 
 	$.ajax({
-		url: '/statistica',
+		url: '/statisticheAdmin',
 		method: 'get'
 	})
 	.done((stat) => {

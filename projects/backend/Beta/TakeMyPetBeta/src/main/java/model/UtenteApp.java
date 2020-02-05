@@ -1,10 +1,13 @@
 package model;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 
 @Entity
 public class UtenteApp extends Utente{
 	
+	@OneToOne
+	private Immagine immagineProfilo;
 	private String descrizione;
 	private boolean attivo;
 	private boolean bloccato;
@@ -68,6 +71,14 @@ public class UtenteApp extends Utente{
 
 	public void setDoppioProfilo(boolean doppioProfilo) {
 		this.doppioProfilo = doppioProfilo;
+	}
+
+	public Immagine getImmagineProfilo() {
+		return immagineProfilo;
+	}
+
+	public void setImmagineProfilo(Immagine immagineProfilo) {
+		this.immagineProfilo = immagineProfilo;
 	}
 	
 	

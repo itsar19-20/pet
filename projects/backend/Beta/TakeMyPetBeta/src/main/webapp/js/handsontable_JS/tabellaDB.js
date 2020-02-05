@@ -1,6 +1,6 @@
 $(() =>{
 	$.ajax({
-		url: '/AdminController',
+		url: '/listaUtentiAdmin',
 		method: 'get'
 	})
 	.done((listaUtenti) => {
@@ -29,4 +29,6 @@ $(() =>{
 		}
 	})
 })
+
+//aggiungere bottoni e date
 

@@ -17,7 +17,7 @@ import business.AdminManager;
 /**
  * Servlet implementation class StatAdminController
  */
-@WebServlet("/statistica")
+@WebServlet("/statisticheAdmin")
 public class StatAdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
