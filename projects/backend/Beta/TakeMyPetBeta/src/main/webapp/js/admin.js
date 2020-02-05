@@ -12,17 +12,31 @@ $(() => {
 		document.getElementById('statistiche_admin').style.color = '#14a302';
 		document.getElementById('gestioneUtenti_admin').style.color = '#333';
 		document.getElementById('segnalazioni_admin').style.color = '#333';
+		document.getElementById("mySidenav_statistiche").style.width = "100%";
 	})
 	$('#gestioneUtenti_admin').click(() => {
 		document.getElementById('homepage_admin').style.color = '#333';
 		document.getElementById('statistiche_admin').style.color = '#333';
 		document.getElementById('gestioneUtenti_admin').style.color = '#14a302';
 		document.getElementById('segnalazioni_admin').style.color = '#333';
+		document.getElementById("mySidenav_gestioneUtenti").style.width = "100%";
 	})
 	$('#segnalazioni_admin').click(() => {
 		document.getElementById('homepage_admin').style.color = '#333';
 		document.getElementById('statistiche_admin').style.color = '#333';
 		document.getElementById('gestioneUtenti_admin').style.color = '#333';
 		document.getElementById('segnalazioni_admin').style.color = '#14a302';
+		document.getElementById("mySidenav_segnalazioni").style.width = "100%";
+	})
+	
+	$('#btnclose_statistiche').click(() => {
+		 document.getElementById("mySidenav_statistiche").style.width = "0"
+	})
+	$('#btnclose_gestioneUtenti').click(() => {
+		document.getElementById("mySidenav_gestioneUtenti").style.width = "0";	
+	})
+	$('#btnclose_segnalazioni').click(() => {
+		document.getElementById("mySidenav_segnalazioni").style.width = "0";	
 	})
 })
+
