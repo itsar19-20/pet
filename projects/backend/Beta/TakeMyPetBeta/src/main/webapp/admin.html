@@ -12,10 +12,13 @@
 
     <!-- Custom styles for this template -->
     <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/navBar.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/handsontable_css/handsontable.full.min.css">
 	<link rel="stylesheet" type="text/css" href="css/handsontable_css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	
+	
+
 </head>
 <body>
  <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
@@ -35,10 +38,10 @@
             <ul class="nav flex-column">
              <li class="nav-item">
                 <a class="nav-link" href="#" id="spazioVuoto_admin">
-                 
+
                 </a>
                  <a class="nav-link" href="#" id="spazioVuoto2_admin">
-                 
+
                 </a>
               </li>
               <li class="nav-item">
@@ -52,18 +55,31 @@
                   <span data-feather="bar-chart-2"></span>
                   Statistiche
                 </a>
+                 <div id="mySidenav_statistiche" class="sidenav">
+				  <a href="javascript:void(0)" id="btnclose_statistiche" class="closebtn">&times;</a>
+				</div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" id="gestioneUtenti_admin">
+                <a class="nav-link" id="gestioneUtenti_admin">
                   <span data-feather="users"></span>
                   Gestione Utenti
                 </a>
+                <div id="mySidenav_gestioneUtenti" class="sidenav">
+				  <a href="javascript:void(0)" id="btnclose_gestioneUtenti" class="closebtn">&times;</a>
+				      <table id="tabella" class="display" style="width:100%"> 
+				      
+				      </table>
+				</div>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" id="segnalazioni_admin">
                   <span data-feather="layers"></span>
                   Segnalazioni
                 </a>
+                 <div id="mySidenav_segnalazioni" class="sidenav">
+				  <a href="javascript:void(0)" id="btnclose_segnalazioni" class="closebtn">&times;</a>
+				     <p>ciao</p>
+				</div>
               </li>
             </ul>
           </div>
@@ -83,33 +99,13 @@
               </button>
             </div>
           </div>
-
-          <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
-
-          <h2>Gestione Utenti</h2>
           
-         <table id="example" class="display" style="width:100%">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Extn.</th>
-            <th>Start date</th>
-            <th>Salary</th>
-        </tr>
-    </thead>
-    <tfoot>
-        <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Extn.</th>
-            <th>Start date</th>
-            <th>Salary</th>
-        </tr>
-    </tfoot>
-</table>
+         <div id="chartContainer" style="height:370px; width: 100%;"></div>
+          
+          <h2>Gestione Utenti</h2>
+           <table id="tabella2" class="display" style="width:100%"></table>
+
+
          <!-- <div id="hot"></div>-->
         </main>
       </div>
@@ -123,9 +119,9 @@
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
-  
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+
+    <script src="vendor/jquery/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
@@ -134,40 +130,19 @@
     </script>
 
     <!-- Graphs -->
+    
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="js/admin.js"></script>
     <script src="js/logout.js"></script>
     <script src="js/handsontable_JS/handsontable.full.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
+    <script src="js/handsontable_JS/tabellaDB.js"></script>
+    <script src="js/statAdmin.js"></script>
     
-    <script>
-      var ctx = document.getElementById("myChart");
-      var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          datasets: [{
-            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
-            lineTension: 0,
-            backgroundColor: 'transparent',
-            borderColor: '#14a302',
-            borderWidth: 4,
-            pointBackgroundColor: '#14a302'
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: false
-              }
-            }]
-          },
-          legend: {
-            display: false,
-          }
-        }
-      });
-    </script>
-<script src="js/admin.js"></script>
-<!-- <script src="js/handsontable_JS/tabellaDB.js"></script>-->
+
+
 </body>
 </html>

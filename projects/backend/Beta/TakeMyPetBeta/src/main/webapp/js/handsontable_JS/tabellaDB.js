@@ -1,28 +1,34 @@
 $(() =>{
 	$.ajax({
-		url: '/AdminController',
+		url: '/listaUtentiAdmin',
 		method: 'get'
 	})
 	.done((listaUtenti) => {
 		if(listaUtenti){
-			var dataObject = listaUtenti;
-			
-			$(document).ready(function() {
-			    var table = $('#example').DataTable( {
-			        "ajax": dataObject,
-			        "columnDefs": [ {
-			            "targets": -1,
-			            "data": null,
-			            "defaultContent": "<button>Click!</button>"
-			        } ]
+				$('#tabella').DataTable( {
+					data: listaUtenti,
+					columns: [
+						{title: 'Username', data: 'username'},
+						{title: 'Nome', data: 'nome' },
+						{title: 'Cognome', data: 'cognome' },
+						{title: 'Bloccato', data: 'bloccato' },
+						{title: 'Doppio profilo', data: 'doppioProfilo' },
+					]
 			    } );
-			 
-			    $('#example tbody').on( 'click', 'button', function () {
-			        var data = table.row( $(this).parents('tr') ).data();
-			        alert( data[0] +"'s salary is: "+ data[ 5 ] );
+				
+				$('#tabella2').DataTable( {
+					data: listaUtenti,
+					columns: [
+						{title: 'Username', data: 'username'},
+						{title: 'Nome', data: 'nome' },
+						{title: 'Cognome', data: 'cognome' },
+						{title: 'Bloccato', data: 'bloccato' },
+						{title: 'Doppio profilo', data: 'doppioProfilo' },
+					]
 			    } );
-			} );
 		}
 	})
 })
-		
+
+//aggiungere bottoni e date
+

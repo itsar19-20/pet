@@ -13,44 +13,33 @@ import javax.servlet.http.HttpServletResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import business.AdminManager;
-import model.Utente;
 
 /**
- * Servlet implementation class AdminController
+ * Servlet implementation class StatAdminController
  */
-@WebServlet("/listaUtentiAdmin")
-public class AdminController extends HttpServlet {
+@WebServlet("/statisticheAdmin")
+public class StatAdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminController() {
+    public StatAdminController() {
         super();
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		List<Object> lista = new ArrayList<>();
 		AdminManager am = new AdminManager();
-		List<Utente> listaUtenti = new ArrayList<Utente>();
 		ObjectMapper om = new ObjectMapper();
-		listaUtenti = am.visualizzaUtenti();
+		
+		lista = am.statUtentiRegistratiDay();
 		
 		response.setContentType("application/json");
-		response.getWriter().append(om.writeValueAsString(listaUtenti));
-		
-		
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		response.getWriter().append(om.writeValueAsString(lista));
 	}
 
 }
