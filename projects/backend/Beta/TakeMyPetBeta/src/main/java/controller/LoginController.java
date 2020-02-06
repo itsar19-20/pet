@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import business.LoginManager;
@@ -19,7 +22,7 @@ import model.Utente;
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	private static Logger log=LoggerFactory.getLogger(AdminController.class);
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */

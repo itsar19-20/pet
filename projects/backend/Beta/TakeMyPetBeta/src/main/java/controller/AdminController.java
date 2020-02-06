@@ -38,7 +38,7 @@ public class AdminController extends HttpServlet {
 	 */
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		log.debug("L' AdminController funziona.");
+		log.debug("L'AdminController funziona.");
 
 		AdminManager am = new AdminManager();
 		List<Utente> listaUtenti = new ArrayList<Utente>();
