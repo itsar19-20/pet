@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import business.AdminManager;
@@ -21,7 +24,7 @@ import model.Utente;
 @WebServlet("/listaUtentiAdmin")
 public class AdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+	private static Logger log=LoggerFactory.getLogger(AdminController.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -35,6 +38,7 @@ public class AdminController extends HttpServlet {
 	 */
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		log.debug("L' AdminController funziona.");
 
 		AdminManager am = new AdminManager();
 		List<Utente> listaUtenti = new ArrayList<Utente>();
