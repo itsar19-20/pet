@@ -5,9 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Roboto|Courgette|Pacifico:400,700" rel="stylesheet">
-<title>Bootstrap Start Free Trail Sign up Form</title>
+<title>Sign Up</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="css/upload.css"></link>
 <link rel="stylesheet" href="css/signup.css"></link>
 <script
   src="https://code.jquery.com/jquery-3.4.1.js"
@@ -16,6 +17,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/signup.js"></script>
+<script src="js/upload.js"></script>
 </head>
 <body>
 	  <!-- The video -->
@@ -67,6 +69,32 @@
             <input type="password" class="form-control" name="confirm_password" id="inputConfermaPassword" required="required">
         </div>
         <p id="haiSbagliato">Le password non corrispondono</p>
+
+
+
+
+          <!-- UPLOAD IMMAGINE -->
+
+        <div class="row">
+          <div class="small-12 medium-2 large-2 columns">
+            <div class="circle">
+              <!-- User Profile Image -->
+              <img class="profile-pic" src="http://cdn.cutestpaw.com/wp-content/uploads/2012/07/l-Wittle-puppy-yawning.jpg">
+
+              <!-- Default Image -->
+              <!-- <i class="fa fa-user fa-5x"></i> -->
+            </div>
+            <div class="p-image">
+              <i class="fa fa-camera upload-button"></i>
+               <input id="inputImmagine" class="file-upload" type="file" accept="image/*"/>
+            </div>
+         </div>
+       </div>
+
+
+
+
+
         <div class="form-group">
 			<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
 		</div>

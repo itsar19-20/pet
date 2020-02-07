@@ -15,13 +15,14 @@ public interface UtenteAppInterface {
 	//abstract void usaChat();
 	abstract UtenteApp visualizzaProfilo(String username); //
 	//abstract void logout(String username);
-	abstract void modificaProfilo(String username);
-	abstract UtenteApp cambiaTipoProfilo(String username);
+	//abstract void modificaProfilo(String username);
+	//abstract UtenteApp cambiaTipoProfilo(String username);
 	//abstract void refresh();
     abstract List<Evento> visualizzaEventiUtente(UtenteApp utente); //
 	abstract List<Evento> visualizzaTuttiEventi(); //
 	abstract void nuovoEvento(String nomeEvento,  Date dataEvento, String descrizione, String latitudine, String longitudine, UtenteApp organizzatore);//
-	abstract void partecipaEvento(Evento evento, UtenteApp partecipante); //
+	//abstract void partecipaEvento(Evento evento, UtenteApp partecipante); 
+	abstract void inserisciImmagine(String username, byte[] bytearray);
 
 	
 

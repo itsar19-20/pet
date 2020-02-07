@@ -12,12 +12,9 @@
 
     <!-- Custom styles for this template -->
     <link href="css/dashboard.css" rel="stylesheet">
-    <link href="css/navBar.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/handsontable_css/handsontable.full.min.css">
 	<link rel="stylesheet" type="text/css" href="css/handsontable_css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	
-	
 
 </head>
 <body>
@@ -55,29 +52,18 @@
                   <span data-feather="bar-chart-2"></span>
                   Statistiche
                 </a>
-                 <div id="mySidenav_statistiche" class="sidenav">
-				  <a href="javascript:void(0)" id="btnclose_statistiche" class="closebtn">&times;</a>
-				</div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="gestioneUtenti_admin">
+                <a class="nav-link" href="./gestioneUtenti.html" id="gestioneUtenti_admin">
                   <span data-feather="users"></span>
                   Gestione Utenti
                 </a>
-                <div id="mySidenav_gestioneUtenti" class="sidenav">
-				  <a href="javascript:void(0)" id="btnclose_gestioneUtenti" class="closebtn">&times;</a>
-				      <table id="tabella" class="display" style="width:100%"> </table>
-				</div>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" id="segnalazioni_admin">
                   <span data-feather="layers"></span>
                   Segnalazioni
                 </a>
-                 <div id="mySidenav_segnalazioni" class="sidenav">
-				  <a href="javascript:void(0)" id="btnclose_segnalazioni" class="closebtn">&times;</a>
-				     <p>ciao</p>
-				</div>
               </li>
             </ul>
           </div>
@@ -98,13 +84,11 @@
             </div>
           </div>
 
-
-          <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
+          <div id="chartContainer" style="height: 370px; width: 100%;"></div>
 
           <h2>Gestione Utenti</h2>
-           <table id="tabella2" class="display" style="width:100%"></table>
 
-
+         <table id="tabella" class="display" style="width:100%"> </table>
          <!-- <div id="hot"></div>-->
         </main>
       </div>
@@ -119,7 +103,7 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
 
-    <script src="vendor/jsquery/popper.min.js"></script>
+    <script src="vendor/jquery/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Icons -->
@@ -130,14 +114,14 @@
 
     <!-- Graphs -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
     <script src="js/admin.js"></script>
     <script src="js/logout.js"></script>
-    <script src="js/handsontable_JS/handsontable.full.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
     <script src="js/handsontable_JS/tabellaDB.js"></script>
     <script src="js/statAdmin.js"></script>
-    
 
 
 </body>

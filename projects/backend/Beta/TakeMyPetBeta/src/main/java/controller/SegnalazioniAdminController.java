@@ -16,19 +16,20 @@ import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import business.AdminManager;
+import model.Segnalazione;
 
 /**
- * Servlet implementation class StatAdminController
+ * Servlet implementation class SegnalazioniAdminController
  */
-@WebServlet("/statisticheAdmin")
-public class StatAdminController extends HttpServlet {
+@WebServlet("/segnalazioniAdmin")
+public class SegnalazioniAdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static Logger log = LoggerFactory.getLogger(StatAdminController.class);
+	private static Logger log = LoggerFactory.getLogger(SegnalazioniAdminController.class);
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public StatAdminController() {
+    public SegnalazioniAdminController() {
         super();
     }
 
@@ -36,18 +37,17 @@ public class StatAdminController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Object> lista = new ArrayList<>();
 		AdminManager am = new AdminManager();
+		List<Segnalazione> listaS = new ArrayList<>();
 		ObjectMapper om = new ObjectMapper();
 		
-		log.debug("StatAdminController Pronto");
+		log.debug("SegnalazioniAdminController Pronto");
 		
-		lista = am.statUtentiRegistratiDay();
-		
+		listaS = am.visualizzaSegnalazioni();
 		response.setContentType("application/json");
-		response.getWriter().append(om.writeValueAsString(lista));
+		response.getWriter().append(om.writeValueAsString(listaS));
 		
-		log.debug("StatAdminController Funziona");
+		log.debug("SegnalazioniAdminController Funziona");
 		
 	}
 

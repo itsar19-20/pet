@@ -16,7 +16,7 @@ $(() => {
 
             if (utente) {
 
-            	if(utente.contatoreAccessiSbagliati >= 10){
+            	if(utente.bloccato){
                     alert('Il tuo account è stato bloccato. Controlla la tua email per sbloccarlo.')
                     localStorage.removeItem('user');
                     sessionStorage.removeItem('user');
