@@ -1,0 +1,44 @@
+@charset "ISO-8859-1";
+.display{
+	border = 10px;
+	border-color: #14a302;
+}
+.btnEdit{
+	background-color: #14a302;
+    padding-right: 8px;
+    padding-left: 8px;
+    margin-left: 23px;
+    display: inline-block;
+}
+#btnElimina{
+	background-color: red !important;
+	margin-left: 140px;
+}
+#btnBlocca{
+	background-color: orange !important;
+}
+#tabella{
+	border-color: #000000 !important;
+	color: #000000 ;
+	border-collapse: inherit !important;
+}
+#tabella2{
+	border-color: #14a302 !important;
+	color: #000000;
+	border-collapse: inherit !important;
+}
+#tabella2 .odd{
+	height: 49;
+	whidh: 227px !important;
+}
+
+#tabella_info{
+	font-size: 30px;
+	color: #000000;
+}
+#tabella .sorting:1{
+	text-size: 10px;
+}
+.pagination{
+	margin-top: 60px;
+}
