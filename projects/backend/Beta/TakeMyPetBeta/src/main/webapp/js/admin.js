@@ -38,5 +38,10 @@ $(() => {
 	$('#btnclose_segnalazioni').click(() => {
 		document.getElementById("mySidenav_segnalazioni").style.width = "0";	
 	})
+	
+	//prova
+	$('.sorting_1').click(() => {
+				document.getElementById("mySidenav_gestioneUtenti").style.width = "100%";
+	})
 })
 
