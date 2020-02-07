@@ -11,8 +11,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.security.ntlm.Server;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 import business.UtenteAppManager;
 import model.Evento;
@@ -24,7 +29,7 @@ import model.UtenteApp;
 @WebServlet("/getImmagine")
 public class ImmagineController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	private static Logger log=LoggerFactory.getLogger(AdminController.class);
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -38,7 +43,7 @@ public class ImmagineController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UtenteAppManager uam = new UtenteAppManager() {};
 		UtenteApp utente = new UtenteApp();
-
+		log.debug("L'ImmagineController funziona.");
 		
 		String username = request.getParameter("username");
 		utente = uam.visualizzaProfilo(username);

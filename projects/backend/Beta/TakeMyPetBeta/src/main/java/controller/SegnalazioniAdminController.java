@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import business.AdminManager;
@@ -21,7 +24,7 @@ import model.Segnalazione;
 @WebServlet("/segnalazioniAdmin")
 public class SegnalazioniAdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	private static Logger log=LoggerFactory.getLogger(AdminController.class); 
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -33,9 +36,12 @@ public class SegnalazioniAdminController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		log.debug("Il SegnalazioniAdminController funziona.");
 		AdminManager am = new AdminManager();
 		List<Segnalazione> listaS = new ArrayList<>();
 		ObjectMapper om = new ObjectMapper();
+		
+		
 		
 		listaS = am.visualizzaSegnalazioni();
 		response.setContentType("application/json");
