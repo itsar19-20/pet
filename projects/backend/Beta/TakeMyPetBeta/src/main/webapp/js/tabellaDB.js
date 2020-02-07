@@ -1,6 +1,6 @@
 $(() =>{
 	$.ajax({
-		url: '/AdminController',
+		url: '/listaUtentiAdmin',
 		method: 'get'
 	})
 	.done((listaUtenti) => {
@@ -40,7 +40,7 @@ $(() =>{
 				var data_row = table.row($(this).closest('tr')).data();
 
 				$.ajax({
-					url: '/AdminController',
+					url: '/listaUtentiAdmin',
 					method: 'post',
 					data: {
 						username: data_row.username,
@@ -59,7 +59,7 @@ $(() =>{
 				var data_row = tableDue.row($(this).closest('tr')).data();
 
 				$.ajax({
-					url: '/AdminController',
+					url: '/listaUtentiAdmin',
 					method: 'post',
 					data: {
 						username: data_row.username,
@@ -78,7 +78,7 @@ $(() =>{
 				var data_row = tableDue.row($(this).closest('tr')).data();
 
 				$.ajax({
-					url: '/AdminController',
+					url: '/listaUtentiAdmin',
 					method: 'post',
 					data: {
 						username: data_row.username,
@@ -97,7 +97,7 @@ $(() =>{
 				var data_row = tableDue.row($(this).closest('tr')).data();
 
 				$.ajax({
-					url: '/AdminController',
+					url: '/listaUtentiAdmin',
 					method: 'post',
 					data: {
 						username: data_row.username,
@@ -143,7 +143,7 @@ $(() =>{
 				var data_row = tableDue.row($(this).closest('tr')).data();
 
 				$.ajax({
-					url: '/AdminController',
+					url: '/listaUtentiAdmin',
 					method: 'post',
 					data: {
 						username: data_row.username,
@@ -162,7 +162,7 @@ $(() =>{
 				var data_row = tableDue.row($(this).closest('tr')).data();
 
 				$.ajax({
-					url: '/AdminController',
+					url: '/listaUtentiAdmin',
 					method: 'post',
 					data: {
 						username: data_row.username,
@@ -181,7 +181,7 @@ $(() =>{
 				var data_row = tableDue.row($(this).closest('tr')).data();
 
 				$.ajax({
-					url: '/AdminController',
+					url: '/listaUtentiAdmin',
 					method: 'post',
 					data: {
 						username: data_row.username,
