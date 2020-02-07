@@ -40,5 +40,6 @@ var options =  {
 
         }
         $("#chartContainer").CanvasJSChart(options);
+        $("#chartContainer2").CanvasJSChart(options);
 	})
 })

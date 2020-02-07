@@ -1,0 +1,125 @@
+$(() =>{
+	$.ajax({
+		url: '/AdminController',
+		method: 'get'
+	})
+	.done((listaUtenti) => {
+		if(listaUtenti){
+			$('#tabella').DataTable( {
+				data: listaUtenti,
+				columns: [
+					{title: 'Username', data: 'username'},
+					{title: 'Nome', data: 'nome' },
+					{title: 'Cognome', data: 'cognome' },
+					{title: 'Bloccato', data: 'bloccato' },
+					{title: 'Doppio profilo', data: 'doppioProfilo' },
+					{title: 'Stato',data: null,
+						render: function (data, type, row) {
+							return '<button id="btnAggiunto" class="btnEdit btn btn-primary btn-sm">Modifica</button>';
+							//  return '<button id="btnAggiunto" class="btnEdit btn btn-primary btn-sm">Modifica</button>';
+
+						}
+					},
+					]
+			} );
+			table = $('#tabella').DataTable({
+				retrieve: true,
+				paging: false
+			});
+
+			$('#tabella tbody').on('click', '#btnAggiunto', function () {
+				var data_row = table.row($(this).closest('tr')).data();
+
+				$.ajax({
+					url: '/AdminController',
+					method: 'post',
+					data: {
+						username: data_row.username,
+						controllo: 'elimina'
+					},
+				}).done((risposta) => {
+					if (risposta) {
+						location.href = './admin.html';
+					}
+				}).fail(() => {
+					alert("Qualcosa e' andato storto!")
+				})
+			});
+
+			var rows = $('#tabella2').DataTable( {
+				data: listaUtenti,
+				columns: [
+					{title: 'Username', data: 'username'},
+					{title: 'Nome', data: 'nome' },
+					{title: 'Cognome', data: 'cognome' },
+					{title: 'Bloccato', data: 'bloccato' },
+					{title: 'Doppio profilo', data: 'doppioProfilo' },
+					{data: null,
+						render: function (data, type, row) {
+							return '<button	id="btnElimina" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Elimina</button><button id="btnBlocca" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Blocca</button><button id="btnSblocca" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Sblocca</button>';
+                            
+
+						}
+					},
+					]
+			} );
+			
+			 /**Serve perche la tabella da errore quando viene chiamata */
+			tableDue = $('#tabella2').DataTable({
+				retrieve: true,
+				paging: false
+			});
+			 /** Funzione onClick per bottone Cancella */
+			$('#tabella2 tbody').on('click', '#btnElimina', function () {
+				var data_row = tableDue.row($(this).closest('tr')).data();
+
+				$.ajax({
+					url: '/AdminController',
+					method: 'post',
+					data: {
+						username: data_row.username,
+						controllo: 'elimina'
+					},
+				}).done(() => {
+						location.href = './admin.html';
+				}).fail(() => {
+					alert("Qualcosa e' andato storto!")
+				})
+			});	
+			$('#tabella2 tbody').on('click', '#btnBlocca', function () {
+				var data_row = tableDue.row($(this).closest('tr')).data();
+
+				$.ajax({
+					url: '/AdminController',
+					method: 'post',
+					data: {
+						username: data_row.username,
+						controllo: 'blocca'
+					},
+				}).done(() => {
+						location.href = './admin.html';
+				}).fail(() => {
+					alert("Qualcosa e' andato storto!")
+				})
+			});	
+			
+			$('#tabella2 tbody').on('click', '#btnSblocca', function () {
+				var data_row = tableDue.row($(this).closest('tr')).data();
+
+				$.ajax({
+					url: '/AdminController',
+					method: 'post',
+					data: {
+						username: data_row.username,
+						controllo: 'attiva'
+					},
+				}).done(() => {
+						location.href = './admin.html';
+				}).fail(() => {
+					alert("Qualcosa e' andato storto!")
+				})
+			});	
+		}
+	})
+})
+
