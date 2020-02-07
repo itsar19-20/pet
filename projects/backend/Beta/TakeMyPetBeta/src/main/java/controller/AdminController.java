@@ -50,7 +50,28 @@ public class AdminController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		
+		AdminManager am = new AdminManager();
+		String controllo = request.getParameter("controllo");
+		String username = request.getParameter("username");
+		
+		switch (controllo) {
+		
+		case "blocca":
+			am.bloccaUtente(username);
+			break;
+			
+		case "attiva":
+			am.riattivaUtente(username);
+			break;
+			
+		case "elimina":
+			am.eliminaUtente(username);
+			break;
+			
+		default:
+			break;
+		}
 	}
 
 }
