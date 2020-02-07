@@ -36,7 +36,7 @@ public class ImmagineController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UtenteAppManager uam = new UtenteAppManager() {};
 		UtenteApp utente = new UtenteApp();
-
+		log.debug("L'ImmagineController funziona.");
 		
 		String username = request.getParameter("username");
 		utente = uam.visualizzaProfilo(username);

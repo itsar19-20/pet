@@ -36,9 +36,12 @@ public class SegnalazioniAdminController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		log.debug("Il SegnalazioniAdminController funziona.");
 		AdminManager am = new AdminManager();
 		List<Segnalazione> listaS = new ArrayList<>();
 		ObjectMapper om = new ObjectMapper();
+		
+		
 		
 		listaS = am.visualizzaSegnalazioni();
 		response.setContentType("application/json");

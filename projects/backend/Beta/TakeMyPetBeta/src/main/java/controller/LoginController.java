@@ -36,7 +36,7 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		log.debug("Il  loginController  funziona.");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		ObjectMapper om = new ObjectMapper();

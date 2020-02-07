@@ -35,9 +35,11 @@ public class StatAdminController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		log.debug("Lo StatAdminController funziona.");
 		List<Object> lista = new ArrayList<>();
 		AdminManager am = new AdminManager();
 		ObjectMapper om = new ObjectMapper();
+		
 		
 		lista = am.statUtentiRegistratiDay();
 		

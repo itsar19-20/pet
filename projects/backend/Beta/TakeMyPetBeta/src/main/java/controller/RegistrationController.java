@@ -39,6 +39,7 @@ public class RegistrationController extends HttpServlet {
 
 		RegistrationManager rm = new RegistrationManager();
 		ObjectMapper om = new ObjectMapper();
+		log.debug("Il RegistrationController funziona.");
 
 		String nome = request.getParameter("name");
 		String cognome = request.getParameter("surname");
