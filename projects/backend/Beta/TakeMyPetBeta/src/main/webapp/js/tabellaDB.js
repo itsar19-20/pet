@@ -20,7 +20,7 @@ $(() =>{
 					{title: 'Stato',data: null,
 						render: function (data, type, row) {
 							//return '<button id="btnAggiunto" class="btnEdit btn btn-primary btn-sm">Modifica</button>';
-							return '<button	id="btnElimina" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Elimina</button><button id="btnBlocca" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Blocca</button><button id="btnSblocca" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Sblocca</button>';
+							return '<button	id="btnElimina" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Elimina</button><button id="btnBlocca" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Blocca</button><button id="btnSblocca" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Sblocca</button><button id="btnProfilo" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Profilo</button>';
 
 						}
 					},
@@ -83,6 +83,25 @@ $(() =>{
 					data: {
 						username: data_row.username,
 						controllo: 'attiva'
+					},
+				}).done(() => {
+					location.href = './admin.html';
+				}).fail(() => {
+					alert("Qualcosa e' andato storto!")
+				})
+			});	
+			
+//=================================BOTTONE PROFILO TABELLA 1================================================	
+
+			$('#tabella tbody').on('click', '#btnProfilo', function () {
+				var data_row = tableDue.row($(this).closest('tr')).data();
+
+				$.ajax({
+					url: '/AdminController',
+					method: 'post',
+					data: {
+						username: data_row.username,
+						//prendi utente
 					},
 				}).done(() => {
 					location.href = './admin.html';
