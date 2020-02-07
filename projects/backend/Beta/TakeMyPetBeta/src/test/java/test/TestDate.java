@@ -13,6 +13,8 @@ public class TestDate {
 		List<Object> lista = new ArrayList<>();
 		AdminManager am = new AdminManager();
 		
+		
+		
 		lista = am.statUtentiRegistratiDay();
 		
 		for(Object o : lista)
