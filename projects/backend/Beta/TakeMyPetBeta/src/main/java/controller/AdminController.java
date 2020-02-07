@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import business.AdminManager;
@@ -21,6 +24,7 @@ import model.Utente;
 @WebServlet("/listaUtentiAdmin")
 public class AdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static Logger log = LoggerFactory.getLogger(AdminController.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -39,11 +43,14 @@ public class AdminController extends HttpServlet {
 		List<Utente> listaUtenti = new ArrayList<Utente>();
 		ObjectMapper om = new ObjectMapper();
 		listaUtenti = am.visualizzaUtenti();
+	
+		log.debug("AdminController Pronto");
+	
 		
 		response.setContentType("application/json");
 		response.getWriter().append(om.writeValueAsString(listaUtenti));
 		
-		
+		log.debug("AdminController Funziona");
 	}
 
 	/**
@@ -54,6 +61,8 @@ public class AdminController extends HttpServlet {
 		AdminManager am = new AdminManager();
 		String controllo = request.getParameter("controllo");
 		String username = request.getParameter("username");
+		
+		log.debug("AdminController Pronto");
 		
 		switch (controllo) {
 		
@@ -72,6 +81,8 @@ public class AdminController extends HttpServlet {
 		default:
 			break;
 		}
+		
+		log.debug("AdminController Funziona");
 	}
 
 }

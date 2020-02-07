@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.security.ntlm.Server;
 
@@ -24,6 +27,7 @@ import model.UtenteApp;
 @WebServlet("/getImmagine")
 public class ImmagineController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static Logger log = LoggerFactory.getLogger(ImmagineController.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -39,21 +43,28 @@ public class ImmagineController extends HttpServlet {
 		UtenteAppManager uam = new UtenteAppManager() {};
 		UtenteApp utente = new UtenteApp();
 
+	
 		
 		String username = request.getParameter("username");
 		utente = uam.visualizzaProfilo(username);
 		byte[] byteArray = utente.getImmagineProfilo().getByteArray();
 		
+		log.debug("ImmagineController Pronto");
+		
 		//ocho all'asterisco, per ora funziona
 		response.setContentType("image/*");
 		OutputStream out = response.getOutputStream();
 		out.write(byteArray);
+		
+		log.debug("ImmagineController Funziona");
 	}
 	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		UtenteAppManager uam = new UtenteAppManager() {};
 		ObjectMapper om = new ObjectMapper();
+		
+		log.debug("ImmagineController Pronto");
 		
 		String username = request.getParameter("username");
 		//request.setCharacterEncoding("UTF-8");
@@ -64,6 +75,7 @@ public class ImmagineController extends HttpServlet {
 		
 		uam.inserisciImmagine(username, bytearray);
 		
+		log.debug("ImmagineController Funziona");
 	}
 
 }

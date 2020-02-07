@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import business.RegistrationManager;
@@ -19,6 +22,7 @@ import business.RegistrationManager;
 @WebServlet("/signUp")
 public class RegistrationController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static Logger log = LoggerFactory.getLogger(RegistrationController.class);
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -50,11 +54,14 @@ public class RegistrationController extends HttpServlet {
 		String tipo = request.getParameter ("type");
 		boolean doppioProfilo = false; // = request.getParameter("doppioprofilo");
 		
-		String controllo = rm.registrazione(doppioProfilo, tipo, nome, cognome, email, username, password, dataDiNascita, dataDiRegistrazione, descrizione, latitudine, longitudine, null);
+		log.debug("RegistrationController Pronto");
 		
+		String controllo = rm.registrazione(doppioProfilo, tipo, nome, cognome, email, username, password, dataDiNascita, dataDiRegistrazione, descrizione, latitudine, longitudine, null);
 		
 		response.setContentType("application/json");
 	    response.getWriter().append(om.writeValueAsString(controllo));
+	    
+	    log.debug("RegistrationController Funziona");
 	    
 	}
 

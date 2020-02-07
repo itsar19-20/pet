@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import business.AdminManager;
@@ -20,6 +23,7 @@ import business.AdminManager;
 @WebServlet("/statisticheAdmin")
 public class StatAdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static Logger log = LoggerFactory.getLogger(StatAdminController.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -36,10 +40,15 @@ public class StatAdminController extends HttpServlet {
 		AdminManager am = new AdminManager();
 		ObjectMapper om = new ObjectMapper();
 		
+		log.debug("StatAdminController Pronto");
+		
 		lista = am.statUtentiRegistratiDay();
 		
 		response.setContentType("application/json");
 		response.getWriter().append(om.writeValueAsString(lista));
+		
+		log.debug("StatAdminController Funziona");
+		
 	}
 
 }
