@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 $(() =>{
     var dataPoints=[];
 
@@ -45,7 +45,7 @@ var options =  {
 	$('#tabella2').DataTable( {
 		data: listaUtenti,
 		columns: [
-			{title: 'Username', data: 'username' name: "username"},
+			{title: 'Username', data: 'username', name: "username"},
 			{title: 'Nome', data: 'nome' },
 			{title: 'Cognome', data: 'cognome' },
 			{title: 'Bloccato', data: 'bloccato' },
@@ -54,7 +54,7 @@ var options =  {
 	} );
 })
 
-=======
+
 $(() =>{
     var dataPoints=[];
 
@@ -99,4 +99,3 @@ var options =  {
         $("#chartContainer").CanvasJSChart(options);
 	})
 })
->>>>>>> a02c38daf6add02fedf00f85848d8b1d427ff188
