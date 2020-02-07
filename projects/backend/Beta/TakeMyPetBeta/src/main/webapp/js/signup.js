@@ -36,7 +36,35 @@ $(() => {
            if(controllo) {
                $('#esisteGia').show();
             } else {
-                location.href = './login.html';
+                //funzione per convertire base64 to uint8!!!!!
+                /*
+                function base64ToArrayBuffer(base64) {
+                    var binary_string =  window.atob(base64);
+                    var len = binary_string.length;
+                    var bytes = new Uint8Array( len );
+                    for (var i = 0; i < len; i++)        {
+                        bytes[i] = binary_string.charCodeAt(i);
+                    }
+                    return bytes.buffer;
+                }
+                */
+                var base64Immagine = $('.profile-pic').attr('src').substring(23);
+                //taglio via le ultime 4 cifre per la decodifica sul server
+                var base64Cut = base64Immagine.substring(0,(base64Immagine.length - 4));
+
+               // var bytes = base64ToArrayBuffer(base64Immagine)
+               // var bytesJson = JSON.stringify(Array.from(bytes));
+
+                //passo al server il base64 e lo converto li
+                $.ajax({
+                    url: '/getImmagine',
+                    method: 'post',
+                    data: {
+                        username: $('#inputUsername').val(),
+                        immagine: base64Cut
+                    }
+                })
+                .done(() => {location.href = './login.html';})
            }
         })
     }

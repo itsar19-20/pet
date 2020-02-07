@@ -10,6 +10,7 @@ import javax.persistence.EntityManager;
 import interfaces.UtenteAppInterface;
 import model.Annuncio;
 import model.Evento;
+import model.Immagine;
 import model.Segnalazione;
 import model.UtenteApp;
 import model.Valutazione;
@@ -125,4 +126,21 @@ public abstract class UtenteAppManager implements UtenteAppInterface {
 		 em.close();
 		
 	}
+
+	public void inserisciImmagine(String username, byte[] bytearray) {
+		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
+		Immagine ima = new Immagine();
+		UtenteApp utente = new UtenteApp();
+		
+		utente = em.find(UtenteApp.class, username);
+		ima.setByteArray(bytearray);
+		utente.setImmagineProfilo(ima);
+		
+		em.getTransaction().begin();
+		em.persist(ima);
+		em.remove(utente);
+		em.persist(utente);
+		em.getTransaction().commit();
+	}
+
 }

@@ -1,7 +1,9 @@
 package controller;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Base64;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,8 +11,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.security.ntlm.Server;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 import business.UtenteAppManager;
 import model.Evento;
@@ -42,13 +49,25 @@ public class ImmagineController extends HttpServlet {
 		utente = uam.visualizzaProfilo(username);
 		byte[] byteArray = utente.getImmagineProfilo().getByteArray();
 		
-		response.setContentType("image/png");
+		//ocho all'asterisco, per ora funziona
+		response.setContentType("image/*");
 		OutputStream out = response.getOutputStream();
 		out.write(byteArray);
+	}
+	
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		UtenteAppManager uam = new UtenteAppManager() {};
+		ObjectMapper om = new ObjectMapper();
 		
-			
-				
+		String username = request.getParameter("username");
+		//request.setCharacterEncoding("UTF-8");
 		
+		String immagine = request.getParameter("immagine");
+		
+		byte[] bytearray = Base64.getDecoder().decode(immagine);
+		
+		uam.inserisciImmagine(username, bytearray);
 		
 	}
 

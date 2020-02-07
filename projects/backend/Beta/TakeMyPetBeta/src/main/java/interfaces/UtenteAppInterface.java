@@ -21,7 +21,8 @@ public interface UtenteAppInterface {
     abstract List<Evento> visualizzaEventiUtente(UtenteApp utente); //
 	abstract List<Evento> visualizzaTuttiEventi(); //
 	abstract void nuovoEvento(String nomeEvento,  Date dataEvento, String descrizione, String latitudine, String longitudine, UtenteApp organizzatore);//
-	//abstract void partecipaEvento(Evento evento, UtenteApp partecipante); //
+	//abstract void partecipaEvento(Evento evento, UtenteApp partecipante); 
+	abstract void inserisciImmagine(String username, byte[] bytearray);
 
 	
 
