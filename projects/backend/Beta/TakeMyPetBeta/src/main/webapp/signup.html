@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Courgette|Pacifico:400,700" rel="stylesheet">
+<title>Sign Up</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="css/upload.css"></link>
+<link rel="stylesheet" href="css/signup.css"></link>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/signup.js"></script>
+<script src="js/upload.js"></script>
+</head>
+<body>
+	  <!-- The video -->
+	  <video autoplay muted loop id="myVideo">
+		<source src="../immaginiPerWeb/caneApp.mp4" type="video/mp4">
+	  </video>
+
+<div class="signup-form">
+    <form action="/examples/actions/confirmation.php" method="post">
+		<div class="form-header">
+			<h2>Sign Up</h2>
+			<a link href="./index.html"><p style=" color: #fff">TakeMyPet</p></a link>
+        </div>
+        <label>How would you like to sign up?</label>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" id="buttonsChoose">
+            <label class="btn btn-secondary active" id="btnPetSitterLabel">
+            <input type="radio" name="options" id="option1" autocomplete="off"> PetSitter
+            </label>
+            <label class="btn btn-secondary" id="btnProprietarioLabel">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Owner
+            </label>
+        </div>
+        <div>
+            <p> </p>
+        </div>
+        <div class="form-group">
+			<label>Name</label>
+        	<input type="text" class="form-control" name="name" id="inputName" required="required">
+        </div>
+        <div class="form-group">
+			<label>Surname</label>
+        	<input type="text" class="form-control" name="surname" id="inputSurname" required="required">
+        </div>
+        <div class="form-group">
+			<label>Email Address</label>
+        	<input type="email" class="form-control" name="email" id="inputEmail" required="required">
+        </div>
+        <div class="form-group">
+			<label>Username</label>
+        	<input type="text" class="form-control" name="username" id="inputUsername" required="required">
+        </div>
+        <p id="esisteGia" style="font-size: 15px;">L'username scelto esiste già</p>
+		<div class="form-group">
+			<label>Password</label>
+            <input type="password" class="form-control" name="password" id="inputPassword" required="required">
+        </div>
+		<div class="form-group">
+			<label>Confirm Password</label>
+            <input type="password" class="form-control" name="confirm_password" id="inputConfermaPassword" required="required">
+        </div>
+        <p id="haiSbagliato">Le password non corrispondono</p>
+
+
+
+
+          <!-- UPLOAD IMMAGINE -->
+
+        <div class="row">
+          <div class="small-12 medium-2 large-2 columns">
+            <div class="circle">
+              <!-- User Profile Image -->
+              <img class="profile-pic" src="http://cdn.cutestpaw.com/wp-content/uploads/2012/07/l-Wittle-puppy-yawning.jpg">
+
+              <!-- Default Image -->
+              <!-- <i class="fa fa-user fa-5x"></i> -->
+            </div>
+            <div class="p-image">
+              <i class="fa fa-camera upload-button"></i>
+               <input id="inputImmagine" class="file-upload" type="file" accept="image/*"/>
+            </div>
+         </div>
+       </div>
+
+
+
+
+
+        <div class="form-group">
+			<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+		</div>
+		<div class="form-group">
+			<button type="button" class="btn btn-primary btn-block btn-lg" id="btnSignUp" >Sign Up</button>
+		</div>
+    </form>
+
+  <div class="text-center small">Already have an account? <a href="./login.html">Login here</a></div>
+  <div class="text-center small"><a href="./index.html">Return home</a></div>
+</div>
+
+
+</body>
+</html>
