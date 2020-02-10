@@ -95,7 +95,7 @@ $(() =>{
 
 			$('#tabella tbody').on('click', '#btnProfilo', function () {
 				var data_row = tableDue.row($(this).closest('tr')).data();
-
+				//location.href = './gestioneUtenti.html';
 				$.ajax({
 					url: '/listaUtentiAdmin',
 					method: 'post',

@@ -30,6 +30,10 @@ $(() => {
 		document.getElementById("mySidenav_segnalazioni").style.width = "100%";
 	})
 	
+	$('#btnProfilo').click(() => {
+				document.getElementById("mySidenav_gestioneUtenti").style.width = "100%";
+	})
+	
 	$('#btnclose_statistiche').click(() => {
 		 document.getElementById("mySidenav_statistiche").style.width = "0"
 	})
@@ -40,10 +44,6 @@ $(() => {
 		document.getElementById("mySidenav_segnalazioni").style.width = "0";	
 	})
 	
-	//prova
-	$('.sorting').click(() => {
-				document.getElementById("mySidenav_segnalazioni").style.width = "100%";
-	})
 })
 
 

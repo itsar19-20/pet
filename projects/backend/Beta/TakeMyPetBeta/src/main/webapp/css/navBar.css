@@ -55,33 +55,30 @@ body {
 		background-color: #ffffff;
 }
 #btnclose_statistiche{
-    padding: 12px 12px 12px 12px;
+    padding: 1px 1px 1px 1px;
     text-decoration: double;
-    font-size: 25px;
+    font-size: 35px;
     color: #14a302;
-    display: contents;
+    display: block;
     margin: 0px;
-    margin-top: 40px;
-    border-style: hidden;
+    margin-top: 27px;
     background-color: #ffffff
-    }
+}
     
 element.style {
     margin-top: 33px;
     border-bottom-width: 2px;
-    height: 36px;
+    height: 27px;
 }
 
 #btnclose_gestioneUtenti {
     padding: 1px 1px 1px 1px;
     text-decoration: double;
-    font-size: 25px;
+    font-size: 35px;
     color: #14a302;
     display: block;
     margin: 0px;
-    margin-top: 36px;
-    border:2px;
-    border-style: double;
+    margin-top: 27px;
     
     background-color: #ffffff
 }
