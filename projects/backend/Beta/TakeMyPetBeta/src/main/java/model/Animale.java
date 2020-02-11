@@ -1,15 +1,30 @@
 package model;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+@NamedQueries(  
+	    {  	 @NamedQuery(  
+		        name = "cercaAnimaliPerProprietario",  
+		        query = "select c from Animale c where c.proprietario= :username" 
+		        ) 
+	      
+ } 
+	
+	)	    		 
 
 @Entity
 public class Animale {
+	        
+	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,8 +38,9 @@ public class Animale {
 	@OneToOne
 	private Immagine immagine;
 	
-	
-	
+	@OneToOne
+	private Proprietario proprietario;
+
 	
 	
 	

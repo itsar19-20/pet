@@ -17,6 +17,9 @@ import model.Valutazione;
 import utils.JPAUtil;
 
 public abstract class UtenteAppManager implements UtenteAppInterface {
+	
+	
+	//Eventi
 
 	public List<Evento> visualizzaEventiUtente(UtenteApp utente) {
 		List<Evento> _return= new ArrayList<Evento>();
@@ -83,6 +86,9 @@ public abstract class UtenteAppManager implements UtenteAppInterface {
 		
 	}
 	
+	
+	//Profilo
+	
 	public UtenteApp visualizzaProfilo(String username) {
 		
 		UtenteApp _return = new UtenteApp();
@@ -93,6 +99,27 @@ public abstract class UtenteAppManager implements UtenteAppInterface {
 		return _return;
 	}
 	
+	
+	//Immagine profilo
+	
+	public void inserisciImmagine(String username, byte[] bytearray) {
+		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
+		Immagine ima = new Immagine();
+		UtenteApp utente = new UtenteApp();
+		
+		utente = em.find(UtenteApp.class, username);
+		ima.setByteArray(bytearray);
+		utente.setImmagineProfilo(ima);
+		
+		em.getTransaction().begin();
+		em.persist(ima);
+		em.remove(utente);
+		em.persist(utente);
+		em.getTransaction().commit();
+	}
+	
+	
+	//Segnalazioni
 	public void inviaSegnalazione(UtenteApp segnalato, UtenteApp segnalatore, String descrizione, Annuncio annuncio, Evento evento) {
 		
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
@@ -111,6 +138,8 @@ public abstract class UtenteAppManager implements UtenteAppInterface {
 		
 	}
 	
+	//Valutazioni
+	
 	public void inviaValutazione(UtenteApp  valutato, UtenteApp valutatore,String commento,float numeroOrme) {
 		EntityManager em=JPAUtil.getInstance().getEmf().createEntityManager();
 		Valutazione  v= new Valutazione ();
@@ -126,21 +155,7 @@ public abstract class UtenteAppManager implements UtenteAppInterface {
 		 em.close();
 		
 	}
+	
 
-	public void inserisciImmagine(String username, byte[] bytearray) {
-		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
-		Immagine ima = new Immagine();
-		UtenteApp utente = new UtenteApp();
-		
-		utente = em.find(UtenteApp.class, username);
-		ima.setByteArray(bytearray);
-		utente.setImmagineProfilo(ima);
-		
-		em.getTransaction().begin();
-		em.persist(ima);
-		em.remove(utente);
-		em.persist(utente);
-		em.getTransaction().commit();
-	}
 
 }
