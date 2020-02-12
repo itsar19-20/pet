@@ -1,5 +1,6 @@
 package business;
 
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,11 +60,27 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 	}
 
 	@Override
-	public String aggiungiAnimale(String dataDiNascita, String dettagli, Integer eta, String nome, String razza,
+	public String aggiungiAnimale(Date dataDiNascita, String dettagli, Integer eta, String nome, String razza,
 			String tipo) {
-		// TODO Auto-generated method stub
+EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
+		
+		Animale a= new Animale();
+		a.setDataDiNascita(dataDiNascita);
+		a.setDettagli(dettagli);
+		a.setEta(eta);
+		a.setNome(nome);
+		a.setRazza(razza);
+		a.setTipo(tipo);
+		
+		em.getTransaction().begin();
+		em.persist(a);
+		em.getTransaction().commit();
+		em.close();
 		return null;
 	}
+
+
+
 
 
 }

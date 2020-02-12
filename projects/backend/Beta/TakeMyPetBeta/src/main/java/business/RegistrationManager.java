@@ -91,7 +91,7 @@ public class RegistrationManager implements RegistrationInterface {
 			return null;
 		} 
 		else {
-			String str = "L'username esiste già, scegline un altro.";
+			String str = "L'username esiste gia, scegline un altro.";
 			return str;
 		}
 	}
