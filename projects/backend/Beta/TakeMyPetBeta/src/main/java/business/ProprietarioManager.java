@@ -58,5 +58,12 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 		
 	}
 
+	@Override
+	public String aggiungiAnimale(String dataDiNascita, String dettagli, Integer eta, String nome, String razza,
+			String tipo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }
