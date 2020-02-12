@@ -55,8 +55,11 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 
 	@Override
 	public void eliminaAnimale(Integer idAnimale) {
-		// TODO Auto-generated method stub
+		EntityManager em =JPAUtil.getInstance().getEmf().createEntityManager();
 		
+		em.getTransaction().begin();
+		em.remove(em.find(Animale.class,idAnimale));
+		em.getTransaction().commit();
 	}
 
 	@Override
