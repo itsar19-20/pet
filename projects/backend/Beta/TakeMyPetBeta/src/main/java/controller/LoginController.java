@@ -51,7 +51,7 @@ public class LoginController extends HttpServlet {
 			response.getWriter().append(om.writeValueAsString(u));
 			
 			log.debug("LoginController Funziona");
-			log.debug(u.getUsername() + " si è loggato");
+			log.debug(u.getUsername() + " si e loggato");
 		
 	
 

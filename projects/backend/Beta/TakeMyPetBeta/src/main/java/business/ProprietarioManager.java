@@ -31,8 +31,8 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 		
 	}
 	
+	@Override
 	//Animali
-
 	public List<Animale> visualizzaAnimale(Proprietario utente) {
 		List<Animale> _return= new ArrayList<Animale>();
 	
@@ -48,6 +48,14 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 		
 		em.close();
 		return _return;
+	}
+
+	
+
+	@Override
+	public void eliminaAnimale(Integer idAnimale) {
+		// TODO Auto-generated method stub
+		
 	}
 
 
