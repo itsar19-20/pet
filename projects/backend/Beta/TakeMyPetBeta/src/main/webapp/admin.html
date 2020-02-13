@@ -11,9 +11,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/dashboard.css" rel="stylesheet">
-    <link href="css/navBar.css" rel="stylesheet">
-    <link href="css/table.css" rel="stylesheet">
+    <link href="css/admin_css/dashboard.css" rel="stylesheet">
+    <link href="css/admin_css/navBar.css" rel="stylesheet">
+    <link href="css/admin_css/table.css" rel="stylesheet">
+    <link href="css/admin_css/statAdmin.css" rel="stylesheet">
     
 	
 	
@@ -49,15 +50,17 @@
                   Homepage
                 </a>
               </li>
+              
               <li class="nav-item">
                 <a class="nav-link" href="#" id="statistiche_admin">
                   <span data-feather="bar-chart-2"></span>
                   Statistiche
                 </a>
                		<div id="mySidenav_statistiche" class="sidenav">
-				 	 	<a href="javascript:void(0)" id="btnclose_statistiche" class="closebtn">&times;</a>
-				  			<div id="chartContainer" style="height:370px; width: 300%;"></div>
-					</div>
+				 	 	 <a href="javascript:void(0)" id="btnclose_statistiche" class="closebtn btn-primary">&times;</a>
+							 <table id="tabella3" class="display" style="width:100%" border=""> 
+		 					 	 
+				     			 </table>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" id="gestioneUtenti_admin">
@@ -66,9 +69,9 @@
                 </a>
                 <div id="mySidenav_gestioneUtenti" class="sidenav">
 				  <a href="javascript:void(0)" id="btnclose_gestioneUtenti" class="closebtn btn-primary">&times;</a>
-				      <table id="tabella" class="display" style="width:100%" border=""> 
-				      
-				      </table>
+							 <table id="tabella" class="display" style="width:100%" border=""> 
+		 					 	 
+				     			 </table>
 				</div>
               </li>
               <li class="nav-item">
@@ -100,7 +103,7 @@
             </div>
           </div>
           
-         <div id="chartContainer2" style="height:370px; width: 100%;"></div>
+         <div id="chartContainer" style="height:370px; width: 100%;"></div>
 			</br>
 			</br>
 			</br>
@@ -142,11 +145,11 @@
 	<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-    <script src="js/admin.js"></script>
+    <script src="js/admin_js/admin.js"></script>
     <script src="js/logout.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
-    <script src="js/tabellaDB.js"></script>
-    <script src="js/statAdmin.js"></script>
+    <script src="js/admin_js/tabellaDB.js"></script>
+    <script src="js/admin_js/statAdmin.js"></script>
    
 
 </body>

@@ -18,7 +18,7 @@
 	background-color: orange !important;
 }
 #tabella{
-	border-color: #000000 !important;
+	border-color: #14a302 !important;
 	color: #000000 ;
 	border-collapse: inherit !important;
 }
@@ -30,6 +30,14 @@
 #tabella2 .odd{
 	height: 49;
 	whidh: 227px !important;
+}
+#tabella3{
+	border-color: #14a302 !important;
+	color: #000000;
+	border-collapse: inherit !important;
+}
+.page-link{
+	visibility: hidden !important;
 }
 
 #tabella_info{

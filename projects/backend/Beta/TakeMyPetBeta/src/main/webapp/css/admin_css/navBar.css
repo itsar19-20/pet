@@ -51,6 +51,9 @@ body {
 .closebtn{
 	background-color: #14a302;
 }
+#mySidenav_statistiche{
+		background-color: #ffffff;
+}
 #mySidenav_gestioneUtenti{
 		background-color: #ffffff;
 }

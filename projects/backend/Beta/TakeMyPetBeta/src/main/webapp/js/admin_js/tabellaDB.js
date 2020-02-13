@@ -9,24 +9,23 @@ $(() =>{
 
 //=================================CREA TABELLA 1======================================================
 			
-			$('#tabella').DataTable( {
+			var rows = $('#tabella').DataTable( {
 				data: listaUtenti,
 				columns: [
 					{title: 'Username', data: 'username'},
 					{title: 'Nome', data: 'nome' },
 					{title: 'Cognome', data: 'cognome' },
 					{title: 'Bloccato', data: 'bloccato' },
-					{title: 'Doppio profilo', data: 'doppioProfilo' },
-					{title: 'Stato',data: null,
+					{title: 'Tipo utente', data: 'tipoUtente' },
+					{data: null,
 						render: function (data, type, row) {
-							//return '<button id="btnAggiunto" class="btnEdit btn btn-primary btn-sm">Modifica</button>';
 							return '<button	id="btnElimina" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Elimina</button><button id="btnBlocca" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Blocca</button><button id="btnSblocca" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Sblocca</button><button id="btnProfilo" class="btnEdit btn btn-primary btn-lg" style="height: 32px; padding-bottom:0px; padding-top:0px">Profilo</button>';
 
 						}
 					},
 					]
 			} );
-	
+			
 //==========================Serve perche la tabella da errore quando viene chiamata==========================
 
 			table = $('#tabella').DataTable({
@@ -56,7 +55,7 @@ $(() =>{
 //=================================BOTTONE BLOCCA TABELLA 1================================================	
 
 			$('#tabella tbody').on('click', '#btnBlocca', function () {
-				var data_row = tableDue.row($(this).closest('tr')).data();
+				var data_row = table.row($(this).closest('tr')).data();
 
 				$.ajax({
 					url: '/listaUtentiAdmin',
@@ -71,11 +70,12 @@ $(() =>{
 					alert("Qualcosa e' andato storto!")
 				})
 			});	
+			
 
 //=================================BOTTONE ATTIVA TABELLA 1================================================	
 
 			$('#tabella tbody').on('click', '#btnSblocca', function () {
-				var data_row = tableDue.row($(this).closest('tr')).data();
+				var data_row = table.row($(this).closest('tr')).data();
 
 				$.ajax({
 					url: '/listaUtentiAdmin',
@@ -85,7 +85,7 @@ $(() =>{
 						controllo: 'attiva'
 					},
 				}).done(() => {
-					location.href = './admin.html';
+					//location.href = './admin.html';
 				}).fail(() => {
 					alert("Qualcosa e' andato storto!")
 				})
@@ -94,8 +94,10 @@ $(() =>{
 //=================================BOTTONE PROFILO TABELLA 1================================================	
 
 			$('#tabella tbody').on('click', '#btnProfilo', function () {
-				var data_row = tableDue.row($(this).closest('tr')).data();
-				//location.href = './gestioneUtenti.html';
+				var data_row = table.row($(this).closest('tr')).data();
+	           // $('#nomeUtente').text(` Ciao ${utente.username}`);
+	            
+				location.href = './gestioneUtenti.html';
 				$.ajax({
 					url: '/listaUtentiAdmin',
 					method: 'post',
@@ -104,12 +106,14 @@ $(() =>{
 						//prendi utente
 					},
 				}).done(() => {
-					location.href = './admin.html';
+					//location.href = './admin.html';
 				}).fail(() => {
 					alert("Qualcosa e' andato storto!")
 				})
-			});	
-
+			});
+			/*$('#btnProfilo').click(() => {
+				document.getElementById("mySidenav_gestioneUtenti").style.width = "0";		
+			});*/
 //=================================CREA TABELLA 2================================================			
 
 			var rows = $('#tabella2').DataTable( {
@@ -193,6 +197,27 @@ $(() =>{
 					alert("Qualcosa e' andato storto!")
 				})
 			});	
+			
+//=================================CREA TABELLA 3================================================			
+		
+			var rows = $('#tabella3').DataTable( {
+				data: listaUtenti,
+				columns: [
+					{title: 'Username', data: 'username'},
+					{title: 'Attività', data: 'attivo' },
+					{title: 'Valutazioni fatte'},
+					{title: 'Valutazioni ricevute'},
+					{title: 'Swap fatti'},
+					{title: 'Profilo visitato'},
+					]
+			} );
+			
+//==========================Serve perche la tabella da errore quando viene chiamata==========================
+
+			tableTre = $('#tabella3').DataTable({
+				retrieve: true,
+				paging: false
+			});
 		}
 	})
 })
