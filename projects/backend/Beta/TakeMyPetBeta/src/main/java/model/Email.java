@@ -2,14 +2,14 @@ package model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Email {
 
 	@Id
 	private String email;
-	@OneToOne
+	@ManyToOne
 	private Utente utente_email;
 	
 	

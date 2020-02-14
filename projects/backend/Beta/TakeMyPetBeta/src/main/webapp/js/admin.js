@@ -1,6 +1,16 @@
 $(() => {
+	if(localStorage.getItem('user')){
+		
 	var utente = JSON.parse(localStorage.getItem('user'));
-    if(localStorage.getItem('user')) {
+	}
+	else if(sessionStorage.getItem('user')) {
+		var utente = JSON.parse(sessionStorage.getItem('user'));
+	}
+	else {
+		location.href = './index.html';
+	}
+    /*
+	if(localStorage.getItem('user')) {
         
     } else {
         location.href = 'login.html';
@@ -13,7 +23,10 @@ $(() => {
             location.href = 'login.html';
         }
 	}, 10000);
-
+*/
+	if(utente.tipoUtente != "admin"){
+		location.href = './index.html';
+	}
 		$('#homepage_admin').click(() => {
 		document.getElementById('homepage_admin').style.color = '#14a302';
 		document.getElementById('statistiche_admin').style.color = '#333';

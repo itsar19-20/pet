@@ -20,7 +20,7 @@ $(() => {
                     alert('Il tuo account è stato bloccato. Controlla la tua email per sbloccarlo.')
                     localStorage.removeItem('user');
                     sessionStorage.removeItem('user');
-                    location.href = './index.html'
+                    location.href = './index.html';
                   }
                 if($('#rememberCheck').checked) {
                     localStorage.setItem('user',JSON.stringify(utente));

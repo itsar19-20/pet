@@ -48,6 +48,7 @@ public class UtenteAppController extends HttpServlet {
 		log.debug("UteneAppController Pronto");
 	
 		
+		
 		response.setContentType("application/json");
 		response.getWriter().append(om.writeValueAsString(pm));
 		response.getWriter().append(om.writeValueAsString(ps));

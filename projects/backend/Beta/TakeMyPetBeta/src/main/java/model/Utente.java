@@ -1,11 +1,13 @@
 package model;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -45,8 +47,8 @@ public class Utente {
 	private Date dataRegistrazione;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataOraUltimoLogin;
-	//@OneToMany
-	//private List<Email> emails;
+	@OneToMany
+	private List<Email> emails;
 	
 	
 	public Utente() {
