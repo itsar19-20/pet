@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -38,7 +39,7 @@ public class Animale {
 	@OneToOne
 	private Immagine immagine;
 	
-	@OneToOne
+	@ManyToOne
 	private Proprietario proprietario;
 
 	

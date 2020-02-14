@@ -1,5 +1,19 @@
-
 $(() => {
+	var utente = JSON.parse(localStorage.getItem('user'));
+    if(localStorage.getItem('user')) {
+        
+    } else {
+        location.href = 'login.html';
+    }
+    setInterval(() => { //controlla che nel localstorage ci sia un utente salvato, in caso contrario riporta alla pagina di login
+        if(localStorage.getItem('user')) {
+        
+        } else {
+            alert('Sessione scaduta!')
+            location.href = 'login.html';
+        }
+	}, 10000);
+
 		$('#homepage_admin').click(() => {
 		document.getElementById('homepage_admin').style.color = '#14a302';
 		document.getElementById('statistiche_admin').style.color = '#333';

@@ -15,6 +15,8 @@ import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import business.PetSitterManager;
+import business.ProprietarioManager;
 import business.UtenteAppManager;
 import model.Animale;
 import model.Utente;
@@ -39,10 +41,18 @@ public class UtenteAppController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UtenteAppManager ua=new UtenteAppManager() {
-		};
+		UtenteAppManager pm= new ProprietarioManager();
+		UtenteAppManager ps= new PetSitterManager();
 		ObjectMapper om = new ObjectMapper();
 		
+		log.debug("UteneAppController Pronto");
+	
+		
+		response.setContentType("application/json");
+		response.getWriter().append(om.writeValueAsString(pm));
+		response.getWriter().append(om.writeValueAsString(ps));
+		
+		log.debug("AdminController Funziona");
 	}
 
 	/**

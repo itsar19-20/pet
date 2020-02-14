@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 
 import interfaces.PetSitterInterface;
 
-public abstract class PetSitterManager extends UtenteAppManager implements PetSitterInterface {
+public  class PetSitterManager extends UtenteAppManager implements PetSitterInterface {
 
 	
 
