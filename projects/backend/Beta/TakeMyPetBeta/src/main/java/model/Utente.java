@@ -33,6 +33,12 @@ public class Utente {
 	private String username;
 	@JsonIgnore
 	private String password;
+	@JsonIgnore
+	private String codiceSblocco;
+	
+	
+
+
 	@Temporal(TemporalType.DATE)
 	private Date dataDiNascita;
 	@Temporal(TemporalType.DATE)
@@ -93,9 +99,10 @@ public class Utente {
 
 	@Override
 	public String toString() {
-		return "Utente [nome=" + nome + ", cognome=" + cognome + ", username=" + username + ", dataDiNascita="
-				+ dataDiNascita + ", dataRegistrazione=" + dataRegistrazione + ", dataOraUltimoLogin="
-				+ dataOraUltimoLogin + "]";
+		return "Utente [tipoUtente=" + tipoUtente + ", contatoreAccessiSbagliati=" + contatoreAccessiSbagliati
+				+ ", nome=" + nome + ", cognome=" + cognome + ", username=" + username + ", password=" + password
+				+ ", codiceSblocco=" + codiceSblocco + ", dataDiNascita=" + dataDiNascita + ", dataRegistrazione="
+				+ dataRegistrazione + ", dataOraUltimoLogin=" + dataOraUltimoLogin + "]";
 	}
 
 
@@ -128,5 +135,13 @@ public class Utente {
 		this.contatoreAccessiSbagliati = contatoreAccessiSbagliati;
 	}
 
+	public String getCodiceSblocco() {
+		return codiceSblocco;
+	}
+
+
+	public void setCodiceSblocco(String codiceSblocco) {
+		this.codiceSblocco = codiceSblocco;
+	}
 	
 }

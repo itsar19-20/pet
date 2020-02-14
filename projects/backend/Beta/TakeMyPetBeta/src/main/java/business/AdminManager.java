@@ -64,16 +64,42 @@ public class AdminManager implements AdminInterface {
 	}
 
 	@Override
-	public void riattivaUtente(String username) {
+	public boolean sbloccoUtente(String username, String codiceSblocco) {
+	
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 		UtenteApp u = new UtenteApp();
 		u = em.find(UtenteApp.class, username);
+		if(codiceSblocco != null) {
+			if (u.getCodiceSblocco().contentEquals(codiceSblocco)) {
+		
 		u.setBloccato(false);
 
 		em.getTransaction().begin();
 		em.remove(em.find(UtenteApp.class, username));
 		em.persist(u);
 		em.getTransaction().commit();
+		return true;
+		
+			}else { 
+				return false;
+			}
+		}else {
+		u.setBloccato(false);
+
+		em.getTransaction().begin();
+		em.remove(em.find(UtenteApp.class, username));
+		em.persist(u);
+		em.getTransaction().commit();
+		return true;
+		}
+	}
+	
+	public UtenteApp cercaUtenteSingolo(String username) {
+		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
+
+		UtenteApp u = em.find(UtenteApp.class, username);
+		
+		return u;
 	}
 
 	@Override

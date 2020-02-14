@@ -45,6 +45,12 @@ public class Animale {
 	
 	
 	
+	@Override
+	public String toString() {
+		return "Animale [id_animale=" + id_animale + ", tipo=" + tipo + ", razza=" + razza + ", nome=" + nome + ", eta="
+				+ eta + ", dettagli=" + dettagli + ", dataDiNascita=" + dataDiNascita + ", immagine=" + immagine
+				+ ", proprietario=" + proprietario + "]";
+	}
 	public int getId_animale() {
 		return id_animale;
 	}
@@ -86,6 +92,18 @@ public class Animale {
 	}
 	public void setDataDiNascita(Date dataDiNascita) {
 		this.dataDiNascita = dataDiNascita;
+	}
+	public Immagine getImmagine() {
+		return immagine;
+	}
+	public void setImmagine(Immagine immagine) {
+		this.immagine = immagine;
+	}
+	public Proprietario getProprietario() {
+		return proprietario;
+	}
+	public void setProprietario(Proprietario proprietario) {
+		this.proprietario = proprietario;
 	}
 	
 

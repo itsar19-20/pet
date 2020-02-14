@@ -72,7 +72,7 @@ public class AdminController extends HttpServlet {
 			break;
 			
 		case "attiva":
-			am.riattivaUtente(username);
+			am.sbloccoUtente(username, null);
 			break;
 			
 		case "elimina":

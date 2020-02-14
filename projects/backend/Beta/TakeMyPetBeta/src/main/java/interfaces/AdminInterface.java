@@ -16,7 +16,9 @@ public interface AdminInterface {
 	
 	abstract void bloccaUtente(String username);
 	
-	abstract void riattivaUtente(String username);
+	abstract boolean sbloccoUtente(String username,String codiceSblocco); //ritorna true se sblocca
+	
+	public UtenteApp cercaUtenteSingolo(String username);
 	
 	abstract void eliminaUtente(String username);
 	
