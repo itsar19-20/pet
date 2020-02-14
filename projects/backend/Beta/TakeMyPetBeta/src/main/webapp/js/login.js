@@ -37,6 +37,23 @@ $(() => {
 
             }
             if(!utente) {
+            	 $.ajax ( {
+                     url:'/login',
+                     method: 'get',
+                     data: {
+                         username: $('#inputUsername').val(),
+                         password: $('#inputPassword').val()
+                     }
+                 })
+                 .done((controlloBloccato) => {
+                    if(controlloBloccato){
+                     alert('Il tuo account è stato bloccato. Controlla la tua email per sbloccarlo.')
+                     localStorage.removeItem('user');
+                     sessionStorage.removeItem('user');
+                     location.href = './index.html';
+                    } 
+                 });
+            	 
             	localStorage.removeItem('user');
                 sessionStorage.removeItem('user');
                 $('#haiSbagliato').show();

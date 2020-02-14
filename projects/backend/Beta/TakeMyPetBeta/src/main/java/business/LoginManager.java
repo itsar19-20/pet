@@ -43,16 +43,24 @@ public class LoginManager implements LoginInterface {
 				
 			} 
 			
-			//else {
-				//Integer i = u.getContatoreAccessiSbagliati();
-				//i++;
-				//u.setContatoreAccessiSbagliati(i);
-				//em.getTransaction().begin();
-				//em.remove(em.find(Utente.class, username));
-				//em.persist(u);
-				//em.getTransaction().commit();
-				//return null;
-			//}
+			else {
+				Integer i = u.getContatoreAccessiSbagliati();
+				i++;
+				u.setContatoreAccessiSbagliati(i);
+				em.getTransaction().begin();
+				em.remove(em.find(Utente.class, username));
+				em.persist(u);
+				em.getTransaction().commit();
+				if(u.getContatoreAccessiSbagliati() >= 10) {
+					em.getTransaction().begin();
+					em.remove(u);
+					u.setBloccato(true);
+					em.persist(u);
+					em.getTransaction().commit();
+					return u;
+				}
+				return null;
+			}
 		}
 		log.debug("LoginManager Funziona");
 		log.debug("Utente NON trovato");

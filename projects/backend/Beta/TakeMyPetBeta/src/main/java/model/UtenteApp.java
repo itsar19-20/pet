@@ -10,7 +10,7 @@ public class UtenteApp extends Utente{
 	private Immagine immagineProfilo;
 	private String descrizione;
 	private boolean attivo;
-	private boolean bloccato;
+	
 	private String latitudine;
 	private String longitudine;
 	private boolean doppioProfilo;
@@ -35,13 +35,7 @@ public class UtenteApp extends Utente{
 		this.attivo = attivo;
 	}
 
-	public boolean isBloccato() {
-		return bloccato;
-	}
 
-	public void setBloccato(boolean bloccato) {
-		this.bloccato = bloccato;
-	}
 
 	public String getLatitudine() {
 		return latitudine;
@@ -61,8 +55,7 @@ public class UtenteApp extends Utente{
 
 	@Override
 	public String toString() {
-		return "UtenteApp [descrizione=" + descrizione + ", attivo=" + attivo + ", bloccato=" + bloccato
-				+ ", latitudine=" + latitudine + ", longitudine=" + longitudine + "]";
+		return "UtenteApp [descrizione=" + descrizione + ", attivo=" + attivo +  ", latitudine=" + latitudine + ", longitudine=" + longitudine + "]";
 	}
 
 	public boolean isDoppioProfilo() {

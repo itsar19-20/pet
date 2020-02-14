@@ -30,6 +30,31 @@ public class LoginController extends HttpServlet {
 	public LoginController() {
 		super();
 	}
+	
+	/**
+	 * @throws IOException 
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		LoginManager lm = new LoginManager();
+		String isBloccato;
+		
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		
+		Utente u = lm.login(username, password);
+		
+		if(u.isBloccato()) {
+			isBloccato = "qualcosa";
+		}
+		else { 
+			isBloccato = null;
+		}
+		
+		response.getWriter().append(isBloccato);
+		
+		
+	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
@@ -50,8 +75,9 @@ public class LoginController extends HttpServlet {
 			response.setContentType("application/json");
 			response.getWriter().append(om.writeValueAsString(u));
 			
+			
 			log.debug("LoginController Funziona");
-			log.debug(u.getUsername() + " si e loggato");
+			//log.debug(u.getUsername() + " si e loggato");
 		
 	
 

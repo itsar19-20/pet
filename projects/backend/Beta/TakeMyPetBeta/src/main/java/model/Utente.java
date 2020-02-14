@@ -37,6 +37,7 @@ public class Utente {
 	private String password;
 	@JsonIgnore
 	private String codiceSblocco;
+	private boolean bloccato;
 	
 	
 
@@ -144,6 +145,13 @@ public class Utente {
 
 	public void setCodiceSblocco(String codiceSblocco) {
 		this.codiceSblocco = codiceSblocco;
+	}
+	public boolean isBloccato() {
+		return bloccato;
+	}
+
+	public void setBloccato(boolean bloccato) {
+		this.bloccato = bloccato;
 	}
 	
 }
