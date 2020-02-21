@@ -2,6 +2,8 @@ package controller;
 
 import java.io.IOException;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,11 +32,11 @@ public class LoginController extends HttpServlet {
 	public LoginController() {
 		super();
 	}
-	
+	/*
 	/**
 	 * @throws IOException 
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		LoginManager lm = new LoginManager();
 		String isBloccato;
@@ -42,20 +44,26 @@ public class LoginController extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
-		Utente u = lm.login(username, password);
-		
-		if(u.isBloccato()) {
-			isBloccato = "qualcosa";
+		Utente u;
+		try {
+			u = lm.login(username, password);
+			if(u.isBloccato()) {
+				isBloccato = "qualcosa";
+			}
+			else { 
+				isBloccato = null;
+			}
+			
+			response.getWriter().append(isBloccato);
+			
+			
+		} catch (AddressException e) {
+			e.printStackTrace();
+		} catch (MessagingException e) {
+			e.printStackTrace();
 		}
-		else { 
-			isBloccato = null;
-		}
-		
-		response.getWriter().append(isBloccato);
-		
-		
 	}
-
+*/
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
@@ -68,15 +76,23 @@ public class LoginController extends HttpServlet {
 		ObjectMapper om = new ObjectMapper();
 		LoginManager lm = new LoginManager();
 
-		Utente u = lm.login(username, password);
+		Utente u;
+		try {
+				u = lm.login(username, password);
+
+				log.debug("LoginController Pronto");
+			
+				response.setContentType("application/json");
+				response.getWriter().append(om.writeValueAsString(u));
+			
+				log.debug("LoginController Funziona");
+				
+		} catch (AddressException e) {
+			e.printStackTrace();
+		} catch (MessagingException e) {
+			e.printStackTrace();
+		}
 	
-		log.debug("LoginController Pronto");
-		
-			response.setContentType("application/json");
-			response.getWriter().append(om.writeValueAsString(u));
-			
-			
-			log.debug("LoginController Funziona");
 			//log.debug(u.getUsername() + " si e loggato");
 		
 	

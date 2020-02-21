@@ -22,12 +22,12 @@ $(() => {
                     sessionStorage.removeItem('user');
                     location.href = './index.html';
                   }
-                if($('#rememberCheck').checked) {
-                    localStorage.setItem('user',JSON.stringify(utente));
-                }
-                else {
-                    sessionStorage.setItem('user',JSON.stringify(utente));
-                }
+                    else if($('#rememberCheck').checked) {
+                        localStorage.setItem('user',JSON.stringify(utente));
+                    }
+                    else {
+                        sessionStorage.setItem('user',JSON.stringify(utente));
+                    }
                 if(utente.tipoUtente == "admin"){
                 	location.href = './admin.html';
                 } else {
@@ -37,7 +37,7 @@ $(() => {
 
             }
             if(!utente) {
-            	 $.ajax ( {
+            	/* $.ajax ( {
                      url:'/login',
                      method: 'get',
                      data: {
@@ -53,7 +53,7 @@ $(() => {
                      location.href = './index.html';
                     } 
                  });
-            	 
+            	 */
             	localStorage.removeItem('user');
                 sessionStorage.removeItem('user');
                 $('#haiSbagliato').show();

@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -49,6 +50,7 @@ public class Utente {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataOraUltimoLogin;
 	@OneToMany
+	@JsonIgnore
 	private List<Email> emails;
 	
 	
@@ -152,6 +154,16 @@ public class Utente {
 
 	public void setBloccato(boolean bloccato) {
 		this.bloccato = bloccato;
+	}
+
+
+	public List<Email> getEmails() {
+		return emails;
+	}
+
+
+	public void setEmails(List<Email> emails) {
+		this.emails = emails;
 	}
 	
 }

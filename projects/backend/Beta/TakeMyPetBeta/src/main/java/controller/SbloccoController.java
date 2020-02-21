@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,8 +13,8 @@ import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import business.AdminManager;
-import model.UtenteApp;
+import business.SbloccoManager;
+import model.Utente;
 
 /**
  * Servlet implementation class SbloccoController
@@ -39,17 +40,16 @@ public class SbloccoController extends HttpServlet {
 		String username = request.getParameter("username");
 		String codiceSblocco = request.getParameter("codiceSblocco");
 		ObjectMapper om = new ObjectMapper();
-		AdminManager am = new AdminManager();
-		UtenteApp u = new UtenteApp();
+		SbloccoManager sm = new SbloccoManager();
+	
 		log.debug("SbloccController Pronto");
 		
-		boolean controlloSblocco = am.sbloccoUtente(username, codiceSblocco);
+		Utente u = sm.sbloccaUtente(username, codiceSblocco);
 		
-		if (controlloSblocco) {
-		u = am.cercaUtenteSingolo(username);
+		
 		response.setContentType("application/json");
 		response.getWriter().append(om.writeValueAsString(u));
-		}
+		
 		
 		
 		log.debug("SbloccoController Funziona");

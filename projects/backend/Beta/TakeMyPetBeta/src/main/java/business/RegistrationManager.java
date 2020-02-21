@@ -2,11 +2,13 @@ package business;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 
 import interfaces.RegistrationInterface;
 import model.Admin;
+import model.Email;
 import model.PetSitter;
 import model.Proprietario;
 import model.Utente;
@@ -16,13 +18,14 @@ import utils.UtenteFactory;
 
 public class RegistrationManager implements RegistrationInterface {
 
-	//MANCA DA SISTEMARE L' EMAIL
+
 	public String registrazione(boolean doppioProfilo, String tipo, String nome, String cognome,String email, String username, String password,
 			Date dataDiNascita, Date dataRegistrazione, String descrizione, String latitudine, String longitudine,
 			Date dataUltimoLogin) {
 
 		Utente u = UtenteFactory.creaUtente(tipo);
-		ArrayList<String> emails = new ArrayList<>();
+		List<Email> emails = new ArrayList<>();
+		Email mail = new Email();
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 
 		if (em.find(Utente.class, username) == null) {
@@ -35,7 +38,10 @@ public class RegistrationManager implements RegistrationInterface {
 				u.setPassword(password);
 				u.setDataDiNascita(dataDiNascita);
 				u.setDataRegistrazione(dataRegistrazione);
-				emails.add(email);
+				mail.setEmail(email);
+				mail.setUtente_email(u);
+				emails.add(mail);
+				u.setEmails(emails);
 			}
 
 			if (u instanceof PetSitter) {
@@ -46,6 +52,10 @@ public class RegistrationManager implements RegistrationInterface {
 				u.setPassword(password);
 				u.setDataDiNascita(dataDiNascita);
 				u.setDataRegistrazione(dataRegistrazione);
+				mail.setEmail(email);
+				mail.setUtente_email(u);
+				emails.add(mail);
+				u.setEmails(emails);
 				((UtenteApp) u).setDescrizione(descrizione);
 				((UtenteApp) u).setLatitudine(latitudine);
 				((UtenteApp) u).setLongitudine(longitudine);
@@ -73,6 +83,10 @@ public class RegistrationManager implements RegistrationInterface {
 				u.setPassword(password);
 				u.setDataDiNascita(dataDiNascita);
 				u.setDataRegistrazione(dataRegistrazione);
+				mail.setEmail(email);
+				mail.setUtente_email(u);
+				emails.add(mail);
+				u.setEmails(emails);
 				((UtenteApp) u).setDescrizione(descrizione);
 				((UtenteApp) u).setLatitudine(latitudine);
 				((UtenteApp) u).setLongitudine(longitudine);
@@ -86,6 +100,7 @@ public class RegistrationManager implements RegistrationInterface {
 
 			em.getTransaction().begin();
 			em.persist(u);
+			em.persist(mail);
 			em.getTransaction().commit();
 			em.close();
 			return null;

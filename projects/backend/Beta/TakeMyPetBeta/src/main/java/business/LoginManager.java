@@ -2,6 +2,8 @@ package business;
 
 import java.util.Date;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
 import javax.persistence.EntityManager;
 
 import org.slf4j.Logger;
@@ -9,6 +11,7 @@ import org.slf4j.LoggerFactory;
 
 import controller.LoginController;
 import interfaces.LoginInterface;
+import model.Email;
 import model.Utente;
 import model.UtenteApp;
 import utils.JPAUtil;
@@ -16,7 +19,7 @@ import utils.JPAUtil;
 public class LoginManager implements LoginInterface {
 	private static Logger log = LoggerFactory.getLogger(LoginManager.class);
 	
-	public Utente login(String username, String password) {
+	public Utente login(String username, String password) throws AddressException, MessagingException {
 
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 		Utente u = em.find(Utente.class, username);
@@ -26,39 +29,56 @@ public class LoginManager implements LoginInterface {
 		if (u != null) {
 			u.setDataOraUltimoLogin(new Date());
 			em.getTransaction().begin();
-			em.remove(em.find(Utente.class, username));
+			//em.remove(em.find(Utente.class, username));
 			em.persist(u);
 			em.getTransaction().commit();
 
-			if (u.getPassword().contentEquals(password)) { //&& !((UtenteApp) u).isBloccato()) {
+			if (u.getPassword().contentEquals(password)) {
+				if(!u.isBloccato()) {
 				u.setContatoreAccessiSbagliati(0);
-				//((UtenteApp) u).setAttivo(true);
+				((UtenteApp) u).setAttivo(true);
 				em.getTransaction().begin();
-				em.remove(em.find(Utente.class, username));
+				//em.remove(em.find(Utente.class, username));
 				em.persist(u);
 				em.getTransaction().commit();
 				log.debug("LoginManager Funziona");
 				log.debug("Utente trovato");
 				return u;
-				
+				}
+				else {
+					return u;
+					}
 			} 
 			
-			else {
+			else{
 				Integer i = u.getContatoreAccessiSbagliati();
 				i++;
 				u.setContatoreAccessiSbagliati(i);
 				em.getTransaction().begin();
-				em.remove(em.find(Utente.class, username));
+				//em.remove(em.find(Utente.class, username));
 				em.persist(u);
 				em.getTransaction().commit();
-				if(u.getContatoreAccessiSbagliati() >= 10) {
+					if(u.getContatoreAccessiSbagliati() == 10) {
+						MailManager mailManager= new MailManager();
+						String codiceSblocco = mailManager.generateUnlockCode();
+						u.setCodiceSblocco(codiceSblocco);
+						for(Email email: u.getEmails()) {
+							mailManager.sendMail(mailManager.getUSERNAME(), mailManager.getPASSWORD(), email.getEmail(), "Codice sblocco account Take My Pet App", "Clicca su questo link: ... ed inserisci il tuo username e il seguente codice: " + codiceSblocco);
+						}
 					em.getTransaction().begin();
-					em.remove(u);
+					//em.remove(u);
 					u.setBloccato(true);
 					em.persist(u);
 					em.getTransaction().commit();
 					return u;
-				}
+					}
+				
+				
+			}
+			if(u.isBloccato()) {
+				return u;
+			}
+			else {
 				return null;
 			}
 		}
