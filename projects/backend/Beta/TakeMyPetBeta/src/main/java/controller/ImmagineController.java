@@ -1,10 +1,19 @@
 package controller;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Base64;
 
+
+import org.apache.commons.codec.*;
+import org.apache.commons.codec.binary.Base64;
+
+import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,6 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fasterxml.jackson.core.util.ByteArrayBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.security.ntlm.Server;
 
@@ -42,19 +52,20 @@ public class ImmagineController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UtenteAppManager uam = new UtenteAppManager() {};
 		UtenteApp utente = new UtenteApp();
-
-	
 		
 		String username = request.getParameter("username");
 		utente = uam.visualizzaProfilo(username);
-		byte[] byteArray = utente.getImmagineProfilo().getByteArray();
+		String urlImmagine = null;
+		if(utente != null) {
+		urlImmagine = utente.getImmagineProfilo().getUrlImmagine();
+		}
 		
 		log.debug("ImmagineController Pronto");
 		
-		//ocho all'asterisco, per ora funziona
-		response.setContentType("image/*");
-		OutputStream out = response.getOutputStream();
-		out.write(byteArray);
+		//DA MODIFICARE LA RISPOSTA PER JAVASCRIPT
+		
+		
+		response.getWriter().append(urlImmagine);
 		
 		log.debug("ImmagineController Funziona");
 	}
@@ -70,10 +81,28 @@ public class ImmagineController extends HttpServlet {
 		//request.setCharacterEncoding("UTF-8");
 		
 		String immagine = request.getParameter("immagine");
+	
+	
+		//Mi arriva il base64 dal javascript
+		byte[] byteImmagine;
 		
-		byte[] bytearray = Base64.getDecoder().decode(immagine);
+		if(Base64.isBase64(immagine)) {
+	    	byteImmagine = java.util.Base64.getDecoder().decode(immagine);
+	    } else {
+	    	byteImmagine = immagine.getBytes();
+	    }
 		
-		uam.inserisciImmagine(username, bytearray);
+		
+		ByteArrayInputStream bais = new ByteArrayInputStream(byteImmagine);
+		BufferedImage image = ImageIO.read(bais);
+		OutputStream os = new FileOutputStream(new File("src/main/webapp/immaginiPerWeb/" + username +".jpg"));
+		ImageIO.write(image, "jpg", os);
+		os.close();
+		
+		//mettere sito app o localhost o ip computer server
+		String urlImmagine = "http://192.168.1.103:8080/immaginiPerWeb/" + username +".jpg";
+		
+		uam.inserisciImmagine(username, urlImmagine);
 		
 		log.debug("ImmagineController Funziona");
 	}

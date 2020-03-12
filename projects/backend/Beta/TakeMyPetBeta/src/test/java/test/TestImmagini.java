@@ -26,7 +26,7 @@ public class TestImmagini {
 		byte[] byteImmagine = new byte[(int) fileImmagine.length()];
 		FileInputStream fis = new FileInputStream(fileImmagine);
 		fis.read(byteImmagine);
-		immagineCiccio.setByteArray(byteImmagine);
+		//immagineCiccio.setByteArray(byteImmagine);
 		ps.setImmagineProfilo(immagineCiccio);
 		fis.close();
 		

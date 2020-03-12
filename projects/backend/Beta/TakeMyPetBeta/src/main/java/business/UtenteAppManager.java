@@ -102,13 +102,13 @@ public abstract class UtenteAppManager implements UtenteAppInterface {
 	
 	//Immagine profilo
 	
-	public void inserisciImmagine(String username, byte[] bytearray) {
+	public void inserisciImmagine(String username, String urlImmagine) {
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 		Immagine ima = new Immagine();
 		UtenteApp utente = new UtenteApp();
 		
 		utente = em.find(UtenteApp.class, username);
-		ima.setByteArray(bytearray);
+		ima.setUrlImmagine(urlImmagine);
 		utente.setImmagineProfilo(ima);
 		
 		em.getTransaction().begin();

@@ -14,9 +14,7 @@ public class Immagine {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id_Immagine;
-	@Lob
-	@Basic(fetch = FetchType.LAZY)
-	private byte[] byteArray;
+	private String urlImmagine;
 	
 	
 	
@@ -28,11 +26,13 @@ public class Immagine {
 	public void setId_Immagine(Integer id_Immagine) {
 		this.id_Immagine = id_Immagine;
 	}
-	public byte[] getByteArray() {
-		return byteArray;
+	public String getUrlImmagine() {
+		return urlImmagine;
 	}
-	public void setByteArray(byte[] byteArray) {
-		this.byteArray = byteArray;
+	public void setUrlImmagine(String urlImmagine) {
+		this.urlImmagine = urlImmagine;
 	}
+	
+	
 
 }

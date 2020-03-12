@@ -24,7 +24,7 @@ $(() => {
             })
             .done((image) => {
                 if(image){
-                    var ima = new Image()
+                    var ima = new Image();
                     //var myCanvas = document.getElementById('my_canvas_id');
                     //var myCanvas = new Canvas()
                     //var ctx = myCanvas.getContext();
@@ -41,7 +41,7 @@ $(() => {
                      //   ctx.drawImage(ima,0,0); // Or at whatever offset you like
                     //};
                     ima.style = 'height: 70px; width: 80px'
-                    ima.src = 'http://localhost:8080/getImmagine?username=' + utente.username //'data:image/png;base64,' + base64;
+                    ima.src = image; //'data:image/png;base64,' + base64;
                     //ima.height = '70 px';
                     //ima.width = '80 px';
                      $('#immagineProfilo').append(ima);
