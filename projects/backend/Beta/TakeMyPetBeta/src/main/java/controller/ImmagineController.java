@@ -1,6 +1,7 @@
 package controller;
 
 import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -77,21 +78,39 @@ public class ImmagineController extends HttpServlet {
 		
 		log.debug("ImmagineController Pronto");
 		
+		
+		
 		String username = request.getParameter("username");
 		//request.setCharacterEncoding("UTF-8");
 		
 		String immagine = request.getParameter("immagine");
-	
-	
-		//Mi arriva il base64 dal javascript
+		
 		byte[] byteImmagine;
-		
-		if(Base64.isBase64(immagine)) {
-	    	byteImmagine = java.util.Base64.getDecoder().decode(immagine);
-	    } else {
-	    	byteImmagine = immagine.getBytes();
-	    }
-		
+	
+		if(immagine != null) {
+			//Mi arriva il base64 da jquery
+			byteImmagine = java.util.Base64.getDecoder().decode(immagine);
+		} else {
+			//per prendere il body da android
+			BufferedReader br = request.getReader();
+			
+			log.debug(br.readLine());
+			log.debug(br.readLine());
+			log.debug(br.readLine());
+			log.debug(br.readLine());
+			log.debug(br.readLine());
+			
+			StringBuilder builder = new StringBuilder();
+			String s;
+			while((s = br.readLine()) != null) {
+			builder.append(s);
+		}
+			String base64Letto = builder.toString();
+		    log.debug(base64Letto);
+			String base64Cut = base64Letto.substring(0, base64Letto.length() - 44);
+			log.debug(base64Cut);
+			byteImmagine = java.util.Base64.getDecoder().decode(base64Cut);
+		}
 		
 		ByteArrayInputStream bais = new ByteArrayInputStream(byteImmagine);
 		BufferedImage image = ImageIO.read(bais);

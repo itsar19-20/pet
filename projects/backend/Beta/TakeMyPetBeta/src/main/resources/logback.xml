@@ -1,4 +1,4 @@
-<!-- 
+
 <configuration>
 
   <appender name="FILE1" class="ch.qos.logback.core.FileAppender">
@@ -50,4 +50,3 @@
     <appender-ref ref="STDOUT" />
   </root>
 </configuration>
--->

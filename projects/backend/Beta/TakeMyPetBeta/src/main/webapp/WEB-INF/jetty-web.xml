@@ -5,5 +5,5 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!-- Max Form Size                                                   -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <Set name="maxFormContentSize">9000000</Set>
+  <Set name="maxFormContentSize">90000000</Set>
 </Configure>
