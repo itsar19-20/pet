@@ -160,6 +160,16 @@ public abstract class UtenteAppManager implements UtenteAppInterface {
 		
 	}
 	
-
+	public Annuncio visualizzaAnnuncio(Integer idAnnuncio) {
+		EntityManager em=JPAUtil.getInstance().getEmf().createEntityManager();
+		
+		Annuncio annuncio=new Annuncio();
+		annuncio=em.find(Annuncio.class, idAnnuncio);
+		
+		
+		return annuncio;
+		
+		
+	}
 
 }

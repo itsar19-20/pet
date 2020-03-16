@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 
 import interfaces.ProprietarioInterface;
 import model.Animale;
+import model.Annuncio;
 import model.Evento;
 import model.Proprietario;
 import model.Segnalazione;
@@ -84,6 +85,46 @@ EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 
 
 
+public void aggiungiAnnuncio(String usernameProprietario,String descrizione,String longitudine, String latitudine, List<Animale> listaAnimali) {
+	EntityManager em =JPAUtil.getInstance().getEmf().createEntityManager();
+	
+	Annuncio annuncio=new Annuncio();
+	Proprietario proprietario=new Proprietario();
+	
+	proprietario=em.find(Proprietario.class, usernameProprietario);
+	
+	annuncio.setProprietarioAnnuncio(proprietario);
+	annuncio.setDescrizione(descrizione);
+	annuncio.setAnimaliAnnuncio(listaAnimali);
+	annuncio.setLongitudine(longitudine);
+	annuncio.setLongitudine(longitudine);
+	
+	em.getTransaction().begin();
+	em.persist(annuncio);
+	em.getTransaction().commit();
+	em.close();
+	
+}
+
+public void rimuoviAnnuncio(Integer idAnnuncio) {
+	
+	EntityManager em =JPAUtil.getInstance().getEmf().createEntityManager();
+	
+	em.getTransaction().begin();
+	em.remove(em.find(Annuncio.class, idAnnuncio));
+	em.getTransaction().commit();
+	em.close();
+	
+}
+
+public List<Annuncio> listaAnnunciProprietario(String usernameProprietario){
+	EntityManager em =JPAUtil.getInstance().getEmf().createEntityManager();
+	
+	List<Annuncio> _return=new ArrayList<Annuncio>();
+	_return= em.createNamedQuery("annuncio.findByProprietario").setParameter("name", usernameProprietario).getResultList();
+	return _return;
+	
+}
 
 
 }

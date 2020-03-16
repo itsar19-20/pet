@@ -23,7 +23,7 @@ public interface UtenteAppInterface {
 	abstract void nuovoEvento(String nomeEvento,  Date dataEvento, String descrizione, String latitudine, String longitudine, UtenteApp organizzatore);//
 	//abstract void partecipaEvento(Evento evento, UtenteApp partecipante); 
 	abstract void inserisciImmagine(String username, String urlImmagine);
-
+	abstract Annuncio visualizzaAnnuncio(Integer idAnnuncio);
 	
 
 }
