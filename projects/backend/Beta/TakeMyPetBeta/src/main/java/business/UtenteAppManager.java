@@ -16,19 +16,19 @@ import model.UtenteApp;
 import model.Valutazione;
 import utils.JPAUtil;
 
-public abstract class UtenteAppManager implements UtenteAppInterface {
+public class UtenteAppManager implements UtenteAppInterface {
 	
 	
 	//Eventi
 
-	public List<Evento> visualizzaEventiUtente(UtenteApp utente) {
+	public List<Evento> visualizzaEventiUtente(String username) {
 		List<Evento> _return= new ArrayList<Evento>();
 	
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 		
-		_return = em.createNamedQuery("cercaEventiPerOrganizzatore", Evento.class).setParameter("username", utente).getResultList();
+		_return = em.createNamedQuery("cercaEventiPerOrganizzatore", Evento.class).setParameter("username", username).getResultList();
 		
-		for (Evento e : em.createNamedQuery("cercaEventiPerPartecipante", Evento.class).setParameter("username", utente).getResultList())  {
+		for (Evento e : em.createNamedQuery("cercaEventiPerPartecipante", Evento.class).setParameter("username", username).getResultList())  {
 			_return.add(e);
 		}
 		
@@ -49,7 +49,7 @@ public abstract class UtenteAppManager implements UtenteAppInterface {
 		
 	}
 
-	public void nuovoEvento(String nomeEvento,  Date dataEvento, String descrizione, String latitudine, String longitudine, UtenteApp organizzatore) {
+	public void nuovoEvento(String nomeEvento,  Date dataEvento, String descrizione, String latitudine, String longitudine, String usernameOrganizzatore) {
 		
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 
@@ -60,7 +60,7 @@ public abstract class UtenteAppManager implements UtenteAppInterface {
 		e.setDescrizione(descrizione);
 		e.setLatitudine(latitudine);
 		e.setLongitudine(longitudine);
-		e.setOrganizzatore(organizzatore);
+		e.setOrganizzatore(em.find(UtenteApp.class, usernameOrganizzatore));
 		
 		em.getTransaction().begin();
 		em.persist(e);
@@ -84,6 +84,16 @@ public abstract class UtenteAppManager implements UtenteAppInterface {
 		 em.getTransaction().commit();
 			em.close();
 		
+	}
+	
+	public void eliminaEvento(Integer idEvento) {
+		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
+		
+		em.getTransaction().begin();
+		em.remove(em.find(Evento.class, idEvento));
+		em.getTransaction().commit();
+		em.close();
+	
 	}
 	
 	

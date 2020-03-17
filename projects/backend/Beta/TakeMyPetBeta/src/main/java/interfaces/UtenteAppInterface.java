@@ -18,12 +18,13 @@ public interface UtenteAppInterface {
 	//abstract void modificaProfilo(String username);
 	//abstract UtenteApp cambiaTipoProfilo(String username);
 	//abstract void refresh();
-    abstract List<Evento> visualizzaEventiUtente(UtenteApp utente); //
+    abstract List<Evento> visualizzaEventiUtente(String username); //
 	abstract List<Evento> visualizzaTuttiEventi(); //
-	abstract void nuovoEvento(String nomeEvento,  Date dataEvento, String descrizione, String latitudine, String longitudine, UtenteApp organizzatore);//
-	//abstract void partecipaEvento(Evento evento, UtenteApp partecipante); 
+	abstract void nuovoEvento(String nomeEvento,  Date dataEvento, String descrizione, String latitudine, String longitudine, String usernameOrganizzatore);//
+	abstract void partecipaEvento(int _idEvento, UtenteApp partecipante); 
 	abstract void inserisciImmagine(String username, String urlImmagine);
 	abstract Annuncio visualizzaAnnuncio(Integer idAnnuncio);
+	abstract void eliminaEvento(Integer idEvento);
 	
 
 }
