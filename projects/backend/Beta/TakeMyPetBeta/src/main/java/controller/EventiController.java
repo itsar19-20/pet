@@ -47,7 +47,7 @@ public class EventiController extends HttpServlet {
 		
 	listaEventi=utenteAppManager.visualizzaTuttiEventi();
 	response.setContentType("application/json");
-	response.getWriter().write(objectMapper.writeValueAsString(listaEventi));
+	response.getWriter().append(objectMapper.writeValueAsString(listaEventi));
 	log.debug("\"doGet lista tutti Eventi funziona");
 	
 	

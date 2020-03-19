@@ -9,9 +9,9 @@ import model.Proprietario;
 
 public interface ProprietarioInterface extends UtenteAppInterface {
 	
-	abstract List<Animale> visualizzaAnimale(Proprietario utente);
+	abstract List<Animale> visualizzaAnimali(String usernameProprietario);
 	abstract void eliminaAnimale(Integer idAnimale);
-	public abstract String aggiungiAnimale( Date dataDiNascita, String dettagli,Integer eta,String nome,String razza,String tipo);
+	public abstract String aggiungiAnimale(String usernameProprietario, Date dataDiNascita, String dettagli,Integer eta,String nome,String razza,String tipo);
 	abstract void aggiungiAnnuncio(String usernameProprietario,String descrizione,String longitudine, String latitudine, List<Animale> listaAnimali);
 	abstract void rimuoviAnnuncio(Integer idAnnuncio);
 	abstract List<Annuncio> listaAnnunciProprietario(String usernameProprietario);

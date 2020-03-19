@@ -48,7 +48,7 @@ public class EventiUtenteController extends HttpServlet {
 	listaEventi=utenteAppManager.visualizzaEventiUtente(username);
 	response.setContentType("aplication/json");
 	
-	response.getWriter().write(objectMapper.writeValueAsString(listaEventi));
+	response.getWriter().append(objectMapper.writeValueAsString(listaEventi));
 	log.debug("EventiUtenteController funziona.");
 	
 	}

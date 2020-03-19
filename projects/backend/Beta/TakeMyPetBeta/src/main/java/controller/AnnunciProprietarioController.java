@@ -46,7 +46,7 @@ public class AnnunciProprietarioController extends HttpServlet {
 		
 		listaAnnunciProprietario = proprietarioManager.listaAnnunciProprietario(usernameProprietario);
 		response.setContentType("application/json");
-		response.getWriter().write(om.writeValueAsString(listaAnnunciProprietario));
+		response.getWriter().append(om.writeValueAsString(listaAnnunciProprietario));
 		log.debug("doGet lista Annunci Proprietario funziona");
 	}
 

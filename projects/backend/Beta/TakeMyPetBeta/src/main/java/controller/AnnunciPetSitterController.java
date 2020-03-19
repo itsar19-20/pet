@@ -43,7 +43,8 @@ public class AnnunciPetSitterController extends HttpServlet {
 		
 		listaAnnunciPetSitter = petSitterManager.listaAnnunciPetSitter();
 		
-		response.getWriter().write(om.writeValueAsString(listaAnnunciPetSitter));
+		response.setContentType("application/json");
+		response.getWriter().append(om.writeValueAsString(listaAnnunciPetSitter));
 		log.debug("doGet lista Annunci PetSitter funziona");
 		
 	}
