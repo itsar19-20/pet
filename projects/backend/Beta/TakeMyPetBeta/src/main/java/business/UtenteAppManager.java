@@ -68,11 +68,13 @@ public class UtenteAppManager implements UtenteAppInterface {
 		em.close();
 	}
 
-	public void partecipaEvento(int id_evento, UtenteApp partecipante) {
+	public void partecipaEvento(int id_evento, String usernamePartecipante) {
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 		Evento e = new Evento();
+		UtenteApp partecipante = new UtenteApp();
 		List<UtenteApp> listaPartecipanti = new ArrayList<UtenteApp>();
 		
+		partecipante = em.find(UtenteApp.class, usernamePartecipante);
 		e = em.find(Evento.class, id_evento);
 		
 		listaPartecipanti = e.getPartecipanti();

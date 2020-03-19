@@ -21,7 +21,7 @@ public interface UtenteAppInterface {
     abstract List<Evento> visualizzaEventiUtente(String username); //
 	abstract List<Evento> visualizzaTuttiEventi(); //
 	abstract void nuovoEvento(String nomeEvento,  Date dataEvento, String descrizione, String latitudine, String longitudine, String usernameOrganizzatore);//
-	abstract void partecipaEvento(int _idEvento, UtenteApp partecipante); 
+	abstract void partecipaEvento(int _idEvento, String usernamePartecipante); 
 	abstract void inserisciImmagine(String username, String urlImmagine);
 	abstract Annuncio visualizzaAnnuncio(Integer idAnnuncio);
 	abstract void eliminaEvento(Integer idEvento);

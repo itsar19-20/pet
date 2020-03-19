@@ -23,15 +23,15 @@ import model.UtenteApp;
 /**
  * Servlet implementation class EventIConroller
  */
-@WebServlet("/EventIConroller")
-public class EventIConroller extends HttpServlet {
+@WebServlet("/EventiController")
+public class EventiController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Logger log = LoggerFactory.getLogger(ImmagineController.class);
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EventIConroller() {
+    public EventiController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -48,7 +48,7 @@ public class EventIConroller extends HttpServlet {
 	listaEventi=utenteAppManager.visualizzaTuttiEventi();
 	response.setContentType("application/json");
 	response.getWriter().write(objectMapper.writeValueAsString(listaEventi));
-	log.debug("\"doGet nuovo listaEventi funziona");
+	log.debug("\"doGet lista tutti Eventi funziona");
 	
 	
 		
@@ -71,15 +71,24 @@ public class EventIConroller extends HttpServlet {
 	}
 
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		UtenteAppManager utenteAppManager = new UtenteAppManager();
+		String idEventoString = request.getParameter("idEventoString");
+		String usernamePartecipante = request.getParameter("usernamePartecipante");
+		int idEvento = Integer.parseInt(idEventoString);
+		utenteAppManager.partecipaEvento(idEvento, usernamePartecipante);
+		log.debug("doPut partecipa Evento funziona");
 	}
 
 	/**
 	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
 	 */
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		UtenteAppManager utenteAppManager = new UtenteAppManager();
+		String idEventoString = request.getParameter("idEventoString");
+		Integer idEvento = Integer.valueOf(idEventoString);
+		utenteAppManager.eliminaEvento(idEvento);
+		log.debug("doDelete elimina Evento Funziona");
+		
 	}
 
 }
