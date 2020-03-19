@@ -28,10 +28,7 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 		return null;
 	}
 
-	public void partecipaEvento(Evento evento, UtenteApp partecipante) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 	@Override
 	//Animali

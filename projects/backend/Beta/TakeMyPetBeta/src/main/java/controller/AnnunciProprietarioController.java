@@ -10,38 +10,56 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import business.ProprietarioManager;
 import model.Animale;
+import model.Annuncio;
 
 /**
  * Servlet implementation class AnnuncioController
  */
-@WebServlet("/AnnuncioController")
-public class AnnuncioController extends HttpServlet {
+@WebServlet("/AnnunciProprietarioController")
+public class AnnunciProprietarioController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static Logger log = LoggerFactory.getLogger(ImmagineController.class);
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AnnuncioController() {
+    public AnnunciProprietarioController() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		ProprietarioManager proprietarioManager = new ProprietarioManager();
+		ObjectMapper om = new ObjectMapper();
+		List<Annuncio> listaAnnunciProprietario = new ArrayList<Annuncio>();
+		
+		String usernameProprietario = request.getParameter("usernameProprietario");
+		
+		listaAnnunciProprietario = proprietarioManager.listaAnnunciProprietario(usernameProprietario);
+		response.setContentType("application/json");
+		response.getWriter().write(om.writeValueAsString(listaAnnunciProprietario));
+		log.debug("doGet lista Annunci Proprietario funziona");
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		ProprietarioManager proprietarioManager = new ProprietarioManager();
+		String idAnnuncioString = request.getParameter("idAnnuncioString");
+		
+		Integer idAnnuncio = Integer.valueOf(idAnnuncioString);
+		proprietarioManager.rimuoviAnnuncio(idAnnuncio);
+		log.debug("doDelete elimina Annuncio Proprietario funziona");
 	}
 	
 	/**
