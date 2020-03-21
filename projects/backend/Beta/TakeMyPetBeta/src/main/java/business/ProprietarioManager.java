@@ -10,6 +10,8 @@ import interfaces.ProprietarioInterface;
 import model.Animale;
 import model.Annuncio;
 import model.Evento;
+import model.PetSitter;
+import model.Preferiti;
 import model.Proprietario;
 import model.Segnalazione;
 import model.UtenteApp;
@@ -76,7 +78,7 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 	}
 
 	public void aggiungiAnnuncio(String usernameProprietario, String descrizione, String longitudine, String latitudine,
-			List<Animale> listaAnimali) {
+			List<Animale> listaAnimali, Date dataAnnuncio, Date dataCreazioneAnnuncio) {
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 
 		Annuncio annuncio = new Annuncio();
@@ -84,6 +86,9 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 
 		proprietario = em.find(Proprietario.class, usernameProprietario);
 
+		annuncio.setDataAnnuncio(dataAnnuncio);
+		annuncio.setDataCreazioneAnnuncio(dataCreazioneAnnuncio);
+		annuncio.setTerminato(false);
 		annuncio.setProprietarioAnnuncio(proprietario);
 		annuncio.setDescrizione(descrizione);
 		annuncio.setAnimaliAnnuncio(listaAnimali);
@@ -118,4 +123,32 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 
 	}
 
+	public void creaPreferitoProprietario(String usernameProprietario, Integer idAnnuncio, String usernamePetSitter) {
+		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
+		Preferiti preferito = new Preferiti();
+		PetSitter petSitter = new PetSitter();
+		Annuncio annuncio = new Annuncio();
+		Proprietario proprietario = new Proprietario();
+		
+		proprietario = em.find(Proprietario.class, usernameProprietario);
+		petSitter = em.find(PetSitter.class, usernamePetSitter);
+		annuncio = em.find(Annuncio.class, idAnnuncio);
+		
+		preferito.setAnnuncioPreferito(annuncio);
+		preferito.setPreferitoDelProprietario(proprietario);
+		preferito.setPetSitterPreferitoDelProprietario(petSitter);
+		em.getTransaction().begin();
+		em.persist(preferito);
+		em.getTransaction().commit();
+		em.close();
+	}
+	
+	public List<Preferiti> visualizzaPreferitiProprietario (String usernameProprietario) {
+		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
+		List<Preferiti> _return = new ArrayList<Preferiti>();
+		_return = em.createNamedQuery("preferiti.findByProprietario").setParameter("name", usernameProprietario).getResultList();
+		em.close();
+		return _return;
+	}
+	
 }

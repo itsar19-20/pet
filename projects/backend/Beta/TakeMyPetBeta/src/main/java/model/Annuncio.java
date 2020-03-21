@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -18,7 +19,7 @@ import javax.persistence.OneToOne;
     @NamedQuery(name="annuncio.findByProprietario",
                 query="SELECT c FROM Annuncio c WHERE c.proprietarioAnnuncio = :name"),
     @NamedQuery(name="annuncio.findAll",
-    			query="SELECT c FROM Annuncio c"),
+    			query="SELECT c FROM Annuncio c WHERE NOT c.terminato = true "),
 })
 public class Annuncio {
 	
@@ -34,6 +35,10 @@ public class Annuncio {
 	private String descrizione;
 	private String latitudine;
 	private String longitudine;
+	private Date dataCreazioneAnnuncio;
+	private Date dataAnnuncio;
+	
+	private boolean terminato;
 	
 	
 	
@@ -78,6 +83,24 @@ public class Annuncio {
 	}
 	public void setLongitudine(String longitudine) {
 		this.longitudine = longitudine;
+	}
+	public Date getDataCreazioneAnnuncio() {
+		return dataCreazioneAnnuncio;
+	}
+	public void setDataCreazioneAnnuncio(Date dataCreazioneAnnuncio) {
+		this.dataCreazioneAnnuncio = dataCreazioneAnnuncio;
+	}
+	public Date getDataAnnuncio() {
+		return dataAnnuncio;
+	}
+	public void setDataAnnuncio(Date dataAnnuncio) {
+		this.dataAnnuncio = dataAnnuncio;
+	}
+	public boolean isTerminato() {
+		return terminato;
+	}
+	public void setTerminato(boolean terminato) {
+		this.terminato = terminato;
 	}
 	
 	

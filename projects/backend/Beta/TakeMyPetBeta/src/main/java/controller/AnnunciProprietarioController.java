@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -74,6 +75,8 @@ public class AnnunciProprietarioController extends HttpServlet {
 		//da sistemare dopo
 		String latitudine=null;
 		String longitudine=null;
+		Date dataCreazioneAnnuncio = null;
+		Date dataAnnuncio = null;
 		
 		List<Animale> listaAnimali=new ArrayList<Animale>();
 		//prendere dal body la lista animali e convertirla dal Json

@@ -25,6 +25,7 @@ public interface UtenteAppInterface {
 	abstract void inserisciImmagine(String username, String urlImmagine);
 	abstract Annuncio visualizzaAnnuncio(Integer idAnnuncio);
 	abstract void eliminaEvento(Integer idEvento);
+	abstract void eliminaPreferito(Integer idPreferito);
 	
 
 }

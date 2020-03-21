@@ -11,6 +11,7 @@ import interfaces.UtenteAppInterface;
 import model.Annuncio;
 import model.Evento;
 import model.Immagine;
+import model.Preferiti;
 import model.Segnalazione;
 import model.UtenteApp;
 import model.Valutazione;
@@ -182,6 +183,12 @@ public class UtenteAppManager implements UtenteAppInterface {
 		return annuncio;
 		
 		
+	}
+	
+	public void eliminaPreferito(Integer idPreferito) {
+		EntityManager em =JPAUtil.getInstance().getEmf().createEntityManager();
+		em.remove(em.find(Preferiti.class, idPreferito));
+		em.close();
 	}
 
 }
