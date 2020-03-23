@@ -37,6 +37,7 @@ public class Annuncio {
 	private String longitudine;
 	private Date dataCreazioneAnnuncio;
 	private Date dataAnnuncio;
+	private String nomeAnnuncio;
 	
 	private boolean terminato;
 	
@@ -101,6 +102,12 @@ public class Annuncio {
 	}
 	public void setTerminato(boolean terminato) {
 		this.terminato = terminato;
+	}
+	public String getNomeAnnuncio() {
+		return nomeAnnuncio;
+	}
+	public void setNomeAnnuncio(String nomeAnnuncio) {
+		this.nomeAnnuncio = nomeAnnuncio;
 	}
 	
 	

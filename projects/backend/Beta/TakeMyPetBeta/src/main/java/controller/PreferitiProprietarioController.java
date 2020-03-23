@@ -62,7 +62,7 @@ public class PreferitiProprietarioController extends HttpServlet {
 		Integer idAnnuncio = Integer.valueOf(idAnnuncioStringa);
 		log.debug("doPost creaPreferitoProprietario, PreferitiProprietarioController Pronto");
 		proprietarioManager.creaPreferitoProprietario(usernameProprietario, idAnnuncio, usernamePetSitter);
-		log.debug("doGet creaPreferitoProprietario, PreferitiProprietarioController Funziona");
+		log.debug("doPost creaPreferitoProprietario, PreferitiProprietarioController Funziona");
 	}
 
 	/**

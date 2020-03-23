@@ -77,7 +77,7 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 		return null;
 	}
 
-	public void aggiungiAnnuncio(String usernameProprietario, String descrizione, String longitudine, String latitudine,
+	public void aggiungiAnnuncio(String nomeAnnuncio, String usernameProprietario, String descrizione, String longitudine, String latitudine,
 			List<Animale> listaAnimali, Date dataAnnuncio, Date dataCreazioneAnnuncio) {
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 
@@ -86,6 +86,7 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 
 		proprietario = em.find(Proprietario.class, usernameProprietario);
 
+		annuncio.setNomeAnnuncio(nomeAnnuncio);
 		annuncio.setDataAnnuncio(dataAnnuncio);
 		annuncio.setDataCreazioneAnnuncio(dataCreazioneAnnuncio);
 		annuncio.setTerminato(false);

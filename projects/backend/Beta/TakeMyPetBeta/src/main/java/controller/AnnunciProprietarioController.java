@@ -71,6 +71,7 @@ public class AnnunciProprietarioController extends HttpServlet {
 		ProprietarioManager proprietarioManager=new ProprietarioManager();
 		String usernameProprietario=request.getParameter("usernameProprietario");
 		String descrizioneProprietario=request.getParameter("descrizioneProprietario");
+		String nomeAnnuncio = request.getParameter("nomeAnnuncio");
 		
 		//da sistemare dopo
 		String latitudine=null;
@@ -80,6 +81,7 @@ public class AnnunciProprietarioController extends HttpServlet {
 		
 		List<Animale> listaAnimali=new ArrayList<Animale>();
 		//prendere dal body la lista animali e convertirla dal Json
+		proprietarioManager.aggiungiAnnuncio(nomeAnnuncio, usernameProprietario, descrizioneProprietario, longitudine, latitudine, listaAnimali, dataAnnuncio, dataCreazioneAnnuncio);
 		
 		
 	}
