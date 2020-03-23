@@ -1,5 +1,7 @@
 $(() =>{
+	$('#nomeUtente').click(() => {
 	$('#nomeUtente').text(" Ciao");
+	location.href('./gestioneUtenti.html')});
 	/*$.ajax({
 		url: '/listaUtentiAdmin',
 		method: 'get'
