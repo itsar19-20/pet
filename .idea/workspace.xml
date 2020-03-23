@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c96c75c5-011f-4970-beff-a9074791e30c" name="Default Changelist" comment="" />
+    <list default="true" id="c96c75c5-011f-4970-beff-a9074791e30c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ApplicazioneUfficialeTMPet/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicazioneUfficialeTMPet/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApplicazioneUfficialeTMPet/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicazioneUfficialeTMPet/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApplicazioneUfficialeTMPet/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicazioneUfficialeTMPet/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApplicazioneUfficialeTMPet/.idea/libraries/Gradle__android_android_29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApplicazioneUfficialeTMPet/ApplicazioneUfficialeTMPet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicazioneUfficialeTMPet/ApplicazioneUfficialeTMPet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApplicazioneUfficialeTMPet/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicazioneUfficialeTMPet/app/app.iml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +52,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
