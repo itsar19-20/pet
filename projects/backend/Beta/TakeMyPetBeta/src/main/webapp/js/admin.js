@@ -1,4 +1,4 @@
-$(() => {
+/*$(() => {
 	if(localStorage.getItem('user')){
 		
 	var utente = JSON.parse(localStorage.getItem('user'));
@@ -9,7 +9,7 @@ $(() => {
 	else {
 		location.href = './index.html';
 	}
-    /*
+    
 	if(localStorage.getItem('user')) {
         
     } else {
