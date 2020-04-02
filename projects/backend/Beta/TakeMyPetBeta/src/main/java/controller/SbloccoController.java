@@ -22,7 +22,7 @@ import model.Utente;
 @WebServlet("/SbloccoController")
 public class SbloccoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static Logger log = LoggerFactory.getLogger(LoginController.class);
+	private static Logger log = LoggerFactory.getLogger(SbloccoController.class);
 
        
     /**

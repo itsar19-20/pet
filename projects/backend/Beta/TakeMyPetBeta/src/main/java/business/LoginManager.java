@@ -36,7 +36,7 @@ public class LoginManager implements LoginInterface {
 			if (u.getPassword().contentEquals(password)) {
 				if(!u.isBloccato()) {
 				u.setContatoreAccessiSbagliati(0);
-				((UtenteApp) u).setAttivo(true);
+				//((UtenteApp) u).setAttivo(true);
 				em.getTransaction().begin();
 				//em.remove(em.find(Utente.class, username));
 				em.persist(u);
@@ -46,6 +46,15 @@ public class LoginManager implements LoginInterface {
 				return u;
 				}
 				else {
+					MailManager mailManager= new MailManager();
+					String codiceSblocco = mailManager.generateUnlockCode();
+					for(Email email: u.getEmails()) {
+						mailManager.sendMail(mailManager.getUSERNAME(), mailManager.getPASSWORD(), email.getEmail(), "Codice sblocco account Take My Pet App", "Clicca su questo link: http://localhost:8080/sblocco.html ed inserisci il tuo username e il seguente codice: " + codiceSblocco);
+					}
+					u.setCodiceSblocco(codiceSblocco);
+					em.getTransaction().begin();
+					em.persist(u);
+					em.getTransaction().commit();
 					return u;
 					}
 			} 
@@ -63,7 +72,7 @@ public class LoginManager implements LoginInterface {
 						String codiceSblocco = mailManager.generateUnlockCode();
 						u.setCodiceSblocco(codiceSblocco);
 						for(Email email: u.getEmails()) {
-							mailManager.sendMail(mailManager.getUSERNAME(), mailManager.getPASSWORD(), email.getEmail(), "Codice sblocco account Take My Pet App", "Clicca su questo link: ... ed inserisci il tuo username e il seguente codice: " + codiceSblocco);
+							mailManager.sendMail(mailManager.getUSERNAME(), mailManager.getPASSWORD(), email.getEmail(), "Codice sblocco account Take My Pet App", "Clicca su questo link: http://localhost:8080/sblocco.html ed inserisci il tuo username e il seguente codice: " + codiceSblocco);
 						}
 					em.getTransaction().begin();
 					//em.remove(u);

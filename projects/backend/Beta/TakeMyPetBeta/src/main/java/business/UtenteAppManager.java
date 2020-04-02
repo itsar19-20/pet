@@ -121,10 +121,10 @@ public class UtenteAppManager implements UtenteAppInterface {
 		UtenteApp utente = new UtenteApp();
 		
 		utente = em.find(UtenteApp.class, username);
-		Immagine vecchiaImmagine = new Immagine();
-		if ((vecchiaImmagine = em.find(Immagine.class, utente.getImmagineProfilo().getId_Immagine())) != null) {
-			em.remove(vecchiaImmagine);
-		}
+		//Immagine vecchiaImmagine = new Immagine();
+		//if ((vecchiaImmagine = em.find(Immagine.class, utente.getImmagineProfilo().getId_Immagine())) != null) {
+			//em.remove(vecchiaImmagine);
+		//}
 		ima.setUrlImmagine(urlImmagine);
 		utente.setImmagineProfilo(ima);
 		

@@ -25,7 +25,7 @@ import model.Preferiti;
 @WebServlet("/PreferitiProprietarioController")
 public class PreferitiProprietarioController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static Logger log = LoggerFactory.getLogger(UtenteAppController.class);   
+	private static Logger log = LoggerFactory.getLogger(PreferitiProprietarioController.class);   
        
     /**
      * @see HttpServlet#HttpServlet()

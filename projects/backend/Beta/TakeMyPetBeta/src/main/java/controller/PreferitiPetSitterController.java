@@ -25,7 +25,7 @@ import model.Preferiti;
 @WebServlet("/PreferitiPetSitterController")
 public class PreferitiPetSitterController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static Logger log = LoggerFactory.getLogger(UtenteAppController.class); 
+	private static Logger log = LoggerFactory.getLogger(PreferitiPetSitterController.class); 
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -70,7 +70,7 @@ public class PreferitiPetSitterController extends HttpServlet {
 	 */
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UtenteAppManager utenteAppManager = new UtenteAppManager();
-		String idPreferitoStringa = request.getParameter("idPreferitoStringa");
+		String idPreferitoStringa = request.getParameter("idPreferitoString");
 		Integer idPreferito = Integer.valueOf(idPreferitoStringa);
 		log.debug("doDelete eliminaPreferitoPetSitter, PreferitiPetSitterController Pronto");
 		utenteAppManager.eliminaPreferito(idPreferito);
