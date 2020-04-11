@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteEditorActivity">
+
+    <EditText
+        android:id="@+id/etNote"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:hint="Insert the contact's E-mail"
+        android:inputType="textMultiLine"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:hint="Insert Name"
+        android:layout_marginTop="18dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNote"
+        app:layout_constraintBottom_toTopOf="@id/etAuthor"
+        app:layout_constraintHorizontal_bias="0.04"/>
+
+    <EditText
+        android:id="@+id/etAuthor"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:hint="Insert Surname"
+        android:layout_marginTop="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etTitle"
+        app:layout_constraintBottom_toTopOf="@id/etDate"
+        app:layout_constraintHorizontal_bias="0.04"/>
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:hint="Inserire dettagli/promemoria (fac.)"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etAuthor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"/>
+
+    <Button
+        android:id="@+id/btnSaveUpdate"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="35dp"
+        android:textColor="@color/white"
+        android:text="Save"
+        android:background="@drawable/ic_background_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNote"
+        app:layout_constraintBottom_toTopOf="@id/btnRemove"/>
+
+    <Button
+        android:id="@+id/btnRemove"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="Delete"
+        android:textColor="@color/white"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/ic_background_btn"
+        app:layout_constraintTop_toBottomOf="@id/btnSaveUpdate"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

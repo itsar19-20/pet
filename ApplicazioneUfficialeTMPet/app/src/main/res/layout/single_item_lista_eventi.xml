@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="6dp"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorVerdeApp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/set_image_profilo"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/logoapppet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_item_titolo_lista_eventi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/set_image_profilo"
+        android:layout_marginStart="0dp"
+        android:hint="Title"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/textView_item_autore_lista_eventi" />
+
+    <TextView
+        android:id="@+id/textView_item_autore_lista_eventi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_item_titolo_lista_eventi"
+        android:layout_alignParentStart="@+id/set_image_profilo"
+        android:hint="Author"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/textView_item_autore_lista_eventi"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_item_testo_lista_eventi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_item_autore_lista_eventi"
+        android:hint="Text"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="24dp" />
+    <TextView
+        android:id="@+id/textView_item_data_lista_eventi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_item_testo_lista_eventi"
+        android:hint="Date"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="24dp" />
+</RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

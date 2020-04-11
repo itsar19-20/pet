@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Accettati">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView_avviso_accettati"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:text="Non hai accetato ancora nessun annuncio!"
+        android:textAlignment="center"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:id="@+id/imgView_attesa_accettati"
+        android:layout_width="match_parent"
+        android:layout_height="352dp"
+        android:layout_below="@+id/textView_avviso_accettati"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/cane_attesa_accettati" />
+
+
+</RelativeLayout>

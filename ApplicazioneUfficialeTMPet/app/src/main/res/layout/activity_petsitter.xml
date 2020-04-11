@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_petsitter">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_viewProva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        app:itemIconTint="@menu/single_item_nav"
+        app:itemTextColor="@color/colorVerdeApp"
+        app:menu="@menu/top_nav_menu" />
+    <TextView
+        android:id="@+id/textView_title_fragment_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="E-MAILS-CHAT"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorVerdeApp"></TextView>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp">
+
+        <include
+            android:id="@+id/petsitter_toolBar"
+            layout="@layout/petsitter_app_bar"></include>
+
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="595dp"
+            android:layout_marginVertical="58dp"
+            android:backgroundTintMode="@color/colorVerdeApp"></ListView>
+
+
+
+    </FrameLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@menu/single_item_nav"
+        app:itemTextColor="@color/colorVerdeApp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "986379806936",
+    "firebase_url": "https://applicazioneufficialetmpet.firebaseio.com",
+    "project_id": "applicazioneufficialetmpet",
+    "storage_bucket": "applicazioneufficialetmpet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986379806936:android:93bec5fc6d9f772c3e4fad",
+        "android_client_info": {
+          "package_name": "com.ifts.applicazioneufficialetmpet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986379806936-elhmnc815ceo71euvdqhtasd5l9bgv86.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ifts.applicazioneufficialetmpet",
+            "certificate_hash": "2d55c5ac9904dc3f43aa8df8f1b169e82aa5d662"
+          }
+        },
+        {
+          "client_id": "986379806936-le6b2gv52o0m9lp6c0vinib2pbpihoda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhROdLRc8YN5KiE6uLhluim9pOGbFo-y8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986379806936-le6b2gv52o0m9lp6c0vinib2pbpihoda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
