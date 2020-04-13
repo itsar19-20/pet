@@ -39,6 +39,7 @@ public class Utente {
 	@JsonIgnore
 	private String codiceSblocco;
 	private boolean bloccato;
+	private boolean attivo;
 	
 	
 
@@ -164,6 +165,16 @@ public class Utente {
 
 	public void setEmails(List<Email> emails) {
 		this.emails = emails;
+	}
+
+
+	public boolean isAttivo() {
+		return attivo;
+	}
+
+
+	public void setAttivo(boolean attivo) {
+		this.attivo = attivo;
 	}
 	
 }

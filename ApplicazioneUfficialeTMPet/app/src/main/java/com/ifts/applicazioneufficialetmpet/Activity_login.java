@@ -3,8 +3,8 @@ package com.ifts.applicazioneufficialetmpet;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,6 +34,9 @@ public class Activity_login extends Activity {
     private TextView registrati;
 
     private ProgressDialog loadingBar;
+
+    private static final String SHARED_PREF_USERNAME = "shared_pref_username";
+    private static final String USERNAME = "username";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,13 +79,13 @@ public class Activity_login extends Activity {
             String password = etPassword.getText().toString();
 
 
-            if(TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)){
+            if(etUsername.toString().isEmpty() && !etPassword.toString().isEmpty()){
                 Toast.makeText(Activity_login.this, "Manca lo Username", Toast.LENGTH_LONG).show();
             }else
-            if(TextUtils.isEmpty(password) && !TextUtils.isEmpty(username)){
+            if(etPassword.toString().isEmpty() && !etUsername.toString().isEmpty()){
                 Toast.makeText(Activity_login.this, "Manca la Password", Toast.LENGTH_LONG).show();
             }else
-            if(TextUtils.isEmpty(password) && TextUtils.isEmpty(username)){
+            if(etPassword.toString().isEmpty() && etUsername.toString().isEmpty()){
                 Toast.makeText(Activity_login.this, "Manca lo Username e la Password", Toast.LENGTH_LONG).show();
             }else
             {
@@ -101,8 +104,17 @@ public class Activity_login extends Activity {
 
                             loadingBar.dismiss();
                             Toast.makeText(Activity_login.this, "Ti sei loggato con Successo!", Toast.LENGTH_LONG).show();
-                            SendUserToMain();
+                            SharedPreferences sharedpref = getSharedPreferences(SHARED_PREF_USERNAME,MODE_PRIVATE);
+                            sharedpref.edit().putString(USERNAME, etUsername.toString());
+                            sharedpref.edit().commit();
+                            sendUserToMain();
                         //Una volta aggiunto SQLite posso prendermi il model dalla Call<> e salvarlo
+                        }
+                        UserModel userModel = response.body();
+                        if(userModel == null) {
+                            Toast.makeText(Activity_login.this, "Username o Password sbagliati", Toast.LENGTH_LONG).show();
+                            refresh();
+
                         }
                     }
 
@@ -138,7 +150,7 @@ public class Activity_login extends Activity {
 
         }
 
-        private void SendUserToMain() {
+        private void sendUserToMain() {
         Intent mainIntent = new Intent(Activity_login.this, MainActivity.class);
         //mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(mainIntent);
@@ -148,6 +160,12 @@ public class Activity_login extends Activity {
     private void SendUserToRegistrazione() {
         Intent registrazioneIntent = new Intent(Activity_login.this, Activity_registrazione.class);
         startActivity(registrazioneIntent);
+    }
+
+    private void refresh(){
+        Intent refresh = new Intent(Activity_login.this, Activity_login.class);
+        startActivity(refresh);
+        finish();
     }
 }
 

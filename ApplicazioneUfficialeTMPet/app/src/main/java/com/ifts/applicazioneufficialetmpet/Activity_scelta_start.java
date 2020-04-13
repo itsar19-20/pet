@@ -1,7 +1,5 @@
 package com.ifts.applicazioneufficialetmpet;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,12 +7,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Activity_scelta_start extends AppCompatActivity {
-    private Button petsitter;
+    private Button btnPetsitter;
     private Button proprietario;
-    private Button spiegaPetsitter;
+    private Button btnSpiegaPetSitter;
     private Button spiegaProprietario;
     private TextView spiegazione;
 
@@ -23,16 +21,16 @@ public class Activity_scelta_start extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scelta_start);
 
-        petsitter = (Button)findViewById(R.id.button_petsitter);
-        proprietario = (Button)findViewById(R.id.button_proprietario);
-        spiegaPetsitter = (Button)findViewById(R.id.button_spiega_petsitter);
-        spiegaProprietario = (Button)findViewById(R.id.button_spiega_proprietario);
-        spiegazione = (TextView)findViewById(R.id.textView_spiegazione);
+        btnPetsitter = findViewById(R.id.button_petsitter);
+        proprietario = findViewById(R.id.button_proprietario);
+        btnSpiegaPetSitter = findViewById(R.id.button_spiega_petsitter);
+        spiegaProprietario = findViewById(R.id.button_spiega_proprietario);
+        spiegazione = findViewById(R.id.textView_spiegazione);
 
-        petsitter.setOnClickListener(new View.OnClickListener(){
+        btnPetsitter.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                openActivity_petsitter();
+                openActivityPetSitter();
                 finish();
             }
         });
@@ -45,10 +43,10 @@ public class Activity_scelta_start extends AppCompatActivity {
             }
         });
 
-        spiegaPetsitter.setOnClickListener(new View.OnClickListener() {
+        btnSpiegaPetSitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                spiega_petsitter();
+                spiegaPetSitter();
                 //finish();
             }
         });
@@ -61,7 +59,7 @@ public class Activity_scelta_start extends AppCompatActivity {
         });
 
     }
-    public void openActivity_petsitter(){
+    public void openActivityPetSitter(){
         Intent intent = new Intent(Activity_scelta_start.this, Activity_petsitter.class);
         startActivity(intent);
     }
@@ -70,7 +68,7 @@ public class Activity_scelta_start extends AppCompatActivity {
         Intent intent = new Intent(Activity_scelta_start.this, Activity_proprietario.class);
         startActivity(intent);
     }
-    public void spiega_petsitter(){
+    public void spiegaPetSitter(){
         //Snackbar
         Toast.makeText(Activity_scelta_start.this, "IL PET-SITTER SI PRENDE CURA DEGLI ANIMALI DEI PROPRIETARI, CREA E PARTECIPA AD EVNTI. PER MAGGIORI INFORMAZIONI CONSULTARE IL SITO 'TakeMyPetWEB'", Toast.LENGTH_LONG).show();
 

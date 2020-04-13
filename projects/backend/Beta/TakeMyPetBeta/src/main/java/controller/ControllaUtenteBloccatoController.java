@@ -48,6 +48,8 @@ public class ControllaUtenteBloccatoController extends HttpServlet {
 		Utente utente = cbManager.controlloBlocco(username);
 		if(utente.isBloccato()) {
 			controllo = "bloccato";
+		} else if(!utente.isAttivo()) {
+			controllo = "disattivato";
 		} else {
 			controllo = "ok";
 		}

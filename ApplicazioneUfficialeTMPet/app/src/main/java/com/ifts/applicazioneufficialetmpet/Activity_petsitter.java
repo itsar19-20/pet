@@ -42,6 +42,8 @@ public class Activity_petsitter extends AppCompatActivity {
     private FirebaseAuth auth;
     private String mailID;
 
+    private static final String SHARED_PREF_USERNAME = "shared_pref_username";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -202,15 +204,16 @@ public class Activity_petsitter extends AppCompatActivity {
             SendUserToProfile();
         }
         if (item.getItemId() == R.id.logout_menu){
-            auth.signOut();
-            SendUserToLogin();
+           SharedPreferences sharedPref = getSharedPreferences(SHARED_PREF_USERNAME, MODE_PRIVATE);
+           sharedPref.edit().clear().commit();
+           sendUserToLogin();
         } if (item.getItemId() == R.id.add_people){
            SendUserToNewNote();
         }
         return true;
     }
 
-    private void SendUserToLogin(){
+    private void sendUserToLogin(){
         Intent registrationIntent = new Intent(Activity_petsitter.this, Activity_login.class);
         startActivity(registrationIntent);
     }

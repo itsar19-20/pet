@@ -55,7 +55,7 @@ public class AdminManager implements AdminInterface {
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 		UtenteApp u = new UtenteApp();
 		u = em.find(UtenteApp.class, username);
-		u.setBloccato(true);
+		u.setAttivo(false);
 
 		em.getTransaction().begin();
 		em.remove(em.find(UtenteApp.class, username));
@@ -72,7 +72,7 @@ public class AdminManager implements AdminInterface {
 		if(codiceSblocco != null) {
 			if (u.getCodiceSblocco().contentEquals(codiceSblocco)) {
 		
-		u.setBloccato(false);
+		u.setAttivo(true);
 
 		em.getTransaction().begin();
 		em.remove(em.find(UtenteApp.class, username));

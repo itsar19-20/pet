@@ -32,7 +32,10 @@ public interface MyApiEndPointInterface {
     @POST("getImmagine")
     Call<RequestBody> setImage2(@Query("username") String username, @Query("immagine") String immagine, @Part("description") RequestBody description);
 
+    //CONTROLLO UTENTE BLOCCATO
 
+    @GET("/ControllaUtenteBloccatoController")
+    Call<String> getControlloBloccato(@Query("username") String username);
 
     //EVENTI
 /*

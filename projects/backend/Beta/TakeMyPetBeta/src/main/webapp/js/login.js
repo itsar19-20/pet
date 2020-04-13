@@ -22,6 +22,12 @@ $(() => {
                     sessionStorage.removeItem('user');
                     location.href = './index.html';
                   }
+            	    else if(!utente.attivo){
+            	    	 alert('Il tuo account è stato bloccato dai nostri admin. Scrivici per avere più informazioni: takemypetapp@gmail.com')
+                         localStorage.removeItem('user');
+                         sessionStorage.removeItem('user');
+                         location.href = './index.html';
+            	    }
                     else if($('#rememberCheck').checked) {
                         localStorage.setItem('user',JSON.stringify(utente));
                     }

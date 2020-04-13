@@ -1,58 +1,49 @@
 package com.ifts.applicazioneufficialetmpet;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.ifts.applicazioneufficialetmpet.interfaces.MyApiEndPointInterface;
+import com.ifts.applicazioneufficialetmpet.retrofit.ApplicationWebService;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-    private Button start;
+    private Button btnStart;
     private ProgressBar cerchio;
 
-    private FirebaseUser user;
-    private FirebaseAuth auth;
-    private DatabaseReference rootReference;
+    private static final String SHARED_PREF_USERNAME = "shared_pref_username";
+    private static final String USERNAME = "username";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        auth = FirebaseAuth.getInstance();
-        user = auth.getCurrentUser();
-        rootReference = FirebaseDatabase.getInstance().getReference();
+        cerchio = findViewById(R.id.progressBar_circle);
+        btnStart = findViewById(R.id.button_start);
 
-        cerchio = (ProgressBar) findViewById(R.id.progressBar_circle);
-        start = (Button) findViewById(R.id.button_start);
-
-        start.setVisibility(View.INVISIBLE);
-        start.postDelayed(new Runnable() {
+        btnStart.setVisibility(View.INVISIBLE);
+        btnStart.postDelayed(new Runnable() {
             public void run() {
-                start.setVisibility(View.VISIBLE);
+                btnStart.setVisibility(View.VISIBLE);
                 cerchio.setVisibility(View.INVISIBLE);
             }
         }, 2000);
 
-        start.setOnClickListener(new View.OnClickListener() {
+        btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SendUserToSceltaStart();
+                sendUserToSceltaStart();
                 finish();
             }
         });
@@ -61,42 +52,52 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
 
         super.onStart();
-
-        if (user == null){
-            SendUserToLogin();
-        }else{
-            VerifyUserExistence();
-        }
+            verifyUser();
     }
 
-    private void VerifyUserExistence(){
-        String userId = auth.getCurrentUser().getUid();
-        rootReference.child("Users").child(userId).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if ((dataSnapshot.child("name").exists())){
-                    Toast.makeText(MainActivity.this, "welcome", Toast.LENGTH_LONG).show();
-                }else{
-                    SendUserToProfile();
-                   // Toast.makeText(MainActivity.this, "", Toast.LENGTH_LONG).show();
+    private void verifyUser(){
+        SharedPreferences sharedPref = getSharedPreferences(SHARED_PREF_USERNAME, MODE_PRIVATE);
+        String username = sharedPref.getString(USERNAME, null);
+        if(username != null) {
+            ApplicationWebService applicationWebService = (ApplicationWebService) getApplication();
+            MyApiEndPointInterface apiInterface =  applicationWebService.getRetrofit().create(MyApiEndPointInterface.class);
+            apiInterface.getControlloBloccato(username).enqueue(new Callback<String>() {
+                @Override
+                public void onResponse(Call<String> call, Response<String> response) {
+                    int statusCode = response.code();
+                    if (statusCode == 200) {
+                        String controllo = response.body();
+                        if(controllo.contentEquals("ok")){
+                            Toast.makeText(MainActivity.this, "welcome" + username, Toast.LENGTH_LONG).show();
+                        } else if (controllo.contentEquals("bloccato")) {
+                            Toast.makeText(MainActivity.this, "Il tuo account è stato bloccato, controlla la tua email per le info di sblocco", Toast.LENGTH_LONG);
+                            sharedPref.edit().clear().commit();
+                            sendUserToLogin();
+                        } else if (controllo.contentEquals("disattivato")){
+                            Toast.makeText(MainActivity.this, "Il tuo account è stato bloccato dai nostri admin. Scrivici per avere più informazioni: takemypetapp@gmail.com", Toast.LENGTH_LONG);
+                            sharedPref.edit().clear().commit();
+                            sendUserToLogin();
+                        }
+                    }
                 }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                @Override
+                public void onFailure(Call<String> call, Throwable t) {
+                    Toast.makeText(MainActivity.this, "Si è verificato un errore: " + t.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            });
+        } else {
+            sendUserToLogin();
             }
-        });
 
     }
-
-    private void SendUserToLogin() {
+    private void sendUserToLogin() {
         Intent loginIntent = new Intent(MainActivity.this, Activity_login.class);
         loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(loginIntent);
         finish();
     }
-    private void SendUserToSceltaStart() {
+    private void sendUserToSceltaStart() {
         Intent sceltaStartIntent = new Intent(MainActivity.this, Activity_scelta_start.class);
         startActivity(sceltaStartIntent);
     }

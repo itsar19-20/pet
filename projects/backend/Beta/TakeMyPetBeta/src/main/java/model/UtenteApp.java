@@ -9,7 +9,7 @@ public class UtenteApp extends Utente{
 	@OneToOne
 	private Immagine immagineProfilo;
 	private String descrizione;
-	private boolean attivo;
+
 	
 	private String latitudine;
 	private String longitudine;
@@ -27,13 +27,6 @@ public class UtenteApp extends Utente{
 		this.descrizione = descrizione;
 	}
 
-	public boolean isAttivo() {
-		return attivo;
-	}
-
-	public void setAttivo(boolean attivo) {
-		this.attivo = attivo;
-	}
 
 
 
@@ -55,7 +48,7 @@ public class UtenteApp extends Utente{
 
 	@Override
 	public String toString() {
-		return "UtenteApp [descrizione=" + descrizione + ", attivo=" + attivo +  ", latitudine=" + latitudine + ", longitudine=" + longitudine + "]";
+		return "UtenteApp [descrizione=" + descrizione +  " latitudine=" + latitudine + ", longitudine=" + longitudine + "]";
 	}
 
 	public boolean isDoppioProfilo() {
