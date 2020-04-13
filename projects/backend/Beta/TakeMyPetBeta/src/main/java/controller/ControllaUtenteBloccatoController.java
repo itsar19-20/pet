@@ -40,14 +40,19 @@ public class ControllaUtenteBloccatoController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ControlloBloccatoManager cbManager = new ControlloBloccatoManager();
-		ObjectMapper objectMapper = new ObjectMapper();
+		
+		String controllo;
 		log.debug("ControlloUtenteBloccatoController pronto");
 	
 		String username = request.getParameter("username");
 		Utente utente = cbManager.controlloBlocco(username);
+		if(utente.isBloccato()) {
+			controllo = "bloccato";
+		} else {
+			controllo = "ok";
+		}
 		
-		response.setContentType("application/json");
-		response.getWriter().append(objectMapper.writeValueAsString(utente));
+		response.getWriter().append(controllo);
 		
 		log.debug("ControlloUtenteBloccatoController funziona");
 		
