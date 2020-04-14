@@ -13,6 +13,9 @@ body{
 #haiSbagliato{
     color: red;
 }
+#riempireCampi{
+	color: red;
+}
 .form-control{
     font-size: medium;
     min-height: 41px;

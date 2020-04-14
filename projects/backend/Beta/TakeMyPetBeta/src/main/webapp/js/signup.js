@@ -1,6 +1,7 @@
 $(() => {
    $('#haiSbagliato').hide();
    $('#esisteGia').hide();
+   $('#riempireCampi').hide();
 
    var tipo = 'petsitter';
 
@@ -12,13 +13,19 @@ $(() => {
         tipo = 'petsitter';
    });
 
+   
+   
    $('#btnSignUp').click(() => {
 
     // SISTEMARE SE CAMPIVUOTI ATTENZIONE
 
     if(($('#inputPassword').val()) != ($('#inputConfermaPassword').val())) {
         $('#haiSbagliato').show();
-    } else {
+    } 
+    if($('#inputName').val().contentEquals("")|| $('#inputSurname').val().contentEquals("") || $('#inputEmail').val().contentEquals("") || $('#inputUsername').val().contentEquals("")  || $('#inputPassword').val().contentEquals("") || $('#inputConfermaPassword').val().contentEquals("") ){
+    	$('#riempireCampi').show();
+    }
+    else {
        $.ajax({
            url: '/signUp',
            method: 'post',
@@ -48,6 +55,7 @@ $(() => {
                     return bytes.buffer;
                 }
                 */
+            	
                 var base64Immagine = $('.profile-pic').attr('src').substring(23);
                 //taglio via le ultime 4 cifre per la decodifica sul server
                 var base64Cut = base64Immagine.substring(0,(base64Immagine.length - 4));
@@ -70,3 +78,5 @@ $(() => {
     }
     })
 })
+
+
