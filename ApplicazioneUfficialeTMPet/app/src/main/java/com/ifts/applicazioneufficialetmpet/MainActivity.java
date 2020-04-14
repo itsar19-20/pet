@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void verifyUser(){
         SharedPreferences sharedPref = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
         String username = sharedPref.getString(USERNAME, null);
         if(username != null) {
             ApplicationWebService applicationWebService = (ApplicationWebService) getApplication();
@@ -71,11 +72,11 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "welcome" + username, Toast.LENGTH_LONG).show();
                         } else if (controllo.contentEquals("bloccato")) {
                             Toast.makeText(MainActivity.this, "Il tuo account è stato bloccato, controlla la tua email per le info di sblocco", Toast.LENGTH_LONG).show();
-                            sharedPref.edit().clear().apply();
+                            editor.clear().commit();
                             sendUserToLogin();
                         } else if (controllo.contentEquals("disattivato")){
                             Toast.makeText(MainActivity.this, "Il tuo account è stato bloccato dai nostri admin. Scrivici per avere più informazioni: takemypetapp@gmail.com", Toast.LENGTH_LONG).show();
-                            sharedPref.edit().clear().apply();
+                            editor.clear().commit();
                             sendUserToLogin();
                         }
                     }

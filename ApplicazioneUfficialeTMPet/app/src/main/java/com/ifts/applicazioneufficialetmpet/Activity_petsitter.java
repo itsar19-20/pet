@@ -205,7 +205,8 @@ public class Activity_petsitter extends AppCompatActivity {
         }
         if (item.getItemId() == R.id.logout_menu){
            SharedPreferences sharedPref = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
-           sharedPref.edit().clear().commit();
+           SharedPreferences.Editor editor = sharedPref.edit();
+           editor.clear().commit();
            sendUserToLogin();
         } if (item.getItemId() == R.id.add_people){
            SendUserToNewNote();

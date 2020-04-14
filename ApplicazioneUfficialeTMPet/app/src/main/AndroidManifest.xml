@@ -14,6 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_logo_tmp_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Activity_signup"></activity>
         <activity android:name=".NoteEditorActivity" />
         <activity android:name=".CreateActivity" />
         <activity android:name=".Activity_profilo" />

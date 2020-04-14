@@ -103,7 +103,6 @@ public class Activity_login extends Activity {
                                 refresh();
                             }
                             else{
-                            Toast.makeText(Activity_login.this, "Ti sei loggato con Successo!", Toast.LENGTH_LONG).show();
                             SharedPreferences sharedpref = getSharedPreferences(SHARED_PREFERENCE,MODE_PRIVATE);
                             SharedPreferences.Editor editor = sharedpref.edit();
                             editor.putString(USERNAME, etUsername.getText().toString());
@@ -131,8 +130,9 @@ public class Activity_login extends Activity {
     }
 
     private void sendUserToRegistrazione() {
-        Intent registrazioneIntent = new Intent(Activity_login.this, Activity_registrazione.class);
+        Intent registrazioneIntent = new Intent(Activity_login.this, Activity_signup.class);
         startActivity(registrazioneIntent);
+        finish();
     }
 
     private void refresh(){
