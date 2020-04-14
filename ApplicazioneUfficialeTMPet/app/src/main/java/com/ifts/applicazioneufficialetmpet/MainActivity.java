@@ -19,9 +19,9 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     private Button btnStart;
-    private ProgressBar cerchio;
+    private ProgressBar progressCerchio;
 
-    private static final String SHARED_PREF_USERNAME = "shared_pref_username";
+    public static final String SHARED_PREFERENCE = "shared_preference";
     private static final String USERNAME = "username";
 
     @Override
@@ -29,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        cerchio = findViewById(R.id.progressBar_circle);
+        progressCerchio = findViewById(R.id.progressBar_circle);
         btnStart = findViewById(R.id.button_start);
 
         btnStart.setVisibility(View.INVISIBLE);
         btnStart.postDelayed(new Runnable() {
             public void run() {
                 btnStart.setVisibility(View.VISIBLE);
-                cerchio.setVisibility(View.INVISIBLE);
+                progressCerchio.setVisibility(View.INVISIBLE);
             }
         }, 2000);
 
@@ -52,11 +52,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
 
         super.onStart();
-            verifyUser();
+        verifyUser();
     }
 
     private void verifyUser(){
-        SharedPreferences sharedPref = getSharedPreferences(SHARED_PREF_USERNAME, MODE_PRIVATE);
+        SharedPreferences sharedPref = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
         String username = sharedPref.getString(USERNAME, null);
         if(username != null) {
             ApplicationWebService applicationWebService = (ApplicationWebService) getApplication();
@@ -70,12 +70,12 @@ public class MainActivity extends AppCompatActivity {
                         if(controllo.contentEquals("ok")){
                             Toast.makeText(MainActivity.this, "welcome" + username, Toast.LENGTH_LONG).show();
                         } else if (controllo.contentEquals("bloccato")) {
-                            Toast.makeText(MainActivity.this, "Il tuo account è stato bloccato, controlla la tua email per le info di sblocco", Toast.LENGTH_LONG);
-                            sharedPref.edit().clear().commit();
+                            Toast.makeText(MainActivity.this, "Il tuo account è stato bloccato, controlla la tua email per le info di sblocco", Toast.LENGTH_LONG).show();
+                            sharedPref.edit().clear().apply();
                             sendUserToLogin();
                         } else if (controllo.contentEquals("disattivato")){
-                            Toast.makeText(MainActivity.this, "Il tuo account è stato bloccato dai nostri admin. Scrivici per avere più informazioni: takemypetapp@gmail.com", Toast.LENGTH_LONG);
-                            sharedPref.edit().clear().commit();
+                            Toast.makeText(MainActivity.this, "Il tuo account è stato bloccato dai nostri admin. Scrivici per avere più informazioni: takemypetapp@gmail.com", Toast.LENGTH_LONG).show();
+                            sharedPref.edit().clear().apply();
                             sendUserToLogin();
                         }
                     }
@@ -86,14 +86,13 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Si è verificato un errore: " + t.getMessage(), Toast.LENGTH_LONG).show();
                 }
             });
-        } else {
+        } if(username == null) {
             sendUserToLogin();
             }
 
     }
     private void sendUserToLogin() {
         Intent loginIntent = new Intent(MainActivity.this, Activity_login.class);
-        loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(loginIntent);
         finish();
     }

@@ -16,7 +16,12 @@ public class ControlloBloccatoManager {
 	EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 	Utente _return = em.find(Utente.class, username);
 	em.close();
+	if(_return!=null) {
 	log.debug("ControlloBloccatoManager funziona");
+	}
+	else {
+		log.debug("l'utente è null");
+	}
 	return _return;
 	}
 	

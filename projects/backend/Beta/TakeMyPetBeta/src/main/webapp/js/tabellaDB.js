@@ -15,7 +15,7 @@ $(() =>{
 					{title: 'Username', data: 'username'},
 					{title: 'Nome', data: 'nome' },
 					{title: 'Cognome', data: 'cognome' },
-					{title: 'Bloccato', data: 'bloccato' },
+					{title: 'Attivo', data: 'attivo' },
 					{title: 'Doppio profilo', data: 'doppioProfilo' },
 					{title: 'Stato',data: null,
 						render: function (data, type, row) {
@@ -117,7 +117,7 @@ $(() =>{
 					{title: 'Username', data: 'username'},
 					{title: 'Nome', data: 'nome' },
 					{title: 'Cognome', data: 'cognome' },
-					{title: 'Bloccato', data: 'bloccato' },
+					{title: 'Attivoo', data: 'attivo' },
 					{title: 'Doppio profilo', data: 'doppioProfilo' },
 					{data: null,
 						render: function (data, type, row) {

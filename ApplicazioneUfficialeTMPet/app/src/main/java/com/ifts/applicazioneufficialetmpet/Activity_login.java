@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
 import com.ifts.applicazioneufficialetmpet.interfaces.MyApiEndPointInterface;
 import com.ifts.applicazioneufficialetmpet.model.UserModel;
 import com.ifts.applicazioneufficialetmpet.retrofit.ApplicationWebService;
@@ -22,20 +21,18 @@ import retrofit2.Response;
 
 public class Activity_login extends Activity {
 
-    //private FirebaseUser user;
-    private FirebaseAuth auth;
 
     private EditText etUsername;
     private EditText etPassword;
 
     private Button btnLogin;
 
-    private TextView passwordDimenticata;
-    private TextView registrati;
+    private TextView tvPasswordDimenticata;
+    private TextView tvRegistrati;
 
     private ProgressDialog loadingBar;
 
-    private static final String SHARED_PREF_USERNAME = "shared_pref_username";
+    public static final String SHARED_PREFERENCE = "shared_preference";
     private static final String USERNAME = "username";
 
     @Override
@@ -43,52 +40,51 @@ public class Activity_login extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        InitializeField();
+        initializeField();
 
-        registrati.setOnClickListener(new View.OnClickListener() {
+        tvRegistrati.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SendUserToRegistrazione();
+                sendUserToRegistrazione();
             }
         });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AllowUserToLogin();
+                allowUserToLogin();
             }
         });
 
     }//l'ho aggiunta ma potrei toglierla nel caso tornassi al versione precedente
 
-    private void InitializeField(){
+    private void initializeField(){
         etUsername = (EditText)findViewById(R.id.editText_user_name_login);
         etPassword = (EditText)findViewById(R.id.editText_password_login);
 
         btnLogin = (Button)findViewById(R.id.button_login_login);
 
-        passwordDimenticata = (TextView)findViewById(R.id.textView_password_dimenticata);
-        registrati = (TextView)findViewById(R.id.textView_registrazione);
+        tvPasswordDimenticata = (TextView)findViewById(R.id.textView_password_dimenticata);
+        tvRegistrati = (TextView)findViewById(R.id.textView_registrazione);
         loadingBar = new ProgressDialog(this);
     }
 
 
-    private void AllowUserToLogin(){
+    private void allowUserToLogin(){
 
             String username = etUsername.getText().toString();
             String password = etPassword.getText().toString();
 
 
-            if(etUsername.toString().isEmpty() && !etPassword.toString().isEmpty()){
+            if(etUsername.getText().toString().isEmpty() && !etPassword.getText().toString().isEmpty()){
                 Toast.makeText(Activity_login.this, "Manca lo Username", Toast.LENGTH_LONG).show();
             }else
-            if(etPassword.toString().isEmpty() && !etUsername.toString().isEmpty()){
+            if(etPassword.getText().toString().isEmpty() && !etUsername.getText().toString().isEmpty()){
                 Toast.makeText(Activity_login.this, "Manca la Password", Toast.LENGTH_LONG).show();
             }else
-            if(etPassword.toString().isEmpty() && etUsername.toString().isEmpty()){
+            if(etPassword.getText().toString().isEmpty() && etUsername.getText().toString().isEmpty()){
                 Toast.makeText(Activity_login.this, "Manca lo Username e la Password", Toast.LENGTH_LONG).show();
-            }else
-            {
+            }else {
                 loadingBar.setTitle("Logging");
                 loadingBar.setMessage("Please Wait...");
                 loadingBar.setCanceledOnTouchOutside(false);
@@ -101,20 +97,21 @@ public class Activity_login extends Activity {
                     public void onResponse(Call<UserModel> call, Response<UserModel> response) {
                         int statusCode = response.code();
                         if (statusCode == 200){
-
-                            loadingBar.dismiss();
+                            UserModel userModel = response.body();
+                            if (userModel == null) {
+                                Toast.makeText(Activity_login.this, "Username o Password sbagliati", Toast.LENGTH_LONG).show();
+                                refresh();
+                            }
+                            else{
                             Toast.makeText(Activity_login.this, "Ti sei loggato con Successo!", Toast.LENGTH_LONG).show();
-                            SharedPreferences sharedpref = getSharedPreferences(SHARED_PREF_USERNAME,MODE_PRIVATE);
-                            sharedpref.edit().putString(USERNAME, etUsername.toString());
-                            sharedpref.edit().commit();
+                            SharedPreferences sharedpref = getSharedPreferences(SHARED_PREFERENCE,MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedpref.edit();
+                            editor.putString(USERNAME, etUsername.getText().toString());
+                            editor.commit();
                             sendUserToMain();
+                            loadingBar.dismiss();
                         //Una volta aggiunto SQLite posso prendermi il model dalla Call<> e salvarlo
                         }
-                        UserModel userModel = response.body();
-                        if(userModel == null) {
-                            Toast.makeText(Activity_login.this, "Username o Password sbagliati", Toast.LENGTH_LONG).show();
-                            refresh();
-
                         }
                     }
 
@@ -124,40 +121,16 @@ public class Activity_login extends Activity {
                         Toast.makeText(Activity_login.this, "Si è verificato un errore: " + t.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
-
-/*
-                auth.signInWithEmailAndPassword(mail, password)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()){
-                                    SendUserToMain();
-                                    loadingBar.dismiss();
-                                    Toast.makeText(Activity_login.this, "Ti sei loggato con Successo!", Toast.LENGTH_LONG).show();
-                                }else{
-                                    String message = task.getException().toString();
-                                    loadingBar.dismiss();
-                                    Toast.makeText(Activity_login.this, "si è verificato un errore:" + message, Toast.LENGTH_LONG).show();
-
-                                }
-                            }
-                        });
-                // _return = true;
-                */
             }
-            // return _return;
+    }
 
-
-        }
-
-        private void sendUserToMain() {
+    private void sendUserToMain() {
         Intent mainIntent = new Intent(Activity_login.this, MainActivity.class);
-        //mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(mainIntent);
         finish();
     }
 
-    private void SendUserToRegistrazione() {
+    private void sendUserToRegistrazione() {
         Intent registrazioneIntent = new Intent(Activity_login.this, Activity_registrazione.class);
         startActivity(registrazioneIntent);
     }

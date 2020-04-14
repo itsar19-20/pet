@@ -42,7 +42,7 @@ public class Activity_petsitter extends AppCompatActivity {
     private FirebaseAuth auth;
     private String mailID;
 
-    private static final String SHARED_PREF_USERNAME = "shared_pref_username";
+    public static final String SHARED_PREFERENCE = "shared_preference";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -204,7 +204,7 @@ public class Activity_petsitter extends AppCompatActivity {
             SendUserToProfile();
         }
         if (item.getItemId() == R.id.logout_menu){
-           SharedPreferences sharedPref = getSharedPreferences(SHARED_PREF_USERNAME, MODE_PRIVATE);
+           SharedPreferences sharedPref = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
            sharedPref.edit().clear().commit();
            sendUserToLogin();
         } if (item.getItemId() == R.id.add_people){

@@ -23,6 +23,7 @@ public class TestDB {
 		a.setUsername("admin");
 		a.setPassword("password");
 		a.setTipoUtente("admin");
+		a.setAttivo(true);
 		
 		
 	
