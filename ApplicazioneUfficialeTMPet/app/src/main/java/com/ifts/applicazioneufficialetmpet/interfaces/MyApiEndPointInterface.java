@@ -18,6 +18,10 @@ public interface MyApiEndPointInterface {
     @POST("/login")
     Call<UserModel> getUser(@Query("username") String username, @Query("password") String password);
 
+    //REGISTRAZIONE
+
+    @POST("/signUp")
+    Call<String> signUpUser(@Query("name") String nome, @Query("surname") String cognome, @Query("username") String username, @Query("password") String password, @Query("email") String email, @Query("type") String tipoUtente);
 
 
     //IMMAGINI
