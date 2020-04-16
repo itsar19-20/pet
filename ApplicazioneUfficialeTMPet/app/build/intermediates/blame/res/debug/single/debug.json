@@ -1,838 +1,838 @@
 [
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_dashboard_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_check_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_check_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_account_circle_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_account_circle_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_avatar_username.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_avatar_username.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_mail_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_mail_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_eventi_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_eventi_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_dashboard_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_chat_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_chat_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_notifications_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_notifications_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_vpn_key_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_vpn_key_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_vpn_key_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_vpn_key_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_preferiti_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_preferiti_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_preferiti_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_preferiti_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_vpn_key_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_vpn_key_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_logo_tmp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_logo_tmp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_notifications_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_notifications_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_ufficialeverticale.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\background_ufficialeverticale.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_account_circle_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_circle_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_item_eventi.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\single_item_eventi.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_logo_tmp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_logo_tmp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_takenote.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_takenote.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_logo_tmp_round.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_logo_tmp_round.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_profilo.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_profilo.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_accettati.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\fragment_accettati.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\menu_top_nav_menu.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\menu\\top_nav_menu.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_notifications_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_notifications_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_logo_tmp_foreground.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_logo_tmp_foreground.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_preferiti_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_preferiti_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_logo_tmp_foreground.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_logo_tmp_foreground.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_item_lista_eventi.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\single_item_lista_eventi.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logoapppet.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\logoapppet.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_logo_tmp_round.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_logo_tmp_round.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_preferiti_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_preferiti_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_logo_tmp_round.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_logo_tmp_round.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_mynotes.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_mynotes.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_switch_mode_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_switch_mode_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_vpn_key_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_vpn_key_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_mynotes.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_mynotes.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_create.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_create.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_switch_mode_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_switch_mode_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_logo_tmp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_logo_tmp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_account_circle_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_account_circle_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_takenote.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_takenote.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_home_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_inputs.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\inputs.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_home_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_home_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_swap.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\fragment_swap.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_chat_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_chat_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_check_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_check_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_logo_tmp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_logo_tmp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_chat_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_chat_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_scelta_start.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_scelta_start.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_visualizza_annuncio.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\visualizza_annuncio.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_swap.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\fragment_swap.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_logo_tmp_foreground.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_logo_tmp_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_logo_tmp_foreground.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_logo_tmp_foreground.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_logo_tmp_background.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_logo_tmp_background.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_item_swap.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\single_item_swap.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_petsitter.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_petsitter.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_eventi.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\fragment_eventi.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_chat_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_chat_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_mynotes.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_mynotes.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_logo_tmp_foreground.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_logo_tmp_foreground.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_mail_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_mail_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_preferiti_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_preferiti_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_avatar_username.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_avatar_username.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_switch_mode_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_switch_mode_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_account_circle_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_account_circle_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_eventi_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_eventi_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_logo_tmp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_logo_tmp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_item_visualizza_annuncio.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\single_item_visualizza_annuncio.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_mail_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_mail_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_home_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_background_btn.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\ic_background_btn.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_chat_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_chat_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_dashboard_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_item_visualizza_annuncio.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\single_item_visualizza_annuncio.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_dashboard_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_chat.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\fragment_chat.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_chat_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_chat_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_takenote.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_takenote.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_avatar_username.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_avatar_username.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_dashboard_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_logo_tmp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_logo_tmp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_avatar_username.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_avatar_username.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_logo_tmp_foreground.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_logo_tmp_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_background_btn.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_background_btn.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_logo_tmp_round.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_logo_tmp_round.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_logo_tmp_round.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_logo_tmp_round.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_takenote.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_takenote.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_notifications_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_notifications_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_chat_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_chat_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_avatar_username.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_avatar_username.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_check_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_check_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_mail_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_mail_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_vpn_key_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_vpn_key_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_mynotes.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_mynotes.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_background_ufficiale.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\background_ufficiale.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_logo_tmp_round.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_logo_tmp_round.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logoapppet.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\logoapppet.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_logo_tmp_background.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_logo_tmp_background.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_account_circle_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_account_circle_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_mynotes.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_mynotes.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_yellowpaper_background_takenote.jpg.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\yellowpaper_background_takenote.jpg"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_eventi_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_eventi_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_preferiti_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_preferiti_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_zampa_voto2.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\zampa_voto2.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_preferiti.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\fragment_preferiti.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_eventi_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_eventi_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_logo_tmp_background.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_logo_tmp_background.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_mynotes.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_mynotes.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_mail_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_mail_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_note_editor.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_note_editor.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_takenote.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_takenote.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_dashboard_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_check_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_check_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_takenote.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_takenote.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_home_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_home_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_account_circle_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_circle_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_chat_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_chat_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buttons.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\buttons.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_logo_tmp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_logo_tmp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_home_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_home_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_eventi_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_eventi_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_yellowpaper_background_takenote.jpg.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\yellowpaper_background_takenote.jpg"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_takenote.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_takenote.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_mail_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_mail_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_preferiti_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_preferiti_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_inputs.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\inputs.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_notifications_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_notifications_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_switch_mode_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_switch_mode_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_eventi_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_eventi_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_switch_mode_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_switch_mode_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_petsitter.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\menu\\menu_petsitter.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_background_btn.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\ic_background_btn.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logoapppet.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\logoapppet.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_takenote.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_takenote.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_account_circle_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_account_circle_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_check_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_check_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_yellowpaper_background_takenote.jpg.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\yellowpaper_background_takenote.jpg"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_logo_tmp_background.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_logo_tmp_background.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_avatar_username.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_avatar_username.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_chat.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\fragment_chat.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_notifications_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_notifications_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_check_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_check_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_home_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_home_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_vpn_key_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_vpn_key_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_switch_mode_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_switch_mode_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_notifications_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_notifications_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_preferiti_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_preferiti_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_whitepaper_background_takenote.jpg.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\whitepaper_background_takenote.jpg"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_profilo.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_profilo.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registrazione.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_registrazione.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_notifications_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_notifications_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_notifications_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_notifications_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_dashboard_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_dashboard_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_dashboard_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_mail_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_mail_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_check_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_check_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_preferiti_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_preferiti_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_logo_tmp_round.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_logo_tmp_round.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\menu_single_item_nav.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\menu\\single_item_nav.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_account_circle_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_account_circle_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_logo_tmp_foreground.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_logo_tmp_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_whitepaper_background_takenote.jpg.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\whitepaper_background_takenote.jpg"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_account_circle_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_circle_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_eventi_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_eventi_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_mail_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_mail_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_check_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_check_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_chat_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_chat_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_check_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_check_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_background_ufficialeverticale.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\background_ufficialeverticale.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_logo_tmp_background.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_logo_tmp_background.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_item_eventi.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\single_item_eventi.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_accettati.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\fragment_accettati.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logoapppet.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\logoapppet.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_home_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_home_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_logo_tmp_foreground.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_logo_tmp_foreground.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_visualizza_evento.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\visualizza_evento.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\menu_top_nav_menu.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\menu\\top_nav_menu.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_mail_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_mail_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_logo_tmp_foreground.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_logo_tmp_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_zampa_voto.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\zampa_voto.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_preferiti.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\fragment_preferiti.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cane_attesa_accettati.jpg.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\cane_attesa_accettati.jpg"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_notifications_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_notifications_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_logo_tmp_background.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_logo_tmp_background.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_avatar_username.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_avatar_username.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_zampa_voto2.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\zampa_voto2.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_check_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_check_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_switch_mode_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_switch_mode_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_logo_tmp_background.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_logo_tmp_background.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_background_btn.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_background_btn.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_proprietario.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_proprietario.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_mail_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_mail_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_home_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_home_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_logo_tmp_foreground.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_logo_tmp_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_yellowpaper_background_takenote.jpg.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\yellowpaper_background_takenote.jpg"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_account_circle_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_account_circle_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_vpn_key_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_vpn_key_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_create.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_create.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_logo_tmp_background.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_logo_tmp_background.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_eventi.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\fragment_eventi.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_item_swap.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\single_item_swap.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_whitepaper_background_takenote.jpg.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\whitepaper_background_takenote.jpg"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_account_circle_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_account_circle_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_takenote.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_takenote.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_chat_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_chat_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_switch_mode_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_switch_mode_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_logo_tmp_round.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_logo_tmp_round.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_preferiti_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_preferiti_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_vpn_key_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_vpn_key_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_mynotes.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_mynotes.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_eventi_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_eventi_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_dashboard_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_dashboard_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_logo_tmp_background.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_logo_tmp_background.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_logo_tmp_background.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_logo_tmp_background.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_item_visualizza_evento.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\single_item_visualizza_evento.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_vpn_key_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_vpn_key_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_home_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_home_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_avatar_username.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_avatar_username.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_dashboard_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_takenote.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_takenote.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buttons.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\buttons.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_home_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_background_grey.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\ic_background_grey.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_notifications_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_notifications_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_preferiti_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_preferiti_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_check_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_check_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_logo_tmp_background.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_logo_tmp_background.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_ufficiale.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\background_ufficiale.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_notifications_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_notifications_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_dashboard_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_petsitter_app_bar.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\petsitter_app_bar.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_takenote.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_takenote.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_switch_mode_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_switch_mode_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_logo_tmp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_logo_tmp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_logo_tmp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_logo_tmp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_avatar_username.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_avatar_username.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_whitepaper_background_takenote.jpg.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\whitepaper_background_takenote.jpg"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_eventi_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_eventi_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_avatar_username.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_avatar_username.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_logo_tmp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_logo_tmp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_background_ufficiale.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\background_ufficiale.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_dashboard_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_mynotes.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_mynotes.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_home_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_logo_tmp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_logo_tmp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_dashboard_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_logo_tmp_background.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_logo_tmp_background.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_logo_tmp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_logo_tmp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_switch_mode_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_switch_mode_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_vpn_key_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_vpn_key_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_switch_mode_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_switch_mode_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_mynotes.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_mynotes.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_account_circle_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_account_circle_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_petsitter.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_petsitter.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_preferiti_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_preferiti_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_dashboard_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_takenote.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_takenote.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_item_visualizza_evento.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\single_item_visualizza_evento.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_account_circle_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_circle_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_chat_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_chat_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_mail_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_mail_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_avatar_username.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_avatar_username.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_preferiti_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_preferiti_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_petsitter.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\menu\\menu_petsitter.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_ufficialeverticale.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\background_ufficialeverticale.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_ufficiale.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\background_ufficiale.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_takenote.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_takenote.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_home_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_home_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_eventi_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_eventi_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_logo_tmp_round.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_logo_tmp_round.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_mynotes.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_mynotes.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_mynotes.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_mynotes.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_home_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_account_circle_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_account_circle_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_mail_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_mail_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_preferiti_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_preferiti_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cane_attesa_accettati.jpg.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\cane_attesa_accettati.jpg"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_avatar_username.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_avatar_username.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\menu_single_item_nav.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\menu\\single_item_nav.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_logo_tmp_background.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_logo_tmp_background.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_item_chat.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\single_item_chat.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_switch_mode_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_switch_mode_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_eventi_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_eventi_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_vpn_key_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_vpn_key_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_cane_attesa_accettati.jpg.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\cane_attesa_accettati.jpg"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_proprietario.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_proprietario.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_background_grey.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_background_grey.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_vpn_key_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_vpn_key_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_avatar_username.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_avatar_username.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_home_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_home_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_note_editor.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_note_editor.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_takenote.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_takenote.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_chat_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_chat_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_check_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_check_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_logo_tmp_background.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_logo_tmp_background.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_switch_mode_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_switch_mode_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_mynotes.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_mynotes.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_preferiti_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_preferiti_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_background_grey.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\ic_background_grey.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_petsitter_app_bar.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\petsitter_app_bar.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_notifications_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_notifications_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_mynotes.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_mynotes.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_zampa_voto.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\zampa_voto.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_preferiti_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_preferiti_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_background_grey.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_background_grey.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_chat_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_chat_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_chat_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_chat_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_takenote.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_takenote.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_notifications_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_notifications_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_mynotes.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_mynotes.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_item_chat.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\single_item_chat.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_logo_tmp_round.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_logo_tmp_round.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_chat_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_chat_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_dashboard_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_home_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_home_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_chat_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_chat_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registrazione.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_registrazione.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_cane_attesa_accettati.jpg.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\cane_attesa_accettati.jpg"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_switch_mode_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_switch_mode_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_mail_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_mail_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_eventi_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_eventi_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_switch_mode_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_switch_mode_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_eventi_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_eventi_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_logo_tmp_round.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_logo_tmp_round.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_scelta_start.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\activity_scelta_start.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_zampa_voto2.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\zampa_voto2.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_mynotes.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_mynotes.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_home_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_zampa_voto.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\zampa_voto.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_takenote.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_takenote.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_eventi_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_eventi_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_zampa_voto2.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\zampa_voto2.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_avatar_username.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_avatar_username.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_check_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_check_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_visualizza_annuncio.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\visualizza_annuncio.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_vpn_key_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_vpn_key_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_eventi_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_eventi_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_check_black_24dp.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_check_black_24dp.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_item_lista_eventi.xml.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\single_item_lista_eventi.xml"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_mail_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_mail_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_dashboard_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_eventi_black_24dp.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\ic_eventi_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_zampa_voto.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable\\zampa_voto.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_account_circle_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_account_circle_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_mynotes.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_mynotes.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_switch_mode_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_switch_mode_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_visualizza_evento.xml.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\layout\\visualizza_evento.xml"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_account_circle_black_24dp.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_account_circle_black_24dp.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_logo_tmp_round.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_logo_tmp_round.png"
     },
     {
-        "merged": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_background_ufficialeverticale.png.flat",
-        "source": "C:\\Users\\alexd\\Desktop\\ApplicazioneUfficialeTMPet\\app\\src\\main\\res\\drawable-v24\\background_ufficialeverticale.png"
+        "merged": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_vpn_key_black_24dp.png.flat",
+        "source": "C:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_vpn_key_black_24dp.png"
     }
 ]
