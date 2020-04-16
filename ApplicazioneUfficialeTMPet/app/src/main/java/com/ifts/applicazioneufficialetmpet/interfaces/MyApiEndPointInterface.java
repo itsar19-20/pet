@@ -33,7 +33,7 @@ public interface MyApiEndPointInterface {
     Call<String> setImage(@Query("username") String username, @Query("immagine") String immagine);
 
     @Multipart
-    @POST("getImmagine")
+    @POST("/getImmagine")
     Call<RequestBody> setImage2(@Query("username") String username, @Query("immagine") String immagine, @Part("description") RequestBody description);
 
     //CONTROLLO UTENTE BLOCCATO

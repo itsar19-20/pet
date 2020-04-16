@@ -52,7 +52,6 @@ public class Activity_signup extends AppCompatActivity {
 
     Bitmap imageProfile = null;
 
-    String base64Image;
     boolean controlloUploadImmagine = false;
 
     private static final CharSequence[] OPTIONS_UPLOAD = {"Take Photo", "Choose from Gallery", "Cancel"};
@@ -89,12 +88,7 @@ public class Activity_signup extends AppCompatActivity {
         btnSignUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (controlloUploadImmagine) {
-                    registrazioneImmagine(base64Image, etUsername.getText().toString());
                     registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
-                } else {
-                    registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
-                }
             }
         });
     }
@@ -198,7 +192,7 @@ public class Activity_signup extends AppCompatActivity {
 
             //Convert Bitmap to BASE64 String
              byte[] imageBytes = baos.toByteArray();
-             base64Image = Base64.encodeToString(imageBytes, Base64.DEFAULT);
+             String base64Image = Base64.encodeToString(imageBytes, Base64.DEFAULT);
 
             btnSignUP.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -268,7 +262,7 @@ public class Activity_signup extends AppCompatActivity {
         ApplicationWebService webService = (ApplicationWebService) getApplication();
         MyApiEndPointInterface apiService= webService.getRetrofit().create(MyApiEndPointInterface.class);
         RequestBody requestBody = RequestBody.create(MediaType.parse(base64Image), base64Image);
-        apiService.setImage2(username, base64Image,requestBody).enqueue(new Callback<RequestBody>() {
+        apiService.setImage2(username, null,requestBody).enqueue(new Callback<RequestBody>() {
             @Override
             public void onResponse(Call<RequestBody> call, Response<RequestBody> response) {
                 int responseCode = response.code();
