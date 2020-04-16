@@ -81,7 +81,8 @@ public class Activity_signup extends AppCompatActivity {
         btnUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialogUpload();
+                AlertDialog dialog = dialogUpload();
+                dialog.show();
             }
         });
 
@@ -134,6 +135,38 @@ public class Activity_signup extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
+
+           //ZOZZATA
+            initializeView();
+            controlloUploadImmagine = true;
+
+
+            //SET BACKGROUND VIDEO
+            vvVideoBackrgound = findViewById(R.id.vvBackground);
+            Uri uri = Uri.parse("android.resource://"+getPackageName()+ "/" + R.raw.cane_app);
+            vvVideoBackrgound.setVideoURI(uri);
+            vvVideoBackrgound.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(MediaPlayer mediaPlayer) {
+                    mediaPlayer.setLooping(true);
+                }
+            });
+            vvVideoBackrgound.start();
+
+            btnUpload.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AlertDialog dialog = dialogUpload();
+                    dialog.show();
+                }
+            });
+
+
+
+            //FINE ZOZZATA
+
+
+
             if (requestCode == 1) {
                 File f = new File(Environment.getExternalStorageDirectory().toString());
                 for (File temp : f.listFiles()) {
@@ -161,11 +194,23 @@ public class Activity_signup extends AppCompatActivity {
             imageProfile = getResizedBitmap(imageProfile, 400);
 
             ivProfile.setImageBitmap(imageProfile);
-            controlloUploadImmagine = true;
+
 
             //Convert Bitmap to BASE64 String
              byte[] imageBytes = baos.toByteArray();
              base64Image = Base64.encodeToString(imageBytes, Base64.DEFAULT);
+
+            btnSignUP.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (controlloUploadImmagine) {
+                        registrazioneImmagine(base64Image, etUsername.getText().toString());
+                        registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
+                    } else {
+                        registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
+                    }
+                }
+            });
 
         }
 
@@ -183,6 +228,11 @@ public class Activity_signup extends AppCompatActivity {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
                 int responseCode = response.code();
+
+
+
+                //Non so perchè risponde con un 500, bisogna sistemare!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+              /*
                 if (responseCode == 200) {
                     String controlloUsernameEsistente = response.body();
                     if (controlloUsernameEsistente != null) {
@@ -194,6 +244,15 @@ public class Activity_signup extends AppCompatActivity {
                     if(responseCode != 200) {
                         Toast.makeText(Activity_signup.this, "Problemi con la registrazione utente, Response code: " + responseCode, Toast.LENGTH_SHORT).show();
                     }
+                }
+                */
+                //ALTRA ZOZZATA
+                String controlloUsernameEsistente = response.body();
+                if (controlloUsernameEsistente != null) {
+                    Toast.makeText(Activity_signup.this, controlloUsernameEsistente, Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(Activity_signup.this, "Utente registrato con successo", Toast.LENGTH_SHORT).show();
+                    sendUserToLogin();
                 }
             }
 
@@ -258,7 +317,7 @@ public class Activity_signup extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmailRegistrazione);
 
         btnSignUP=findViewById(R.id.btnSignUp);
-        btnSignUP=findViewById(R.id.btnUpload);
+        btnUpload=findViewById(R.id.btnUpload);
 
         ivProfile=findViewById(R.id.ivProfile);
 
