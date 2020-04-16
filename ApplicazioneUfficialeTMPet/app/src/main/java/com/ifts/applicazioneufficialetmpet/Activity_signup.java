@@ -198,8 +198,8 @@ public class Activity_signup extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if (controlloUploadImmagine) {
-                        registrazioneImmagine(base64Image, etUsername.getText().toString());
                         registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
+                        registrazioneImmagine(base64Image, etUsername.getText().toString());
                     } else {
                         registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
                     }
