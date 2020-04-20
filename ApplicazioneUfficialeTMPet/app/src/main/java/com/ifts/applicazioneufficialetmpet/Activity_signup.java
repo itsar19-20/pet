@@ -102,10 +102,10 @@ public class Activity_signup extends AppCompatActivity {
                 } else if (OPTIONS_UPLOAD[item].equals("Choose from Gallery")) {
                     Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(intent, 2);
-                    finish();
+
                 } else if (OPTIONS_UPLOAD[item].equals("Cancel")) {
                     dialog.dismiss();
-                    finish();
+
                 }
             }
         });
@@ -272,6 +272,7 @@ public class Activity_signup extends AppCompatActivity {
     public Bitmap getResizedBitmap(Bitmap image, int maxSize) {
         int width = image.getWidth();
         int height = image.getHeight();
+
 
         float bitmapRatio = (float) width / (float) height;
         if (bitmapRatio > 1) {

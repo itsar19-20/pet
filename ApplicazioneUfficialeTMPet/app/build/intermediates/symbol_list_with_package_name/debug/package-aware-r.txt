@@ -1559,6 +1559,7 @@ drawable ic_switch_mode_black_24dp
 drawable ic_takenote
 drawable ic_vpn_key_black_24dp
 drawable inputs
+drawable layout_image
 drawable logoapppet
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
@@ -1720,6 +1721,8 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btnRemove
 id btnSaveUpdate
+id btnSignUp
+id btnUpload
 id btn_holder
 id buttonPanel
 id button_continue
@@ -1809,9 +1812,15 @@ id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id etAuthor
+id etCognomeRegistrazione
+id etConfermaPasswordRegistrazione
 id etDate
+id etEmailRegistrazione
+id etNomeRegistrazione
 id etNote
+id etPasswordRegistrazione
 id etTitle
+id etUsernameRegistrazione
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1858,11 +1867,13 @@ id imgView_img_login
 id imgView_img_registrazione
 id img_clear_query
 id img_dismiss
+id include2
 id info
 id invisible
 id invisible_frame
 id italic
 id item_touch_helper_previous_elevation
+id ivProfile
 id labeled
 id largeLabel
 id left
@@ -2079,6 +2090,7 @@ id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
 id vp_slider_layout
+id vvBackground
 id welcome_back_email_link_body
 id welcome_back_idp_button
 id welcome_back_idp_prompt
@@ -2148,6 +2160,7 @@ layout activity_profilo
 layout activity_proprietario
 layout activity_registrazione
 layout activity_scelta_start
+layout activity_signup
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout crop_image_activity
@@ -2232,6 +2245,7 @@ layout single_item_visualizza_annuncio
 layout single_item_visualizza_evento
 layout slider_view
 layout support_simple_spinner_dropdown_item
+layout video_background_layout
 layout visualizza_annuncio
 layout visualizza_evento
 menu bottom_nav_menu
@@ -2248,6 +2262,7 @@ plurals fui_error_weak_password
 raw a_new_lang_template
 raw arabic
 raw bengali
+raw cane_app
 raw chinese_simplified
 raw chinese_traditional
 raw dutch

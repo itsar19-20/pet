@@ -60,8 +60,10 @@ public class RegistrationController extends HttpServlet {
 		
 		response.setContentType("application/json");
 	    response.getWriter().append(om.writeValueAsString(controllo));
+	    response.getWriter().append("Utente registrato senza errori");
 	    
 	    log.debug("RegistrationController Funziona");
+	    
 	    
 	}
 
