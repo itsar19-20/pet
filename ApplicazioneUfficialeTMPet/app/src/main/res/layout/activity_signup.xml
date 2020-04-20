@@ -122,8 +122,6 @@
         android:layout_height="194dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/layout_image"
-        android:radius="10dp"
-        android:backgroundTint="@color/fui_transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"

@@ -180,7 +180,8 @@ public class Activity_login extends Activity {
     }
 
     private void SendUserToRegistrazione() {
-        Intent registrazioneIntent = new Intent(Activity_login.this, Activity_registrazione.class);
+        //Intent registrazioneIntent = new Intent(Activity_login.this, Activity_registrazione.class);
+        Intent registrazioneIntent = new Intent(Activity_login.this, Activity_signup.class);
         startActivity(registrazioneIntent);
     }
 }

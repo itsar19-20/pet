@@ -1,5 +1,6 @@
 package com.ifts.applicazioneufficialetmpet;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -44,8 +45,10 @@ public class Activity_signup extends AppCompatActivity {
             etControlloPassword,
             etPassword,
             etUsername;
+
     Button btnUpload,
             btnSignUP;
+
     ImageView ivProfile;
     Bitmap imageProfile = null;
     boolean controlloUploadImmagine = false;
@@ -57,7 +60,8 @@ public class Activity_signup extends AppCompatActivity {
 
         initializeView();
 
-        //SET BACKGROUND VIDEO
+//==============================SET BACKGROUND VIDEO===========================================================ù
+
         vvVideoBackrgound = findViewById(R.id.vvBackground);
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.cane_app);
         vvVideoBackrgound.setVideoURI(uri);
@@ -69,7 +73,8 @@ public class Activity_signup extends AppCompatActivity {
         });
         vvVideoBackrgound.start();
 
-        btnUpload.setOnClickListener(new View.OnClickListener() {
+//================================CLICK SULLA SCELTA IMMAGINE PROFILO==============================
+        ivProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog dialog = dialogUpload();
@@ -99,13 +104,15 @@ public class Activity_signup extends AppCompatActivity {
                     File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp.jpg");
                     intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
                     startActivityForResult(intent, 1);
+                   // ivProfile.setAlpha(1);
                 } else if (OPTIONS_UPLOAD[item].equals("Choose from Gallery")) {
                     Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(intent, 2);
-
+                   // ivProfile.setAlpha(1);
+                   // finish();
                 } else if (OPTIONS_UPLOAD[item].equals("Cancel")) {
                     dialog.dismiss();
-
+                   // finish();
                 }
             }
         });
@@ -115,6 +122,7 @@ public class Activity_signup extends AppCompatActivity {
     }
 
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -137,11 +145,19 @@ public class Activity_signup extends AppCompatActivity {
             });
             vvVideoBackrgound.start();
 
-            btnUpload.setOnClickListener(new View.OnClickListener() {
+           /* btnUpload.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     AlertDialog dialog = dialogUpload();
                     dialog.show();
+                }
+            });*/
+            ivProfile.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AlertDialog dialog = dialogUpload();
+                    dialog.show();
+                    //ivProfile.setAlpha(1);
                 }
             });
 
@@ -176,7 +192,7 @@ public class Activity_signup extends AppCompatActivity {
             imageProfile = getResizedBitmap(imageProfile, 400);
 
             ivProfile.setImageBitmap(imageProfile);
-
+            ivProfile.setBackgroundColor(R.color.fui_transparent);
 
             //Convert Bitmap to BASE64 String
             byte[] imageBytes = baos.toByteArray();
@@ -252,6 +268,7 @@ public class Activity_signup extends AppCompatActivity {
 
                 int responseCode = response.code();
                 if (responseCode == 200) {
+                   // ivProfile.setAlpha(1);
                     Toast.makeText(Activity_signup.this, "Immagine caricata con successo", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(Activity_signup.this, "Problemi con il caricamento dell'immagine, Response code: " + responseCode, Toast.LENGTH_SHORT).show();
@@ -273,7 +290,6 @@ public class Activity_signup extends AppCompatActivity {
         int width = image.getWidth();
         int height = image.getHeight();
 
-
         float bitmapRatio = (float) width / (float) height;
         if (bitmapRatio > 1) {
             width = maxSize;
@@ -285,6 +301,7 @@ public class Activity_signup extends AppCompatActivity {
         return Bitmap.createScaledBitmap(image, width, height, true);
     }
 
+//=============================METODI RIUTILIZZATI========================================
     public void initializeView() {
         etPassword = findViewById(R.id.etPasswordRegistrazione);
         etNome = findViewById(R.id.etNomeRegistrazione);
@@ -295,10 +312,9 @@ public class Activity_signup extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmailRegistrazione);
 
         btnSignUP = findViewById(R.id.btnSignUp);
-        btnUpload = findViewById(R.id.btnUpload);
+      //  btnUpload = findViewById(R.id.btnUpload);
 
         ivProfile = findViewById(R.id.ivProfile);
-
     }
 
     public void sendUserToLogin() {
