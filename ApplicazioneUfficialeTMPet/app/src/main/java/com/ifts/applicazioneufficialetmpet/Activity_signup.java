@@ -36,6 +36,7 @@ import retrofit2.Response;
 
 public class Activity_signup extends AppCompatActivity {
 
+    private static final CharSequence[] OPTIONS_UPLOAD = {"Take Photo", "Choose from Gallery", "Cancel"};
     VideoView vvVideoBackrgound;
     EditText etNome,
             etCognome,
@@ -43,19 +44,11 @@ public class Activity_signup extends AppCompatActivity {
             etControlloPassword,
             etPassword,
             etUsername;
-
-
     Button btnUpload,
             btnSignUP;
-
     ImageView ivProfile;
-
     Bitmap imageProfile = null;
-
     boolean controlloUploadImmagine = false;
-
-    private static final CharSequence[] OPTIONS_UPLOAD = {"Take Photo", "Choose from Gallery", "Cancel"};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,10 +57,9 @@ public class Activity_signup extends AppCompatActivity {
 
         initializeView();
 
-
         //SET BACKGROUND VIDEO
         vvVideoBackrgound = findViewById(R.id.vvBackground);
-        Uri uri = Uri.parse("android.resource://"+getPackageName()+ "/" + R.raw.cane_app);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.cane_app);
         vvVideoBackrgound.setVideoURI(uri);
         vvVideoBackrgound.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
@@ -84,19 +76,16 @@ public class Activity_signup extends AppCompatActivity {
                 dialog.show();
             }
         });
+        //////////////////////////////////////////////////////////////////////////////////////
+
 
         btnSignUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
+                registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
             }
         });
     }
-
-
-
-
-
 
 
     public AlertDialog dialogUpload() {
@@ -113,8 +102,10 @@ public class Activity_signup extends AppCompatActivity {
                 } else if (OPTIONS_UPLOAD[item].equals("Choose from Gallery")) {
                     Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(intent, 2);
+                    finish();
                 } else if (OPTIONS_UPLOAD[item].equals("Cancel")) {
                     dialog.dismiss();
+                    finish();
                 }
             }
         });
@@ -124,20 +115,19 @@ public class Activity_signup extends AppCompatActivity {
     }
 
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
 
-           //ZOZZATA
+            //ZOZZATA
             initializeView();
             controlloUploadImmagine = true;
 
 
             //SET BACKGROUND VIDEO
             vvVideoBackrgound = findViewById(R.id.vvBackground);
-            Uri uri = Uri.parse("android.resource://"+getPackageName()+ "/" + R.raw.cane_app);
+            Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.cane_app);
             vvVideoBackrgound.setVideoURI(uri);
             vvVideoBackrgound.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 @Override
@@ -156,9 +146,7 @@ public class Activity_signup extends AppCompatActivity {
             });
 
 
-
             //FINE ZOZZATA
-
 
 
             if (requestCode == 1) {
@@ -191,8 +179,8 @@ public class Activity_signup extends AppCompatActivity {
 
 
             //Convert Bitmap to BASE64 String
-             byte[] imageBytes = baos.toByteArray();
-             String base64Image = Base64.encodeToString(imageBytes, Base64.DEFAULT);
+            byte[] imageBytes = baos.toByteArray();
+            String base64Image = Base64.encodeToString(imageBytes, Base64.DEFAULT);
 
             btnSignUP.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -211,18 +199,13 @@ public class Activity_signup extends AppCompatActivity {
     }
 
 
-
-
-
-
-    public void registrazioneUtente (String nome, String cognome, String username, String password, String email, String tipoUtente) {
+    public void registrazioneUtente(String nome, String cognome, String username, String password, String email, String tipoUtente) {
         ApplicationWebService webService = (ApplicationWebService) getApplication();
-        MyApiEndPointInterface apiService= webService.getRetrofit().create(MyApiEndPointInterface.class);
+        MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
         apiService.signUpUser(nome, cognome, username, password, email, tipoUtente).enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
                 int responseCode = response.code();
-
 
 
                 //Non so perchè risponde con un 500, bisogna sistemare!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -260,11 +243,13 @@ public class Activity_signup extends AppCompatActivity {
 
     public void registrazioneImmagine(String base64Image, String username) {
         ApplicationWebService webService = (ApplicationWebService) getApplication();
-        MyApiEndPointInterface apiService= webService.getRetrofit().create(MyApiEndPointInterface.class);
+        MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
         RequestBody requestBody = RequestBody.create(MediaType.parse(base64Image), base64Image);
-        apiService.setImage2(username, null,requestBody).enqueue(new Callback<RequestBody>() {
+        apiService.setImage2(username, null, requestBody).enqueue(new Callback<RequestBody>() {
             @Override
+            //aggiungere una response lato server
             public void onResponse(Call<RequestBody> call, Response<RequestBody> response) {
+
                 int responseCode = response.code();
                 if (responseCode == 200) {
                     Toast.makeText(Activity_signup.this, "Immagine caricata con successo", Toast.LENGTH_SHORT).show();
@@ -275,22 +260,20 @@ public class Activity_signup extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<RequestBody> call, Throwable t) {
-                Toast.makeText(Activity_signup.this, "Problemi con il caricamento dell'immagine: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                // da sistemare
+                //Toast.makeText(Activity_signup.this, "Problemi con il caricamento dell'immagine: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
+
     }
-
-
-
-
-
 
 
     public Bitmap getResizedBitmap(Bitmap image, int maxSize) {
         int width = image.getWidth();
         int height = image.getHeight();
 
-        float bitmapRatio = (float)width / (float) height;
+        float bitmapRatio = (float) width / (float) height;
         if (bitmapRatio > 1) {
             width = maxSize;
             height = (int) (width / bitmapRatio);
@@ -301,23 +284,23 @@ public class Activity_signup extends AppCompatActivity {
         return Bitmap.createScaledBitmap(image, width, height, true);
     }
 
-    public void initializeView(){
+    public void initializeView() {
         etPassword = findViewById(R.id.etPasswordRegistrazione);
         etNome = findViewById(R.id.etNomeRegistrazione);
         etCognome = findViewById(R.id.etCognomeRegistrazione);
-        etUsername= findViewById(R.id.etUsernameRegistrazione);
+        etUsername = findViewById(R.id.etUsernameRegistrazione);
         etControlloPassword = findViewById(R.id.etConfermaPasswordRegistrazione);
         etPassword = findViewById(R.id.etPasswordRegistrazione);
         etEmail = findViewById(R.id.etEmailRegistrazione);
 
-        btnSignUP=findViewById(R.id.btnSignUp);
-        btnUpload=findViewById(R.id.btnUpload);
+        btnSignUP = findViewById(R.id.btnSignUp);
+        btnUpload = findViewById(R.id.btnUpload);
 
-        ivProfile=findViewById(R.id.ivProfile);
+        ivProfile = findViewById(R.id.ivProfile);
 
     }
 
-    public void sendUserToLogin (){
+    public void sendUserToLogin() {
         Intent toLogin = new Intent(Activity_signup.this, Activity_login.class);
         startActivity(toLogin);
         finish();

@@ -6,95 +6,137 @@
     android:layout_height="match_parent"
     tools:context=".Activity_signup">
 
-    <include layout="@layout/video_background_layout"/>
 
+    <include
+        android:id="@+id/include2"
+        layout="@layout/video_background_layout"
+        tools:layout_editor_absoluteX="-103dp"
+        tools:layout_editor_absoluteY="154dp" />
 
     <EditText
         android:id="@+id/etNomeRegistrazione"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="296dp"
+        android:hint="Nome"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:hint="Nome"
-        android:textAlignment="center"/>
 
-    <EditText
-        android:id="@+id/etCognomeRegistrazione"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etNomeRegistrazione"
-        android:hint="Cognome"
-        android:textAlignment="center"/>
+
+        />
 
     <EditText
         android:id="@+id/etEmailRegistrazione"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etCognomeRegistrazione"
-        android:hint="Email"
-        android:textAlignment="center"/>
+        app:layout_constraintTop_toBottomOf="@id/etCognomeRegistrazione" />
 
     <EditText
         android:id="@+id/etUsernameRegistrazione"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Username"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etEmailRegistrazione"
-        android:hint="Username"
-        android:textAlignment="center"/>
+        app:layout_constraintTop_toBottomOf="@id/etEmailRegistrazione" />
 
     <EditText
         android:id="@+id/etPasswordRegistrazione"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etUsernameRegistrazione"
-        android:hint="Password"
-        android:textAlignment="center"/>
+        app:layout_constraintTop_toBottomOf="@id/etUsernameRegistrazione" />
 
     <EditText
         android:id="@+id/etConfermaPasswordRegistrazione"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Conferma password"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPasswordRegistrazione"
-        android:hint="Conferma password"
-        android:textAlignment="center"/>
+        app:layout_constraintTop_toBottomOf="@id/etPasswordRegistrazione" />
+
+    <EditText
+        android:id="@+id/etCognomeRegistrazione"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cognome"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNomeRegistrazione" />
 
     <Button
-        android:id="@+id/btnUpload"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnSignUp"
+        android:layout_width="207dp"
         android:layout_height="wrap_content"
-        android:text="Upload"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etConfermaPasswordRegistrazione"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="44dp"
+
+        android:background="@color/colorVerdeApp"
+        android:padding="4dp"
+        android:text="Sign Up"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toStartOf="@+id/include2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/include2"
+        app:layout_constraintTop_toBottomOf="@id/etConfermaPasswordRegistrazione" />
 
     <ImageView
         android:id="@+id/ivProfile"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="50dp"
-        android:background="@color/black"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnUpload"/>
+        android:layout_marginTop="56dp"
+        android:background="@drawable/layout_image"
+        android:radius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnSignUp"
+        android:id="@+id/btnUpload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SignUp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="98.5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="99dp"
+        android:background="@color/colorVerdeApp"
+        android:padding="6dp"
+        android:text="Upload"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivProfile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
