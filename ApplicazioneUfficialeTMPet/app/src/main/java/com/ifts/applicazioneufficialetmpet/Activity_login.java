@@ -122,8 +122,10 @@ public class Activity_login extends Activity {
                                 saveUserOnSharedPreference();
                                 loadingBar.dismiss();
                                 Toast.makeText(Activity_login.this, "Ti sei loggato con Successo!", Toast.LENGTH_LONG).show();
-                                sendUserToMain();
-                            }
+                                sendUserToMain();}
+
+
+
                         }
                     }
 
@@ -172,6 +174,7 @@ public class Activity_login extends Activity {
         startActivity(mainIntent);
         finish();
     }
+
     private void refresh() {
         Intent loginIntent = new Intent(Activity_login.this, Activity_login.class);
         // mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
