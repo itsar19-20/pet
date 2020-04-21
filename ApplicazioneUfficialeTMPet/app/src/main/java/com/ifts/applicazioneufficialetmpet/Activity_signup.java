@@ -49,8 +49,7 @@ public class Activity_signup extends AppCompatActivity {
             etPassword,
             etUsername;
 
-    Button  btnSignUP,
-            btnUpload;
+    Button  btnSignUP;
 
     //ImageView ivProfile;
     private CircleImageView ivProfile;
@@ -63,19 +62,6 @@ public class Activity_signup extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         initializeView();
-
-//==============================SET BACKGROUND VIDEO===========================================================ù
-
-        vvVideoBackrgound = findViewById(R.id.vvBackground);
-        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.cane_app);
-        vvVideoBackrgound.setVideoURI(uri);
-        vvVideoBackrgound.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mediaPlayer) {
-                mediaPlayer.setLooping(true);
-            }
-        });
-        vvVideoBackrgound.start();
 
 //================================CLICK SULLA SCELTA IMMAGINE PROFILO==============================
         ivProfile.setOnClickListener(new View.OnClickListener() {
@@ -107,15 +93,11 @@ public class Activity_signup extends AppCompatActivity {
                     File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp.jpg");
                     intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
                     startActivityForResult(intent, 1);
-                   // ivProfile.setAlpha(1);
                 } else if (OPTIONS_UPLOAD[item].equals("Choose from Gallery")) {
                     Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(intent, 2);
-                   // ivProfile.setAlpha(1);
-                   // finish();
                 } else if (OPTIONS_UPLOAD[item].equals("Cancel")) {
                     dialog.dismiss();
-                   // finish();
                 }
             }
         });
@@ -124,48 +106,15 @@ public class Activity_signup extends AppCompatActivity {
 
     }
 
-//========================================COS'è?======================================
+//========================================VERIFICA L'IMMAGINE NEL DB======================================
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
-
             //ZOZZATA   PERCHè RIINIZIALIZZI??
            // initializeView();
             controlloUploadImmagine = true;
-
-
-            //SET BACKGROUND VIDEO
-            //MA CI ENTRA QUA? SAI CHE NON CREDO
-          /*  vvVideoBackrgound = findViewById(R.id.vvBackground);
-            Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.cane_app);
-            vvVideoBackrgound.setVideoURI(uri);
-            vvVideoBackrgound.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mediaPlayer) {
-                    mediaPlayer.setLooping(true);
-                }
-            });
-            vvVideoBackrgound.start();*/
-
-           /* btnUpload.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    AlertDialog dialog = dialogUpload();
-                    dialog.show();
-                }
-            });*/
-            ivProfile.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    AlertDialog dialog = dialogUpload();
-                    dialog.show();
-                    //ivProfile.setAlpha(1);
-                }
-            });
-
-
             //FINE ZOZZATA
 
 
@@ -350,6 +299,7 @@ public class Activity_signup extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+//==============================SET BACKGROUND VIDEO===========================================================
         vvVideoBackrgound = findViewById(R.id.vvBackground);
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.cane_app);
         vvVideoBackrgound.setVideoURI(uri);
