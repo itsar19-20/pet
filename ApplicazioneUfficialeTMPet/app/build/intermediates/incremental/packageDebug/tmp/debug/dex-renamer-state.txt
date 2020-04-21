@@ -1,4 +1,4 @@
-#Mon Apr 13 20:00:52 CEST 2020
+#Mon Apr 20 18:33:22 CEST 2020
 base.0=C\:\\Users\\Giorgio\\git\\pet\\ApplicazioneUfficialeTMPet\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

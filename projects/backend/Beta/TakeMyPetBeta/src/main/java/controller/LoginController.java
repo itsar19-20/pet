@@ -71,7 +71,7 @@ public class LoginController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String username = request.getParameter("username");
+		String username = request.getParameter("username"); //aggiungi owner o pet
 		String password = request.getParameter("password");
 		ObjectMapper om = new ObjectMapper();
 		LoginManager lm = new LoginManager();

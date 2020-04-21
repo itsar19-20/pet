@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class ApplicationWebService extends Application {
-    public static final String BASE_URL = "http://192.168.1.9:8080";
+    public static final String BASE_URL = "http://192.168.1.7:8080";
     public static Retrofit retrofit;
 
 
