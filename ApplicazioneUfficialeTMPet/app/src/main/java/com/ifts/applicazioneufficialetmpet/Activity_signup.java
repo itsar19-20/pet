@@ -2,6 +2,7 @@ package com.ifts.applicazioneufficialetmpet;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -17,6 +18,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -40,6 +42,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Activity_signup extends AppCompatActivity {
+    private ProgressDialog creaUtente;
 
     private static final CharSequence[] OPTIONS_UPLOAD = {"Take Photo", "Choose from Gallery", "Cancel"};
     VideoView vvVideoBackrgound;
@@ -56,7 +59,7 @@ public class Activity_signup extends AppCompatActivity {
              btnProprietario,
              twBackToLogin;
 
-    Boolean checkStato;
+   public Boolean checkStato = true;
 
     String tipoUtente;
 
@@ -111,8 +114,18 @@ public class Activity_signup extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                verificaTipoUtente();
-                registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), tipoUtente);
+//                creaUtente.setTitle("Logging");
+//                creaUtente.setMessage("Please Wait...");
+//                creaUtente.setCanceledOnTouchOutside(false);
+//                creaUtente.show();
+                //verificaTipoUtente();
+                if(checkStato) {
+                    registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "petsitter");
+//                    creaUtente.dismiss();
+                }else{
+                    registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
+//                    creaUtente.dismiss();
+                }
             }
         });
 
@@ -213,11 +226,29 @@ public class Activity_signup extends AppCompatActivity {
             btnSignUP.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                  //  creaUtente.setTitle("Logging");
+                  //  creaUtente.setMessage("Please Wait...");
+                  //  creaUtente.setCanceledOnTouchOutside(false);
+                  //  creaUtente.show();
+                    //verificaTipoUtente();
                     if (controlloUploadImmagine) {
-                        registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
+                        if (checkStato){
+                        registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "petsitter");
                         registrazioneImmagine(base64Image, etUsername.getText().toString());
+                        creaUtente.dismiss();
+                        }else{
+                            registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
+                            registrazioneImmagine(base64Image, etUsername.getText().toString());
+                           // creaUtente.dismiss();
+                        }
                     } else {
-                        registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
+                        if(checkStato) {
+                            registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "petsitter");
+                            //creaUtente.dismiss();
+                        }else{
+                            registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
+                           // creaUtente.dismiss();
+                        }
                     }
                 }
             });
@@ -330,7 +361,8 @@ public class Activity_signup extends AppCompatActivity {
 
         ivProfile = findViewById(R.id.ivProfile);
 
-        checkStato = true;
+        creaUtente = new ProgressDialog(this);
+
     }
 
     public void sendUserToLogin() {
@@ -339,13 +371,13 @@ public class Activity_signup extends AppCompatActivity {
         finish();
     }
 
-    public void verificaTipoUtente(){
+    /*public void verificaTipoUtente(){
         if(checkStato == true){
-            tipoUtente = "Petsitter";
+            tipoUtente = "petsitter";
         }else {
-            tipoUtente = "Proprietario";
+            tipoUtente = "proprietario";
         }
-    }
+    }*/
 
     @Override
     protected void onStart() {
