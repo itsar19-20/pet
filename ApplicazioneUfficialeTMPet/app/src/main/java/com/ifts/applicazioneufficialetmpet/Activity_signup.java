@@ -25,10 +25,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ifts.applicazioneufficialetmpet.interfaces.MyApiEndPointInterface;
 import com.ifts.applicazioneufficialetmpet.retrofit.ApplicationWebService;
+import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -46,10 +49,11 @@ public class Activity_signup extends AppCompatActivity {
             etPassword,
             etUsername;
 
-    Button btnUpload,
-            btnSignUP;
+    Button  btnSignUP,
+            btnUpload;
 
-    ImageView ivProfile;
+    //ImageView ivProfile;
+    private CircleImageView ivProfile;
     Bitmap imageProfile = null;
     boolean controlloUploadImmagine = false;
 
@@ -81,8 +85,6 @@ public class Activity_signup extends AppCompatActivity {
                 dialog.show();
             }
         });
-        //////////////////////////////////////////////////////////////////////////////////////
-
 
         btnSignUP.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +94,7 @@ public class Activity_signup extends AppCompatActivity {
         });
     }
 
+//=======================================DIALOG PER LA SCELTA DELL'IMMAGINE========================================
 
     public AlertDialog dialogUpload() {
         AlertDialog.Builder builder = new AlertDialog.Builder(Activity_signup.this);
@@ -121,20 +124,21 @@ public class Activity_signup extends AppCompatActivity {
 
     }
 
-
+//========================================COS'è?======================================
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
 
-            //ZOZZATA
-            initializeView();
+            //ZOZZATA   PERCHè RIINIZIALIZZI??
+           // initializeView();
             controlloUploadImmagine = true;
 
 
             //SET BACKGROUND VIDEO
-            vvVideoBackrgound = findViewById(R.id.vvBackground);
+            //MA CI ENTRA QUA? SAI CHE NON CREDO
+          /*  vvVideoBackrgound = findViewById(R.id.vvBackground);
             Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.cane_app);
             vvVideoBackrgound.setVideoURI(uri);
             vvVideoBackrgound.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
@@ -143,7 +147,7 @@ public class Activity_signup extends AppCompatActivity {
                     mediaPlayer.setLooping(true);
                 }
             });
-            vvVideoBackrgound.start();
+            vvVideoBackrgound.start();*/
 
            /* btnUpload.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -165,7 +169,7 @@ public class Activity_signup extends AppCompatActivity {
             //FINE ZOZZATA
 
 
-            if (requestCode == 1) {
+            if (requestCode == 1  && resultCode == RESULT_OK && data != null) {
                 File f = new File(Environment.getExternalStorageDirectory().toString());
                 for (File temp : f.listFiles()) {
                     if (temp.getName().equals("temp.jpg")) {
@@ -175,24 +179,44 @@ public class Activity_signup extends AppCompatActivity {
                         break;
                     }
                 }
-            } else if (requestCode == 2) {
+            } else if (requestCode == 2 ) {
                 Uri selectedImage = data.getData();
+                //=======================inizio prova crop========================================
+                CropImage.activity()
+                        .setGuidelines(CropImageView.Guidelines.ON)
+                        .setAspectRatio(1, 1)
+                        .start(this);
+                 CropImage.ActivityResult result = CropImage.getActivityResult(data);
+
+//============================fine prova crop=================================================
+
+                   // Uri resultUri = result.getUri();
                 String[] filePath = {MediaStore.Images.Media.DATA};
                 Cursor c = getContentResolver().query(selectedImage, filePath, null, null, null);
+               // Cursor c = getContentResolver().query(resultUri, filePath, null, null, null);
                 c.moveToFirst();
                 int columnIndex = c.getColumnIndex(filePath[0]);
                 String picturePath = c.getString(columnIndex);
                 c.close();
                 imageProfile = (BitmapFactory.decodeFile(picturePath));
                 Log.w("path of img gallery", picturePath + "");
+               // imageProfile = (BitmapFactory.decodeFile(String.valueOf(result)));
+              //  Log.w("path of img gallery", result + "");
             }
+
+
+               /* if (resultCode == RESULT_OK){
+                    /*loadingBar.setTitle("set profile img");
+                    loadingBar.setMessage("pls wait the uploading");
+                    loadingBar.setCanceledOnTouchOutside(false);
+                    loadingBar.show();
+                    Uri resultUri = result.getUri();*/
 
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             imageProfile.compress(Bitmap.CompressFormat.JPEG, 20, baos);
             imageProfile = getResizedBitmap(imageProfile, 400);
 
             ivProfile.setImageBitmap(imageProfile);
-            ivProfile.setBackgroundColor(R.color.fui_transparent);
 
             //Convert Bitmap to BASE64 String
             byte[] imageBytes = baos.toByteArray();
@@ -268,7 +292,6 @@ public class Activity_signup extends AppCompatActivity {
 
                 int responseCode = response.code();
                 if (responseCode == 200) {
-                   // ivProfile.setAlpha(1);
                     Toast.makeText(Activity_signup.this, "Immagine caricata con successo", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(Activity_signup.this, "Problemi con il caricamento dell'immagine, Response code: " + responseCode, Toast.LENGTH_SHORT).show();
@@ -302,6 +325,7 @@ public class Activity_signup extends AppCompatActivity {
     }
 
 //=============================METODI RIUTILIZZATI========================================
+    //richiamo alla riga 65
     public void initializeView() {
         etPassword = findViewById(R.id.etPasswordRegistrazione);
         etNome = findViewById(R.id.etNomeRegistrazione);
@@ -321,6 +345,21 @@ public class Activity_signup extends AppCompatActivity {
         Intent toLogin = new Intent(Activity_signup.this, Activity_login.class);
         startActivity(toLogin);
         finish();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        vvVideoBackrgound = findViewById(R.id.vvBackground);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.cane_app);
+        vvVideoBackrgound.setVideoURI(uri);
+        vvVideoBackrgound.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                mediaPlayer.setLooping(true);
+            }
+        });
+        vvVideoBackrgound.start();
     }
 
 }
