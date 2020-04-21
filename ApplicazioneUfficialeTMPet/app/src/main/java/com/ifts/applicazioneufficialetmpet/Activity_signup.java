@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -51,6 +52,14 @@ public class Activity_signup extends AppCompatActivity {
 
     Button  btnSignUP;
 
+    TextView btnPetsitter,
+             btnProprietario,
+             twBackToLogin;
+
+    Boolean checkStato;
+
+    String tipoUtente;
+
     //ImageView ivProfile;
     private CircleImageView ivProfile;
     Bitmap imageProfile = null;
@@ -71,13 +80,43 @@ public class Activity_signup extends AppCompatActivity {
                 dialog.show();
             }
         });
-
-        btnSignUP.setOnClickListener(new View.OnClickListener() {
+        btnPetsitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
+                btnPetsitter.setBackgroundColor(getResources().getColor(R.color.colorVerdeApp));
+                btnPetsitter.setTextColor(getResources().getColor(R.color.white));
+                btnProprietario.setBackgroundColor(getResources().getColor(R.color.colorGrayWhatsApp));
+                btnProprietario.setTextColor(getResources().getColor(R.color.black));
+                checkStato = true;
             }
         });
+        btnProprietario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnProprietario.setBackgroundColor(getResources().getColor(R.color.colorVerdeApp));
+                btnProprietario.setTextColor(getResources().getColor(R.color.white));
+                btnPetsitter.setBackgroundColor(getResources().getColor(R.color.colorGrayWhatsApp));
+                btnPetsitter.setTextColor(getResources().getColor(R.color.black));
+                checkStato = false;
+            }
+        });
+        twBackToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendUserToLogin();
+            }
+        });
+
+        btnSignUP.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                verificaTipoUtente();
+                registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), tipoUtente);
+            }
+        });
+
+
     }
 
 //=======================================DIALOG PER LA SCELTA DELL'IMMAGINE========================================
@@ -253,8 +292,6 @@ public class Activity_signup extends AppCompatActivity {
                 //Toast.makeText(Activity_signup.this, "Problemi con il caricamento dell'immagine: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 
 
@@ -276,24 +313,38 @@ public class Activity_signup extends AppCompatActivity {
 //=============================METODI RIUTILIZZATI========================================
     //richiamo alla riga 65
     public void initializeView() {
-        etPassword = findViewById(R.id.etPasswordRegistrazione);
-        etNome = findViewById(R.id.etNomeRegistrazione);
-        etCognome = findViewById(R.id.etCognomeRegistrazione);
-        etUsername = findViewById(R.id.etUsernameRegistrazione);
-        etControlloPassword = findViewById(R.id.etConfermaPasswordRegistrazione);
-        etPassword = findViewById(R.id.etPasswordRegistrazione);
-        etEmail = findViewById(R.id.etEmailRegistrazione);
+        etPassword = (EditText) findViewById(R.id.etPasswordRegistrazione);
+        etNome = (EditText) findViewById(R.id.etNomeRegistrazione);
+        etCognome = (EditText) findViewById(R.id.etCognomeRegistrazione);
+        etUsername = (EditText) findViewById(R.id.etUsernameRegistrazione);
+        etControlloPassword = (EditText) findViewById(R.id.etConfermaPasswordRegistrazione);
+        etPassword = (EditText) findViewById(R.id.etPasswordRegistrazione);
+        etEmail = (EditText) findViewById(R.id.etEmailRegistrazione);
 
-        btnSignUP = findViewById(R.id.btnSignUp);
+        btnSignUP = (Button) findViewById(R.id.btnSignUp);
+        btnPetsitter = (TextView) findViewById(R.id.button_petsitter);
+        btnProprietario = (TextView) findViewById(R.id.button_proprietario);
       //  btnUpload = findViewById(R.id.btnUpload);
 
+        twBackToLogin = (TextView) findViewById(R.id.textView_backToLogin);
+
         ivProfile = findViewById(R.id.ivProfile);
+
+        checkStato = true;
     }
 
     public void sendUserToLogin() {
         Intent toLogin = new Intent(Activity_signup.this, Activity_login.class);
         startActivity(toLogin);
         finish();
+    }
+
+    public void verificaTipoUtente(){
+        if(checkStato == true){
+            tipoUtente = "Petsitter";
+        }else {
+            tipoUtente = "Proprietario";
+        }
     }
 
     @Override
@@ -311,5 +362,6 @@ public class Activity_signup extends AppCompatActivity {
         });
         vvVideoBackrgound.start();
     }
+
 
 }
