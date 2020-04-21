@@ -170,7 +170,7 @@ public class Activity_signup extends AppCompatActivity {
             } else if (requestCode == 2 ) {
                 Uri selectedImage = data.getData();
                 //=======================inizio prova crop========================================
-                CropImage.activity()
+               CropImage.activity()
                         .setGuidelines(CropImageView.Guidelines.ON)
                         .setAspectRatio(1, 1)
                         .start(this);
