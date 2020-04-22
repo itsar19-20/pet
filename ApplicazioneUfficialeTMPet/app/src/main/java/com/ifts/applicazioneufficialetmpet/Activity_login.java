@@ -26,6 +26,7 @@ public class Activity_login extends Activity {
     //shared preference to save user
     public static final String SHARED_PREFERENCE = "shared_preference";
     private static final String USERNAME = "username";
+    private static final String TIPOUTENTE="tipoUtente";
 
     //private FirebaseUser user;
     private FirebaseAuth auth;
@@ -39,6 +40,7 @@ public class Activity_login extends Activity {
     private TextView registrati;
 
     private ProgressDialog loadingBar;
+
 
 
     @Override
@@ -119,7 +121,7 @@ public class Activity_login extends Activity {
                                 Toast.makeText(Activity_login.this, "username o password sbagliati, idiota. Ma ti ripigli o no??!!!!!", Toast.LENGTH_LONG).show();
                                 refresh();
                             } else {
-                                saveUserOnSharedPreference();
+                                saveUserOnSharedPreference(userModel.getUsername(),userModel.getTipoUtente());
                                 loadingBar.dismiss();
                                 Toast.makeText(Activity_login.this, "Ti sei loggato con Successo!", Toast.LENGTH_LONG).show();
                                 sendUserToMain();}
@@ -160,10 +162,12 @@ public class Activity_login extends Activity {
 
 
         }
-    private void saveUserOnSharedPreference(){
+    private void saveUserOnSharedPreference(String username, String tipoUtente){
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(USERNAME, String.valueOf(etUsername));
+        editor.putString(USERNAME,username);
+        editor.putString(TIPOUTENTE, tipoUtente);
+
         Toast.makeText(Activity_login.this, "fatto", Toast.LENGTH_SHORT).show();
         editor.apply();
     }
