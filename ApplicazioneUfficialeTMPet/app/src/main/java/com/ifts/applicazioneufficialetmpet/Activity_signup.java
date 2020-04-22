@@ -51,7 +51,6 @@ public class Activity_signup extends AppCompatActivity {
 
     private ProgressDialog creaUtente;
 
-    private static final CharSequence[] OPTIONS_UPLOAD = {"Take Photo", "Choose from Gallery", "Cancel"};
     VideoView vvVideoBackrgound;
     EditText etNome,
             etCognome,
@@ -108,7 +107,8 @@ public class Activity_signup extends AppCompatActivity {
                 btnPetsitter.setTextColor(getResources().getColor(R.color.white));
                 btnProprietario.setBackgroundColor(getResources().getColor(R.color.colorGrayWhatsApp));
                 btnProprietario.setTextColor(getResources().getColor(R.color.black));
-                checkStato = true;
+                //checkStato = true;
+                tipoUtente = "petsitter";
             }
         });
         btnProprietario.setOnClickListener(new View.OnClickListener() {
@@ -118,7 +118,8 @@ public class Activity_signup extends AppCompatActivity {
                 btnProprietario.setTextColor(getResources().getColor(R.color.white));
                 btnPetsitter.setBackgroundColor(getResources().getColor(R.color.colorGrayWhatsApp));
                 btnPetsitter.setTextColor(getResources().getColor(R.color.black));
-                checkStato = false;
+                //checkStato = false;
+                tipoUtente = "proprietario";
             }
         });
         twBackToLogin.setOnClickListener(new View.OnClickListener() {
@@ -137,13 +138,15 @@ public class Activity_signup extends AppCompatActivity {
 //                creaUtente.setCanceledOnTouchOutside(false);
 //                creaUtente.show();
                 //verificaTipoUtente();
-                if(checkStato) {
+              /*  if(checkStato) {
                     registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "petsitter");
 //                    creaUtente.dismiss();
                 }else{
                     registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
 //                    creaUtente.dismiss();
-                }
+                } */
+                registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), tipoUtente);
+               // sendUserToLogin();
             }
         });
 
@@ -166,7 +169,7 @@ public class Activity_signup extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-            controlloUploadImmagine = true;
+           // controlloUploadImmagine = true;
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             Uri resultUri = result.getUri();
         try {
@@ -194,7 +197,7 @@ public class Activity_signup extends AppCompatActivity {
                   //  creaUtente.setCanceledOnTouchOutside(false);
                   //  creaUtente.show();
                     //verificaTipoUtente();
-                    if (controlloUploadImmagine) {
+                   /* if (controlloUploadImmagine) {
                         if (checkStato){
                         registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "petsitter");
                         registrazioneImmagine(base64Image, etUsername.getText().toString());
@@ -212,7 +215,9 @@ public class Activity_signup extends AppCompatActivity {
                             registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
                            // creaUtente.dismiss();
                         }
-                    }
+                    }*/
+                    registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), tipoUtente);
+                    registrazioneImmagine(base64Image, etUsername.getText().toString());
                 }
             });
 
@@ -227,31 +232,14 @@ public class Activity_signup extends AppCompatActivity {
         apiService.signUpUser(nome, cognome, username, password, email, tipoUtente).enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                int responseCode = response.code();
-
-
-                //Non so perchè risponde con un 500, bisogna sistemare!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-              /*
-                if (responseCode == 200) {
-                    String controlloUsernameEsistente = response.body();
-                    if (controlloUsernameEsistente != null) {
-                        Toast.makeText(Activity_signup.this, controlloUsernameEsistente, Toast.LENGTH_LONG).show();
-                    } else {
-                        Toast.makeText(Activity_signup.this, "Utente registrato con successo", Toast.LENGTH_SHORT).show();
-                        sendUserToLogin();
-                    }
-                    if(responseCode != 200) {
-                        Toast.makeText(Activity_signup.this, "Problemi con la registrazione utente, Response code: " + responseCode, Toast.LENGTH_SHORT).show();
-                    }
-                }
-                */
-                //ALTRA ZOZZATA
                 String controlloUsernameEsistente = response.body();
                 if (controlloUsernameEsistente != null) {
                     Toast.makeText(Activity_signup.this, controlloUsernameEsistente, Toast.LENGTH_LONG).show();
+                    if(imageProfile == null) {
+                        sendUserToLogin();
+                    }
                 } else {
                     Toast.makeText(Activity_signup.this, "Utente registrato con successo", Toast.LENGTH_SHORT).show();
-                    sendUserToLogin();
                 }
             }
 
@@ -269,21 +257,14 @@ public class Activity_signup extends AppCompatActivity {
         RequestBody requestBody = RequestBody.create(MediaType.parse(base64Image), base64Image);
         apiService.setImage2(username, null, requestBody).enqueue(new Callback<RequestBody>() {
             @Override
-            //aggiungere una response lato server
             public void onResponse(Call<RequestBody> call, Response<RequestBody> response) {
-
-                int responseCode = response.code();
-                if (responseCode == 200) {
                     Toast.makeText(Activity_signup.this, "Immagine caricata con successo", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(Activity_signup.this, "Problemi con il caricamento dell'immagine, Response code: " + responseCode, Toast.LENGTH_SHORT).show();
-                }
+                    sendUserToLogin();
             }
 
             @Override
             public void onFailure(Call<RequestBody> call, Throwable t) {
-                // da sistemare
-                //Toast.makeText(Activity_signup.this, "Problemi con il caricamento dell'immagine: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Activity_signup.this, "Problemi con il caricamento dell'immagine: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
