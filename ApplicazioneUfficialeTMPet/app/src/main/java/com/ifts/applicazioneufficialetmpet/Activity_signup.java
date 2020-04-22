@@ -29,6 +29,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
 
 import com.ifts.applicazioneufficialetmpet.interfaces.MyApiEndPointInterface;
 import com.ifts.applicazioneufficialetmpet.retrofit.ApplicationWebService;
@@ -37,6 +38,7 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.IOException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import okhttp3.MediaType;
@@ -93,8 +95,10 @@ public class Activity_signup extends AppCompatActivity {
         ivProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog dialog = dialogUpload();
-                dialog.show();
+                CropImage.activity()
+                        .setGuidelines(CropImageView.Guidelines.ON)
+                        .setAspectRatio(1, 1)
+                        .start(Activity_signup.this);
             }
         });
         btnPetsitter.setOnClickListener(new View.OnClickListener() {
@@ -155,88 +159,22 @@ public class Activity_signup extends AppCompatActivity {
             }
         }
     }
-//=======================================DIALOG PER LA SCELTA DELL'IMMAGINE========================================
-
-    public AlertDialog dialogUpload() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(Activity_signup.this);
-        builder.setTitle("Aggiungi la tua foto profilo");
-        builder.setItems(OPTIONS_UPLOAD, new DialogInterface.OnClickListener() {
-                      @Override
-                     public void onClick(DialogInterface dialog, int item) {
-                       if (OPTIONS_UPLOAD[item].equals("Take Photo")) {
-                             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                             File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp.jpg");
-                             intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
-                             startActivityForResult(intent, 1);
-                         } else if (OPTIONS_UPLOAD[item].equals("Choose from Gallery")) {
-                             Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                             startActivityForResult(intent, 2);
-                         } else if (OPTIONS_UPLOAD[item].equals("Cancel")) {
-                             dialog.dismiss();
-                         }
-                     }
 
 
-                 });
-        AlertDialog _return = builder.create();
-        return _return;
-
-    }
-
-//========================================VERIFICA L'IMMAGINE NEL DB======================================
+//========================================ACTIVITY RESULT DOPO IL CROP======================================
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK) {
-            //ZOZZATA   PERCHè RIINIZIALIZZI??
-           // initializeView();
             controlloUploadImmagine = true;
-            //FINE ZOZZATA
+            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+            Uri resultUri = result.getUri();
+        try {
+            imageProfile = MediaStore.Images.Media.getBitmap(this.getContentResolver(),resultUri);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-
-            if (requestCode == 1) {
-                File f = new File(Environment.getExternalStorageDirectory().toString());
-                for (File temp : f.listFiles()) {
-                    if (temp.getName().equals("temp.jpg")) {
-                        f = temp;
-                        imageProfile = BitmapFactory.decodeFile(f.getAbsolutePath());
-                        f.delete(); //OCCHIO
-                        break;
-                    }
-                }
-            } else if (requestCode == 2 ) {
-                Uri selectedImage = data.getData();
-                //=======================inizio prova crop========================================
-               CropImage.activity()
-                        .setGuidelines(CropImageView.Guidelines.ON)
-                        .setAspectRatio(1, 1)
-                        .start(this);
-                CropImage.ActivityResult result = CropImage.getActivityResult(data);
-
-//============================fine prova crop=================================================
-
-                   // Uri resultUri = result.getUri();
-                String[] filePath = {MediaStore.Images.Media.DATA};
-                Cursor c = getContentResolver().query(selectedImage, filePath, null, null, null);
-               // Cursor c = getContentResolver().query(resultUri, filePath, null, null, null);
-                c.moveToFirst();
-                int columnIndex = c.getColumnIndex(filePath[0]);
-                String picturePath = c.getString(columnIndex);
-                c.close();
-                imageProfile = (BitmapFactory.decodeFile(picturePath));
-                Log.w("path of img gallery", picturePath + "");
-               // imageProfile = (BitmapFactory.decodeFile(String.valueOf(result)));
-              //  Log.w("path of img gallery", result + "");
-            }
-
-
-               /* if (resultCode == RESULT_OK){
-                    /*loadingBar.setTitle("set profile img");
-                    loadingBar.setMessage("pls wait the uploading");
-                    loadingBar.setCanceledOnTouchOutside(false);
-                    loadingBar.show();
-                    Uri resultUri = result.getUri();*/
 
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             imageProfile.compress(Bitmap.CompressFormat.JPEG, 20, baos);
@@ -278,7 +216,7 @@ public class Activity_signup extends AppCompatActivity {
                 }
             });
 
-        }
+        //}
 
     }
 
