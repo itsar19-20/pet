@@ -2,7 +2,27 @@ package com.ifts.applicazioneufficialetmpet.model;
 
 public class UserModel {
 
-    private String username;
+    private String username,
+                    tipoUtente ;
+
+    @Override
+    public String toString() {
+        return "UserModel{" +
+                "username='" + username + '\'' +
+                ", tipoUtente='" + tipoUtente + '\'' +
+                '}';
+    }
+
+    public String getTipoUtente() {
+        return tipoUtente;
+    }
+
+    public void setTipoUtente(String tipoUtente) {
+        this.tipoUtente = tipoUtente;
+    }
+
+
+
 
     public String getUsername() {
         return username;
@@ -18,10 +38,4 @@ public class UserModel {
         this.username = username;
     }
 
-    @Override
-    public String toString() {
-        return "UserModel{" +
-                "username='" + username + '\'' +
-                '}';
-    }
 }
