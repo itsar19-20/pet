@@ -116,6 +116,7 @@ public class ImmagineController extends HttpServlet {
 		String urlImmagine = "http://192.168.1.103:8080/immaginiPerWeb/" + username +".jpg";
 		
 		uam.inserisciImmagine(username, urlImmagine);
+		response.getWriter().append("Immagine salvata con successo");
 		
 		log.debug("ImmagineController Funziona");
 	}
