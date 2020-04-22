@@ -1,9 +1,11 @@
 package com.ifts.applicazioneufficialetmpet;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -25,6 +27,8 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.ifts.applicazioneufficialetmpet.interfaces.MyApiEndPointInterface;
 import com.ifts.applicazioneufficialetmpet.retrofit.ApplicationWebService;
@@ -42,6 +46,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Activity_signup extends AppCompatActivity {
+
     private ProgressDialog creaUtente;
 
     private static final CharSequence[] OPTIONS_UPLOAD = {"Take Photo", "Choose from Gallery", "Cancel"};
@@ -72,8 +77,17 @@ public class Activity_signup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
         initializeView();
+        if (ContextCompat.checkSelfPermission(Activity_signup.this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(Activity_signup.this,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.CAMERA,Manifest.permission.READ_EXTERNAL_STORAGE},
+                    1);
+        }
+
+
+
 
 //================================CLICK SULLA SCELTA IMMAGINE PROFILO==============================
         ivProfile.setOnClickListener(new View.OnClickListener() {
@@ -132,27 +146,38 @@ public class Activity_signup extends AppCompatActivity {
 
     }
 
+    //=======================================GESTIONE PERMESSI ========================================
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (requestCode == 1) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED
+                    && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+            }
+        }
+    }
 //=======================================DIALOG PER LA SCELTA DELL'IMMAGINE========================================
 
     public AlertDialog dialogUpload() {
         AlertDialog.Builder builder = new AlertDialog.Builder(Activity_signup.this);
         builder.setTitle("Aggiungi la tua foto profilo");
         builder.setItems(OPTIONS_UPLOAD, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int item) {
-                if (OPTIONS_UPLOAD[item].equals("Take Photo")) {
-                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp.jpg");
-                    intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
-                    startActivityForResult(intent, 1);
-                } else if (OPTIONS_UPLOAD[item].equals("Choose from Gallery")) {
-                    Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                    startActivityForResult(intent, 2);
-                } else if (OPTIONS_UPLOAD[item].equals("Cancel")) {
-                    dialog.dismiss();
-                }
-            }
-        });
+                      @Override
+                     public void onClick(DialogInterface dialog, int item) {
+                       if (OPTIONS_UPLOAD[item].equals("Take Photo")) {
+                             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                             File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp.jpg");
+                             intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
+                             startActivityForResult(intent, 1);
+                         } else if (OPTIONS_UPLOAD[item].equals("Choose from Gallery")) {
+                             Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                             startActivityForResult(intent, 2);
+                         } else if (OPTIONS_UPLOAD[item].equals("Cancel")) {
+                             dialog.dismiss();
+                         }
+                     }
+
+
+                 });
         AlertDialog _return = builder.create();
         return _return;
 
@@ -170,7 +195,7 @@ public class Activity_signup extends AppCompatActivity {
             //FINE ZOZZATA
 
 
-            if (requestCode == 1  && resultCode == RESULT_OK && data != null) {
+            if (requestCode == 1) {
                 File f = new File(Environment.getExternalStorageDirectory().toString());
                 for (File temp : f.listFiles()) {
                     if (temp.getName().equals("temp.jpg")) {
@@ -187,7 +212,7 @@ public class Activity_signup extends AppCompatActivity {
                         .setGuidelines(CropImageView.Guidelines.ON)
                         .setAspectRatio(1, 1)
                         .start(this);
-                 CropImage.ActivityResult result = CropImage.getActivityResult(data);
+                CropImage.ActivityResult result = CropImage.getActivityResult(data);
 
 //============================fine prova crop=================================================
 
