@@ -1,13 +1,18 @@
 package com.ifts.applicazioneufficialetmpet.interfaces;
 
 
+import com.ifts.applicazioneufficialetmpet.model.EventoModel;
 import com.ifts.applicazioneufficialetmpet.model.UserModel;
+
+import java.util.List;
 
 import okhttp3.RequestBody;
 import retrofit2.Call;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Part;
 import retrofit2.http.Query;
 
@@ -44,12 +49,12 @@ public interface MyApiEndPointInterface {
 
 
     //EVENTI
-/*
+
     @GET("/EventiController")
-    Call<List<Evento>> getAllEvents();
+    Call<List<EventoModel>> getAllEvents();
 
     @POST("/EventiController")
-    Call<String> setNewEvent(@Query("nomeEvento") String eventName, @Query("descrizione") String description, @Query("usernameOrgnizzatore") String usernameOrganizer);
+    Call<String> setNewEvent(@Query("nomeEvento") String nomeEvento, @Query("descrizione") String descrizione, @Query("usernameOrgnizzatore") String usernameOrganizzatore);
 
     @PUT("/EventiController")
     Call<String> joinEvent(@Query("idEventoString") String idEventString, @Query("usernamePartecipante") String usernameEntrant);
@@ -58,7 +63,7 @@ public interface MyApiEndPointInterface {
     Call<String> removeEvent(@Query("idEventoString") String idEventString);
 
     @GET("/EventiUtenteController")
-    Call<List<Evento>> getUserEvents(@Query("username") String username);
+    Call<List<EventoModel>> getUserEvents(@Query("username") String username);
 
-*/
+
 }

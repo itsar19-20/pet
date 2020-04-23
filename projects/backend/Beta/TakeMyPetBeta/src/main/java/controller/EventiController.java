@@ -59,6 +59,7 @@ public class EventiController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Evento evento=new Evento();
+		ObjectMapper om = new ObjectMapper();
 		UtenteAppManager utenteAppManager=new UtenteAppManager();
 		String nomeEvento=request.getParameter("nomeEvento");
 		Date dataEvento=new Date();
@@ -67,6 +68,9 @@ public class EventiController extends HttpServlet {
 		String longitudine=null;
 		String organizzatore=request.getParameter("usernameOrgnizzatore");
 		utenteAppManager.nuovoEvento(nomeEvento, dataEvento, descrizione, latitudine, longitudine, organizzatore);
+		String controllo = "Evento salvato con successo";
+		response.setContentType("application/json");
+	    response.getWriter().append(om.writeValueAsString(controllo));
 		log.debug("doPost nuovo Evento funziona");
 	}
 

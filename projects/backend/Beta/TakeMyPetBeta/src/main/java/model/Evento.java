@@ -11,6 +11,8 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 @NamedQueries(  
 	    {  
 	        @NamedQuery(  
@@ -34,6 +36,7 @@ public class Evento {
 	@OneToOne
 	private UtenteApp organizzatore;
 	private String nomeEvento;
+	@Temporal(TemporalType.DATE)
 	private Date dataEvento;
 	
 	@OneToMany

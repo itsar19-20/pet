@@ -22,12 +22,20 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.ifts.applicazioneufficialetmpet.adapter.EventiArrayAdapter;
 import com.ifts.applicazioneufficialetmpet.database.NotaAdapter;
+import com.ifts.applicazioneufficialetmpet.interfaces.MyApiEndPointInterface;
 import com.ifts.applicazioneufficialetmpet.list.NotaCursorAdapter;
 import com.ifts.applicazioneufficialetmpet.list.NotaDatabaseHelper;
+import com.ifts.applicazioneufficialetmpet.model.EventoModel;
+import com.ifts.applicazioneufficialetmpet.retrofit.ApplicationWebService;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class Eventi extends Fragment {
@@ -65,13 +73,41 @@ public class Eventi extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_eventi, container, false);
         //===================================INIZIO XD========================00
-        notaAdapter = new NotaAdapter(getContext());
+
+
+
+       //QUI SOSTITUISCO CON L'ARRAY ADAPTER DOPO AVER PRESO LA LISTA DAL SERVER!!
+
+        /*notaAdapter = new NotaAdapter(getContext());
         notaAdapter.open();
 
         databaseOpenHelper = new NotaDatabaseHelper(getContext());
         listView = view.findViewById(R.id.listView_eventi);
         customAdapter = new NotaCursorAdapter( getContext(), databaseOpenHelper.getAllData());
-        listView.setAdapter(customAdapter);
+        listView.setAdapter(customAdapter);*/
+
+        listView = view.findViewById(R.id.listView_eventi);
+
+
+        ApplicationWebService webService = (ApplicationWebService) getActivity().getApplication();
+        MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
+        apiService.getAllEvents().enqueue(new Callback<List<EventoModel>>() {
+            @Override
+            public void onResponse(Call<List<EventoModel>> call, Response<List<EventoModel>> response) {
+                List<EventoModel> listaEventi;
+                listaEventi = response.body();
+                EventiArrayAdapter arrayAdapter = new EventiArrayAdapter(getContext(),(ArrayList)listaEventi);
+                listView.setAdapter(arrayAdapter);
+            }
+
+            @Override
+            public void onFailure(Call<List<EventoModel>> call, Throwable t) {
+                Toast.makeText(getContext(), "Errore caricamento eventi: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -142,6 +178,11 @@ public class Eventi extends Fragment {
         });
 
 
+
+
+        //QUI BISOGNA SOSTITUIRE IL DELETE SU SQLITE CON UNA CHIAMATA DELETE AL SERVER
+
+
         listView.setOnItemLongClickListener( new AdapterView.OnItemLongClickListener() {
 
             @Override
@@ -183,7 +224,13 @@ public class Eventi extends Fragment {
             public void onClick(View view) {
 
                 //change activity
-                Intent i = new Intent( getContext(), CreateActivity.class);
+                //
+                //
+                //
+                //
+                //
+                // HO CAMBIATO CON ACTIVITY_CREAEVENTO
+                Intent i = new Intent( getContext(), Activity_creaEvento.class);
                 i.putExtra("edit", "false");
                 startActivity(i);
             }
