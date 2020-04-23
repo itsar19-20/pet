@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String SHARED_PREF_USERNAME = "shared_pref_username";
     private static final String USERNAME = "username";
+    private static final String TIPOUTENTE="tipoUtente";
+    private String tipoUtente;
     private String loginUsername;
 
     @Override
@@ -46,31 +48,24 @@ public class MainActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendUserToSceltaStart();
-                finish();
+                if(tipoUtente.contentEquals("proprietario")) {
+                    openActivity_proprietario();
+                }else {
+                    openActivityPetSitter();
+                }
             }
         });
     }
 
     protected void onStart() {
-
         super.onStart();
             verifyUser();
-       // VerifyUserExistence();
-    }
-    private void VerifyUserExistence(){
-        loadData();
-        if (loginUsername != null){
-            Toast.makeText(MainActivity.this, "welcome", Toast.LENGTH_LONG).show();
-        }else{
-            sendUserToLogin();
-            Toast.makeText(MainActivity.this, "qua c e un prob", Toast.LENGTH_LONG).show();
-        }
     }
 
     private void verifyUser(){
         SharedPreferences sharedPref = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
         String username = sharedPref.getString(USERNAME, null);
+        String tipoUtente = sharedPref.getString(TIPOUTENTE, null);
         if(username != null) {
             ApplicationWebService applicationWebService = (ApplicationWebService) getApplication();
             MyApiEndPointInterface apiInterface =  applicationWebService.getRetrofit().create(MyApiEndPointInterface.class);
@@ -105,24 +100,27 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void loadData(){
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
-        loginUsername = sharedPreferences.getString(USERNAME, null);
-    }
     private void sendUserToLogin() {
         Intent loginIntent = new Intent(MainActivity.this, Activity_login.class);
        // loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(loginIntent);
         finish();
     }
-    private void sendUserToSceltaStart() {
-        Intent sceltaStartIntent = new Intent(MainActivity.this, Activity_scelta_start.class);
-        startActivity(sceltaStartIntent);
-    }
     private void SendUserToProfile(){
         Intent profiloIntent = new Intent(MainActivity.this, Activity_profilo.class);
         profiloIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(profiloIntent);
+        finish();
+    }
+    public void openActivityPetSitter(){
+        Intent intent = new Intent(MainActivity.this, Activity_petsitter.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void openActivity_proprietario(){
+        Intent intent = new Intent(MainActivity.this, Activity_proprietario.class);
+        startActivity(intent);
         finish();
     }
 }
