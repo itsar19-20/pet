@@ -42,10 +42,7 @@ public interface MyApiEndPointInterface {
     Call<String> getControlloBloccato(@Query("username") String username);
 
 
-    //CONTROLLO TIPO UTENTE
 
-    @GET("/ControlloTipoUtenteController")
-    Call<String> getControlloTipoUtente(@Query("username") String username);
     //EVENTI
 /*
     @GET("/EventiController")

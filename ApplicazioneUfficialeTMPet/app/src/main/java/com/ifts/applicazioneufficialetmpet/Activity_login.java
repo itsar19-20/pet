@@ -28,12 +28,8 @@ public class Activity_login extends Activity {
     private static final String USERNAME = "username";
     private static final String TIPOUTENTE="tipoUtente";
 
-    //private FirebaseUser user;
-    private FirebaseAuth auth;
-
     private EditText etUsername;
     private EditText etPassword;
-
     private Button btnLogin;
 
     private TextView passwordDimenticata;

@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     private Button btnStart;
     private ProgressBar cerchio;
 
-    private static final String SHARED_PREF_USERNAME = "shared_pref_username";
     private static final String USERNAME = "username";
     private static final String TIPOUTENTE="tipoUtente";
     private String tipoUtente;
