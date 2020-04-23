@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String USERNAME = "username";
     private static final String TIPOUTENTE="tipoUtente";
-    private String tipoUtente;
+    public String tipoUtente;
     private String loginUsername;
 
     @Override
@@ -48,9 +48,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(tipoUtente.contentEquals("proprietario")) {
-                    openActivity_proprietario();
+                    sendUserToProprietario();
                 }else {
-                    openActivityPetSitter();
+                    sendUserToPetSitter();
                 }
             }
         });
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     private void verifyUser(){
         SharedPreferences sharedPref = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
         String username = sharedPref.getString(USERNAME, null);
-        String tipoUtente = sharedPref.getString(TIPOUTENTE, null);
+        tipoUtente = sharedPref.getString(TIPOUTENTE, null);
         if(username != null) {
             ApplicationWebService applicationWebService = (ApplicationWebService) getApplication();
             MyApiEndPointInterface apiInterface =  applicationWebService.getRetrofit().create(MyApiEndPointInterface.class);
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     if (statusCode == 200) {
                         String controllo = response.body();
                         if(controllo.contentEquals("ok")){
-                            Toast.makeText(MainActivity.this, "welcome" + username, Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this, "welcome " + username, Toast.LENGTH_LONG).show();
                         } else if (controllo.contentEquals("bloccato")) {
                             Toast.makeText(MainActivity.this, "Il tuo account è stato bloccato, controlla la tua email per le info di sblocco", Toast.LENGTH_LONG);
                             sharedPref.edit().clear().commit();
@@ -111,16 +111,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(profiloIntent);
         finish();
     }
-    public void openActivityPetSitter(){
-        Intent intent = new Intent(MainActivity.this, Activity_petsitter.class);
-        startActivity(intent);
-        finish();
+    public void sendUserToPetSitter(){
+        Intent petsitterIntent = new Intent(MainActivity.this, Activity_petsitter.class);
+        startActivity(petsitterIntent);
+       // finish();
     }
 
-    public void openActivity_proprietario(){
-        Intent intent = new Intent(MainActivity.this, Activity_proprietario.class);
-        startActivity(intent);
-        finish();
+    public void sendUserToProprietario(){
+        Intent proprietarioIntent = new Intent(MainActivity.this, Activity_proprietario.class);
+        startActivity(proprietarioIntent);
+        //finish();
     }
 }
 
