@@ -106,4 +106,20 @@
         app:layout_constraintTop_toTopOf="@+id/logo_iniziale"
         app:layout_constraintVertical_bias="0.717" />
 
+    <TextView
+        android:id="@+id/textView_usernameUtente"
+        android:layout_width="127dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/logo_iniziale"
+        app:layout_constraintEnd_toEndOf="@+id/logo_iniziale"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="@+id/logo_iniziale"
+        app:layout_constraintTop_toTopOf="@+id/logo_iniziale"
+        app:layout_constraintVertical_bias="0.253" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

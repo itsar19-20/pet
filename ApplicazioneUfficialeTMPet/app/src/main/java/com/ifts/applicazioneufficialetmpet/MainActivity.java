@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnStart;
     private ProgressBar cerchio;
     private TextView twProfilo;
+    private TextView twUsernameProfilo;
 
     private static final String USERNAME = "username";
     private static final String TIPOUTENTE="tipoUtente";
@@ -37,15 +38,18 @@ public class MainActivity extends AppCompatActivity {
         cerchio = findViewById(R.id.progressBar_circle);
         btnStart = findViewById(R.id.button_start);
         twProfilo = findViewById(R.id.textView_tipoUtente);
+        twUsernameProfilo = findViewById(R.id.textView_usernameUtente);
 
 
         btnStart.setVisibility(View.INVISIBLE);
         twProfilo.setVisibility(View.INVISIBLE);
+        twUsernameProfilo.setVisibility(View.INVISIBLE);
         btnStart.postDelayed(new Runnable() {
             public void run() {
                 btnStart.setVisibility(View.VISIBLE);
                 twProfilo.setText(tipoUtente);
                 twProfilo.setVisibility(View.VISIBLE);
+                twUsernameProfilo.setVisibility(View.VISIBLE);
                 cerchio.setVisibility(View.INVISIBLE);
             }
         }, 2000);
@@ -70,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
     private void verifyUser(){
         SharedPreferences sharedPref = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
         String username = sharedPref.getString(USERNAME, null);
+        twUsernameProfilo.setText(username);
         tipoUtente = sharedPref.getString(TIPOUTENTE, null);
         if(username != null) {
             ApplicationWebService applicationWebService = (ApplicationWebService) getApplication();

@@ -40,10 +40,7 @@ import retrofit2.Response;
 
 public class Eventi extends Fragment {
     private Button chiudi_evento;
-    //private Button visualizza_evento;
-    //private Dialog dialog_evento;
     private Dialog dialog_visualizza_evento;
-    private FirebaseAuth auth;
     //===========================INIZIO XD====================================
     private NotaAdapter notaAdapter;
     private NotaCursorAdapter customAdapter;
@@ -56,9 +53,6 @@ public class Eventi extends Fragment {
     //===================inizio=================
    // static ArrayList<String> notes = new ArrayList<>();
     //static ArrayAdapter arrayAdapter;
-
-    private DatabaseReference rootReference;
-
     //===================fine====================
     ViewPager viewPager;
     Slider_Adapter_Eventi adapter_eventi;
@@ -72,22 +66,11 @@ public class Eventi extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_eventi, container, false);
-        //===================================INIZIO XD========================00
 
-
+//===================================INIZIO XD========================00
 
        //QUI SOSTITUISCO CON L'ARRAY ADAPTER DOPO AVER PRESO LA LISTA DAL SERVER!!
-
-        /*notaAdapter = new NotaAdapter(getContext());
-        notaAdapter.open();
-
-        databaseOpenHelper = new NotaDatabaseHelper(getContext());
         listView = view.findViewById(R.id.listView_eventi);
-        customAdapter = new NotaCursorAdapter( getContext(), databaseOpenHelper.getAllData());
-        listView.setAdapter(customAdapter);*/
-
-        listView = view.findViewById(R.id.listView_eventi);
-
 
         ApplicationWebService webService = (ApplicationWebService) getActivity().getApplication();
         MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
@@ -106,11 +89,7 @@ public class Eventi extends Fragment {
             }
         });
 
-
-
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
@@ -177,9 +156,6 @@ public class Eventi extends Fragment {
             }
         });
 
-
-
-
         //QUI BISOGNA SOSTITUIRE IL DELETE SU SQLITE CON UNA CHIAMATA DELETE AL SERVER
 
 
@@ -218,18 +194,11 @@ public class Eventi extends Fragment {
             }
         });
 
+//======================CREA EVENTO==================================================================
         FloatingActionButton fab = view.findViewById(R.id.fab_add);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //change activity
-                //
-                //
-                //
-                //
-                //
-                // HO CAMBIATO CON ACTIVITY_CREAEVENTO
                 Intent i = new Intent( getContext(), Activity_creaEvento.class);
                 i.putExtra("edit", "false");
                 startActivity(i);
@@ -237,15 +206,6 @@ public class Eventi extends Fragment {
         });
         //===================================FINE XD========================00
         //===================================INIZIO========================00
-        auth = FirebaseAuth.getInstance();
-        rootReference = FirebaseDatabase.getInstance().getReference();
-        String userID = auth.getCurrentUser().getUid();
-        String eventoID = auth.getCurrentUser().getUid();
-
-        //rootReference.child("Users").child(userID).child("Eventi").child(eventoID).setValue(eventoID);
-       // rootReference.child("Users").child(userID).child("Eventi").setValue("");//per ora creo la tabella, quando salvo un nuovo evento faccio la stringa sopra
-
-
 
        /* ListView listView = view.findViewById(R.id.listView_eventi);
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("com.robpercival.notes", Context.MODE_PRIVATE);
@@ -411,14 +371,12 @@ public class Eventi extends Fragment {
                 });
             }
         });*/
-
         return view;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-
         notaAdapter.close();
     }
 }

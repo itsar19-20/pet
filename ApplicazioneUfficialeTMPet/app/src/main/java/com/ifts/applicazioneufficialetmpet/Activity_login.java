@@ -26,6 +26,8 @@ public class Activity_login extends Activity {
     //shared preference to save user
     public static final String SHARED_PREFERENCE = "shared_preference";
     private static final String USERNAME = "username";
+    private static final String NOME = "nome";
+    private static final String COGNOME = "cognome";
     private static final String TIPOUTENTE="tipoUtente";
 
     private EditText etUsername;
@@ -117,7 +119,7 @@ public class Activity_login extends Activity {
                                 Toast.makeText(Activity_login.this, "Username o password sbagliati", Toast.LENGTH_LONG).show();
                                 refresh();
                             } else {
-                                saveUserOnSharedPreference(userModel.getUsername(),userModel.getTipoUtente());
+                                saveUserOnSharedPreference(userModel.getUsername(),userModel.getNome(),userModel.getCognome(),userModel.getTipoUtente());
                                 loadingBar.dismiss();
                                 Toast.makeText(Activity_login.this, "Ti sei loggato con Successo!", Toast.LENGTH_LONG).show();
                                 sendUserToMain();}
@@ -134,10 +136,12 @@ public class Activity_login extends Activity {
         }
 
 
-    private void saveUserOnSharedPreference(String username, String tipoUtente){
+    private void saveUserOnSharedPreference(String username, String nome, String cognome, String tipoUtente){
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(USERNAME,username);
+        editor.putString(NOME,nome);
+        editor.putString(COGNOME,cognome);
         editor.putString(TIPOUTENTE, tipoUtente);
         editor.apply();
     }

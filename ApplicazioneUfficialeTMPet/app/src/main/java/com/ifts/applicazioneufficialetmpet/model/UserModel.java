@@ -3,12 +3,16 @@ package com.ifts.applicazioneufficialetmpet.model;
 public class UserModel {
 
     private String username,
+                    nome,
+                    cognome,
                     tipoUtente ;
 
     @Override
     public String toString() {
         return "UserModel{" +
                 "username='" + username + '\'' +
+                ", nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
                 ", tipoUtente='" + tipoUtente + '\'' +
                 '}';
     }
@@ -22,6 +26,22 @@ public class UserModel {
     }
 
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+
+    public String getCognome() {
+        return cognome;
+    }
+
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
 
 
     public String getUsername() {
