@@ -65,14 +65,12 @@ public class Activity_signup extends AppCompatActivity {
              btnProprietario,
              twBackToLogin;
 
-   public Boolean checkStato = true;
-
-    String tipoUtente;
+   public String tipoUtente = "petsitter";
 
     //ImageView ivProfile;
     private CircleImageView ivProfile;
     Bitmap imageProfile = null;
-    boolean controlloUploadImmagine = false;
+    //boolean controlloUploadImmagine = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,11 +84,7 @@ public class Activity_signup extends AppCompatActivity {
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.CAMERA,Manifest.permission.READ_EXTERNAL_STORAGE},
                     1);
         }
-
-
-
-
-//================================CLICK SULLA SCELTA IMMAGINE PROFILO==============================
+//================================CLICK VARI BOTTONI==============================================================0
         ivProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,6 +94,20 @@ public class Activity_signup extends AppCompatActivity {
                         .start(Activity_signup.this);
             }
         });
+        twBackToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendUserToLogin();
+            }
+        });
+        btnSignUP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), tipoUtente);
+                sendUserToLogin();
+            }
+        });
+//=====================================I DUE BTN QUA SERVONO NEL CASO NON VENGA SELEZIONATA NESSUNA IMMAGINE=================================
         btnPetsitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,7 +115,6 @@ public class Activity_signup extends AppCompatActivity {
                 btnPetsitter.setTextColor(getResources().getColor(R.color.white));
                 btnProprietario.setBackgroundColor(getResources().getColor(R.color.colorGrayWhatsApp));
                 btnProprietario.setTextColor(getResources().getColor(R.color.black));
-                //checkStato = true;
                 tipoUtente = "petsitter";
             }
         });
@@ -118,41 +125,10 @@ public class Activity_signup extends AppCompatActivity {
                 btnProprietario.setTextColor(getResources().getColor(R.color.white));
                 btnPetsitter.setBackgroundColor(getResources().getColor(R.color.colorGrayWhatsApp));
                 btnPetsitter.setTextColor(getResources().getColor(R.color.black));
-                //checkStato = false;
                 tipoUtente = "proprietario";
             }
         });
-        twBackToLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendUserToLogin();
-            }
-        });
-
-        btnSignUP.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-//                creaUtente.setTitle("Logging");
-//                creaUtente.setMessage("Please Wait...");
-//                creaUtente.setCanceledOnTouchOutside(false);
-//                creaUtente.show();
-                //verificaTipoUtente();
-              /*  if(checkStato) {
-                    registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "petsitter");
-//                    creaUtente.dismiss();
-                }else{
-                    registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
-//                    creaUtente.dismiss();
-                } */
-                registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), tipoUtente);
-               // sendUserToLogin();
-            }
-        });
-
-
     }
-
     //=======================================GESTIONE PERMESSI ========================================
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
@@ -162,13 +138,31 @@ public class Activity_signup extends AppCompatActivity {
             }
         }
     }
-
-
 //========================================ACTIVITY RESULT DOPO IL CROP======================================
-    @SuppressLint("ResourceAsColor")
+   // @SuppressLint("ResourceAsColor")
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        btnPetsitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnPetsitter.setBackgroundColor(getResources().getColor(R.color.colorVerdeApp));
+                btnPetsitter.setTextColor(getResources().getColor(R.color.white));
+                btnProprietario.setBackgroundColor(getResources().getColor(R.color.colorGrayWhatsApp));
+                btnProprietario.setTextColor(getResources().getColor(R.color.black));
+                tipoUtente = "petsitter";
+            }
+        });
+        btnProprietario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnProprietario.setBackgroundColor(getResources().getColor(R.color.colorVerdeApp));
+                btnProprietario.setTextColor(getResources().getColor(R.color.white));
+                btnPetsitter.setBackgroundColor(getResources().getColor(R.color.colorGrayWhatsApp));
+                btnPetsitter.setTextColor(getResources().getColor(R.color.black));
+                tipoUtente = "proprietario";
+            }
+        });
            // controlloUploadImmagine = true;
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             Uri resultUri = result.getUri();
@@ -192,59 +186,42 @@ public class Activity_signup extends AppCompatActivity {
             btnSignUP.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                  //  creaUtente.setTitle("Logging");
-                  //  creaUtente.setMessage("Please Wait...");
-                  //  creaUtente.setCanceledOnTouchOutside(false);
-                  //  creaUtente.show();
-                    //verificaTipoUtente();
-                   /* if (controlloUploadImmagine) {
-                        if (checkStato){
-                        registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "petsitter");
-                        registrazioneImmagine(base64Image, etUsername.getText().toString());
-                        creaUtente.dismiss();
-                        }else{
-                            registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
-                            registrazioneImmagine(base64Image, etUsername.getText().toString());
-                           // creaUtente.dismiss();
-                        }
-                    } else {
-                        if(checkStato) {
-                            registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "petsitter");
-                            //creaUtente.dismiss();
-                        }else{
-                            registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), "proprietario");
-                           // creaUtente.dismiss();
-                        }
-                    }*/
                     registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), tipoUtente);
                     registrazioneImmagine(base64Image, etUsername.getText().toString());
                 }
             });
-
-        //}
-
     }
 
 
     public void registrazioneUtente(String nome, String cognome, String username, String password, String email, String tipoUtente) {
+        //questo viene richiamato al clik del btnSignUp
+        creaUtente.setTitle("Logging");
+        creaUtente.setMessage("Please Wait...");
+        creaUtente.setCanceledOnTouchOutside(false);
+        creaUtente.show();
         ApplicationWebService webService = (ApplicationWebService) getApplication();
         MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
         apiService.signUpUser(nome, cognome, username, password, email, tipoUtente).enqueue(new Callback<String>() {
+            //questo viene fatto dopo la registrazione
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
                 String controlloUsernameEsistente = response.body();
                 if (controlloUsernameEsistente != null) {
                     Toast.makeText(Activity_signup.this, controlloUsernameEsistente, Toast.LENGTH_LONG).show();
                     if(imageProfile == null) {
+                        creaUtente.dismiss();
                         sendUserToLogin();
+
                     }
                 } else {
+                    creaUtente.dismiss();
                     Toast.makeText(Activity_signup.this, "Utente registrato con successo", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
+                creaUtente.dismiss();
                 Toast.makeText(Activity_signup.this, "Problemi con la registrazione utente: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
@@ -258,17 +235,18 @@ public class Activity_signup extends AppCompatActivity {
         apiService.setImage2(username, null, requestBody).enqueue(new Callback<RequestBody>() {
             @Override
             public void onResponse(Call<RequestBody> call, Response<RequestBody> response) {
+                creaUtente.dismiss();
                     Toast.makeText(Activity_signup.this, "Immagine caricata con successo", Toast.LENGTH_SHORT).show();
                     sendUserToLogin();
             }
-
             @Override
             public void onFailure(Call<RequestBody> call, Throwable t) {
+                creaUtente.dismiss();
                 Toast.makeText(Activity_signup.this, "Problemi con il caricamento dell'immagine: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Activity_signup.this, "ha scelto proprietario vero? ", Toast.LENGTH_SHORT).show();
             }
         });
     }
-
 
     public Bitmap getResizedBitmap(Bitmap image, int maxSize) {
         int width = image.getWidth();
@@ -299,7 +277,6 @@ public class Activity_signup extends AppCompatActivity {
         btnSignUP = (Button) findViewById(R.id.btnSignUp);
         btnPetsitter = (TextView) findViewById(R.id.button_petsitter);
         btnProprietario = (TextView) findViewById(R.id.button_proprietario);
-      //  btnUpload = findViewById(R.id.btnUpload);
 
         twBackToLogin = (TextView) findViewById(R.id.textView_backToLogin);
 
@@ -315,12 +292,29 @@ public class Activity_signup extends AppCompatActivity {
         finish();
     }
 
-    /*public void verificaTipoUtente(){
-        if(checkStato == true){
-            tipoUtente = "petsitter";
-        }else {
-            tipoUtente = "proprietario";
-        }
+    /*public void sceltaTipoUtente(){
+       btnPetsitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnPetsitter.setBackgroundColor(getResources().getColor(R.color.colorVerdeApp));
+                btnPetsitter.setTextColor(getResources().getColor(R.color.white));
+                btnProprietario.setBackgroundColor(getResources().getColor(R.color.colorGrayWhatsApp));
+                btnProprietario.setTextColor(getResources().getColor(R.color.black));
+                //checkStato = true;
+                tipoUtente = "petsitter";
+            }
+        });
+        btnProprietario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnProprietario.setBackgroundColor(getResources().getColor(R.color.colorVerdeApp));
+                btnProprietario.setTextColor(getResources().getColor(R.color.white));
+                btnPetsitter.setBackgroundColor(getResources().getColor(R.color.colorGrayWhatsApp));
+                btnPetsitter.setTextColor(getResources().getColor(R.color.black));
+                //checkStato = false;
+                tipoUtente = "proprietario";
+            }
+        });
     }*/
 
     @Override
@@ -338,6 +332,4 @@ public class Activity_signup extends AppCompatActivity {
         });
         vvVideoBackrgound.start();
     }
-
-
 }
