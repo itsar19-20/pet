@@ -114,9 +114,10 @@ public class ImmagineController extends HttpServlet {
 		
 		//mettere sito app o localhost o ip computer server
 		String urlImmagine = "http://192.168.1.103:8080/immaginiPerWeb/" + username +".jpg";
-		
 		uam.inserisciImmagine(username, urlImmagine);
-		response.getWriter().append("Immagine salvata con successo");
+		String controllo = "Immagine salvata con successo";
+		response.setContentType("application/json");
+	    response.getWriter().append(om.writeValueAsString(controllo));
 		
 		log.debug("ImmagineController Funziona");
 	}
