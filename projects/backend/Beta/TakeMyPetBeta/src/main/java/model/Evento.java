@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -13,26 +14,34 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+@Entity
 @NamedQueries(  
 	    {  
 	        @NamedQuery(  
 	        name = "cercaEventiPerOrganizzatore",  
-	        query = "select c from Evento c where c.organizzatore= :username"  
+	        query = "SELECT c from Evento c where c.organizzatore= :username"  
 	       
 	        ),
 	        @NamedQuery(
 	        name = "cercaEventiPerPartecipante",
-	        query = "select c from Evento c where c.partecipanti= :username"
-	        )
-	    }  
-	)  
+	        query = "SELECT c from Evento c where c.partecipanti= :username"
+	        ),
+	        @NamedQuery(
+	        name="cercaEventi",
+            query="SELECT c FROM Evento c"),
+	        
+	       
+	    }  )  
 
-@Entity
+
 public class Evento {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id_evento;
+	
 	@OneToOne
 	private UtenteApp organizzatore;
 	private String nomeEvento;
@@ -40,6 +49,7 @@ public class Evento {
 	private Date dataEvento;
 	
 	@OneToMany
+	@JsonIgnore
 	private List<UtenteApp> partecipanti;
 	private String descrizione;
 	private String latitudine;
@@ -96,5 +106,10 @@ public class Evento {
 		this.dataEvento = dataEvento;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "Evento [id_evento=" + id_evento + ", organizzatore=" + organizzatore + ", nomeEvento=" + nomeEvento
+				+ ", dataEvento=" + dataEvento + ", partecipanti=" + partecipanti + ", descrizione=" + descrizione
+				+ ", latitudine=" + latitudine + ", longitudine=" + longitudine + "]";
+	}
 }
