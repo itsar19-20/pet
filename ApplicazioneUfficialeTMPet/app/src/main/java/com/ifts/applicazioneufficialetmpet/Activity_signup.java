@@ -54,6 +54,7 @@ public class Activity_signup extends AppCompatActivity {
     VideoView vvVideoBackrgound;
     EditText etNome,
             etCognome,
+            etDescrizione,
             etEmail,
             etControlloPassword,
             etPassword,
@@ -103,7 +104,7 @@ public class Activity_signup extends AppCompatActivity {
         btnSignUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), tipoUtente);
+                registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etDescrizione.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), tipoUtente);
                 sendUserToLogin();
             }
         });
@@ -186,14 +187,14 @@ public class Activity_signup extends AppCompatActivity {
             btnSignUP.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), tipoUtente);
+                    registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etDescrizione.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), tipoUtente);
                     registrazioneImmagine(base64Image, etUsername.getText().toString());
                 }
             });
     }
 
 
-    public void registrazioneUtente(String nome, String cognome, String username, String password, String email, String tipoUtente) {
+    public void registrazioneUtente(String nome, String cognome, String descrizione, String username, String password, String email, String tipoUtente) {
         //questo viene richiamato al clik del btnSignUp
         creaUtente.setTitle("Logging");
         creaUtente.setMessage("Please Wait...");
@@ -201,7 +202,7 @@ public class Activity_signup extends AppCompatActivity {
         creaUtente.show();
         ApplicationWebService webService = (ApplicationWebService) getApplication();
         MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
-        apiService.signUpUser(nome, cognome, username, password, email, tipoUtente).enqueue(new Callback<String>() {
+        apiService.signUpUser(nome, cognome, descrizione, username, password, email, tipoUtente).enqueue(new Callback<String>() {
             //questo viene fatto dopo la registrazione
             @Override
             public void onResponse(Call<String> call, Response<String> response) {

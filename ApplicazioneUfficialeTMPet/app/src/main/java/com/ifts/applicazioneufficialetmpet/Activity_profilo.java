@@ -59,6 +59,7 @@ public class Activity_profilo extends AppCompatActivity {
     private static final String USERNAME = "username";
     private static final String NOME = "nome";
     private static final String COGNOME = "cognome";
+    private static final String DESCRIZIONE = "descrizione";
     private static final String TIPOUTENTE = "tipoUtente";
     private static final String IMGPROFILE = "immagineProfilo_id_Immagine";
 
@@ -70,8 +71,9 @@ public class Activity_profilo extends AppCompatActivity {
     public TextView twName;
     public TextView twSurname;
     public TextView twUserType;
-   // private EditText status;
+    public EditText etDescrizione;
     private Button update;
+    private Button delete;
     private String mail;
     private Activity_registrazione activity_registrazione = new Activity_registrazione();
 
@@ -100,7 +102,17 @@ public class Activity_profilo extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                loadingBar.setTitle("set profile img");
+                loadingBar.setMessage("pls wait the uploading");
+                loadingBar.setCanceledOnTouchOutside(false);
+                loadingBar.show();
                 updateProfilo();
+            }
+        });
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendUserToLogin();
             }
         });
         saveUserInfo();
@@ -113,8 +125,10 @@ public class Activity_profilo extends AppCompatActivity {
         twName = (TextView) findViewById(R.id.textView_name_profilo);
         twSurname = (TextView) findViewById(R.id.textView_surname_profilo);
         twUserType = (TextView) findViewById(R.id.textView_userType_profilo);
+        etDescrizione = (EditText) findViewById(R.id.editText_userStatus_profilo);
 
         update = (Button) findViewById(R.id.button_update_profilo);
+        delete = (Button) findViewById(R.id.button_delete_profilo);
         loadingBar = new ProgressDialog(this);
     }
 
@@ -147,23 +161,9 @@ public class Activity_profilo extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // registrazioneUtente(etNome.getText().toString(), etCognome.getText().toString(), etUsername.getText().toString(), etPassword.getText().toString(), etEmail.getText().toString(), tipoUtente);
-              //  registrazioneImmagine(base64Image, etUsername.getText().toString());
             }
         });
-
-//                                    });
-//                        }else{
-//                            String message = task.getException().toString();
-//                            Toast.makeText(Activity_profilo.this, "ATTENZIONE:" + message, Toast.LENGTH_LONG).show();
-//                            loadingBar.dismiss();
-//                        }
-//                    }
-//                });
             }
-  //      }
- //  }
-
 
 //===========================================SALVA DATI PROFILO==================================================================
     private void saveUserInfo(){
@@ -172,21 +172,17 @@ public class Activity_profilo extends AppCompatActivity {
 //===========================================UPDATE PROFILO==========================================================================
 
     public void updateProfilo(){
-//        String setUsername = username.getText().toString();
-//        String setStatus = status.getText().toString();
-//        //String setImg = imgProfilo.toString();
-//
-//        /*if(TextUtils.isEmpty(setImg)){
-//            Toast.makeText(Activity_profilo.this, "Inserire uno Username perfavore", Toast.LENGTH_SHORT).show();
-//        }else*/
-//        if(TextUtils.isEmpty(setUsername)){
-//            Toast.makeText(Activity_profilo.this, "Inserire uno Username perfavore", Toast.LENGTH_SHORT).show();
-//        }else
-//        if(TextUtils.isEmpty(setStatus)){
-//            Toast.makeText(Activity_profilo.this, "Inserire uno Stato perfavore", Toast.LENGTH_SHORT).show();
-//        }else{
-//        }
-    }
+
+        String descrizione = etDescrizione.getText().toString();
+
+            SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(DESCRIZIONE,descrizione);
+            editor.apply();
+            loadingBar.dismiss();
+            Toast.makeText(Activity_profilo.this, "Profilo Aggiornato", Toast.LENGTH_SHORT).show();
+        }
+
 public void registrazioneImmagine(String base64Image, String username) {
     ApplicationWebService webService = (ApplicationWebService) getApplication();
     MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
@@ -229,17 +225,26 @@ public void registrazioneImmagine(String base64Image, String username) {
         startActivity(mainIntent);
        // finish();
     }
+    public void sendUserToLogin(){
+        Intent loginIntent = new Intent(Activity_profilo.this, Activity_login.class);
+       // loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(loginIntent);
+        // finish();
+    }
     public void verifyUser() {
         SharedPreferences sharedPref = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
         String username = sharedPref.getString(USERNAME, null);
         String name = sharedPref.getString(NOME, null);
         String surname = sharedPref.getString(COGNOME, null);
+        String descrizione = sharedPref.getString(DESCRIZIONE, null);
         String userType = sharedPref.getString(TIPOUTENTE, null);
+
+        etDescrizione.setText(descrizione);
+
+
 
         ApplicationWebService webService = (ApplicationWebService) getApplication();
         MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
-        String imgProfile = sharedPref.getString(IMGPROFILE, null);
-
 
         apiService.getImage(twUsername.getText().toString()).enqueue(new Callback<String>() {
             @Override
@@ -267,9 +272,37 @@ public void registrazioneImmagine(String base64Image, String username) {
         twUsername.setText(username);
         twName.setText(name);
         twSurname.setText(surname);
+        etDescrizione.setText(descrizione);
         twUserType.setText(userType);
+       // ivProfile.setImageBitmap(imageProfile);
 
-    }}
+      /*  public void registrazioneUtente(String descrizione) {
+            //questo viene richiamato al clik del btnSignUp
+            loadingBar.setTitle("Logging");
+            loadingBar.setMessage("Please Wait...");
+            loadingBar.setCanceledOnTouchOutside(false);
+            loadingBar.show();
+            ApplicationWebService webService = (ApplicationWebService) getApplication();
+            MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
+            apiService.signUpUser(descrizione,).enqueue(new Callback<String>() {
+                //questo viene fatto dopo la registrazione
+                @Override
+                public void onResponse(Call<String> call, Response<String> response) {
+                    String controlloUsernameEsistente = response.body();
+                    if (controlloUsernameEsistente != null) {
+                        Toast.makeText(Activity_profilo.this, controlloUsernameEsistente, Toast.LENGTH_LONG).show();
+                        if(imageProfile == null) {
+                            loadingBar.dismiss();
+                            sendUserToLogin();
+
+                        }
+                    } else {
+                        loadingBar.dismiss();
+                        Toast.makeText(Activity_profilo.this, "Utente registrato con successo", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+            });}*/}}
 
 
 

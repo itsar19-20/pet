@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Activity_profilo">
 
 
@@ -13,7 +13,7 @@
         android:layout_height="186dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="4dp"
         android:src="@drawable/logoapppet"
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"
@@ -24,12 +24,14 @@
         tools:ignore="MissingConstraints" />
 
     <RelativeLayout
-        android:layout_width="413dp"
-        android:layout_height="180dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_update_profilo"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/set_image_profilo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -115,6 +117,22 @@
             app:layout_constraintTop_toBottomOf="@+id/textView_name_profilo"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="87dp"></TextView>
+
+        <EditText
+            android:id="@+id/editText_userStatus_profilo"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_below="@+id/textView_userType_profilo"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="68dp"
+            android:drawableStart="@drawable/ic_takenote"
+            android:hint="Stato"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
     </RelativeLayout>
 
     <Button
@@ -135,7 +153,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.771"></Button>
+        app:layout_constraintVertical_bias="0.822"></Button>
 
     <Button
         android:id="@+id/button_delete_profilo"
@@ -155,6 +173,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.905"></Button>
+        app:layout_constraintVertical_bias="0.948"></Button>
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -48,7 +48,7 @@ public class RegistrationController extends HttpServlet {
 		String email = request.getParameter("email");
 		Date dataDiNascita = null; // = (request.getParameter("dataDiNascita");
 		Date dataDiRegistrazione = new Date();
-		String descrizione = null; //request.getParameter("descrizione");
+		String descrizione = null;//request.getParameter("descrizione");
 		String latitudine = null; //request.getParameter("latitudine");
 		String longitudine = null; //request.getParameter("longitudine");
 		String tipo = request.getParameter ("type");
