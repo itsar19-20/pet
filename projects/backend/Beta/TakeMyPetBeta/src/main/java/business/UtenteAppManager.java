@@ -44,7 +44,8 @@ public class UtenteAppManager implements UtenteAppInterface {
 		
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 		
-		_return=em.createQuery("select c from evento",Evento.class).getResultList();
+		//_return=em.createQuery("select c from Evento c",Evento.class).getResultList();
+		_return=em.createNamedQuery("cercaEventi").getResultList();
 		em.close();
 		return _return;
 		
