@@ -17,12 +17,11 @@ $(() => {
    
    $('#btnSignUp').click(() => {
 
-    // SISTEMARE SE CAMPIVUOTI ATTENZIONE
 
     if(($('#inputPassword').val()) != ($('#inputConfermaPassword').val())) {
         $('#haiSbagliato').show();
     } 
-    if($('#inputName').val().contentEquals("")|| $('#inputSurname').val().contentEquals("") || $('#inputEmail').val().contentEquals("") || $('#inputUsername').val().contentEquals("")  || $('#inputPassword').val().contentEquals("") || $('#inputConfermaPassword').val().contentEquals("") ){
+    else if($('#inputName').val()==("")|| $('#inputSurname').val()==("") || $('#inputEmail').val()==("") || $('#inputUsername').val()==("")  || $('#inputPassword').val()==("") || $('#inputConfermaPassword').val()==("") ){
     	$('#riempireCampi').show();
     }
     else {
