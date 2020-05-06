@@ -202,7 +202,7 @@ public class Activity_signup extends AppCompatActivity {
         creaUtente.show();
         ApplicationWebService webService = (ApplicationWebService) getApplication();
         MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
-        apiService.signUpUser(nome, cognome, descrizione, username, password, email, tipoUtente).enqueue(new Callback<String>() {
+        apiService.signUpUser(nome, cognome, username, password, email, tipoUtente,descrizione).enqueue(new Callback<String>() {
             //questo viene fatto dopo la registrazione
             @Override
             public void onResponse(Call<String> call, Response<String> response) {

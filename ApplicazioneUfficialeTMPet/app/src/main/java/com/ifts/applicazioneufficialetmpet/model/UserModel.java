@@ -5,7 +5,10 @@ public class UserModel {
     private String username,
                     nome,
                     cognome,
-                    tipoUtente ;
+                    tipoUtente,
+                    descrizione;
+
+
 
     @Override
     public String toString() {
@@ -14,6 +17,7 @@ public class UserModel {
                 ", nome='" + nome + '\'' +
                 ", cognome='" + cognome + '\'' +
                 ", tipoUtente='" + tipoUtente + '\'' +
+                ", descrizione='" + descrizione + '\'' +
                 '}';
     }
 
@@ -56,6 +60,13 @@ public class UserModel {
 
     public UserModel(String username) {
         this.username = username;
+    }
+    public String getDescrizione() {
+        return descrizione;
+    }
+
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
     }
 
 }

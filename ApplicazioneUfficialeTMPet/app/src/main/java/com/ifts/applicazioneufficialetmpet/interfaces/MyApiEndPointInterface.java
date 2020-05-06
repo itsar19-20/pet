@@ -26,7 +26,7 @@ public interface MyApiEndPointInterface {
     //REGISTRAZIONE
 
     @POST("/signUp")
-    Call<String> signUpUser(@Query("name") String nome, @Query("surname") String cognome, @Query("username") String username, @Query("password") String password, @Query("email") String email, @Query("type") String tipoUtente);
+    Call<String> signUpUser(@Query("name") String nome, @Query("surname") String cognome, @Query("username") String username, @Query("password") String password, @Query("email") String email, @Query("type") String tipoUtente, @Query("descrizione") String descrizione);
 
 
     //IMMAGINI
@@ -50,7 +50,7 @@ public interface MyApiEndPointInterface {
 
     //EVENTI
 
-    @GET("/EventiController")
+   @GET("/EventiController")
     Call<List<EventoModel>> getAllEvents();
 
     @POST("/EventiController")

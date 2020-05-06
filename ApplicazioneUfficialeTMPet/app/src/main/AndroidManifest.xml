@@ -28,6 +28,7 @@
         <activity android:name=".Activity_scelta_start" />
         <activity android:name=".Activity_login" />
         <activity android:name=".Activity_registrazione" />
+        <activity android:name=".Activity_creaEvento" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
