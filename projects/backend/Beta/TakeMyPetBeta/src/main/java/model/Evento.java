@@ -12,11 +12,12 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-@Entity
+
 @NamedQueries(  
 	    {  
 	        @NamedQuery(  
@@ -35,7 +36,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 	       
 	    }  )  
 
-
+@Entity
+@Table(name="evento")
 public class Evento {
 
 	@Id
@@ -113,3 +115,4 @@ public class Evento {
 				+ ", latitudine=" + latitudine + ", longitudine=" + longitudine + "]";
 	}
 }
+
