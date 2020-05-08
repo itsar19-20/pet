@@ -274,6 +274,7 @@ public class Activity_signup extends AppCompatActivity {
         etControlloPassword = (EditText) findViewById(R.id.etConfermaPasswordRegistrazione);
         etPassword = (EditText) findViewById(R.id.etPasswordRegistrazione);
         etEmail = (EditText) findViewById(R.id.etEmailRegistrazione);
+        etDescrizione= (EditText) findViewById(R.id.etDescrizione);
 
         btnSignUP = (Button) findViewById(R.id.btnSignUp);
         btnPetsitter = (TextView) findViewById(R.id.button_petsitter);

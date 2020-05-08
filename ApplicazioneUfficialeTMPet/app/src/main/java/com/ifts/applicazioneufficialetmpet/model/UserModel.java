@@ -2,24 +2,22 @@ package com.ifts.applicazioneufficialetmpet.model;
 
 public class UserModel {
 
+
     private String username,
                     nome,
                     cognome,
                     tipoUtente,
                     descrizione;
+    private ImmagineModel immagineProfilo;
 
-
-
-    @Override
-    public String toString() {
-        return "UserModel{" +
-                "username='" + username + '\'' +
-                ", nome='" + nome + '\'' +
-                ", cognome='" + cognome + '\'' +
-                ", tipoUtente='" + tipoUtente + '\'' +
-                ", descrizione='" + descrizione + '\'' +
-                '}';
+    public ImmagineModel getImmagineProfilo() {
+        return immagineProfilo;
     }
+
+    public void setImmagineProfilo(ImmagineModel immagineProfilo) {
+        this.immagineProfilo = immagineProfilo;
+    }
+
 
     public String getTipoUtente() {
         return tipoUtente;
@@ -69,4 +67,15 @@ public class UserModel {
         this.descrizione = descrizione;
     }
 
+    @Override
+    public String toString() {
+        return "UserModel{" +
+                "username='" + username + '\'' +
+                ", nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                ", tipoUtente='" + tipoUtente + '\'' +
+                ", descrizione='" + descrizione + '\'' +
+                ", immagineProfilo=" + immagineProfilo +
+                '}';
+    }
 }

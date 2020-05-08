@@ -30,6 +30,7 @@ public class Activity_login extends Activity {
     private static final String COGNOME = "cognome";
     private static final String DESCRIZIONE = "descrizione";
     private static final String TIPOUTENTE="tipoUtente";
+    private static final String URLIMMAGINE="urlImmagine";
 
     private EditText etUsername;
     private EditText etPassword;
@@ -116,13 +117,16 @@ public class Activity_login extends Activity {
                         int statusCode = response.code();
                         if (statusCode == 200) {
                             UserModel userModel = response.body();
+
                             if (userModel == null) {
                                 Toast.makeText(Activity_login.this, "Username o password sbagliati", Toast.LENGTH_LONG).show();
                                 refresh();
                             } else {
-                                saveUserOnSharedPreference(userModel.getUsername(),userModel.getNome(),userModel.getCognome(),userModel.getDescrizione(),userModel.getTipoUtente());
+                                saveUserOnSharedPreference(userModel.getUsername(),userModel.getNome(),userModel.getCognome(),userModel.getDescrizione(),userModel.getTipoUtente(),userModel.getImmagineProfilo().getUrlImmagine());
                                 loadingBar.dismiss();
                                 Toast.makeText(Activity_login.this, "Ti sei loggato con Successo!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(Activity_login.this,"UrlImmagine"+userModel.getImmagineProfilo().getUrlImmagine() , Toast.LENGTH_LONG).show();
+                                System.out.println(userModel.getImmagineProfilo().getUrlImmagine());
                                 sendUserToMain();}
                         }
                     }
@@ -137,7 +141,7 @@ public class Activity_login extends Activity {
         }
 
 
-    private void saveUserOnSharedPreference(String username, String nome, String cognome, String descrizione, String tipoUtente){
+    private void saveUserOnSharedPreference(String username, String nome, String cognome, String descrizione, String tipoUtente, String urlImmagine){
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(USERNAME,username);
@@ -145,6 +149,7 @@ public class Activity_login extends Activity {
         editor.putString(COGNOME,cognome);
         editor.putString(DESCRIZIONE,descrizione);
         editor.putString(TIPOUTENTE, tipoUtente);
+        editor.putString(URLIMMAGINE,urlImmagine);
         editor.apply();
     }
 

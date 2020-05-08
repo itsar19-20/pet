@@ -3,10 +3,14 @@ package com.ifts.applicazioneufficialetmpet;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.ifts.applicazioneufficialetmpet.interfaces.MyApiEndPointInterface;
@@ -17,11 +21,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Activity_creaEvento extends AppCompatActivity {
-
+    VideoView vvVideoBackrgound;
     EditText etOrganizzatore;
     EditText etNomeEvento;
     EditText etDescrizione;
     FloatingActionButton btnSave;
+    Bitmap imageProfile = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,4 +62,20 @@ public class Activity_creaEvento extends AppCompatActivity {
             }
         });
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
+//==============================SET BACKGROUND VIDEO===========================================================
+        vvVideoBackrgound = findViewById(R.id.vvBackground);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.cane_app);
+        vvVideoBackrgound.setVideoURI(uri);
+        vvVideoBackrgound.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                mediaPlayer.setLooping(true);
+            }
+        });
+        vvVideoBackrgound.start();
+    }
 }
+

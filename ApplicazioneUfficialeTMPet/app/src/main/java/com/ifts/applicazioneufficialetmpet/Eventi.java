@@ -85,7 +85,8 @@ public class Eventi extends Fragment {
 
             @Override
             public void onFailure(Call<List<EventoModel>> call, Throwable t) {
-                Toast.makeText(getContext(), "Errore caricamento eventi: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Errore caricamento eventi: "+t.getCause() + t.getStackTrace() + " "+ t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -374,9 +375,5 @@ public class Eventi extends Fragment {
         return view;
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        notaAdapter.close();
-    }
+
 }
