@@ -11,17 +11,8 @@ public class EventoModel {
 
     private UserModel organizzatore;
     private List<UserModel> partecipanti;
+    private ImmagineModel immagineEvento;
 
-    @Override
-    public String toString() {
-        return "EventoModel{" +
-                "nomeEvento='" + nomeEvento + '\'' +
-                ", dataEvento=" + dataEvento +
-                ", descrizione='" + descrizione + '\'' +
-                ", organizzatore=" + organizzatore +
-                ", partecipanti=" + partecipanti +
-                '}';
-    }
 
     public Date getDataEvento() {
         return dataEvento;
@@ -61,5 +52,24 @@ public class EventoModel {
 
     public void setPartecipanti(List<UserModel> partecipanti) {
         this.partecipanti = partecipanti;
+    }
+    public ImmagineModel getImmagineEvento() {
+        return immagineEvento;
+    }
+
+    public void setImmagineEvento(ImmagineModel immagineEvento) {
+        this.immagineEvento = immagineEvento;
+    }
+
+    @Override
+    public String toString() {
+        return "EventoModel{" +
+                "nomeEvento='" + nomeEvento + '\'' +
+                ", dataEvento=" + dataEvento +
+                ", descrizione='" + descrizione + '\'' +
+                ", organizzatore=" + organizzatore +
+                ", partecipanti=" + partecipanti +
+                ", immagineEvento=" + immagineEvento +
+                '}';
     }
 }
