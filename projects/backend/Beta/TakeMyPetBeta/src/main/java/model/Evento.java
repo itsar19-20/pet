@@ -47,6 +47,7 @@ public class Evento {
 	@OneToOne
 	private UtenteApp organizzatore;
 	private String nomeEvento;
+	
 	@Temporal(TemporalType.DATE)
 	private Date dataEvento;
 	
@@ -56,8 +57,18 @@ public class Evento {
 	private String descrizione;
 	private String latitudine;
 	private String longitudine;
+	@OneToOne
+	private Immagine immagineEvento;
 	
 	
+	
+	
+	public Immagine getImmagineEvento() {
+		return immagineEvento;
+	}
+	public void setImmagineEvento(Immagine immagineEvento) {
+		this.immagineEvento = immagineEvento;
+	}
 	public String getNomeEvento() {
 		return nomeEvento;
 	}
@@ -112,7 +123,8 @@ public class Evento {
 	public String toString() {
 		return "Evento [id_evento=" + id_evento + ", organizzatore=" + organizzatore + ", nomeEvento=" + nomeEvento
 				+ ", dataEvento=" + dataEvento + ", partecipanti=" + partecipanti + ", descrizione=" + descrizione
-				+ ", latitudine=" + latitudine + ", longitudine=" + longitudine + "]";
+				+ ", latitudine=" + latitudine + ", longitudine=" + longitudine + ", immagineEvento=" + immagineEvento
+				+ "]";
 	}
 }
 
