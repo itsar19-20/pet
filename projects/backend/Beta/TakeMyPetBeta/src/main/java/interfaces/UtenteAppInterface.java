@@ -20,7 +20,7 @@ public interface UtenteAppInterface {
 	//abstract void refresh();
     abstract List<Evento> visualizzaEventiUtente(String username); //
 	abstract List<Evento> visualizzaTuttiEventi(); //
-	abstract void nuovoEvento(String nomeEvento,  Date dataEvento, String descrizione, String latitudine, String longitudine, String usernameOrganizzatore);//
+	abstract void nuovoEvento(String nomeEvento,  Date dataEvento, String descrizione, String latitudine, String longitudine, String usernameOrganizzatore, String urlImmagine);//
 	abstract void partecipaEvento(int _idEvento, String usernamePartecipante); 
 	abstract void inserisciImmagine(String username, String urlImmagine);
 	abstract Annuncio visualizzaAnnuncio(Integer idAnnuncio);

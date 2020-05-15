@@ -40,6 +40,7 @@ public class EventiController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		log.debug("\"doGet lista tutti Eventi partito");
 		
 		List<Evento> listaEventi=new  ArrayList<Evento>();
 		UtenteAppManager utenteAppManager=new UtenteAppManager();
@@ -58,6 +59,7 @@ public class EventiController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		log.debug("doPost nuovo Evento partito");
 		Evento evento=new Evento();
 		ObjectMapper om = new ObjectMapper();
 		UtenteAppManager utenteAppManager=new UtenteAppManager();
@@ -67,7 +69,8 @@ public class EventiController extends HttpServlet {
 		String latitudine=null;
 		String longitudine=null;
 		String organizzatore=request.getParameter("usernameOrgnizzatore");
-		utenteAppManager.nuovoEvento(nomeEvento, dataEvento, descrizione, latitudine, longitudine, organizzatore);
+		String urlImmagine=request.getParameter("urlImmagine");
+		utenteAppManager.nuovoEvento(nomeEvento, dataEvento, descrizione, latitudine, longitudine, organizzatore,urlImmagine);
 		String controllo = "Evento salvato con successo";
 		response.setContentType("application/json");
 	    response.getWriter().append(om.writeValueAsString(controllo));
@@ -89,8 +92,10 @@ public class EventiController extends HttpServlet {
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UtenteAppManager utenteAppManager = new UtenteAppManager();
 		String idEventoString = request.getParameter("idEventoString");
+		String nomeEvento=request.getParameter("nomeEvento");
 		Integer idEvento = Integer.valueOf(idEventoString);
 		utenteAppManager.eliminaEvento(idEvento);
+		response.getWriter().append("Evento"+ nomeEvento+" eliminato");
 		log.debug("doDelete elimina Evento Funziona");
 		
 	}

@@ -82,9 +82,11 @@ public class ImmagineController extends HttpServlet {
 		byte[] byteImmagine;
 	
 		if(immagine != null) {
+			log.debug("Immagine non è nulla");
 			//Mi arriva il base64 da jquery
 			byteImmagine = java.util.Base64.getDecoder().decode(immagine);
 		} else {
+			log.debug("Immagine è nulla");
 			//per prendere il body da android
 			BufferedReader br = request.getReader();
 			
@@ -101,6 +103,7 @@ public class ImmagineController extends HttpServlet {
 		}
 			String base64Letto = builder.toString();
 		    log.debug(base64Letto);
+		 
 			String base64Cut = base64Letto.substring(0, base64Letto.length() - 44);
 			log.debug(base64Cut);
 			byteImmagine = java.util.Base64.getDecoder().decode(base64Cut);
@@ -108,16 +111,16 @@ public class ImmagineController extends HttpServlet {
 		
 		ByteArrayInputStream bais = new ByteArrayInputStream(byteImmagine);
 		BufferedImage image = ImageIO.read(bais);
-		OutputStream os = new FileOutputStream(new File("src/main/webapp/immaginiPerWeb/" + username +".jpg"));
+		OutputStream os = new FileOutputStream(new File("src/main/webapp/immaginiPerWeb/" + username+byteImmagine.toString().substring(5,10)+".jpg"));
 		ImageIO.write(image, "jpg", os);
 		os.close();
 		
 		//mettere sito app o localhost o ip computer server
-		String urlImmagine = "http://192.168.1.103:8080/immaginiPerWeb/" + username +".jpg";
+		String urlImmagine = "http://192.168.1.243:8080/immaginiPerWeb/" + username+byteImmagine.toString().substring(5,10) +".jpg";
 		uam.inserisciImmagine(username, urlImmagine);
 		String controllo = "Immagine salvata con successo";
 		response.setContentType("application/json");
-	    response.getWriter().append(om.writeValueAsString(controllo));
+	    response.getWriter().append(om.writeValueAsString(urlImmagine));
 		
 		log.debug("ImmagineController Funziona");
 	}

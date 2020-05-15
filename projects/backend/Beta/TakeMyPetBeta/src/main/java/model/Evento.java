@@ -57,6 +57,8 @@ public class Evento {
 	private String descrizione;
 	private String latitudine;
 	private String longitudine;
+	private String urlImmagineEvento;
+	
 	@OneToOne
 	private Immagine immagineEvento;
 	
@@ -118,13 +120,20 @@ public class Evento {
 	public void setDataEvento(Date dataEvento) {
 		this.dataEvento = dataEvento;
 	}
+	public String getUrlImmagineEvento() {
+		return urlImmagineEvento;
+	}
+	public void setUrlImmagineEvento(String urlImmagineEvento) {
+		this.urlImmagineEvento = urlImmagineEvento;
+	}
+
 	
 	@Override
 	public String toString() {
 		return "Evento [id_evento=" + id_evento + ", organizzatore=" + organizzatore + ", nomeEvento=" + nomeEvento
 				+ ", dataEvento=" + dataEvento + ", partecipanti=" + partecipanti + ", descrizione=" + descrizione
-				+ ", latitudine=" + latitudine + ", longitudine=" + longitudine + ", immagineEvento=" + immagineEvento
-				+ "]";
+				+ ", latitudine=" + latitudine + ", longitudine=" + longitudine + ", urlImmagineEvento="
+				+ urlImmagineEvento + ", immagineEvento=" + immagineEvento + "]";
 	}
 }
 

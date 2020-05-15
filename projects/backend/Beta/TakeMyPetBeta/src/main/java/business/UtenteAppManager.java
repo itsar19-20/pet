@@ -51,10 +51,12 @@ public class UtenteAppManager implements UtenteAppInterface {
 		
 	}
 
-	public void nuovoEvento(String nomeEvento,  Date dataEvento, String descrizione, String latitudine, String longitudine, String usernameOrganizzatore) {
+	public void nuovoEvento(String nomeEvento,  Date dataEvento, String descrizione, String latitudine, String longitudine, String usernameOrganizzatore,String urlImmagine) {
 		
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
-
+		 
+		
+		
 		Evento e = new Evento();
 		
 		e.setNomeEvento(nomeEvento);
@@ -63,11 +65,14 @@ public class UtenteAppManager implements UtenteAppInterface {
 		e.setLatitudine(latitudine);
 		e.setLongitudine(longitudine);
 		e.setOrganizzatore(em.find(UtenteApp.class, usernameOrganizzatore));
+	    e.setUrlImmagineEvento(urlImmagine);
+		
 		
 		em.getTransaction().begin();
 		em.persist(e);
 		em.getTransaction().commit();
 		em.close();
+	
 	}
 
 	public void partecipaEvento(int id_evento, String usernamePartecipante) {
@@ -135,6 +140,30 @@ public class UtenteAppManager implements UtenteAppInterface {
 		em.persist(utente);
 		em.getTransaction().commit();
 	}
+	
+	
+	
+	//Immagine evento
+	
+	public void inserisciImmagineEvento( String urlImmagine) {
+		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
+		Immagine ima = new Immagine();
+		
+		
+		
+		//Immagine vecchiaImmagine = new Immagine();
+		//if ((vecchiaImmagine = em.find(Immagine.class, utente.getImmagineProfilo().getId_Immagine())) != null) {
+			//em.remove(vecchiaImmagine);
+		//}
+		ima.setUrlImmagine(urlImmagine);
+		
+		
+		em.getTransaction().begin();
+		em.persist(ima);
+		
+		em.getTransaction().commit();
+	}
+	
 	
 	
 	//Segnalazioni
