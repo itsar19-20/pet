@@ -5,9 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -40,6 +43,7 @@ public class Slider_Adapter_Visualizza_Evento extends PagerAdapter {
         ImageView imageView;
 
         imageView = view.findViewById(R.id.image_single_item_visualizza_evento);
+
 
         imageView.setImageResource(sliders_eventi.get(position).getImg());
 

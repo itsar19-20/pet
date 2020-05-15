@@ -4,7 +4,7 @@ import android.animation.ArgbEvaluator;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,9 +19,6 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.ifts.applicazioneufficialetmpet.adapter.EventiArrayAdapter;
 import com.ifts.applicazioneufficialetmpet.database.NotaAdapter;
 import com.ifts.applicazioneufficialetmpet.interfaces.MyApiEndPointInterface;
@@ -37,8 +34,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.content.Context.MODE_PRIVATE;
+import static com.ifts.applicazioneufficialetmpet.Activity_login.SHARED_PREFERENCE;
+import static com.ifts.applicazioneufficialetmpet.Activity_petsitter.arrayAdapter;
+
 
 public class Eventi extends Fragment {
+    private static final String USERNAME = "username";
     private Button chiudi_evento;
     private Dialog dialog_visualizza_evento;
     //===========================INIZIO XD====================================
@@ -49,7 +51,7 @@ public class Eventi extends Fragment {
     private ListView listView;
     private static final String TAG = MainActivity.class.getSimpleName();
     //=============================FINE XD=============================
-
+    List<EventoModel> listaEventi;
     //===================inizio=================
    // static ArrayList<String> notes = new ArrayList<>();
     //static ArrayAdapter arrayAdapter;
@@ -77,7 +79,7 @@ public class Eventi extends Fragment {
         apiService.getAllEvents().enqueue(new Callback<List<EventoModel>>() {
             @Override
             public void onResponse(Call<List<EventoModel>> call, Response<List<EventoModel>> response) {
-                List<EventoModel> listaEventi;
+
                 listaEventi = response.body();
                 EventiArrayAdapter arrayAdapter = new EventiArrayAdapter(getContext(),(ArrayList)listaEventi);
                 listView.setAdapter(arrayAdapter);
@@ -104,11 +106,12 @@ public class Eventi extends Fragment {
 
                 dialog_visualizza_evento.setContentView(R.layout.visualizza_evento);
                 //=============================INIZIO=========================================================0
+                //=============================Sliders al momento non utilizzati=========================================================0
                 sliders_visualizza_eventi = new ArrayList<>();
                 sliders_visualizza_eventi.add(new Slider_Visualizza_Eventi(R.drawable.logoapppet));
                 sliders_visualizza_eventi.add(new Slider_Visualizza_Eventi(R.drawable.zampa_voto));
                 sliders_visualizza_eventi.add(new Slider_Visualizza_Eventi(R.drawable.zampa_voto2));
-
+                //=============================Adapter=========================================================0
                 adapter_visualizza_eventi = new Slider_Adapter_Visualizza_Evento(sliders_visualizza_eventi, getContext());
 
                 viewPager = dialog_visualizza_evento.findViewById(R.id.viewPager_dialog_visualizza_evento);
@@ -174,21 +177,63 @@ public class Eventi extends Fragment {
                         .setPositiveButton("YES", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int i) {
-                                //memorizzo l'id dell'oggetto selezionato
+                                //memorizzo l'id dell'oggetto selezionato con SQLITE
+                                /*
                                 Cursor cursor = (Cursor) customAdapter.getItem(position);
                                 int notaId = cursor.getInt(0);
+                                String stringID=String.valueOf(notaId);
+                                    */
 
-                                Boolean result = notaAdapter.deleteNota(notaId);
+                                SharedPreferences sharedPref=getActivity().getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
+                                String username = sharedPref.getString(USERNAME, null);
 
-                                customAdapter.swapCursor(databaseOpenHelper.getAllData());
+
+                                ApplicationWebService webService = (ApplicationWebService) getActivity().getApplication();
+                                MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
+                              EventoModel evento= listaEventi.get(position);
+
+                              if(evento.getOrganizzatore().getUsername().contentEquals(username)){
+
+                                apiService.removeEvent(evento.getId_Evento()).enqueue(new Callback<String>() {
+                                    @Override
+                                    public void onResponse(Call<String> call, Response<String> response) {
+
+                                       //Toast.makeText(getContext(), "Hai eliminato l’elemento in posizione " + position, Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getContext(), "Hai eliminato l’evento " + evento.getNomeEvento(), Toast.LENGTH_LONG).show();
+                                // arrayAdapter.remove();
+                                   listaEventi.remove(position);
+                                        EventiArrayAdapter arrayAdapter = new EventiArrayAdapter(getContext(),(ArrayList)listaEventi);
+                                        listView.setAdapter(arrayAdapter);
+
+
+                                    }
+                                    @Override
+                                    public void onFailure(Call<String> call, Throwable t) {
+
+                                        Toast.makeText(getContext(), "Problemi con la cancellazione dell'evento: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+
+                                    }
+                                });
+
+                              }
+
+                              else{
+                                  Toast.makeText(getContext(), "Non puoi caccellare gli eventi organizzati dagli altri ", Toast.LENGTH_SHORT).show();
+                              }
+                               // Boolean result = notaAdapter.deleteNota(notaId);
+
+                                //customAdapter.swapCursor(databaseOpenHelper.getAllData());
                                 listView.invalidate();
-
-                                if (result) {
+ /*
+                              if (result) {
 
                                     Toast.makeText(getContext(), "Hai eliminato l’elemento in posizione " + position, Toast.LENGTH_LONG).show();
                                 }
+
+  */
                             }
                         })
+
                         .setNegativeButton("NO", null)
                         .show();
                 return true;
@@ -205,6 +250,10 @@ public class Eventi extends Fragment {
                 startActivity(i);
             }
         });
+
+
+
+
         //===================================FINE XD========================00
         //===================================INIZIO========================00
 

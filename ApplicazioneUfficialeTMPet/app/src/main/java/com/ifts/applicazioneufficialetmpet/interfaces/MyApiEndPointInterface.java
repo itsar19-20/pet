@@ -7,6 +7,8 @@ import com.ifts.applicazioneufficialetmpet.model.UserModel;
 import java.util.List;
 
 import okhttp3.RequestBody;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -41,7 +43,10 @@ public interface MyApiEndPointInterface {
     @POST("/getImmagine")
     Call<RequestBody> setImage2(@Query("username") String username, @Query("immagine") String immagine, @Part("description") RequestBody description);
 
-    //CONTROLLO UTENTE BLOCCATO
+    @Multipart
+    @POST("/getImmagine")
+    Call<ResponseBody> setImage3(@Query("username") String username, @Query("immagine") String immagine, @Part("description") RequestBody description);
+
 
     @GET("/ControllaUtenteBloccatoController")
     Call<String> getControlloBloccato(@Query("username") String username);
@@ -54,16 +59,20 @@ public interface MyApiEndPointInterface {
     Call<List<EventoModel>> getAllEvents();
 
     @POST("/EventiController")
-    Call<String> setNewEvent(@Query("nomeEvento") String nomeEvento, @Query("descrizione") String descrizione, @Query("usernameOrgnizzatore") String usernameOrganizzatore);
+    Call<String> setNewEvent(@Query("nomeEvento") String nomeEvento, @Query("descrizione") String descrizione, @Query("usernameOrgnizzatore") String usernameOrganizzatore,@Query("urlImmagine") String urlImmagine);
+
 
     @PUT("/EventiController")
     Call<String> joinEvent(@Query("idEventoString") String idEventString, @Query("usernamePartecipante") String usernameEntrant);
 
-    @DELETE("/EventiController")
-    Call<String> removeEvent(@Query("idEventoString") String idEventString);
+    @DELETE("/")
+    Call<String> removeEvent(@Query("idEventoString") int idEventString);
 
     @GET("/EventiUtenteController")
     Call<List<EventoModel>> getUserEvents(@Query("username") String username);
 
+    @Multipart
+    @POST("/ImmagineEventoController")
+    Call<RequestBody> setImage(@Query("username") int username, @Query("immagine") String immagine, @Part("description") RequestBody description);
 
 }

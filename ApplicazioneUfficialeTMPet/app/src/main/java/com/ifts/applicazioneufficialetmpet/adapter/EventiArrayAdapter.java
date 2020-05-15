@@ -34,11 +34,15 @@ public class EventiArrayAdapter extends ArrayAdapter<EventoModel> {
         TextView tvNomeEvento = convertView.findViewById(R.id.textView_item_titolo_lista_eventi);
         TextView tvDescrizione = convertView.findViewById(R.id.textView_item_testo_lista_eventi);
 
+
+
         //visualizzazione dell'immagine
-        Picasso.get().load(evento.getImmagineEvento().getUrlImmagine()).placeholder(R.drawable.logoapppet).error(R.drawable.logoapppet).into(ivImaggineEvento);
+        Picasso.get().load(evento.getUrlImmagineEvento()).placeholder(R.drawable.logoapppet).error(R.drawable.logoapppet).into(ivImaggineEvento);
+
         tvNomeEvento.setText(evento.getNomeEvento());
         tvDescrizione.setText(evento.getDescrizione());
         tvOrganizzatore.setText(evento.getOrganizzatore().getUsername());
+        int adapterIdEvento=evento.getId_Evento();
 
         //CONVERTO DATA IN STRINGA
         DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
