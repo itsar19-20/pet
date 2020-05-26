@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateActivity">
+    tools:context=".Activity_creaAnnuncio">
 
     <include
         android:id="@+id/include2"
         layout="@layout/video_background_layout"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="-16dp" />
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="65dp" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivProfile"
@@ -18,39 +18,71 @@
         android:layout_height="149dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="52dp"
         android:src="@drawable/logoapppet"
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="125dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="272dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edit_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="252dp"
         android:ems="10"
-        android:hint="Organizzatore"
-        android:inputType="textPersonName"
+        android:hint="Enter Date"
+        android:inputType="date"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textColorHint="@color/white"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/include2"
+        app:layout_constraintVertical_bias="0.39"
         tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonGetDate"
+        android:layout_width="223dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/edit_date"
+        android:ems="10"
+        android:hint="Enter Date"
+        android:inputType="date"
+        android:text="Get Date"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorVerdeApp"
+        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/include2"
+        app:layout_constraintTop_toTopOf="@+id/include2"
+        tools:visibility="gone" />
+
 
     <EditText
         android:id="@+id/edit_text"
         android:layout_width="210dp"
         android:layout_height="112dp"
-        android:layout_marginTop="36dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Descrizione"
@@ -60,43 +92,40 @@
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/include2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_title"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/include2"
+        app:layout_constraintVertical_bias="0.64" />
 
     <EditText
         android:id="@+id/edit_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:ems="10"
-        android:hint="Nome evento"
+        android:hint="Titolo annuncio"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/include2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_date" />
-
+        app:layout_constraintTop_toTopOf="@+id/include2"
+        app:layout_constraintVertical_bias="0.49" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
         android:tint="@color/white"
         app:backgroundTint="@color/colorVerdeApp"
         app:fabSize="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.89"
+        app:layout_constraintTop_toTopOf="@+id/include2"
+        app:layout_constraintVertical_bias="0.909"
         app:srcCompat="@android:drawable/ic_menu_save" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

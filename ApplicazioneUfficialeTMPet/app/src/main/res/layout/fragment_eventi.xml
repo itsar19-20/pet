@@ -39,7 +39,8 @@
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="3dp"
             android:backgroundTintMode="@color/colorVerdeApp"
-            tools:ignore="NotSibling"></ListView>
+            android:scrollbars="horizontal|vertical"
+            tools:ignore="NotSibling"/>
 
         <TextView
             android:layout_width="wrap_content"

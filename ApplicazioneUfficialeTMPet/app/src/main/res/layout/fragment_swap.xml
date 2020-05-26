@@ -8,6 +8,37 @@
     android:backgroundTint="@color/white"
     tools:context=".Swap">
 
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="-87dp"
+        android:layout_toStartOf="@id/viewPager_swap"
+        android:tint="#FFFFFF"
+        app:backgroundTint="@color/colorVerdeApp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <TextView
+        android:id="@+id/textViewCreaAnnuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="51dp"
+        android:gravity="center"
+        android:text="Vuoi creare un nuovo annuncio?"
+        android:textSize="20dp"></TextView>
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager_swap"
         android:layout_width="match_parent"

@@ -16,7 +16,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorVerdeApp">
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/set_image_profilo"
+        android:id="@+id/set_image_eventi"
         android:layout_width="match_parent"
         android:layout_height="176dp"
         android:layout_marginTop="2dp"
@@ -29,7 +29,7 @@
         android:id="@+id/textView_item_titolo_lista_eventi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/set_image_profilo"
+        android:layout_below="@+id/set_image_eventi"
         android:layout_marginStart="0dp"
         android:hint="Title"
         android:textSize="30dp"
@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView_item_titolo_lista_eventi"
-        android:layout_alignParentStart="@+id/set_image_profilo"
+        android:layout_alignParentStart="@+id/set_image_eventi"
         android:hint="Author"
         android:textSize="24dp"
         android:textAlignment="center"

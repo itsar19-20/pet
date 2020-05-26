@@ -13,13 +13,13 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_logo_tmp"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_logo_tmp_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true"
-        android:largeHeap="true">
-
-        <activity android:name=".Activity_signup"></activity>
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activity_creaAnnuncio"></activity>
+        <activity android:name=".Activity_signup" />
         <activity android:name=".NoteEditorActivity" />
         <activity android:name=".CreateActivity" />
         <activity android:name=".Activity_profilo" />
@@ -38,8 +38,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
