@@ -1,9 +1,13 @@
 package com.ifts.applicazioneufficialetmpet.interfaces;
 
 
+import android.content.Intent;
+
+import com.ifts.applicazioneufficialetmpet.model.AnnuncioModel;
 import com.ifts.applicazioneufficialetmpet.model.EventoModel;
 import com.ifts.applicazioneufficialetmpet.model.UserModel;
 
+import java.util.Date;
 import java.util.List;
 
 import okhttp3.RequestBody;
@@ -75,4 +79,19 @@ public interface MyApiEndPointInterface {
     @POST("/ImmagineEventoController")
     Call<RequestBody> setImage(@Query("username") int username, @Query("immagine") String immagine, @Part("description") RequestBody description);
 
+    //ANNUNCIO
+    @POST("/AnnunciProprietarioController")
+    Call<String> setNewAnnouncement(@Query("nomeAnnuncio") String nomeAnnuncio, @Query("usernameProprietario") String usernameProprietario, @Query("descrizioneProprietario") String descrizione, @Query("dataAnnuncio") String dataAnnuncio, @Query("urlImmagineAnnuncio") String urlImmagineAnnuncio);
+
+    @PUT("/AnnunciPetSitterController")
+    Call<String> joinAnnouncement(@Query("idAnnuncioString") String idAnnuncioString, @Query("usernamePartecipante") String usernamePartecipante);
+
+    @DELETE("/")
+    Call<String> removeAnnouncement(@Query("idAnnunciString") int idAnnuncioString);
+
+    @GET("/AnnunciPetSitterController")
+    Call<List<AnnuncioModel>> getUserAnnouncement();
+
+    @GET("/AnnunciProprietarioController")
+    Call<List<AnnuncioModel>> getProprietarioAnnoucement(@Query("usernameProprietario") String proprietarioAnnuncio);
 }

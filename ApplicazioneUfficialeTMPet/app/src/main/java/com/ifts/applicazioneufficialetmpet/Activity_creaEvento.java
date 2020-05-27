@@ -73,7 +73,7 @@ public class Activity_creaEvento extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create);
-        etOrganizzatore = findViewById(R.id.edit_author);
+        etOrganizzatore = findViewById(R.id.edit_date);
         etNomeEvento = findViewById(R.id.edit_title);
 
         etDescrizione =  findViewById(R.id.edit_text);

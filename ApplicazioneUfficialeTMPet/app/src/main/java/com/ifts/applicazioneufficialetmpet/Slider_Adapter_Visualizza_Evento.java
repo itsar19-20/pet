@@ -17,6 +17,7 @@ import java.util.List;
 public class Slider_Adapter_Visualizza_Evento extends PagerAdapter {
 
     private List<Slider_Visualizza_Eventi> sliders_eventi;
+
     private LayoutInflater inflater;
     private Context context;
 

@@ -120,7 +120,7 @@ public class Activity_profilo extends AppCompatActivity {
 
 //=======================================INIZIALIZZAZIONE VARIABILI========================================================================
     public void initialize(){
-        ivProfile = (CircleImageView) findViewById(R.id.set_image_profilo);
+        ivProfile = (CircleImageView) findViewById(R.id.set_image_annuncio);
         twUsername = (TextView) findViewById(R.id.textView_username_profilo);
         twName = (TextView) findViewById(R.id.textView_name_profilo);
         twSurname = (TextView) findViewById(R.id.textView_surname_profilo);

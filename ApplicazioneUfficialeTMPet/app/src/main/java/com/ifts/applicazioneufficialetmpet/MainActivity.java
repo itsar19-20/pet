@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
             verifyUser();
     }
-
+//====================================Metodi=============================
     private void verifyUser(){
         SharedPreferences sharedPref = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
         String username = sharedPref.getString(USERNAME, null);

@@ -106,11 +106,13 @@ public class Eventi extends Fragment {
 
                 dialog_visualizza_evento.setContentView(R.layout.visualizza_evento);
                 //=============================INIZIO=========================================================0
-                //=============================Sliders al momento non utilizzati=========================================================0
+
                 sliders_visualizza_eventi = new ArrayList<>();
                 sliders_visualizza_eventi.add(new Slider_Visualizza_Eventi(R.drawable.logoapppet));
-                sliders_visualizza_eventi.add(new Slider_Visualizza_Eventi(R.drawable.zampa_voto));
-                sliders_visualizza_eventi.add(new Slider_Visualizza_Eventi(R.drawable.zampa_voto2));
+                //=============================Sliders al momento non utilizzati=========================================================0
+                //sliders_visualizza_eventi.add(new Slider_Visualizza_Eventi(R.drawable.logoapppet));
+               // sliders_visualizza_eventi.add(new Slider_Visualizza_Eventi(R.drawable.zampa_voto));
+                //sliders_visualizza_eventi.add(new Slider_Visualizza_Eventi(R.drawable.zampa_voto2));
                 //=============================Adapter=========================================================0
                 adapter_visualizza_eventi = new Slider_Adapter_Visualizza_Evento(sliders_visualizza_eventi, getContext());
 
@@ -197,6 +199,7 @@ public class Eventi extends Fragment {
                                 apiService.removeEvent(evento.getId_Evento()).enqueue(new Callback<String>() {
                                     @Override
                                     public void onResponse(Call<String> call, Response<String> response) {
+
 
                                        //Toast.makeText(getContext(), "Hai eliminato l’elemento in posizione " + position, Toast.LENGTH_LONG).show();
                                         Toast.makeText(getContext(), "Hai eliminato l’evento " + evento.getNomeEvento(), Toast.LENGTH_LONG).show();

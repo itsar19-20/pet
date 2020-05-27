@@ -20,12 +20,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.ifts.applicazioneufficialetmpet.database.NotaAdapter;
 import com.ifts.applicazioneufficialetmpet.list.NotaCursorAdapter;
 import com.ifts.applicazioneufficialetmpet.list.NotaDatabaseHelper;
-import com.ifts.applicazioneufficialetmpet.model.EventoModel;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 
 public class CreateActivity extends AppCompatActivity {
 
@@ -53,7 +50,7 @@ public class CreateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create);
 
-        autore = (EditText) findViewById(R.id.edit_author);
+        autore = (EditText) findViewById(R.id.edit_date);
         titolo = (EditText) findViewById(R.id.edit_title);
         testo = (EditText) findViewById(R.id.edit_text);
 

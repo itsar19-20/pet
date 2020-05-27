@@ -28,7 +28,7 @@ public class EventiArrayAdapter extends ArrayAdapter<EventoModel> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.single_item_lista_eventi, parent, false);
         }
-        ImageView ivImaggineEvento=convertView.findViewById(R.id.set_image_profilo);
+        ImageView ivImaggineEvento=convertView.findViewById(R.id.set_image_eventi);
         TextView tvDataEvento = convertView.findViewById(R.id.textView_item_data_lista_eventi);
         TextView tvOrganizzatore = convertView.findViewById(R.id.textView_item_autore_lista_eventi);
         TextView tvNomeEvento = convertView.findViewById(R.id.textView_item_titolo_lista_eventi);
@@ -45,7 +45,7 @@ public class EventiArrayAdapter extends ArrayAdapter<EventoModel> {
         int adapterIdEvento=evento.getId_Evento();
 
         //CONVERTO DATA IN STRINGA
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String strDate = dateFormat.format(evento.getDataEvento());
         tvDataEvento.setText(strDate);
 

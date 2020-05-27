@@ -2,19 +2,41 @@ package com.ifts.applicazioneufficialetmpet;
 
 import android.animation.ArgbEvaluator;
 import android.app.Dialog;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.content.SharedPreferences;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.ifts.applicazioneufficialetmpet.adapter.AnnuncioArrayAdapter;
+import com.ifts.applicazioneufficialetmpet.adapter.AnnuncioPageAdapter;
+import com.ifts.applicazioneufficialetmpet.adapter.EventiArrayAdapter;
+import com.ifts.applicazioneufficialetmpet.interfaces.MyApiEndPointInterface;
+import com.ifts.applicazioneufficialetmpet.model.AnnuncioModel;
+import com.ifts.applicazioneufficialetmpet.model.EventoModel;
+import com.ifts.applicazioneufficialetmpet.retrofit.ApplicationWebService;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import static android.content.Context.MODE_PRIVATE;
+import static com.ifts.applicazioneufficialetmpet.Activity_login.SHARED_PREFERENCE;
 
 
 public class Swap extends Fragment {
@@ -22,7 +44,16 @@ public class Swap extends Fragment {
     private TextView aggiungi_ai_preferiti;
     private TextView scarta_annuncio;
     private TextView visualizza_annuncio;
-    private ListView listView_preferiti;
+    private TextView crea_annuncio;
+
+    String TIPOUTENTE="tipoUtente",
+            USERNAME="username";
+
+
+
+
+
+
 
     // private Dialog dialog_swap;
     private Dialog dialog_visualizza_annuncio;
@@ -34,10 +65,17 @@ public class Swap extends Fragment {
     List<Slider_Visualizza_Annunci> sliders_annunci;
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
+    AnnuncioPageAdapter annuncioPageAdapter;
+    List<AnnuncioModel> listaAnnunci;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        SharedPreferences sharedPref = getActivity().getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
+       String tipoUtente=sharedPref.getString(TIPOUTENTE,null);
+       String proprietarioAnnuncio=sharedPref.getString(USERNAME,null);
+
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_swap, container, false);
         sliders_swap = new ArrayList<>();
@@ -47,16 +85,33 @@ public class Swap extends Fragment {
 
         adapter_swap = new Slider_Adapter_Swap(sliders_swap, getContext());
 
+
         viewPager = view.findViewById(R.id.viewPager_swap);
-        viewPager.setAdapter(adapter_swap);
         viewPager.setPadding(130,0,130,0);
 
-        listView_preferiti =  view.findViewById(R.id.listView_preferiti);
+
+        //=========If per decidere quale annunci visualizare=======================
+        if(tipoUtente.contentEquals("petsitter")) {
+            setVisualizzaAnnunciPetsitter();
+
+        }
+        else if(tipoUtente.contentEquals("proprietario")){
+            setVisualizzaAnnunciProprietario(proprietarioAnnuncio);
+
+        }
+        else {
+            viewPager.setAdapter(adapter_swap);
+                }
+
+
+
 
         Integer[] colors_temp = {
                 getResources().getColor(R.color.colorVerdeApp),
                 getResources().getColor(R.color.colorAzzurroApp),
-                getResources().getColor(R.color.colorMarroneApp)
+                getResources().getColor(R.color.colorMarroneApp),
+                getResources().getColor(R.color.colorRossoApp),
+                getResources().getColor(R.color.white),
         };
         colors = colors_temp;
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -71,6 +126,8 @@ public class Swap extends Fragment {
                 }else{
                     viewPager.setBackgroundColor(colors[colors.length - 1]);
                 }
+
+                viewPager.setBackgroundColor(colors[4]);
             }
 
             @Override
@@ -86,6 +143,33 @@ public class Swap extends Fragment {
        // dialog_swap = new Dialog(getContext());
         dialog_visualizza_annuncio = new Dialog(getContext());
         visualizza_annuncio = view.findViewById(R.id.button_visualizza_annuncio);
+
+
+
+
+//=============================Bottone crea annuncio===============================
+
+        //====Nascondi bottone se l'utente è un PetSitter==========
+        crea_annuncio = view.findViewById(R.id.textViewCreaAnnuncio);
+        FloatingActionButton fab = view.findViewById(R.id.fab_add);
+
+        if(tipoUtente.contentEquals("petsitter")) {
+            fab.hide();
+            crea_annuncio.setVisibility(View.GONE);
+
+        }
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent( getContext(), Activity_creaAnnuncio.class);
+                i.putExtra("edit", "false");
+                startActivity(i);
+            }
+        });
+
+
+ //=======================================================================
 
         visualizza_annuncio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,9 +193,12 @@ public class Swap extends Fragment {
                 Integer[] colors_temp = {
                         getResources().getColor(R.color.colorVerdeApp),
                         getResources().getColor(R.color.colorAzzurroApp),
-                        getResources().getColor(R.color.colorMarroneApp)
+                        getResources().getColor(R.color.colorMarroneApp),
+                        getResources().getColor(R.color.colorRossoApp)
                 };
                 colors = colors_temp;
+
+
                 viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                     @Override
                     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -124,6 +211,8 @@ public class Swap extends Fragment {
                         }else{
                             viewPager.setBackgroundColor(colors[colors.length - 1]);
                         }
+
+
                     }
 
                     @Override
@@ -166,5 +255,61 @@ public class Swap extends Fragment {
         return view;
     }
 
+    //====================================Metodi=============================
+    //==============================Call================================
+    private void setVisualizzaAnnunciPetsitter(){
+        ApplicationWebService webService = (ApplicationWebService) getActivity().getApplication();
+        MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
+        apiService.getUserAnnouncement().enqueue(new Callback<List<AnnuncioModel>>() {
+            @Override
+            public void onResponse(Call<List<AnnuncioModel>> call, Response<List<AnnuncioModel>> response) {
 
+                if (response.isSuccessful()) {
+                    listaAnnunci = response.body();
+                    AnnuncioPageAdapter annuncioPageAdapter = new AnnuncioPageAdapter(listaAnnunci, getContext());
+
+                    viewPager.setAdapter(annuncioPageAdapter);
+                   // Toast.makeText(getContext(), "Errore caricamento annunci: "+annuncioPageAdapter, Toast.LENGTH_SHORT).show();
+
+                }
+            }
+
+
+            @Override
+            public void onFailure(Call<List<AnnuncioModel>> call, Throwable t) {
+                Toast.makeText(getContext(), "Errore caricamento annunci: " + t.getCause() + t.getStackTrace() + " " + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                viewPager.setAdapter(adapter_swap);
+
+            }
+        });
+    }
+
+    private void setVisualizzaAnnunciProprietario(String username){
+        ApplicationWebService webService = (ApplicationWebService) getActivity().getApplication();
+        MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
+        apiService. getProprietarioAnnoucement(username).enqueue(new Callback<List<AnnuncioModel>>() {
+            @Override
+            public void onResponse(Call<List<AnnuncioModel>> call, Response<List<AnnuncioModel>> response) {
+
+                if (response.isSuccessful()) {
+                    listaAnnunci = response.body();
+                    AnnuncioPageAdapter annuncioPageAdapter = new AnnuncioPageAdapter(listaAnnunci, getContext());
+
+                    viewPager.setAdapter(annuncioPageAdapter);
+
+                }
+                else{
+                    Toast.makeText(getContext(), "Chiamata non riuscita", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+
+            @Override
+            public void onFailure(Call<List<AnnuncioModel>> call, Throwable t) {
+                Toast.makeText(getContext(), "Server offline" + t.getCause() + t.getStackTrace() + " " + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                viewPager.setAdapter(adapter_swap);
+            }
+        });
+    }
 }
+

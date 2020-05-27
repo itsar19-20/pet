@@ -11,12 +11,14 @@
         android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="579dp"
             android:background="@color/colorVerdeApp">
+
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/set_image_annuncio"
+                android:id="@+id/image_annuncio"
                 android:layout_width="match_parent"
                 android:layout_height="176dp"
                 android:layout_marginTop="2dp"
@@ -29,12 +31,12 @@
                 android:id="@+id/textView_item_titolo_lista_annunci"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/set_image_annuncio"
+                android:layout_below="@+id/image_annuncio"
                 android:layout_marginStart="0dp"
                 android:hint="@string/title"
-                android:textSize="30sp"
                 android:textAlignment="center"
                 android:textColor="@color/white"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toTopOf="@id/textView_item_autore_lista_annunci" />
 
             <TextView
@@ -42,11 +44,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_item_titolo_lista_annunci"
-                android:layout_alignParentStart="@+id/set_image_annuncio"
+                android:layout_alignParentStart="false"
                 android:hint="@string/author"
-                android:textSize="24sp"
                 android:textAlignment="center"
                 android:textColor="@color/white"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toTopOf="@id/textView_item_autore_lista_annunci"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -57,18 +59,20 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_item_autore_lista_annunci"
                 android:hint="@string/text"
-                android:textColor="@color/white"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/textView_item_data_lista_annunci"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_item_testo_lista_annunci"
                 android:hint="@string/date"
-                android:textColor="@color/white"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="24sp" />
+
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
