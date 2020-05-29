@@ -6,7 +6,7 @@ import java.util.List;
 public class AnnuncioModel {
 
 
-
+    private int id_annuncio;
 
     Proprietario proprietarioAnnuncio;
     String usernameProprietario;
@@ -20,12 +20,12 @@ public class AnnuncioModel {
 
     private List<UserModel> petSitterAnnuncio;
 
-    public int getId_Annuncio() {
-        return id_Annuncio;
+    public int getId_annuncio() {
+        return id_annuncio;
     }
 
-    public void setId_Annuncio(int id_Annuncio) {
-        this.id_Annuncio = id_Annuncio;
+    public void setId_annuncio(int id_annuncio) {
+        this.id_annuncio = id_annuncio;
     }
 
     public String getNomeAnnuncio() {
@@ -81,14 +81,14 @@ public class AnnuncioModel {
     public Proprietario getProprietario() {
         return proprietarioAnnuncio;
     }
-    private int id_Annuncio;
+
 
 
 
     @Override
     public String toString() {
         return "AnnuncioModel{" +
-                "id_Annuncio=" + id_Annuncio +
+                "id_Annuncio=" + id_annuncio +
                 ", nomeAnnuncio='" + nomeAnnuncio + '\'' +
                 ", usernameProprietario='" + usernameProprietario + '\'' +
                 ", descrzioneProprietario='" + descrizione + '\'' +

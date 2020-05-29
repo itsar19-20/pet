@@ -45,7 +45,7 @@ public class Swap extends Fragment {
     private TextView scarta_annuncio;
     private TextView visualizza_annuncio;
     private TextView crea_annuncio;
-
+private ApplicationWebService applicationWebService;
     String TIPOUTENTE="tipoUtente",
             USERNAME="username";
 
@@ -69,8 +69,9 @@ public class Swap extends Fragment {
     List<AnnuncioModel> listaAnnunci;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        applicationWebService =(ApplicationWebService) getActivity().getApplication();
         SharedPreferences sharedPref = getActivity().getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
        String tipoUtente=sharedPref.getString(TIPOUTENTE,null);
        String proprietarioAnnuncio=sharedPref.getString(USERNAME,null);
@@ -266,7 +267,7 @@ public class Swap extends Fragment {
 
                 if (response.isSuccessful()) {
                     listaAnnunci = response.body();
-                    AnnuncioPageAdapter annuncioPageAdapter = new AnnuncioPageAdapter(listaAnnunci, getContext());
+                    AnnuncioPageAdapter annuncioPageAdapter = new AnnuncioPageAdapter(listaAnnunci, getContext(), applicationWebService);
 
                     viewPager.setAdapter(annuncioPageAdapter);
                    // Toast.makeText(getContext(), "Errore caricamento annunci: "+annuncioPageAdapter, Toast.LENGTH_SHORT).show();
@@ -293,7 +294,7 @@ public class Swap extends Fragment {
 
                 if (response.isSuccessful()) {
                     listaAnnunci = response.body();
-                    AnnuncioPageAdapter annuncioPageAdapter = new AnnuncioPageAdapter(listaAnnunci, getContext());
+                    AnnuncioPageAdapter annuncioPageAdapter = new AnnuncioPageAdapter(listaAnnunci, getContext(), applicationWebService);
 
                     viewPager.setAdapter(annuncioPageAdapter);
 

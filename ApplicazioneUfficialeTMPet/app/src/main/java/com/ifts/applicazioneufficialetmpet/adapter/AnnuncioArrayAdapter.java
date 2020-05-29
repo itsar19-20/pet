@@ -42,7 +42,7 @@ public class AnnuncioArrayAdapter extends ArrayAdapter<AnnuncioModel> {
         tvNomeAnnuncio.setText(annuncio.getNomeAnnuncio());
         tvDescrizione.setText(annuncio.getDescrizione());
         tvOrganizzatore.setText(annuncio.getUsernameProprietario());
-        int adapterIdAnnuncio=annuncio.getId_Annuncio();
+        int adapterIdAnnuncio=annuncio.getId_annuncio();
 
         //CONVERTO DATA IN STRINGA
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");

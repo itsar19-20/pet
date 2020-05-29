@@ -94,4 +94,9 @@ public interface MyApiEndPointInterface {
 
     @GET("/AnnunciProprietarioController")
     Call<List<AnnuncioModel>> getProprietarioAnnoucement(@Query("usernameProprietario") String proprietarioAnnuncio);
+
+
+    //  PREFERITI
+    @POST("/PreferitiPetSitterController")
+    Call<String> setNewPetSitterPreferiti(@Query("usernamePetSitter") String usernamePetSitter, @Query("idAnnuncioString") int idAnnuncio);
 }
