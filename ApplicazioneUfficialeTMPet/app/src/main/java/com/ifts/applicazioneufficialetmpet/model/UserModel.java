@@ -1,5 +1,7 @@
 package com.ifts.applicazioneufficialetmpet.model;
 
+import java.util.List;
+
 public class UserModel {
 
 
@@ -8,6 +10,9 @@ public class UserModel {
                     cognome,
                     tipoUtente,
                     descrizione;
+
+   List<EmailModel> emailModel;
+
     private ImmagineModel immagineProfilo;
 
     public ImmagineModel getImmagineProfilo() {
@@ -66,7 +71,13 @@ public class UserModel {
     public void setDescrizione(String descrizione) {
         this.descrizione = descrizione;
     }
+    public List<EmailModel> getEmailModel() {
+        return emailModel;
+    }
 
+    public void setEmailModel(List<EmailModel> emailModel) {
+        this.emailModel = emailModel;
+    }
     @Override
     public String toString() {
         return "UserModel{" +

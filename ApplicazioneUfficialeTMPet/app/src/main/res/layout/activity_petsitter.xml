@@ -19,9 +19,9 @@
         android:id="@+id/textView_title_fragment_chat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
         android:text="E-MAILS-CHAT"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="@color/colorVerdeApp"></TextView>
 

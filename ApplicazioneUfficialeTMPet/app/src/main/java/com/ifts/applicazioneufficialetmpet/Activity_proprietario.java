@@ -135,6 +135,7 @@ public class Activity_proprietario extends AppCompatActivity {
                         topNavigationView.setVisibility(View.INVISIBLE);
                         listView.setVisibility(View.INVISIBLE);
                         titolo_chat.setVisibility(View.INVISIBLE);
+
                         break;
                     case R.id.navigation_switch:
                         fragment = new Swap();

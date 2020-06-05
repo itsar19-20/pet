@@ -53,13 +53,19 @@
 
     <TextView
         android:id="@+id/textView_item_testo_lista_eventi"
-        android:layout_width="match_parent"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView_item_autore_lista_eventi"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="7dp"
         android:hint="Text"
-        android:textColor="@color/white"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="24dp" />
+
     <TextView
         android:id="@+id/textView_item_data_lista_eventi"
         android:layout_width="match_parent"

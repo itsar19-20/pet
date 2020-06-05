@@ -3,6 +3,7 @@ package com.ifts.applicazioneufficialetmpet.interfaces;
 
 import android.content.Intent;
 
+import com.ifts.applicazioneufficialetmpet.Preferiti;
 import com.ifts.applicazioneufficialetmpet.model.AnnuncioModel;
 import com.ifts.applicazioneufficialetmpet.model.EventoModel;
 import com.ifts.applicazioneufficialetmpet.model.UserModel;
@@ -69,7 +70,7 @@ public interface MyApiEndPointInterface {
     @PUT("/EventiController")
     Call<String> joinEvent(@Query("idEventoString") String idEventString, @Query("usernamePartecipante") String usernameEntrant);
 
-    @DELETE("/")
+    @DELETE("/EventiController")
     Call<String> removeEvent(@Query("idEventoString") int idEventString);
 
     @GET("/EventiUtenteController")
@@ -95,8 +96,18 @@ public interface MyApiEndPointInterface {
     @GET("/AnnunciProprietarioController")
     Call<List<AnnuncioModel>> getProprietarioAnnoucement(@Query("usernameProprietario") String proprietarioAnnuncio);
 
-
     //  PREFERITI
+
+    //PetSitter
     @POST("/PreferitiPetSitterController")
     Call<String> setNewPetSitterPreferiti(@Query("usernamePetSitter") String usernamePetSitter, @Query("idAnnuncioString") int idAnnuncio);
+
+    @GET("/PreferitiPetSitterController")
+    Call<List<Preferiti>> getPetSitterPreferiti();
+
+    @DELETE("/PreferitiPetSitterController")
+    Call<String> removePreferitoPetSitter(@Query("idPreferitoString") int idPreferitoString);
+    //Propriietario
+    @POST( "/PreferitiProprietarioController")
+    Call<String> setNewPetSitterPreferitiProprietario(@Query("usernameProprietario") String usernameProprietario, @Query("usernamePetSitter") String usernamePetSitter,@Query("idAnnuncioString") int idAnnuncio);
 }

@@ -102,6 +102,7 @@ private ApplicationWebService applicationWebService;
         }
         else {
             viewPager.setAdapter(adapter_swap);
+
                 }
 
 
@@ -157,6 +158,7 @@ private ApplicationWebService applicationWebService;
         if(tipoUtente.contentEquals("petsitter")) {
             fab.hide();
             crea_annuncio.setVisibility(View.GONE);
+
 
         }
 
