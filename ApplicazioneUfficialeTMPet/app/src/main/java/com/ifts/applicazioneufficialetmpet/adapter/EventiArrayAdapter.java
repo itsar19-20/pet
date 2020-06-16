@@ -25,6 +25,7 @@ public class EventiArrayAdapter extends ArrayAdapter<EventoModel> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         EventoModel evento = getItem(position);
+
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.single_item_lista_eventi, parent, false);
         }
@@ -37,7 +38,8 @@ public class EventiArrayAdapter extends ArrayAdapter<EventoModel> {
 
 
         //visualizzazione dell'immagine
-        Picasso.get().load(evento.getUrlImmagineEvento()).placeholder(R.drawable.logoapppet).error(R.drawable.logoapppet).into(ivImaggineEvento);
+        Picasso.get().load(evento.getUrlImmagineEvento()).placeholder(R.drawable.logoapppet).
+                error(R.drawable.logoapppet).into(ivImaggineEvento);
 
         tvNomeEvento.setText(evento.getNomeEvento());
         tvDescrizione.setText(evento.getDescrizione());

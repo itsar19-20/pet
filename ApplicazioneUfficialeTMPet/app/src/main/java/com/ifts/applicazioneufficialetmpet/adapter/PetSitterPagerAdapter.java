@@ -91,14 +91,14 @@ public class PetSitterPagerAdapter extends PagerAdapter {
         TextView tvNome = view.findViewById(R.id.textView_nome);
         TextView tvCognome = view.findViewById(R.id.textView_cognome);
         TextView tvDescrizione = view.findViewById(R.id.textView_descrizione);
-        TextView tvEmail = view.findViewById(R.id.textView_email);
+        TextView tvEmail = view.findViewById(R.id.textView_email_listapetsitter);
 
         tvUsername.setText(listaPetSitter.get(position).getUsername());
         tvNome.setText(listaPetSitter.get(position).getNome());
         tvCognome.setText(listaPetSitter.get(position).getCognome());
         tvDescrizione.setText(listaPetSitter.get(position).getDescrizione());
-        if (listaPetSitter.get(position).getEmailModel().size() > 0)
-            tvEmail.setText(listaPetSitter.get(position).getEmailModel().get(0).getEmail());
+        if (listaPetSitter.get(position).getEmails().size() > 0)
+            tvEmail.setText(listaPetSitter.get(position).getEmails().get(0).getEmail());
 
 
         Picasso.get().load(listaPetSitter.get(position).getImmagineProfilo().getUrlImmagine()).placeholder(R.drawable.logoapppet).error(R.drawable.logoapppet).into(ivImagginePetSitter);

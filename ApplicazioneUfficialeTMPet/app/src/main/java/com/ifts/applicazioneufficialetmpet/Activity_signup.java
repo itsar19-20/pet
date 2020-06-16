@@ -223,7 +223,8 @@ public class Activity_signup extends AppCompatActivity {
             @Override
             public void onFailure(Call<String> call, Throwable t) {
                 creaUtente.dismiss();
-                Toast.makeText(Activity_signup.this, "Problemi con la registrazione utente: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Activity_signup.this, "Problemi con la registrazione utente: " + t.getMessage(),
+                        Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -243,7 +244,8 @@ public class Activity_signup extends AppCompatActivity {
             @Override
             public void onFailure(Call<RequestBody> call, Throwable t) {
                 creaUtente.dismiss();
-                Toast.makeText(Activity_signup.this, "Problemi con il caricamento dell'immagine: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Activity_signup.this, "Problemi con il caricamento dell'immagine: " + t.getMessage(),
+                        Toast.LENGTH_SHORT).show();
                 Toast.makeText(Activity_signup.this, "ha scelto proprietario vero? ", Toast.LENGTH_SHORT).show();
             }
         });

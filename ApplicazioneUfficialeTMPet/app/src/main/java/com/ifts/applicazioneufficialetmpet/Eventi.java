@@ -174,9 +174,9 @@ public class Eventi extends Fragment {
 
                 new AlertDialog.Builder(getContext())
                         .setIcon(android.R.drawable.ic_dialog_alert)
-                        .setTitle("Are you sure?")
-                        .setMessage("Do you want to delete this note?")
-                        .setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                        .setTitle("Sei sicuro?")
+                        .setMessage("Vuoi cancellare questo evento?")
+                        .setPositiveButton("Si", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int i) {
                                 //memorizzo l'id dell'oggetto selezionato con SQLITE

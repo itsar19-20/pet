@@ -6,6 +6,8 @@ import android.content.Intent;
 import com.ifts.applicazioneufficialetmpet.Preferiti;
 import com.ifts.applicazioneufficialetmpet.model.AnnuncioModel;
 import com.ifts.applicazioneufficialetmpet.model.EventoModel;
+import com.ifts.applicazioneufficialetmpet.model.PetSitter;
+import com.ifts.applicazioneufficialetmpet.model.PreferitoModel;
 import com.ifts.applicazioneufficialetmpet.model.UserModel;
 
 import java.util.Date;
@@ -33,7 +35,10 @@ public interface MyApiEndPointInterface {
     //REGISTRAZIONE
 
     @POST("/signUp")
-    Call<String> signUpUser(@Query("name") String nome, @Query("surname") String cognome, @Query("username") String username, @Query("password") String password, @Query("email") String email, @Query("type") String tipoUtente, @Query("descrizione") String descrizione );
+    Call<String> signUpUser(@Query("name") String nome, @Query("surname") String cognome,
+                            @Query("username") String username, @Query("password") String password,
+                            @Query("email") String email, @Query("type") String tipoUtente,
+                            @Query("descrizione") String descrizione );
 
 
     //IMMAGINI
@@ -42,17 +47,21 @@ public interface MyApiEndPointInterface {
     Call<String> getImage(@Query("username") String username);
 
     @POST("getImmagine")
-    Call<String> setImage(@Query("username") String username, @Query("immagine") String immagine);
+    Call<String> setImage(@Query("username") String username,
+                          @Query("immagine") String immagine);
 
     @Multipart
     @POST("/getImmagine")
-    Call<RequestBody> setImage2(@Query("username") String username, @Query("immagine") String immagine, @Part("description") RequestBody description);
+    Call<RequestBody> setImage2(@Query("username") String username, @Query("immagine") String immagine,
+                                @Part("description") RequestBody description);
 
     @Multipart
     @POST("/getImmagine")
-    Call<ResponseBody> setImage3(@Query("username") String username, @Query("immagine") String immagine, @Part("description") RequestBody description);
+    Call<ResponseBody> setImage3(@Query("username") String username, @Query("immagine") String immagine,
+                                 @Part("description") RequestBody description);
 
 
+   //CONTROLLO UTENTE BLOCCATO
     @GET("/ControllaUtenteBloccatoController")
     Call<String> getControlloBloccato(@Query("username") String username);
 
@@ -64,7 +73,10 @@ public interface MyApiEndPointInterface {
     Call<List<EventoModel>> getAllEvents();
 
     @POST("/EventiController")
-    Call<String> setNewEvent(@Query("nomeEvento") String nomeEvento, @Query("descrizione") String descrizione, @Query("usernameOrgnizzatore") String usernameOrganizzatore,@Query("urlImmagine") String urlImmagine);
+    Call<String> setNewEvent(@Query("nomeEvento") String nomeEvento,
+                             @Query("descrizione") String descrizione,
+                             @Query("usernameOrgnizzatore") String usernameOrganizzatore,
+                             @Query("urlImmagine") String urlImmagine);
 
 
     @PUT("/EventiController")
@@ -100,14 +112,22 @@ public interface MyApiEndPointInterface {
 
     //PetSitter
     @POST("/PreferitiPetSitterController")
-    Call<String> setNewPetSitterPreferiti(@Query("usernamePetSitter") String usernamePetSitter, @Query("idAnnuncioString") int idAnnuncio);
+    Call<String> setNewPetSitterPreferiti(@Query("usernamePetSitter") String usernamePetSitter,
+                                          @Query("idAnnuncioString") int idAnnuncio);
 
     @GET("/PreferitiPetSitterController")
-    Call<List<Preferiti>> getPetSitterPreferiti();
+    Call<List<PreferitoModel>> getPetSitterPreferiti(@Query("usernamePetSitter") String usernamePetSitter);
 
     @DELETE("/PreferitiPetSitterController")
     Call<String> removePreferitoPetSitter(@Query("idPreferitoString") int idPreferitoString);
+
     //Propriietario
     @POST( "/PreferitiProprietarioController")
-    Call<String> setNewPetSitterPreferitiProprietario(@Query("usernameProprietario") String usernameProprietario, @Query("usernamePetSitter") String usernamePetSitter,@Query("idAnnuncioString") int idAnnuncio);
+    Call<String> setNewPetSitterPreferitiProprietario(@Query("usernameProprietario") String usernameProprietario, @Query("usernamePetSitter") String usernamePetSitter,@Query("idAnnuncioStringa") int idAnnuncio);
+
+    @GET("/PetSitterPerAnnuncioController")
+    Call<List<PetSitter>> getPetSitter (@Query("id_annuncio") int id_annuncio);
+
+    @GET("/PreferitiProprietarioController")
+    Call<List<PreferitoModel>> getProprietarioPreferiti (@Query("usernameProprietario") String usernameProprietario);
 }

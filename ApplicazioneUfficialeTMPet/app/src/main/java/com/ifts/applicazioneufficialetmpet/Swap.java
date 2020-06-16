@@ -145,14 +145,15 @@ private ApplicationWebService applicationWebService;
        // dialog_swap = new Dialog(getContext());
         dialog_visualizza_annuncio = new Dialog(getContext());
         visualizza_annuncio = view.findViewById(R.id.button_visualizza_annuncio);
-
-
+        //nascondi visualizza annuncio
+        visualizza_annuncio.setVisibility(View.GONE);
 
 
 //=============================Bottone crea annuncio===============================
 
         //====Nascondi bottone se l'utente è un PetSitter==========
         crea_annuncio = view.findViewById(R.id.textViewCreaAnnuncio);
+
         FloatingActionButton fab = view.findViewById(R.id.fab_add);
 
         if(tipoUtente.contentEquals("petsitter")) {
@@ -178,7 +179,7 @@ private ApplicationWebService applicationWebService;
             @Override
             public void onClick(View v) {
               //  dialog_swap.setContentView(R.layout.fragment_swap);
-                dialog_visualizza_annuncio.setContentView(R.layout.visualizza_annuncio);
+              dialog_visualizza_annuncio.setContentView(R.layout.visualizza_annuncio);
 
                 //======================================INIZIO===================================================================
                 sliders_annunci = new ArrayList<>();
@@ -290,7 +291,7 @@ private ApplicationWebService applicationWebService;
     private void setVisualizzaAnnunciProprietario(String username){
         ApplicationWebService webService = (ApplicationWebService) getActivity().getApplication();
         MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
-        apiService. getProprietarioAnnoucement(username).enqueue(new Callback<List<AnnuncioModel>>() {
+        apiService.getProprietarioAnnoucement(username).enqueue(new Callback<List<AnnuncioModel>>() {
             @Override
             public void onResponse(Call<List<AnnuncioModel>> call, Response<List<AnnuncioModel>> response) {
 

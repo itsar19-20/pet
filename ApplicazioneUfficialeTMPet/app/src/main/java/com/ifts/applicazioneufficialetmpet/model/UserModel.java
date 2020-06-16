@@ -11,7 +11,7 @@ public class UserModel {
                     tipoUtente,
                     descrizione;
 
-   List<EmailModel> emailModel;
+   List<EmailModel> emails;
 
     private ImmagineModel immagineProfilo;
 
@@ -71,12 +71,12 @@ public class UserModel {
     public void setDescrizione(String descrizione) {
         this.descrizione = descrizione;
     }
-    public List<EmailModel> getEmailModel() {
-        return emailModel;
+    public List<EmailModel> getEmails() {
+        return emails;
     }
 
-    public void setEmailModel(List<EmailModel> emailModel) {
-        this.emailModel = emailModel;
+    public void setEmailModel(List<EmailModel> emails) {
+        this.emails = emails;
     }
     @Override
     public String toString() {

@@ -1,5 +1,6 @@
 package com.ifts.applicazioneufficialetmpet.adapter;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;
@@ -11,10 +12,12 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.ifts.applicazioneufficialetmpet.R;
 import com.ifts.applicazioneufficialetmpet.interfaces.MyApiEndPointInterface;
 import com.ifts.applicazioneufficialetmpet.model.AnnuncioModel;
+import com.ifts.applicazioneufficialetmpet.model.PetSitter;
 import com.ifts.applicazioneufficialetmpet.retrofit.ApplicationWebService;
 import com.squareup.picasso.Picasso;
 
@@ -62,12 +65,14 @@ public class AnnuncioPageAdapter extends PagerAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(tipo.contentEquals("petsitter")) {
+                Toast.makeText(context, "Tipo " + tipo, Toast.LENGTH_LONG).show();
+                if (tipo.contentEquals("petsitter")) {
                     setNewPetSitterPreferitiProprietario(listaAnnunci.get(position).getId_annuncio());
 
                 } else if (tipo.contentEquals("proprietario")) {
-                    setPopup();
-                };
+                    setPopup(listaAnnunci.get(position).getId_annuncio());
+                }
+                ;
             }
 
 
@@ -117,11 +122,38 @@ public class AnnuncioPageAdapter extends PagerAdapter {
     }
 
 
-   // =====METODI====
-   public void setPopup(){
+    // =====METODI====
+    public void setPopup(int id_annuncio) {
+        Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.popup_petsitter);
+        MyApiEndPointInterface apiService = applicationWebService.getRetrofit().create(MyApiEndPointInterface.class);
+        Call<List<PetSitter>> call = apiService.getPetSitter(id_annuncio);
+        call.enqueue(new Callback<List<PetSitter>>() {
+            @Override
+            public void onResponse(Call<List<PetSitter>> call, Response<List<PetSitter>> response) {
+        if(response.isSuccessful())
+        {
+            List<PetSitter> list = response.body();
+            ViewPager viewPager = dialog.findViewById(R.id.viewpager_popup_petsitter);
+            PetSitterPagerAdapter adapter = new PetSitterPagerAdapter(list, context, applicationWebService, id_annuncio);
+            viewPager.setAdapter(adapter);
+            dialog.show();
+            dialog.setCanceledOnTouchOutside(true);
 
-   }
-    public void setNewPetSitterPreferitiProprietario (int idAnnuncio){
+        }
+        else
+            Toast.makeText(context, "Problemi con il server", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<List<PetSitter>> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+    public void setNewPetSitterPreferitiProprietario(int idAnnuncio) {
         MyApiEndPointInterface apiService = applicationWebService.getRetrofit().create(MyApiEndPointInterface.class);
 
         apiService.setNewPetSitterPreferiti(user, idAnnuncio).enqueue(new Callback<String>() {
