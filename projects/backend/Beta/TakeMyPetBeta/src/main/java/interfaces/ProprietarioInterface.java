@@ -13,9 +13,10 @@ public interface ProprietarioInterface extends UtenteAppInterface {
 	abstract List<Animale> visualizzaAnimali(String usernameProprietario);
 	abstract void eliminaAnimale(Integer idAnimale);
 	abstract String aggiungiAnimale(String usernameProprietario, Date dataDiNascita, String dettagli,Integer eta,String nome,String razza,String tipo);
-	abstract void aggiungiAnnuncio(String nomeAnnuncio, String usernameProprietario,String descrizione,String longitudine, String latitudine, List<Animale> listaAnimali, Date dataAnnuncio, Date dataCreazioneAnnuncio);
+	abstract void aggiungiAnnuncio(String nomeAnnuncio, String usernameProprietario,String descrizione,String longitudine, String latitudine, List<Animale> listaAnimali, Date dataAnnuncio, Date dataCreazioneAnnuncio,String urlImmagineAnnuncio);
 	abstract void rimuoviAnnuncio(Integer idAnnuncio);
 	abstract List<Annuncio> listaAnnunciProprietario(String usernameProprietario);
 	abstract void creaPreferitoProprietario(String usernameProprietario, Integer idAnnuncio, String usernamePetSitter);
 	abstract List<Preferiti> visualizzaPreferitiProprietario (String usernameProprietario);
+	abstract void aggiungiProrietarioALPreferito(String usernamePetSitter, int id);
 }

@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -46,12 +47,14 @@ public class Utente {
 
 	@Temporal(TemporalType.DATE)
 	private Date dataDiNascita;
+	
 	@Temporal(TemporalType.DATE)
 	private Date dataRegistrazione;
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataOraUltimoLogin;
-	@OneToMany
-	@JsonIgnore
+	
+	@OneToMany(fetch = FetchType.EAGER)
 	private List<Email> emails;
 	
 	
@@ -89,12 +92,7 @@ public class Utente {
 	public void setDataDiNascita(Date dataDiNascita) {
 		this.dataDiNascita = dataDiNascita;
 	}
-	//public ArrayList<Email> getEmails() {
-	//	return emails;
-	//}
-	//public void setEmails(ArrayList<Email> emails) {
-	//	this.emails = emails;
-	//}
+	
 	public Date getDataRegistrazione() {
 		return dataRegistrazione;
 	}
@@ -156,6 +154,9 @@ public class Utente {
 	public void setBloccato(boolean bloccato) {
 		this.bloccato = bloccato;
 	}
+
+
+	
 
 
 	public List<Email> getEmails() {

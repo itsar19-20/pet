@@ -38,7 +38,7 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 
 		_return = em.createNamedQuery("cercaAnimaliPerProprietario", Animale.class)
-				.setParameter("username", usernameProrietario).getResultList();
+				.setParameter("name", usernameProrietario).getResultList();
 
 		em.close();
 		return _return;
@@ -51,6 +51,7 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 		em.getTransaction().begin();
 		em.remove(em.find(Animale.class, idAnimale));
 		em.getTransaction().commit();
+		em.close();
 	}
 
 	@Override
@@ -78,7 +79,8 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 	}
 
 	public void aggiungiAnnuncio(String nomeAnnuncio, String usernameProprietario, String descrizione, String longitudine, String latitudine,
-			List<Animale> listaAnimali, Date dataAnnuncio, Date dataCreazioneAnnuncio) {
+			List<Animale> listaAnimali, Date dataAnnuncio, Date dataCreazioneAnnuncio,String urlImmagineAnnuncio) {
+		
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
 
 		Annuncio annuncio = new Annuncio();
@@ -95,7 +97,8 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 		annuncio.setAnimaliAnnuncio(listaAnimali);
 		annuncio.setLongitudine(longitudine);
 		annuncio.setLongitudine(longitudine);
-
+		annuncio.setUrlImmagineAnnuncio(urlImmagineAnnuncio);
+		
 		em.getTransaction().begin();
 		em.persist(annuncio);
 		em.getTransaction().commit();
@@ -116,32 +119,42 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 
 	public List<Annuncio> listaAnnunciProprietario(String usernameProprietario) {
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
-
 		List<Annuncio> _return = new ArrayList<Annuncio>();
-		_return = em.createNamedQuery("annuncio.findByProprietario").setParameter("name", usernameProprietario)
-				.getResultList();
+		_return = em.createNamedQuery("annuncio.findByProprietario").setParameter("name", usernameProprietario).getResultList();
+		em.close();
 		return _return;
+		
 
 	}
 
 	public void creaPreferitoProprietario(String usernameProprietario, Integer idAnnuncio, String usernamePetSitter) {
 		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
-		Preferiti preferito = new Preferiti();
-		PetSitter petSitter = new PetSitter();
-		Annuncio annuncio = new Annuncio();
-		Proprietario proprietario = new Proprietario();
+		//Preferiti preferito = new Preferiti();
 		
-		proprietario = em.find(Proprietario.class, usernameProprietario);
-		petSitter = em.find(PetSitter.class, usernamePetSitter);
-		annuncio = em.find(Annuncio.class, idAnnuncio);
+	
 		
-		preferito.setAnnuncioPreferito(annuncio);
-		preferito.setPreferitoDelProprietario(proprietario);
-		preferito.setPetSitterPreferitoDelProprietario(petSitter);
-		em.getTransaction().begin();
-		em.persist(preferito);
-		em.getTransaction().commit();
-		em.close();
+		
+		Proprietario proprietario = em.find(Proprietario.class, usernameProprietario);
+		PetSitter petSitter = em.find(PetSitter.class, usernamePetSitter);
+		Annuncio annuncio = em.find(Annuncio.class, idAnnuncio);
+		try {
+			Preferiti preferito=(Preferiti) em.createNamedQuery("preferiti.controllaCheEventoPetSitterEsista").setParameter("name", usernamePetSitter).setParameter("id", idAnnuncio).getSingleResult();
+			preferito.setAnnuncioPreferito(annuncio);
+			preferito.setPreferitoDelProprietario(proprietario);
+			preferito.setPetSitterPreferitoDelProprietario(petSitter);
+			em.getTransaction().begin();
+			em.persist(preferito);
+			em.getTransaction().commit();
+			em.close();
+		} catch (Exception e) {
+			System.out.println("Preferito non trovato");
+			System.out.println(e.getCause());
+			return;
+		}
+		
+		
+		
+		
 	}
 	
 	public List<Preferiti> visualizzaPreferitiProprietario (String usernameProprietario) {
@@ -152,4 +165,24 @@ public class ProprietarioManager extends UtenteAppManager implements Proprietari
 		return _return;
 	}
 	
+	
+	public void aggiungiProrietarioALPreferito(String usernamePetSitter, int id) {
+		EntityManager em = JPAUtil.getInstance().getEmf().createEntityManager();
+		Preferiti preferito = new Preferiti();
+	
+		Proprietario proprietario = new Proprietario();
+		PetSitter petSitter=new PetSitter();
+		petSitter = em.find(PetSitter.class, usernamePetSitter);
+		
+		preferito=em.find(Preferiti.class, id);
+		
+		
+	
+		
+		preferito.setPetSitterPreferitoDelProprietario(petSitter);
+		em.getTransaction().begin();
+		em.persist(preferito);
+		em.getTransaction().commit();
+		em.close();
+	}
 }

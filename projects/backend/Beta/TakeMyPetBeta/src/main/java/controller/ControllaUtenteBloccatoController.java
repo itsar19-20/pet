@@ -38,7 +38,9 @@ public class ControllaUtenteBloccatoController extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		
 		ControlloBloccatoManager cbManager = new ControlloBloccatoManager();
 		
 		String controllo;
@@ -46,21 +48,23 @@ public class ControllaUtenteBloccatoController extends HttpServlet {
 	
 		String username = request.getParameter("username");
 		Utente utente = cbManager.controlloBlocco(username);
+	
 		if(utente.isBloccato()) {
 			controllo = "bloccato";
 		} else if(!utente.isAttivo()) {
 			controllo = "disattivato";
 		} else {
 			controllo = "ok";
+			
 		}
 		
 		response.getWriter().append(controllo);
 		
+		
 		log.debug("ControlloUtenteBloccatoController funziona");
 		
 		
-		
-	}
+		}
 
 	
 

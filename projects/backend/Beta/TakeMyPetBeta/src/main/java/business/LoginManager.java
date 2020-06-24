@@ -32,6 +32,7 @@ public class LoginManager implements LoginInterface {
 			//em.remove(em.find(Utente.class, username));
 			em.persist(u);
 			em.getTransaction().commit();
+			
 
 			if (u.getPassword().contentEquals(password)) {
 				if(!u.isBloccato()) {
@@ -43,6 +44,7 @@ public class LoginManager implements LoginInterface {
 				em.getTransaction().commit();
 				log.debug("LoginManager Funziona");
 				log.debug("Utente trovato");
+				em.close();
 				return u;
 				}
 				else {
@@ -55,7 +57,9 @@ public class LoginManager implements LoginInterface {
 					em.getTransaction().begin();
 					em.persist(u);
 					em.getTransaction().commit();
+					em.close();
 					return u;
+					
 					}
 			} 
 			
@@ -67,6 +71,7 @@ public class LoginManager implements LoginInterface {
 				//em.remove(em.find(Utente.class, username));
 				em.persist(u);
 				em.getTransaction().commit();
+				
 					if(u.getContatoreAccessiSbagliati() == 10) {
 						MailManager mailManager= new MailManager();
 						String codiceSblocco = mailManager.generateUnlockCode();
@@ -79,15 +84,18 @@ public class LoginManager implements LoginInterface {
 					u.setBloccato(true);
 					em.persist(u);
 					em.getTransaction().commit();
+					em.close();
 					return u;
 					}
 				
-				
+
 			}
 			if(u.isBloccato()) {
+				em.close();
 				return u;
 			}
 			else {
+				em.close();
 				return null;
 			}
 		}

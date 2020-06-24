@@ -3,8 +3,10 @@ package model;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,11 +15,16 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @NamedQueries({
 	   
     @NamedQuery(name="annuncio.findByProprietario",
-                query="SELECT c FROM Annuncio c WHERE c.proprietarioAnnuncio = :name"),
+                query="SELECT c FROM Annuncio c WHERE c.proprietarioAnnuncio.username like :name"),
     @NamedQuery(name="annuncio.findAll",
     			query="SELECT c FROM Annuncio c WHERE NOT c.terminato = true "),
 })
@@ -29,8 +36,10 @@ public class Annuncio {
 	@OneToOne
 	private Proprietario proprietarioAnnuncio;
 	@OneToMany
+	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<PetSitter> petSittersAnnuncio;
 	@OneToMany
+	@JsonIgnore
 	private List<Animale> animaliAnnuncio;
 	private String descrizione;
 	private String latitudine;
@@ -38,6 +47,8 @@ public class Annuncio {
 	private Date dataCreazioneAnnuncio;
 	private Date dataAnnuncio;
 	private String nomeAnnuncio;
+	private String urlImmagineAnnuncio;
+	
 	
 	private boolean terminato;
 	
@@ -110,7 +121,22 @@ public class Annuncio {
 		this.nomeAnnuncio = nomeAnnuncio;
 	}
 	
+	public String getUrlImmagineAnnuncio() {
+		return urlImmagineAnnuncio;
+	}
+	public void setUrlImmagineAnnuncio(String urlImmagineAnnuncio) {
+		this.urlImmagineAnnuncio = urlImmagineAnnuncio;
+	}
 	
+	@Override
+	public String toString() {
+		return "Annuncio [id_annuncio=" + id_annuncio + ", proprietarioAnnuncio=" + proprietarioAnnuncio
+				+ ", petSittersAnnuncio=" + petSittersAnnuncio + ", animaliAnnuncio=" + animaliAnnuncio
+				+ ", descrizione=" + descrizione + ", latitudine=" + latitudine + ", longitudine=" + longitudine
+				+ ", dataCreazioneAnnuncio=" + dataCreazioneAnnuncio + ", dataAnnuncio=" + dataAnnuncio
+				+ ", nomeAnnuncio=" + nomeAnnuncio + ", urlImmagineAnnuncio=" + urlImmagineAnnuncio + ", terminato="
+				+ terminato + "]";
+	}
 	
 
 }

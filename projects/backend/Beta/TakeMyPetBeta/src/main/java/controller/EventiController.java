@@ -39,7 +39,8 @@ public class EventiController extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		log.debug("\"doGet lista tutti Eventi partito");
 		
 		List<Evento> listaEventi=new  ArrayList<Evento>();
@@ -51,9 +52,8 @@ public class EventiController extends HttpServlet {
 	response.getWriter().append(objectMapper.writeValueAsString(listaEventi));
 	log.debug("\"doGet lista tutti Eventi funziona");
 	
-	
-		
-	}
+
+		}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -92,10 +92,10 @@ public class EventiController extends HttpServlet {
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UtenteAppManager utenteAppManager = new UtenteAppManager();
 		String idEventoString = request.getParameter("idEventoString");
-		String nomeEvento=request.getParameter("nomeEvento");
-		Integer idEvento = Integer.valueOf(idEventoString);
+		//String nomeEvento=request.getParameter("nomeEvento");
+		Integer idEvento = Integer.parseInt(idEventoString);
 		utenteAppManager.eliminaEvento(idEvento);
-		response.getWriter().append("Evento"+ nomeEvento+" eliminato");
+		response.getWriter().append("Evento eliminato");
 		log.debug("doDelete elimina Evento Funziona");
 		
 	}

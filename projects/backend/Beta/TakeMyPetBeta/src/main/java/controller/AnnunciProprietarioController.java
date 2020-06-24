@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -72,16 +74,30 @@ public class AnnunciProprietarioController extends HttpServlet {
 		String usernameProprietario=request.getParameter("usernameProprietario");
 		String descrizioneProprietario=request.getParameter("descrizioneProprietario");
 		String nomeAnnuncio = request.getParameter("nomeAnnuncio");
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		Date dataAnnuncio = null;
+		log.debug("Data annuncio"+request.getParameter("dataAnnuncio"));
+		
+		try {
+			dataAnnuncio = formatter.parse(request.getParameter("dataAnnuncio"));
+			dataAnnuncio.setDate(dataAnnuncio.getDate()+1);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String urlImmagineAnnuncio =request.getParameter("urlImmagineAnnuncio");
 		
 		//da sistemare dopo
 		String latitudine=null;
 		String longitudine=null;
+	
 		Date dataCreazioneAnnuncio = null;
-		Date dataAnnuncio = null;
+		//Date dataAnnuncio = null;
+		
 		
 		List<Animale> listaAnimali=new ArrayList<Animale>();
 		//prendere dal body la lista animali e convertirla dal Json
-		proprietarioManager.aggiungiAnnuncio(nomeAnnuncio, usernameProprietario, descrizioneProprietario, longitudine, latitudine, listaAnimali, dataAnnuncio, dataCreazioneAnnuncio);
+		proprietarioManager.aggiungiAnnuncio(nomeAnnuncio, usernameProprietario, descrizioneProprietario, longitudine, latitudine, listaAnimali, dataAnnuncio, dataCreazioneAnnuncio,urlImmagineAnnuncio);
 		
 		
 	}

@@ -42,6 +42,7 @@ public class RegistrationManager implements RegistrationInterface {
 				mail.setUtente_email(u);
 				emails.add(mail);
 				u.setEmails(emails);
+				
 			}
 
 			if (u instanceof PetSitter) {

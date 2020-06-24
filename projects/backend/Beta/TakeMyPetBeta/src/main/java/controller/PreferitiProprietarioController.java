@@ -59,9 +59,10 @@ public class PreferitiProprietarioController extends HttpServlet {
 		String usernameProprietario = request.getParameter("usernameProprietario");
 		String usernamePetSitter = request.getParameter("usernamePetSitter");
 		String idAnnuncioStringa = request.getParameter("idAnnuncioStringa");
-		Integer idAnnuncio = Integer.valueOf(idAnnuncioStringa);
+		Integer idAnnuncio = Integer.parseInt(idAnnuncioStringa);
 		log.debug("doPost creaPreferitoProprietario, PreferitiProprietarioController Pronto");
 		proprietarioManager.creaPreferitoProprietario(usernameProprietario, idAnnuncio, usernamePetSitter);
+		response.getWriter().append("PetSitter aggiunto ai preferiti");
 		log.debug("doPost creaPreferitoProprietario, PreferitiProprietarioController Funziona");
 	}
 

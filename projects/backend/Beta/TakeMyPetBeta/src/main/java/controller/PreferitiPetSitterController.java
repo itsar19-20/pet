@@ -58,10 +58,20 @@ public class PreferitiPetSitterController extends HttpServlet {
 		PetSitterManager petSitterManager = new PetSitterManager();
 		
 		String usernamePetSitter = request.getParameter("usernamePetSitter");
-		String idAnnuncioString = request.getParameter("idAnnuncioString");
-		Integer idAnnuncio = Integer.valueOf(idAnnuncioString);
+		
+		
+		
+		int idAnnuncioString = Integer.parseInt(request.getParameter("idAnnuncioString"));
+		
 		log.debug("doPost creaPreferitoPetSitter, PreferitiPetSitterController Pronto");
-		petSitterManager.creaPreferito(usernamePetSitter, idAnnuncio);
+		
+		String a=petSitterManager.creaPreferito(usernamePetSitter, idAnnuncioString);
+	
+		if(a==null)
+			response.sendError(500);
+		else
+			response.getWriter().append("Nuovo preferito annuncio creato");
+		
 		log.debug("doPost creaPreferitoPetSitter, PreferitiPetSitterController Funziona");
 	}
 

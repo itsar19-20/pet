@@ -12,14 +12,15 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Proprietario extends UtenteApp{
 	
 	@OneToMany
+	@JsonIgnore
 	private List<Animale> animali;
 
-	@JsonIgnore
+	
 	public List<Animale> getAnimali() {
 		return animali;
 	}
 	
-	@JsonIgnore
+	
 	public void setAnimali(List<Animale> animali) {
 		this.animali = animali;
 	}

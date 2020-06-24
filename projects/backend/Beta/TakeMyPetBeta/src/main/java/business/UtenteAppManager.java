@@ -11,6 +11,7 @@ import interfaces.UtenteAppInterface;
 import model.Annuncio;
 import model.Evento;
 import model.Immagine;
+import model.PetSitter;
 import model.Preferiti;
 import model.Segnalazione;
 import model.UtenteApp;
@@ -132,13 +133,17 @@ public class UtenteAppManager implements UtenteAppInterface {
 			//em.remove(vecchiaImmagine);
 		//}
 		ima.setUrlImmagine(urlImmagine);
+		
+		if(utente.getImmagineProfilo()==null) {
 		utente.setImmagineProfilo(ima);
+		}
 		
 		em.getTransaction().begin();
 		em.persist(ima);
 		em.remove(utente);
 		em.persist(utente);
 		em.getTransaction().commit();
+		em.close();
 	}
 	
 	
@@ -162,6 +167,7 @@ public class UtenteAppManager implements UtenteAppInterface {
 		em.persist(ima);
 		
 		em.getTransaction().commit();
+		em.close();
 	}
 	
 	
@@ -215,9 +221,20 @@ public class UtenteAppManager implements UtenteAppInterface {
 		
 	}
 	
+	//Preferiti
+	
+	public List<Preferiti> visualizzaListaPreferiti(String usernameProprietario) {
+		EntityManager em =JPAUtil.getInstance().getEmf().createEntityManager();
+		List<Preferiti> _return = new ArrayList<Preferiti>();
+		_return = em.createNamedQuery("preferiti.findByProprietario").setParameter("name", usernameProprietario).getResultList();
+		return _return;
+	}
+	
 	public void eliminaPreferito(Integer idPreferito) {
 		EntityManager em =JPAUtil.getInstance().getEmf().createEntityManager();
+		em.getTransaction().begin();
 		em.remove(em.find(Preferiti.class, idPreferito));
+		em.getTransaction().commit();
 		em.close();
 	}
 

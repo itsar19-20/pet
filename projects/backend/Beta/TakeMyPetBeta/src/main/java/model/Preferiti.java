@@ -15,9 +15,15 @@ import javax.persistence.OneToOne;
 @NamedQueries({
 	   
     @NamedQuery(name="preferiti.findByProprietario",
-                query="SELECT c FROM Preferiti c WHERE c.preferitoDelProprietario = :name"),
+                query="SELECT c FROM Preferiti c WHERE c.preferitoDelProprietario.username = :name"),
     @NamedQuery(name="preferiti.findByPetSitter",
-    query="SELECT c FROM Preferiti c WHERE c.preferitoDelPetSitter = :name"),
+    query="SELECT c FROM Preferiti c WHERE c.preferitoDelPetSitter.username = :name"),
+    @NamedQuery(name="preferiti.findAnnuncio",
+    query="SELECT c FROM Preferiti c WHERE c.annuncioPreferito.id_annuncio = :name"),
+    
+    @NamedQuery(name="preferiti.controllaCheEventoPetSitterEsista",
+    query="SELECT c FROM Preferiti c WHERE c.preferitoDelPetSitter.username =:name AND c.annuncioPreferito.id_annuncio =:id"),
+    
 })
 public class Preferiti {
 
