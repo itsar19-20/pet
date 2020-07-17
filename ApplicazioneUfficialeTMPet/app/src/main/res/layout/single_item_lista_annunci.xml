@@ -22,6 +22,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="176dp"
                 android:layout_marginTop="2dp"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp"
                 android:src="@drawable/logoapppet"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"

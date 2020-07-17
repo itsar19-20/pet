@@ -25,10 +25,13 @@
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher_logo_tmp"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_logo_tmp_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
+        <activity android:name="com.ifts.applicazioneufficialetmpet.Activity_creaAnnuncio" />
         <activity android:name="com.ifts.applicazioneufficialetmpet.Activity_signup" />
         <activity android:name="com.ifts.applicazioneufficialetmpet.NoteEditorActivity" />
         <activity android:name="com.ifts.applicazioneufficialetmpet.CreateActivity" />
@@ -38,6 +41,7 @@
         <activity android:name="com.ifts.applicazioneufficialetmpet.Activity_scelta_start" />
         <activity android:name="com.ifts.applicazioneufficialetmpet.Activity_login" />
         <activity android:name="com.ifts.applicazioneufficialetmpet.Activity_registrazione" />
+        <activity android:name="com.ifts.applicazioneufficialetmpet.Activity_creaEvento" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
@@ -48,6 +52,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ifts.applicazioneufficialetmpet.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -172,6 +186,11 @@
                 android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.ifts.applicazioneufficialetmpet.com.squareup.picasso"
+            android:exported="false" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"

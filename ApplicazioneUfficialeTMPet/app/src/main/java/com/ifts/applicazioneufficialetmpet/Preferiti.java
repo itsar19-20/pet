@@ -7,7 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -23,6 +25,7 @@ import com.ifts.applicazioneufficialetmpet.retrofit.ApplicationWebService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -38,6 +41,9 @@ public class Preferiti extends Fragment {
     private static final int ENTER_DATA_REQUEST_CODE = 1;
     private ListView listView;
 
+    TextView tvNessunAccettato;
+    ImageView ivImmagineCaneTriste;
+
     Slider_Adapter_Eventi adapter_eventi;
     ViewPager viewPager;
 
@@ -46,9 +52,12 @@ public class Preferiti extends Fragment {
     private BottomNavigationView topNavigationView;
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
 
         applicationWebService =(ApplicationWebService) getActivity().getApplication();
         SharedPreferences sharedPref = getActivity().getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
@@ -56,7 +65,8 @@ public class Preferiti extends Fragment {
         String username=sharedPref.getString(USERNAME,null);
 
         View view = inflater.inflate(R.layout.fragment_preferiti, container, false);
-
+        tvNessunAccettato = view.findViewById(R.id.textView_avviso_accettati);
+         ivImmagineCaneTriste=view.findViewById(R.id.imgView_attesa_accettati);
         listView= view.findViewById(R.id.listView_preferiti);
 
 
@@ -80,10 +90,16 @@ public class Preferiti extends Fragment {
                       .setTitle("Sei sicuro?")
                       .setMessage("Vuoi cancellare questo evento?")
                       .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+
                           @Override
                           public void onClick(DialogInterface dialog, int i) {
-                          removePreferitoPetSitter(position);
-                              listView.invalidate();
+                              if(tipoUtente.contentEquals("petsitter")) {
+                                  removePreferitoPetSitter(position);
+                                  listView.invalidate();
+                              }
+                              else{
+                                  Toast.makeText(getContext(), "Non pui cacellare i preferiti dei Pet Sitter", Toast.LENGTH_SHORT).show();
+                              }
                           }
                       })
                               .setNegativeButton("NO", null).show();
@@ -124,14 +140,37 @@ public class Preferiti extends Fragment {
     private void setVisualizzaPreferitiPetsitter(String usernamePetSitter) {
         ApplicationWebService webService = (ApplicationWebService) getActivity().getApplication();
         MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
+
+
+       // Call<PreferitoModel>call=apiService.getPetSitter();
        apiService.getPetSitterPreferiti(usernamePetSitter).enqueue(new Callback<List<PreferitoModel>>() {
            @Override
            public void onResponse(Call<List<PreferitoModel>> call, Response<List<PreferitoModel>> response) {
                if (response.isSuccessful()) {
             listaPreferiti=response.body();
-               PreferitiArrayAdapter preferitiArrayAdapter= new PreferitiArrayAdapter(getContext(),R.id.listView_preferiti,listaPreferiti);
-               listView.setAdapter(preferitiArrayAdapter);
-               }
+
+
+                   //controlla che l'annuncio sia stato accettato
+                   ListIterator<PreferitoModel> i=listaPreferiti.listIterator();
+                   while (i.hasNext()){
+                       if (i.next().getPetSitterPreferitoDelProprietario()!= null) {
+                           i.remove();
+                       }
+                   }
+
+                   // sel a lista è vuota rende visbile il testo e l'immagine
+                   if(listaPreferiti.isEmpty()){
+                       tvNessunAccettato.setVisibility(View.VISIBLE);
+                       ivImmagineCaneTriste.setVisibility(View.VISIBLE);
+                       return;
+                   }
+                   if(getActivity()!=null) {
+                       PreferitiArrayAdapter preferitiArrayAdapter= new PreferitiArrayAdapter(getContext(),R.id.listView_preferiti,listaPreferiti);
+                       listView.setAdapter(preferitiArrayAdapter);
+                   }
+
+                   }
+
 
                else{
                    Toast.makeText(getContext(), "Chiamata non riuscita", Toast.LENGTH_SHORT).show();
@@ -153,10 +192,26 @@ public class Preferiti extends Fragment {
             public void onResponse(Call<List<PreferitoModel>> call, Response<List<PreferitoModel>> response) {
                 if (response.isSuccessful()) {
                     listaPreferiti=response.body();
+
+                    //controlla che l'annuncio sia stato accettato
+                    ListIterator<PreferitoModel> i=listaPreferiti.listIterator();
+                    while (i.hasNext()){
+                        if (i.next().getPetSitterPreferitoDelProprietario()!= null) {
+                            i.remove();
+                        }
+                    }
+                    // sel a lista è vuota rende visbile il testo e l'immagine
+                    if(listaPreferiti.isEmpty()){
+                        tvNessunAccettato.setVisibility(View.VISIBLE);
+                        ivImmagineCaneTriste.setVisibility(View.VISIBLE);
+                        return;
+                    }
                   if(getActivity()!=null) {
                         PreferitiArrayAdapter preferitiArrayAdapter = new PreferitiArrayAdapter(getContext(), R.id.listView_preferiti, listaPreferiti);
                         listView.setAdapter(preferitiArrayAdapter);
                    }
+
+
                 }
 
                 else{
@@ -171,22 +226,24 @@ public class Preferiti extends Fragment {
             }
         });
     }
+
     private void removePreferitoPetSitter(int position){
         ApplicationWebService webService = (ApplicationWebService) getActivity().getApplication();
         MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
-PreferitoModel preferito= listaPreferiti.get(position);
+        PreferitoModel preferito= listaPreferiti.get(position);
         apiService.removePreferitoPetSitter(preferito.getId()).enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                Toast.makeText(getContext(), "Hai eliminato l’Annuncio " + preferito.getAnnuncioPreferito().getNomeAnnuncio(), Toast.LENGTH_LONG).show();
-                PreferitiArrayAdapter preferitiArrayAdapter = new PreferitiArrayAdapter(getContext(), R.id.listView_preferiti, listaPreferiti);
+                Toast.makeText(getContext(), "Hai tolro dai preferiti l'annuncio " + preferito.getAnnuncioPreferito().getNomeAnnuncio(), Toast.LENGTH_LONG).show();
                 listaPreferiti.remove(position);
+                PreferitiArrayAdapter preferitiArrayAdapter = new PreferitiArrayAdapter(getContext(), R.id.listView_preferiti, listaPreferiti);
+              listView.setAdapter(preferitiArrayAdapter);
 
             }
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
-                Toast.makeText(getContext(), "Problemi con la cancellazione dell'annuncio: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Problemi con la cancellazione dai preferiti dell'annuncio: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

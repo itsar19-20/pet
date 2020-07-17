@@ -211,6 +211,10 @@ public class Activity_creaAnnuncio extends AppCompatActivity {
             btnSave.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    if ( etDate.getText().toString().length()<1){
+                        Toast.makeText(Activity_creaAnnuncio.this, "Devi selezionare una data", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     ApplicationWebService webService = (ApplicationWebService) getApplication();
                     MyApiEndPointInterface apiService = webService.getRetrofit().create(MyApiEndPointInterface.class);
                     apiService.setNewAnnouncement(etNomeAnnuncio.getText().toString(),username.toString(), etDescrizioneProprietario.getText().toString(), etDate.getText().toString(), urlImmagineAnnuncio = urlImmagineAnnuncio.substring(1, urlImmagineAnnuncio.length() - 1)).enqueue(new Callback<String>() {

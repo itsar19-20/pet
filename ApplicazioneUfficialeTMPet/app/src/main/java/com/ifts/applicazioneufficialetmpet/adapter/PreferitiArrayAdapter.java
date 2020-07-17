@@ -67,12 +67,14 @@ public class PreferitiArrayAdapter extends ArrayAdapter<PreferitoModel> {
             error(R.drawable.logoapppet).into(ivImaggineEvento);
                 //Controllare tipo utente
                 if (tipo.contentEquals("petsitter")) {
-                    Picasso.get().load(preferito.getAnnuncioPreferito().getProprietario().getImmagineProfilo().getUrlImmagine()).placeholder(R.drawable.logoapppet).
+                    Picasso.get().load(preferito.getAnnuncioPreferito().getProprietario().getImmagineProfilo()
+                            .getUrlImmagine()).placeholder(R.drawable.logoapppet).
                             error(R.drawable.logoapppet).into(ivImaggineUtente);
                     tvUtente.setText(preferito.getAnnuncioPreferito().getProprietario().getUsername());
 
                 } else if (tipo.contentEquals("proprietario")) {
-                    Picasso.get().load(preferito.getPreferitoDelPetSitter().getImmagineProfilo().getUrlImmagine()).placeholder(R.drawable.logoapppet)
+                    Picasso.get().load(preferito.getPreferitoDelPetSitter().getImmagineProfilo()
+                            .getUrlImmagine()).placeholder(R.drawable.logoapppet)
                             .error(R.drawable.logoapppet).into(ivImaggineUtente);
                     tvUtente.setText(preferito.getPreferitoDelPetSitter().getUsername());
                 }
@@ -87,11 +89,9 @@ public class PreferitiArrayAdapter extends ArrayAdapter<PreferitoModel> {
                 String strDate = dateFormat.format(preferito.getAnnuncioPreferito().getDataAnnuncio());
                 tvDataEvento.setText(strDate);
 
-                if (preferito.getPetSitterPreferitoDelProprietario()!= null) {
-                    view.setVisibility(View.GONE);
-                    listaPreferiti.remove(position);
 
-        }
+
+
         return view;
 
     }

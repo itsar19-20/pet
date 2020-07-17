@@ -2,19 +2,26 @@ package com.ifts.applicazioneufficialetmpet.adapter;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.ifts.applicazioneufficialetmpet.Activity_creaAnnuncio;
+import com.ifts.applicazioneufficialetmpet.Eventi;
 import com.ifts.applicazioneufficialetmpet.R;
+import com.ifts.applicazioneufficialetmpet.Swap;
 import com.ifts.applicazioneufficialetmpet.interfaces.MyApiEndPointInterface;
 import com.ifts.applicazioneufficialetmpet.model.AnnuncioModel;
 import com.ifts.applicazioneufficialetmpet.model.PetSitter;
@@ -62,10 +69,41 @@ public class AnnuncioPageAdapter extends PagerAdapter {
         inflater = LayoutInflater.from(context);
 
         View view = inflater.inflate(R.layout.single_item_lista_annunci, container, false);
+
+        //====================DIALOG per eliminare un preferito===================
+        view.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                new AlertDialog.Builder(context)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setTitle("Sei sicuro?")
+                        .setMessage("Vuoi cancellare questo evento?")
+                        .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int i) {
+                                if(tipo.contentEquals("proprietario")) {
+                                    Toast.makeText(context, "Sei un proprietario", Toast.LENGTH_SHORT).show();
+                                  rimuoviAnnuncio(listaAnnunci.get(position).getId_annuncio(),position);
+
+
+                                }
+                                else{
+                                    Toast.makeText(context, "Non pui cacellare gli annunci creati dagli altri",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        })
+                        .setNegativeButton("NO", null).show();
+                return true;
+            }
+
+        });
+
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Tipo " + tipo, Toast.LENGTH_LONG).show();
+                //Toast.makeText(context, "Tipo " + tipo, Toast.LENGTH_LONG).show();
                 if (tipo.contentEquals("petsitter")) {
                     setNewPetSitterPreferitiProprietario(listaAnnunci.get(position).getId_annuncio());
 
@@ -74,8 +112,6 @@ public class AnnuncioPageAdapter extends PagerAdapter {
                 }
                 ;
             }
-
-
         });
 
         ImageView ivImaggineAnnuncio = view.findViewById(R.id.image_annuncio);
@@ -95,16 +131,14 @@ public class AnnuncioPageAdapter extends PagerAdapter {
             tvDataAnnuncio.setText(strDate);
         }
 
-
         tvOrganizzatore.setText(listaAnnunci.get(position).getProprietario().getUsername());
-
         tvNomeAnnuncio.setText(listaAnnunci.get(position).getNomeAnnuncio());
         tvDescrizione.setText(listaAnnunci.get(position).getDescrizione());
 
-
         //UrlImmagine
         //if(listaAnnunci.get(position).getUrlImmagineAnnucio()!=null) {
-        Picasso.get().load(listaAnnunci.get(position).getUrlImmagineAnnuncio()).placeholder(R.drawable.logoapppet).error(R.drawable.logoapppet).into(ivImaggineAnnuncio);
+        Picasso.get().load(listaAnnunci.get(position).getUrlImmagineAnnuncio()).placeholder(R.drawable.logoapppet)
+                .error(R.drawable.logoapppet).into(ivImaggineAnnuncio);
 
         container.addView(view, 0);
         return view;
@@ -172,5 +206,30 @@ public class AnnuncioPageAdapter extends PagerAdapter {
             }
         });
 
+    }
+
+    @Override
+    public int getItemPosition(@NonNull Object object) {
+        return POSITION_NONE;
+    }
+
+    private void rimuoviAnnuncio(int idAnnuncioString, int position){
+        MyApiEndPointInterface apiService = applicationWebService.getRetrofit().create(MyApiEndPointInterface.class);
+
+        apiService.removeAnnouncement(idAnnuncioString).enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+
+
+               listaAnnunci.remove(position);
+               notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Toast.makeText(context, "Problemi con la cancellazione dell'annuncio: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

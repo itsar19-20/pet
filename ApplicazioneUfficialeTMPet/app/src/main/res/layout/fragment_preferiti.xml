@@ -6,6 +6,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Preferiti">
+    <TextView
+        android:id="@+id/textView_avviso_accettati"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:text="Nessun annucio è stato accettato!"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imgView_attesa_accettati"
+        android:layout_width="match_parent"
+        android:layout_height="352dp"
+        android:layout_below="@+id/textView_avviso_accettati"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/cane_attesa_accettati"
+        android:visibility="invisible" />
+
     <FrameLayout
         android:id="@+id/containerProva"
         android:layout_width="match_parent"
@@ -15,16 +35,15 @@
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="681dp"></ScrollView>
+
 
         <ListView
             android:id="@+id/listView_preferiti"
-            android:layout_width="match_parent"
-            android:layout_height="581dp"
-            android:layout_marginVertical="100dp"
-            android:backgroundTintMode="@color/colorVerdeApp"></ListView>
+            android:layout_width="wrap_content"
+            android:layout_height="521dp"
+            android:layout_marginTop="65sp"
+            android:backgroundTintMode="@color/colorVerdeApp"
+            android:soundEffectsEnabled="false"></ListView>
     </FrameLayout>
 
 </RelativeLayout>

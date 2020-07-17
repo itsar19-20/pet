@@ -1,4 +1,4 @@
 package com.ifts.applicazioneufficialetmpet.adapter;
 
-class PreferitiAccettatiArrayAdapter {
+public class PreferitiAccettatiArrayAdapter {
 }

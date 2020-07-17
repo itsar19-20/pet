@@ -99,8 +99,8 @@ public interface MyApiEndPointInterface {
     @PUT("/AnnunciPetSitterController")
     Call<String> joinAnnouncement(@Query("idAnnuncioString") String idAnnuncioString, @Query("usernamePartecipante") String usernamePartecipante);
 
-    @DELETE("/")
-    Call<String> removeAnnouncement(@Query("idAnnunciString") int idAnnuncioString);
+    @DELETE("/AnnunciProprietarioController")
+    Call<String> removeAnnouncement(@Query("idAnnuncioString") int idAnnuncioString);
 
     @GET("/AnnunciPetSitterController")
     Call<List<AnnuncioModel>> getUserAnnouncement();
@@ -109,7 +109,8 @@ public interface MyApiEndPointInterface {
     Call<List<AnnuncioModel>> getProprietarioAnnoucement(@Query("usernameProprietario") String proprietarioAnnuncio);
 
     //  PREFERITI
-
+    @DELETE("/PreferitiController")
+    Call<String> removePreferitoPetSitter(@Query("idPreferito") int idPreferito);
     //PetSitter
     @POST("/PreferitiPetSitterController")
     Call<String> setNewPetSitterPreferiti(@Query("usernamePetSitter") String usernamePetSitter,
@@ -118,8 +119,7 @@ public interface MyApiEndPointInterface {
     @GET("/PreferitiPetSitterController")
     Call<List<PreferitoModel>> getPetSitterPreferiti(@Query("usernamePetSitter") String usernamePetSitter);
 
-    @DELETE("/PreferitiPetSitterController")
-    Call<String> removePreferitoPetSitter(@Query("idPreferitoString") int idPreferitoString);
+
 
     //Propriietario
     @POST( "/PreferitiProprietarioController")

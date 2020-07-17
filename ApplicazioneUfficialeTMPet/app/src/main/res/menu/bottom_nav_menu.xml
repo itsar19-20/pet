@@ -10,7 +10,7 @@
     <item
         android:id="@+id/navigation_switch"
         android:icon="@drawable/ic_switch_mode_black_24dp"
-        android:title="@string/title_switch" />
+        android:title="@string/annunci" />
 
     <item
         android:id="@+id/navigation_chat"

@@ -170,7 +170,7 @@ public class Activity_petsitter extends AppCompatActivity {
                     case R.id.navigation_annunci_preferiti:
                         fragment = new Preferiti();
                         listView.setVisibility(View.VISIBLE);
-                        titolo_chat.setVisibility(View.INVISIBLE);
+                        //titolo_chat.setVisibility(View.INVISIBLE);
                         break;
                     case R.id.navigation_annunci_accettati:
                         fragment = new Accettati();

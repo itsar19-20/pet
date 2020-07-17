@@ -791,6 +791,7 @@ color colorMarroneApp
 color colorOrangeApp
 color colorPrimary
 color colorPrimaryDark
+color colorRossoApp
 color colorVerdeApp
 color colorVerdeWhatsApp
 color common_google_signin_btn_text_dark
@@ -1722,11 +1723,12 @@ id browser_actions_menu_view
 id btnRemove
 id btnSaveUpdate
 id btnSignUp
-id btnUpload
 id btn_holder
+id buttonGetDate
 id buttonPanel
 id button_continue
 id button_create
+id button_delete_profilo
 id button_done
 id button_login_login
 id button_next
@@ -1791,12 +1793,11 @@ id editText_mail_registrazione
 id editText_password_login
 id editText_password_registrazione
 id editText_search
-id editText_status_profilo
+id editText_userStatus_profilo
 id editText_user_name_login
 id editText_username_login
-id editText_username_profilo
 id editText_welcome_registrazione
-id edit_author
+id edit_date
 id edit_phone_number
 id edit_query
 id edit_text
@@ -1815,6 +1816,7 @@ id etAuthor
 id etCognomeRegistrazione
 id etConfermaPasswordRegistrazione
 id etDate
+id etDescrizione
 id etEmailRegistrazione
 id etNomeRegistrazione
 id etNote
@@ -1855,6 +1857,7 @@ id ifRoom
 id image
 id imageView
 id imageView_arrow
+id image_annuncio
 id image_flag
 id image_single_item_evento
 id image_single_item_swap
@@ -1903,7 +1906,6 @@ id multiply
 id name
 id name_layout
 id nav_controller_view_tag
-id nav_host_fragment
 id nav_host_fragment_container
 id nav_view
 id nav_viewProva
@@ -1946,6 +1948,8 @@ id progressBar_circle
 id progressBar_line
 id progress_circular
 id progress_horizontal
+id proprietario_toolBar
+id pt_SelezionaUnAnnunxio
 id radio
 id rectangle
 id recycler_countryDialog
@@ -1986,7 +1990,10 @@ id select_dialog_listview
 id selected
 id send_code
 id send_sms_tos
-id set_image_profilo
+id set_image_annuncio
+id set_image_eventi
+id set_image_petsitter
+id set_image_utente
 id shortcut
 id showCustom
 id showHome
@@ -2028,18 +2035,31 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView1
+id textViewCreaAnnuncio
+id textView_NomeEvento
 id textView_already_have_account
 id textView_avviso_accettati
+id textView_backToLogin
 id textView_close_visualizza_annuncio
 id textView_close_visualizza_evento
 id textView_code
+id textView_cognome
 id textView_countryName
+id textView_descrizione
 id textView_descrizione_visualizza_annuncio
+id textView_email_listapetsitter
+id textView_item_autore_lista_annunci
 id textView_item_autore_lista_eventi
+id textView_item_data_lista_annunci
 id textView_item_data_lista_eventi
+id textView_item_testo_lista_annunci
 id textView_item_testo_lista_eventi
+id textView_item_titolo_lista_annunci
 id textView_item_titolo_lista_eventi
 id textView_mail_mail
+id textView_name_profilo
+id textView_nome
 id textView_noresult
 id textView_password_dimenticata
 id textView_preferiti_visualizza_annuncio
@@ -2048,10 +2068,17 @@ id textView_registrazione
 id textView_scarta_visualizza_annuncio
 id textView_scarta_visualizza_evento
 id textView_selectedCountry
+id textView_singleItemLista_UsernameUtente
 id textView_spiegazione
+id textView_surname_profilo
+id textView_tipoUtente
 id textView_title
 id textView_title_fragment_chat
+id textView_userType_profilo
+id textView_username
+id textView_usernameUtente
 id textView_username_mail
+id textView_username_profilo
 id textView_username_visualizza_annuncio
 id textView_username_visualizza_evento
 id text_input_password_toggle
@@ -2087,6 +2114,7 @@ id viewPager_dialog_visualizza_annuncio
 id viewPager_dialog_visualizza_evento
 id viewPager_swap
 id view_offset_helper
+id viewpager_popup_petsitter
 id visible
 id visible_removing_fragment_view_tag
 id vp_slider_layout
@@ -2151,6 +2179,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_crea_annuncio
 layout activity_create
 layout activity_login
 layout activity_main
@@ -2234,12 +2263,16 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout petsitter_app_bar
+layout popup_petsitter
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout single_item_chat
 layout single_item_eventi
+layout single_item_lista_annunci
 layout single_item_lista_eventi
+layout single_item_lista_petsitter
+layout single_item_lista_preferiti
 layout single_item_swap
 layout single_item_visualizza_annuncio
 layout single_item_visualizza_evento
@@ -2323,8 +2356,10 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_settings
+string annunci
 string app_name
 string appbar_scrolling_view_behavior
+string author
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
@@ -2354,6 +2389,7 @@ string crop_image_menu_flip_horizontally
 string crop_image_menu_flip_vertically
 string crop_image_menu_rotate_left
 string crop_image_menu_rotate_right
+string date
 string default_web_client_id
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -2471,6 +2507,7 @@ string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string next
 string no_result_found
+string nomeevento
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -2485,6 +2522,8 @@ string search_menu_title
 string second_fragment_label
 string select_country
 string status_bar_notification_info_overflow
+string text
+string title
 string title_activity_petsitter
 string title_annunci_accettati
 string title_annunci_preferiti
@@ -2496,6 +2535,7 @@ string title_notifications
 string title_preferiti
 string title_settings_dialog
 string title_switch
+string utente
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -3159,3 +3199,5 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable fastscroll__fastScroller fastscroll__bubbleColor fastscroll__bubbleTextAppearance fastscroll__handleColor
+xml filepaths
+xml network_security_config
