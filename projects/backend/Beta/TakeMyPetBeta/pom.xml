@@ -8,7 +8,7 @@
 	<packaging>war</packaging>
 	<properties>
 		<junit.version>4.11</junit.version>
-		<logback.version>1.1.2</logback.version>
+		<logback.version>1.2.0</logback.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<slf4j-api.version>1.7.7</slf4j-api.version>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
